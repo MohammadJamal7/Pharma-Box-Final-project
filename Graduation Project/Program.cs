@@ -1,4 +1,5 @@
 using Graduation_Project.Data;
+using Graduation_Project.Models; // Ensure ApplicationUser is included
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,13 +9,29 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
+
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddEntityFrameworkStores<ApplicationDbContext>();
+// Use ApplicationUser for Identity and add Role support
+builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddRoles<IdentityRole>()  // Add role management support
+    .AddEntityFrameworkStores<ApplicationDbContext>();  // Use ApplicationDbContext for Identity
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+// Seed roles, admin user, and default branch if needed
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();  // Correct UserManager
+    var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();  // Correct RoleManager
+    var context = services.GetRequiredService<ApplicationDbContext>();  // Access to the ApplicationDbContext
+
+    // Initialize the roles, admin user, and default branch
+    await DbInitializer.SeedRolesAndAdminAsync(userManager, roleManager, context); // Pass context for branch seeding
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -24,7 +41,6 @@ if (app.Environment.IsDevelopment())
 else
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
