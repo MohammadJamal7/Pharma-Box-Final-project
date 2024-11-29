@@ -20,7 +20,7 @@ public class ApplicationUser : IdentityUser
     // Nullable BranchId since only Pharmacists have a branch
     public int? BranchId { get; set; }  // Nullable for non-Pharmacist users
     [ForeignKey("BranchId")]
-    public Branch Branch { get; set; }  // Branch for Pharmacists
+    public Branch ?Branch { get; set; }  // Branch for Pharmacists
     // Navigation properties
     public ICollection<ChatMessage> ChatMessages { get; set; }  // Messages for all users
     public List<Order> SupplierAndUserOrders { get; set; }  // Orders mostly relevant for Patients, but can be used for others too  ... from users to our branch and from pharmacist to suppliers

@@ -104,22 +104,22 @@
 <body>
     <div class="container-fluid registration-container">
         <div class="row w-100">
-           
+
             <!-- Image Section -->
             <div class="col-md-6 registration-image-container d-none d-md-flex justify-content-end">
-                <img src="@Url.Content("~/images/pharmacist2.jpg")" alt="Pharmacist Registration" class="registration-image  " />
+                <img src="@Url.Content("~/images/supplier.jpg")" alt="Pharmacist Registration" class="registration-image  " />
             </div>
 
             <!-- Form Section -->
             <div class="col-md-6 registration-form-container">
                 <div class="registration-form">
-                    <h2 class="text-center mb-4" style="color: #6a1b9a;">Pharmacist Registration</h2>
+                    <h2 class="text-center mb-4" style="color: #6a1b9a;">Supplier Registration</h2>
 
                     <form method="post" asp-action="Register" asp-controller="Pharmacist">
                         <div class="mb-3">
                             <label for="FullName" class="form-label">Full Name</label>
                             <input type="text" class="form-control" id="FullName" name="FullName"
-                                   value="@Model.FullName" required
+                                  asp-for="FullName" required
                                    asp-validation-for="FullName" />
                             <span asp-validation-for="FullName" class="text-danger"></span>
                         </div>
@@ -127,7 +127,7 @@
                         <div class="mb-3">
                             <label for="Email" class="form-label">Email Address</label>
                             <input type="email" class="form-control" id="Email" name="Email"
-                                   value="@Model.Email" required
+                                  asp-for="Email" required
                                    asp-validation-for="Email" />
                             <span asp-validation-for="Email" class="text-danger"></span>
                         </div>
@@ -135,7 +135,7 @@
                         <div class="mb-3">
                             <label for="Password" class="form-label">Password</label>
                             <input type="password" class="form-control" id="Password" name="Password"
-                                   required
+                                   required asp-for="Password"
                                    asp-validation-for="Password" />
                             <span asp-validation-for="Password" class="text-danger"></span>
                         </div>
@@ -143,19 +143,9 @@
                         <div class="mb-3">
                             <label for="ConfirmPassword" class="form-label">Confirm Password</label>
                             <input type="password" class="form-control" id="ConfirmPassword"
-                                   name="ConfirmPassword" required
+                                   name="ConfirmPassword" required asp-for="ConfirmPassword"
                                    asp-validation-for="ConfirmPassword" />
                             <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="BranchId" class="form-label">Select Branch</label>
-                            <select class="form-select" id="BranchId" name="BranchId" required>
-                                @foreach (var branch in Model.Branches)
-                                {
-                                    <option value="@branch.BranchId">@branch.Name - @branch.Location</option>
-                                }
-                            </select>
                         </div>
 
                         <div class="d-grid mt-4">
@@ -165,13 +155,13 @@
                         <div class="text-center mt-3">
                             <p class="text-muted">
                                 Already have an account?
-                                <a href="@Url.Action("Login", "Pharmacist")" class="text-decoration-none">Login here</a>
+                                <a href="@Url.Action("Login", "Supplier")" class="text-decoration-none">Login here</a>
                             </p>
                         </div>
                     </form>
                 </div>
             </div>
-            
+
         </div>
     </div>
 
