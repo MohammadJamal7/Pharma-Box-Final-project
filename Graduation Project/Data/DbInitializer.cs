@@ -38,6 +38,28 @@ namespace Graduation_Project.Data
                 }
             }
 
+            // Create a default Supplier user if not exists
+            var supplierUser = new ApplicationUser
+            {
+                UserName = "supplier@pharmabox.com",
+                Email = "supplier@pharmabox.com",
+                FullName = "Supplier User",
+                EmailConfirmed = true,
+                UserType = "Supplier"
+            };
+
+            var existingSupplier = await userManager.FindByEmailAsync(supplierUser.Email);
+            if (existingSupplier == null)
+            {
+                var result = await userManager.CreateAsync(supplierUser, "Supplier@123");  // Default password
+                if (result.Succeeded)
+                {
+                    await userManager.AddToRoleAsync(supplierUser, "Supplier");
+                }
+            }
+
+
+
             // Seed a default Branch if none exists
             if (!context.PharmacyBranch.Any())
             {

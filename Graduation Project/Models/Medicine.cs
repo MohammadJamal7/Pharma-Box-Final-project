@@ -7,16 +7,10 @@ using System.ComponentModel.DataAnnotations.Schema;
     {
         [Key]
         public int MedicineId { get; set; }
-
-        [Required]
-        [StringLength(100)]
-        public string Name { get; set; }
-
         public string Description { get; set; }
         public string HowToUse { get; set; }
         public string ImageUrl { get; set; }  
         public DateTime ExpiryDate { get; set; }
-
 
 
     // relationships : 
@@ -27,4 +21,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
     public List<OrderItem> OrderItems { get; set; }
 
+
+
+    // Relationships
+    public int SupplierMedicationId { get; set; }  // This should be nullable in case there's no supplier stock yet
+    public SupplierMedication SupplierMedication { get; set; }  // Reference to the supplier's medicine entry
 }

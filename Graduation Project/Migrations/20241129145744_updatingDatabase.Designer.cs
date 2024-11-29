@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Graduation_Project.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241129080609_settingUpNewDb")]
-    partial class settingUpNewDb
+    [Migration("20241129145744_updatingDatabase")]
+    partial class updatingDatabase
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -149,17 +149,19 @@ namespace Graduation_Project.Migrations
 
             modelBuilder.Entity("Graduation_Project.Models.SupplierMedication", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("SupplierMedicationId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SupplierMedicationId"));
 
                     b.Property<DateTime>("ExpiryDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("MedicineId")
-                        .HasColumnType("int");
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
@@ -171,9 +173,7 @@ namespace Graduation_Project.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.HasKey("Id");
-
-                    b.HasIndex("MedicineId");
+                    b.HasKey("SupplierMedicationId");
 
                     b.HasIndex("SupplierId");
 
@@ -228,14 +228,14 @@ namespace Graduation_Project.Migrations
                     b.Property<int?>("InventoryId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                    b.Property<int>("SupplierMedicationId")
+                        .HasColumnType("int");
 
                     b.HasKey("MedicineId");
 
                     b.HasIndex("InventoryId");
+
+                    b.HasIndex("SupplierMedicationId");
 
                     b.ToTable("Medicines");
                 });
@@ -589,19 +589,11 @@ namespace Graduation_Project.Migrations
 
             modelBuilder.Entity("Graduation_Project.Models.SupplierMedication", b =>
                 {
-                    b.HasOne("Medicine", "Medicine")
-                        .WithMany()
-                        .HasForeignKey("MedicineId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("ApplicationUser", "Supplier")
                         .WithMany()
                         .HasForeignKey("SupplierId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Medicine");
 
                     b.Navigation("Supplier");
                 });
@@ -623,7 +615,15 @@ namespace Graduation_Project.Migrations
                         .WithMany("Medicines")
                         .HasForeignKey("InventoryId");
 
+                    b.HasOne("Graduation_Project.Models.SupplierMedication", "SupplierMedication")
+                        .WithMany()
+                        .HasForeignKey("SupplierMedicationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Inventory");
+
+                    b.Navigation("SupplierMedication");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
