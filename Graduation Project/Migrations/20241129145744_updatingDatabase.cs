@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Graduation_Project.Migrations
 {
     /// <inheritdoc />
-    public partial class settingUpNewDb : Migration
+    public partial class updatingDatabase : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -260,6 +260,29 @@ namespace Graduation_Project.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "SupplierMedications",
+                columns: table => new
+                {
+                    SupplierMedicationId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    StockQuantity = table.Column<int>(type: "int", nullable: false),
+                    ExpiryDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    SupplierId = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_SupplierMedications", x => x.SupplierMedicationId);
+                    table.ForeignKey(
+                        name: "FK_SupplierMedications_AspNetUsers_SupplierId",
+                        column: x => x.SupplierId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "SupplierOrders",
                 columns: table => new
                 {
@@ -292,12 +315,12 @@ namespace Graduation_Project.Migrations
                 {
                     MedicineId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HowToUse = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ExpiryDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    InventoryId = table.Column<int>(type: "int", nullable: true)
+                    InventoryId = table.Column<int>(type: "int", nullable: true),
+                    SupplierMedicationId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -307,6 +330,40 @@ namespace Graduation_Project.Migrations
                         column: x => x.InventoryId,
                         principalTable: "Inventory",
                         principalColumn: "InventoryId");
+                    table.ForeignKey(
+                        name: "FK_Medicines_SupplierMedications_SupplierMedicationId",
+                        column: x => x.SupplierMedicationId,
+                        principalTable: "SupplierMedications",
+                        principalColumn: "SupplierMedicationId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "SupplierOrderItems",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Quantity = table.Column<int>(type: "int", nullable: false),
+                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    SupplierOrderId = table.Column<int>(type: "int", nullable: false),
+                    SupplierMedicationId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_SupplierOrderItems", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_SupplierOrderItems_SupplierMedications_SupplierMedicationId",
+                        column: x => x.SupplierMedicationId,
+                        principalTable: "SupplierMedications",
+                        principalColumn: "SupplierMedicationId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_SupplierOrderItems_SupplierOrders_SupplierOrderId",
+                        column: x => x.SupplierOrderId,
+                        principalTable: "SupplierOrders",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -333,63 +390,6 @@ namespace Graduation_Project.Migrations
                         name: "FK_OrderItems_Orders_OrderId",
                         column: x => x.OrderId,
                         principalTable: "Orders",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "SupplierMedications",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    StockQuantity = table.Column<int>(type: "int", nullable: false),
-                    ExpiryDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    SupplierId = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    MedicineId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_SupplierMedications", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_SupplierMedications_AspNetUsers_SupplierId",
-                        column: x => x.SupplierId,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_SupplierMedications_Medicines_MedicineId",
-                        column: x => x.MedicineId,
-                        principalTable: "Medicines",
-                        principalColumn: "MedicineId",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "SupplierOrderItems",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Quantity = table.Column<int>(type: "int", nullable: false),
-                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    SupplierOrderId = table.Column<int>(type: "int", nullable: false),
-                    SupplierMedicationId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_SupplierOrderItems", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_SupplierOrderItems_SupplierMedications_SupplierMedicationId",
-                        column: x => x.SupplierMedicationId,
-                        principalTable: "SupplierMedications",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_SupplierOrderItems_SupplierOrders_SupplierOrderId",
-                        column: x => x.SupplierOrderId,
-                        principalTable: "SupplierOrders",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.NoAction);
                 });
@@ -460,6 +460,11 @@ namespace Graduation_Project.Migrations
                 column: "InventoryId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Medicines_SupplierMedicationId",
+                table: "Medicines",
+                column: "SupplierMedicationId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_OrderItems_MedicineId",
                 table: "OrderItems",
                 column: "MedicineId");
@@ -478,11 +483,6 @@ namespace Graduation_Project.Migrations
                 name: "IX_Orders_UserId",
                 table: "Orders",
                 column: "UserId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_SupplierMedications_MedicineId",
-                table: "SupplierMedications",
-                column: "MedicineId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_SupplierMedications_SupplierId",
@@ -541,22 +541,22 @@ namespace Graduation_Project.Migrations
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
-                name: "Orders");
+                name: "Medicines");
 
             migrationBuilder.DropTable(
-                name: "SupplierMedications");
+                name: "Orders");
 
             migrationBuilder.DropTable(
                 name: "SupplierOrders");
 
             migrationBuilder.DropTable(
-                name: "Medicines");
+                name: "Inventory");
+
+            migrationBuilder.DropTable(
+                name: "SupplierMedications");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
-
-            migrationBuilder.DropTable(
-                name: "Inventory");
 
             migrationBuilder.DropTable(
                 name: "PharmacyBranch");
