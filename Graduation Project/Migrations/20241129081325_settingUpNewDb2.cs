@@ -2,10 +2,10 @@
 
 #nullable disable
 
-namespace Graduation_Project.Data.Migrations
+namespace Graduation_Project.Migrations
 {
     /// <inheritdoc />
-    public partial class initialMigration : Migration
+    public partial class settingUpNewDb2 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

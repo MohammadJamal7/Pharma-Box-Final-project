@@ -1,6 +1,7 @@
 ﻿using Graduation_Project.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection.Emit;
 
 namespace Graduation_Project.Data
 {
@@ -27,10 +28,28 @@ namespace Graduation_Project.Data
         public DbSet<ChatMessage> ChatMessages { get; set; }
 
         public DbSet<Branch> PharmacyBranch { get; set; }
+        public DbSet<SupplierMedication> SupplierMedications { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+
             base.OnModelCreating(builder);
+
+            // configure the one-to-one relationship between branch and inventory
+            builder.Entity<Branch>()
+            .HasOne(b => b.Inventory)
+            .WithOne(i => i.Branch)
+            .HasForeignKey<Inventory>(i => i.BranchId);
+
+
+            //builder.Entity<ApplicationUser>()
+            //.HasOne(u => u.Branch)
+            //.WithOne(b => b.adminBranch)
+            //.HasForeignKey<Branch>(b => b.BranchId);
+
+         
+
 
             // Configure the relationship between ApplicationUser and ChatMessages
             builder.Entity<ChatMessage>()
@@ -39,11 +58,15 @@ namespace Graduation_Project.Data
                 .HasForeignKey(c => c.SenderId)  // SenderId is the FK
                 .OnDelete(DeleteBehavior.Restrict);  // Avoid cascading deletes
 
+           
+
             builder.Entity<ChatMessage>()
                 .HasOne(c => c.Receiver)  // Each ChatMessage has one Receiver (ApplicationUser)
                 .WithMany()  // A User (Receiver) does not need to have a collection of ChatMessages
                 .HasForeignKey(c => c.ReceiverId)  // ReceiverId is the FK
                 .OnDelete(DeleteBehavior.Restrict);  // Avoid cascading deletes
         }
+
+
     }
 }
