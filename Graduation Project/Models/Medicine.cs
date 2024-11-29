@@ -1,6 +1,7 @@
 ﻿using Graduation_Project.Models;
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
     public class Medicine
     {
@@ -15,6 +16,15 @@ using System.ComponentModel.DataAnnotations;
         public string HowToUse { get; set; }
         public string ImageUrl { get; set; }  
         public DateTime ExpiryDate { get; set; }
-        public ICollection<OrderItem> OrderItems { get; set; }
+
+
+
+    // relationships : 
+
+    public int? InventoryId { get; set; }
+    [ForeignKey("InventoryId")]
+    public Inventory? Inventory { get; set; }
+
+    public List<OrderItem> OrderItems { get; set; }
 
 }

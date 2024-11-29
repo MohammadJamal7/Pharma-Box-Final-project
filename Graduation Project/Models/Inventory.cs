@@ -6,11 +6,14 @@ public class Inventory
 {
     [Key]
     public int InventoryId { get; set; }
-
-    [ForeignKey("Branch")]
-    public int BranchId { get; set; }
-    public Branch Branch { get; set; }
     public int QuantityAvailable { get; set; }
-    public ICollection<Medicine> Medications { get; set; }
+
+
+    // relationships (with branch (one to one) and with medicine (one to many) )
+    public int BranchId { get; set; }
+    [ForeignKey("BranchId")]
+    public Branch Branch { get; set; }
+
+    public List<Medicine> Medicines { get; set; }
 
 }

@@ -9,11 +9,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Graduation_Project.Data.Migrations
+namespace Graduation_Project.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241127113747_update")]
-    partial class update
+    [Migration("20241129080609_settingUpNewDb")]
+    partial class settingUpNewDb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -90,7 +90,7 @@ namespace Graduation_Project.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("BranchId")
+                    b.Property<int>("BranchId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("DeliveredDate")
@@ -98,10 +98,6 @@ namespace Graduation_Project.Data.Migrations
 
                     b.Property<DateTime>("OrderDate")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("PharmacyId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
@@ -151,6 +147,39 @@ namespace Graduation_Project.Data.Migrations
                     b.ToTable("OrderItems");
                 });
 
+            modelBuilder.Entity("Graduation_Project.Models.SupplierMedication", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("ExpiryDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("MedicineId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("StockQuantity")
+                        .HasColumnType("int");
+
+                    b.Property<string>("SupplierId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MedicineId");
+
+                    b.HasIndex("SupplierId");
+
+                    b.ToTable("SupplierMedications");
+                });
+
             modelBuilder.Entity("Inventory", b =>
                 {
                     b.Property<int>("InventoryId")
@@ -167,7 +196,8 @@ namespace Graduation_Project.Data.Migrations
 
                     b.HasKey("InventoryId");
 
-                    b.HasIndex("BranchId");
+                    b.HasIndex("BranchId")
+                        .IsUnique();
 
                     b.ToTable("Inventory");
                 });
@@ -435,13 +465,15 @@ namespace Graduation_Project.Data.Migrations
                     b.Property<DateTime>("OrderDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("PharmacyId")
+                    b.Property<string>("PharmacistId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("BranchId");
+
+                    b.HasIndex("PharmacistId");
 
                     b.ToTable("SupplierOrders");
                 });
@@ -454,16 +486,13 @@ namespace Graduation_Project.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("MedicationId")
-                        .HasColumnType("int");
-
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int>("ProductMedicineId")
+                    b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.Property<int>("Quantity")
+                    b.Property<int>("SupplierMedicationId")
                         .HasColumnType("int");
 
                     b.Property<int>("SupplierOrderId")
@@ -471,7 +500,7 @@ namespace Graduation_Project.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ProductMedicineId");
+                    b.HasIndex("SupplierMedicationId");
 
                     b.HasIndex("SupplierOrderId");
 
@@ -483,12 +512,20 @@ namespace Graduation_Project.Data.Migrations
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
 
                     b.Property<string>("Address")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("BranchId")
+                        .HasColumnType("int");
 
                     b.Property<string>("FullName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasIndex("BranchId");
 
                     b.HasDiscriminator().HasValue("ApplicationUser");
                 });
@@ -514,15 +551,19 @@ namespace Graduation_Project.Data.Migrations
 
             modelBuilder.Entity("Graduation_Project.Models.Order", b =>
                 {
-                    b.HasOne("Branch", null)
-                        .WithMany("Orders")
-                        .HasForeignKey("BranchId");
+                    b.HasOne("Branch", "Branch")
+                        .WithMany("patientOrders")
+                        .HasForeignKey("BranchId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("ApplicationUser", "User")
-                        .WithMany("Orders")
+                        .WithMany("SupplierAndUserOrders")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Branch");
 
                     b.Navigation("User");
                 });
@@ -546,11 +587,30 @@ namespace Graduation_Project.Data.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("Graduation_Project.Models.SupplierMedication", b =>
+                {
+                    b.HasOne("Medicine", "Medicine")
+                        .WithMany()
+                        .HasForeignKey("MedicineId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ApplicationUser", "Supplier")
+                        .WithMany()
+                        .HasForeignKey("SupplierId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Medicine");
+
+                    b.Navigation("Supplier");
+                });
+
             modelBuilder.Entity("Inventory", b =>
                 {
                     b.HasOne("Branch", "Branch")
-                        .WithMany()
-                        .HasForeignKey("BranchId")
+                        .WithOne("Inventory")
+                        .HasForeignKey("Inventory", "BranchId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -559,9 +619,11 @@ namespace Graduation_Project.Data.Migrations
 
             modelBuilder.Entity("Medicine", b =>
                 {
-                    b.HasOne("Inventory", null)
-                        .WithMany("Medications")
+                    b.HasOne("Inventory", "Inventory")
+                        .WithMany("Medicines")
                         .HasForeignKey("InventoryId");
+
+                    b.Navigation("Inventory");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -618,19 +680,27 @@ namespace Graduation_Project.Data.Migrations
             modelBuilder.Entity("SupplierOrder", b =>
                 {
                     b.HasOne("Branch", "Branch")
-                        .WithMany("SupplierOrders")
+                        .WithMany()
                         .HasForeignKey("BranchId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("ApplicationUser", "Pharmacist")
+                        .WithMany()
+                        .HasForeignKey("PharmacistId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Branch");
+
+                    b.Navigation("Pharmacist");
                 });
 
             modelBuilder.Entity("SupplierOrderItem", b =>
                 {
-                    b.HasOne("Medicine", "Product")
+                    b.HasOne("Graduation_Project.Models.SupplierMedication", "SupplierMedication")
                         .WithMany()
-                        .HasForeignKey("ProductMedicineId")
+                        .HasForeignKey("SupplierMedicationId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -640,16 +710,28 @@ namespace Graduation_Project.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Product");
+                    b.Navigation("SupplierMedication");
 
                     b.Navigation("SupplierOrder");
                 });
 
+            modelBuilder.Entity("ApplicationUser", b =>
+                {
+                    b.HasOne("Branch", "Branch")
+                        .WithMany("suppliers")
+                        .HasForeignKey("BranchId");
+
+                    b.Navigation("Branch");
+                });
+
             modelBuilder.Entity("Branch", b =>
                 {
-                    b.Navigation("Orders");
+                    b.Navigation("Inventory")
+                        .IsRequired();
 
-                    b.Navigation("SupplierOrders");
+                    b.Navigation("patientOrders");
+
+                    b.Navigation("suppliers");
                 });
 
             modelBuilder.Entity("Graduation_Project.Models.Order", b =>
@@ -659,7 +741,7 @@ namespace Graduation_Project.Data.Migrations
 
             modelBuilder.Entity("Inventory", b =>
                 {
-                    b.Navigation("Medications");
+                    b.Navigation("Medicines");
                 });
 
             modelBuilder.Entity("Medicine", b =>
@@ -676,7 +758,7 @@ namespace Graduation_Project.Data.Migrations
                 {
                     b.Navigation("ChatMessages");
 
-                    b.Navigation("Orders");
+                    b.Navigation("SupplierAndUserOrders");
                 });
 #pragma warning restore 612, 618
         }
