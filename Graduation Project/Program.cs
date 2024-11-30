@@ -12,8 +12,12 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-// Use ApplicationUser for Identity and add Role support
-builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+// Configure Identity options
+builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
+{
+    options.SignIn.RequireConfirmedAccount = false; // No email confirmation required
+    options.Tokens.AuthenticatorTokenProvider = null; // Disable 2FA token provider
+})
     .AddRoles<IdentityRole>()  // Add role management support
     .AddEntityFrameworkStores<ApplicationDbContext>();  // Use ApplicationDbContext for Identity
 

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Build.Framework;
 using Microsoft.Build.ObjectModelRemoting;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.InteropServices;
 
@@ -18,8 +19,8 @@ namespace Graduation_Project.Controllers
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         public PharmacistController(ApplicationDbContext context, UserManager<ApplicationUser> usermanager, RoleManager<IdentityRole> rolemanager, SignInManager<ApplicationUser> signin) {
-        
-         _context = context;
+
+            _context = context;
             _userManager = usermanager;
             _roleManager = rolemanager;
             _signInManager = signin;
@@ -33,16 +34,16 @@ namespace Graduation_Project.Controllers
         {
 
             var branches = await _context.PharmacyBranch.ToListAsync();
-            var model = new RegisterVM
+            var model = new PharmacistRegister
             {
                 Branches = branches
             };
-            
+
             return View(model);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Register(RegisterVM model)
+        public async Task<IActionResult> Register(PharmacistRegister model)
         {
             if (true)
             {
@@ -83,7 +84,7 @@ namespace Graduation_Project.Controllers
                     await _signInManager.SignInAsync(user, isPersistent: false);
 
                     // Redirect to the homepage or a desired page after successful registration
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Login", "Pharmacist");
                 }
                 else
                 {
@@ -99,9 +100,43 @@ namespace Graduation_Project.Controllers
             return View(model);
         }
 
+        [HttpGet]
+        public IActionResult Login()
+        {
+            return View();
+        }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login(PharmacistLogin model)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, false);
+                if (result.Succeeded)
+                {
+                    // Redirect to the default action (e.g., Home/Index) after successful login
+                    return RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                    return View(model);
+                }
+            }
 
-        
+            // If we got this far, something failed, redisplay form
+            return View(model);
+        }
+
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Login", "Pharmacist");
+        }
 
     }
+
+
 }
+

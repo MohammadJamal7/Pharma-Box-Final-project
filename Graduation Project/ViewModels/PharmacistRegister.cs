@@ -2,7 +2,7 @@
 
 namespace Graduation_Project.ViewModels
 {
-    public class RegisterVM
+    public class PharmacistRegister
     {
 
         [Required]
