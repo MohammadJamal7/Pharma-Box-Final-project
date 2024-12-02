@@ -4,6 +4,7 @@ using Graduation_Project.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Graduation_Project.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241130135854_updatingonmodelcreate")]
+    partial class updatingonmodelcreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -587,7 +590,7 @@ namespace Graduation_Project.Migrations
             modelBuilder.Entity("Graduation_Project.Models.SupplierMedication", b =>
                 {
                     b.HasOne("ApplicationUser", "Supplier")
-                        .WithMany("SupplierMedication")
+                        .WithMany()
                         .HasForeignKey("SupplierId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -757,8 +760,6 @@ namespace Graduation_Project.Migrations
                     b.Navigation("ChatMessages");
 
                     b.Navigation("SupplierAndUserOrders");
-
-                    b.Navigation("SupplierMedication");
                 });
 #pragma warning restore 612, 618
         }

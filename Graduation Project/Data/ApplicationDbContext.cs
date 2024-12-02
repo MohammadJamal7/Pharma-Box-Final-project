@@ -33,23 +33,20 @@ namespace Graduation_Project.Data
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-
             base.OnModelCreating(builder);
 
-            // configure the one-to-one relationship between branch and inventory
+            // Configure the one-to-one relationship between branch and inventory
             builder.Entity<Branch>()
-            .HasOne(b => b.Inventory)
-            .WithOne(i => i.Branch)
-            .HasForeignKey<Inventory>(i => i.BranchId);
+                .HasOne(b => b.Inventory)
+                .WithOne(i => i.Branch)
+                .HasForeignKey<Inventory>(i => i.BranchId);
 
-
-            //builder.Entity<ApplicationUser>()
-            //.HasOne(u => u.Branch)
-            //.WithOne(b => b.adminBranch)
-            //.HasForeignKey<Branch>(b => b.BranchId);
-
-         
-
+            // Configure the relationship between ApplicationUser and Branch
+            builder.Entity<ApplicationUser>()
+                .HasOne(u => u.Branch) // Each ApplicationUser may have one Branch
+                .WithMany(b => b.suppliers) // A Branch can have many suppliers
+                .HasForeignKey(u => u.BranchId) // Foreign Key on ApplicationUser
+                .OnDelete(DeleteBehavior.SetNull); // Allow BranchId to be null for suppliers
 
             // Configure the relationship between ApplicationUser and ChatMessages
             builder.Entity<ChatMessage>()
@@ -57,8 +54,6 @@ namespace Graduation_Project.Data
                 .WithMany(u => u.ChatMessages)  // A User can have many ChatMessages
                 .HasForeignKey(c => c.SenderId)  // SenderId is the FK
                 .OnDelete(DeleteBehavior.Restrict);  // Avoid cascading deletes
-
-           
 
             builder.Entity<ChatMessage>()
                 .HasOne(c => c.Receiver)  // Each ChatMessage has one Receiver (ApplicationUser)

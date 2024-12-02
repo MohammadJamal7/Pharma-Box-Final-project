@@ -26,7 +26,7 @@ namespace Graduation_Project.ViewModels
         [Required]
         public string ?PhoneNumber { get; set; }
         [Required]
-        public int BranchId { get; set; }
+        public int ?BranchId { get; set; }
 
         public List<Branch> ?Branches { get; set; } // For dropdown
     }

@@ -19,6 +19,7 @@ namespace Graduation_Project.Controllers
             _userManager = userManager;
             _signInManager = signin;
         }
+        [Authorize(Roles = "Supplier")]
         public async Task<IActionResult> Profile()
         {
             var supplierMedications = await _context.SupplierMedications.Include(s=>s.Supplier).ToListAsync();
@@ -72,7 +73,6 @@ namespace Graduation_Project.Controllers
                 var existingUser = await _userManager.FindByEmailAsync(model.Email);
                 if (existingUser != null)
                 {
-                    // If the email already exists, add a model error
                     ModelState.AddModelError("", "This email is already in use. Please choose another one.");
                     return View(model);
                 }
@@ -84,14 +84,20 @@ namespace Graduation_Project.Controllers
                     return View(model);
                 }
 
-                // Create a new user
+                // Validate password format
+                if (!IsValidPassword(model.Password))
+                {
+                    ModelState.AddModelError("", "Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, one number, and one special character.");
+                    return View(model);
+                }
+
+                // Create a new user (for supplier)
                 var user = new ApplicationUser
                 {
                     UserName = model.Email, // Email used as username
                     Email = model.Email,
                     FullName = model.FullName,
-                    Branch = null,
-                    BranchId = null
+                    UserType = "Supplier"
                 };
 
                 // Create the user with the provided password
@@ -99,18 +105,28 @@ namespace Graduation_Project.Controllers
 
                 if (result.Succeeded)
                 {
-                    // Add the default role (e.g., Pharmacist) to the user
-                    await _userManager.AddToRoleAsync(user, "Supplier");
+                    // Assign the "Supplier" role to the user
+                    var roleResult = await _userManager.AddToRoleAsync(user, "Supplier");
+
+                    if (!roleResult.Succeeded)
+                    {
+                        // Handle any errors related to assigning the role
+                        foreach (var error in roleResult.Errors)
+                        {
+                            ModelState.AddModelError("", error.Description);
+                        }
+                        return View(model);
+                    }
 
                     // Sign the user in
                     await _signInManager.SignInAsync(user, isPersistent: false);
 
-                    // Redirect to the homepage or a desired page after successful registration
+                    // Redirect to the login page or another desired page
                     return RedirectToAction("Login", "Supplier");
                 }
                 else
                 {
-                    // Add any errors that occurred during the creation process
+                    // Handle errors during user creation
                     foreach (var error in result.Errors)
                     {
                         ModelState.AddModelError("", error.Description);
@@ -118,8 +134,21 @@ namespace Graduation_Project.Controllers
                 }
             }
 
-            // If validation failed, return the same view with validation errors
+            // Return the view if validation failed
             return View(model);
+        }
+
+        // Helper method to validate password format
+        private bool IsValidPassword(string password)
+        {
+            // Password must be at least 8 characters long, contain at least one uppercase letter,
+            // one lowercase letter, one number, and one special character.
+            var hasUpperCase = password.Any(c => char.IsUpper(c));
+            var hasLowerCase = password.Any(c => char.IsLower(c));
+            var hasDigit = password.Any(c => char.IsDigit(c));
+            var hasSpecialChar = password.Any(c => "!@#$%^&*()_+[]{}|;:,.<>?".Contains(c));
+
+            return password.Length >= 8 && hasUpperCase && hasLowerCase && hasDigit && hasSpecialChar;
         }
 
         [HttpGet]

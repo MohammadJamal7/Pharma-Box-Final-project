@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Build.Framework;
 using Microsoft.Build.ObjectModelRemoting;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.SqlServer.Query.Internal;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.InteropServices;
@@ -116,7 +117,7 @@ namespace Graduation_Project.Controllers
                 if (result.Succeeded)
                 {
                     // Redirect to the default action (e.g., Home/Index) after successful login
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("SuppliersDetails", "Pharmacist");
                 }
                 else
                 {
@@ -133,6 +134,23 @@ namespace Graduation_Project.Controllers
         {
             await _signInManager.SignOutAsync();
             return RedirectToAction("Login", "Pharmacist");
+        }
+
+
+
+        public async Task<IActionResult> SuppliersDetails()
+        {
+            var suppliers = await _userManager.Users
+                .Where(user => user.UserType == "Supplier").Include(user=>user.SupplierMedication).ToListAsync();
+            return View(suppliers);
+        }
+
+
+        public async Task<IActionResult> SupplierMedications(string id)
+        {
+            var user = await _userManager.Users.Include(user=>user.SupplierMedication).FirstOrDefaultAsync(user => user.Id == id);
+            
+            return View(user);
         }
 
     }
