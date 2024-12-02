@@ -1,7 +1,7 @@
 using Graduation_Project.Data;
-using Graduation_Project.Models; // Ensure ApplicationUser is included
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,8 +21,9 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
     .AddRoles<IdentityRole>()  // Add role management support
     .AddEntityFrameworkStores<ApplicationDbContext>();  // Use ApplicationDbContext for Identity
 
-builder.Services.AddControllersWithViews();
 
+
+// Build the app
 var app = builder.Build();
 
 // Seed roles, admin user, and default branch if needed
@@ -51,13 +52,17 @@ else
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
-app.UseRouting();
 
+
+// Enable routing and authorization
+app.UseRouting();
 app.UseAuthorization();
 
+// Configure the default route
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Supplier}/{action=Login}/{id?}");
 app.MapRazorPages();
 
+// Run the application
 app.Run();

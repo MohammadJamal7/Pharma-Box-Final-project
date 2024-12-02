@@ -1,0 +1,179 @@
+﻿@model PharmCart
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container my-5">
+        <h2 class="page-header">Your Cart</h2>
+
+        @if (Model.CartItems.Any())
+        {
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered table-hover text-center">
+                    <thead>
+                        <tr>
+                            <th scope="col">Medicine Name</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Total</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.CartItems)
+                        {
+                            <tr>
+                                <td>@item.Medication.Name</td>
+                                <td>@item.Medication.Price.ToString("C")</td>
+                                <td>
+                                    <input type="number" id="quantity-@item.Id" class="form-control"
+                                           value="@item.Quantity" min="1" max="100"
+                                           onchange="updateQuantity(@item.Id)" />
+                                </td>
+                                <td>$@(item.Medication.Price * item.Quantity)</td>
+                                <td>
+                                    <button class="btn btn-danger" onclick="removeFromCart(@item.MedicationId)">Remove</button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <button class="btn btn-success" onclick="checkout()">Checkout</button>
+                    <button class="btn btn-secondary" onclick="clearCart()">Clear Cart</button>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="alert alert-info" role="alert">
+                Your cart is empty.
+            </div>
+        }
+
+        <a onclick="Back()" class="btn btn-secondary">Back to Medicines</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function Back(){
+            window.history.back();
+        }
+        function removeFromCart(medicationId) {
+            if (confirm("Are you sure you want to remove this item from your cart?")) {
+                $.ajax({
+                    url: '/PharmCart/RemoveFromCart',
+                    type: 'POST',
+                    data: {
+                        medicationId: medicationId,
+                        __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val()
+                    },
+                    success: function (response) {
+                        if (response.success) {
+                            location.reload(); // Reload the page to reflect changes
+                        } else {
+                            alert(response.message);
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Error details:', xhr.responseText);
+                        alert("An error occurred while removing the item.");
+                    }
+                });
+            }
+        }
+
+        function updateQuantity(cartItemId) {
+            var quantity = document.getElementById('quantity-' + cartItemId).value;
+
+            if (quantity <= 0) {
+                alert("Quantity must be greater than 0.");
+                return;
+            }
+
+            $.ajax({
+                url: '/PharmCart/UpdateQuantity',
+                type: 'POST',
+                data: {
+                    cartItemId: cartItemId,
+                    quantity: quantity,
+                    __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val()
+                },
+                success: function (response) {
+                    if (response.success) {
+                        location.reload(); // Reload the page to reflect changes
+                    } else {
+                        alert(response.message);
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.error('Error details:', xhr.responseText);
+                    alert("An error occurred while updating the quantity.");
+                }
+            });
+        }
+
+        function clearCart() {
+            if (confirm("Are you sure you want to clear the entire cart?")) {
+                $.ajax({
+                    url: '/PharmCart/ClearCart',
+                    type: 'POST',
+                    data: {
+                        __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val()
+                    },
+                    success: function (response) {
+                        if (response.success) {
+                            location.reload(); // Reload the page to clear the cart
+                        } else {
+                            alert(response.message);
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Error details:', xhr.responseText);
+                        alert("An error occurred while clearing the cart.");
+                    }
+                });
+            }
+        }
+
+        function checkout() {
+            $.ajax({
+                url: '/PharmCart/Checkout',
+                type: 'POST',
+                data: {
+                    __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val()
+                },
+                success: function (response) {
+                    if (response.success) {
+                        alert("Checkout successful!");
+                        location.reload();
+                    } else {
+                        alert(response.message);
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.error('Error details:', xhr.responseText);
+                    alert("An error occurred during checkout.");
+                }
+            });
+        }
+    </script>
+    @Html.AntiForgeryToken()
+</body>
+</html>

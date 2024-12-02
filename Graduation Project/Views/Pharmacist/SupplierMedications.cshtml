@@ -9,61 +9,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@Model.FullName's Medicines</title>
+    <title>Medicines for Supplier</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f9fa;
-        }
-
-        .medicine-table th {
-            background-color: #6a1b9a;
-            color: white;
-        }
-
-        .medicine-table tbody tr:nth-child(odd) {
-            background-color: #f4f4f4;
-        }
-
-        .medicine-table tbody tr:nth-child(even) {
-            background-color: #ffffff;
-        }
-
-        .btn-custom {
-            background-color: #6a1b9a;
-            color: white;
-        }
-
-            .btn-custom:hover {
-                background-color: #4a0e63;
-                color: white;
-            }
-
-        .page-header {
-            color: #6a1b9a;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .quantity-controls {
-            display: flex;
-            align-items: center;
-        }
-
-            .quantity-controls button {
-                margin: 0 5px;
-            }
-
-        .cart-button {
-            background-color: #28a745;
-            color: white;
-        }
-
-            .cart-button:hover {
-                background-color: #218838;
-            }
-    </style>
 </head>
 <body>
 
@@ -73,42 +20,31 @@
         <div class="row">
             <div class="col-12">
                 <div class="table-responsive">
-                    <table class="table table-striped table-bordered table-hover medicine-table">
+                    <table class="table table-striped table-bordered table-hover text-center">
                         <thead>
                             <tr>
                                 <th scope="col">Medicine Name</th>
-                                <th scope="col">Quantity</th>
+                                <th scope="col">In Stock</th>
                                 <th scope="col">Price</th>
                                 <th scope="col">Expiration Date</th>
+                                <th scope="col">Quantity</th>
                                 <th scope="col">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @if (Model.SupplierMedication != null && Model.SupplierMedication.Any())
-                            {
-                                foreach (var medication in Model.SupplierMedication)
-                                {
-                                    <tr>
-                                        <td>@medication.Name</td>
-                                        <td>
-                                            <div class="quantity-controls">
-                                                <button class="btn btn-outline-secondary" onclick="updateQuantity('@medication.SupplierMedicationId', -1)">-</button>
-                                                <span id="quantity-@medication.SupplierMedicationId">@medication.StockQuantity</span>
-                                                <button class="btn btn-outline-secondary" onclick="updateQuantity('@medication.SupplierMedicationId', 1)">+</button>
-                                            </div>
-                                        </td>
-                                        <td>@medication.Price.ToString("C")</td>
-                                        <td>@medication.ExpiryDate</td>
-                                        <td>
-                                            <button class="btn btn-custom btn-sm" onclick="addToCart('@medication.SupplierMedicationId')">Add to Cart</button>
-                                        </td>
-                                    </tr>
-                                }
-                            }
-                            else
+                            @foreach (var medication in Model.SupplierMedication)
                             {
                                 <tr>
-                                    <td colspan="5" class="text-center">No medications found for this supplier.</td>
+                                    <td>@medication.Name</td>
+                                    <td>@medication.StockQuantity</td>
+                                    <td>@medication.Price.ToString("C")</td>
+                                    <td>@medication.ExpiryDate</td>
+                                    <td>
+                                        <input type="number" id="quantity-@medication.SupplierMedicationId" class="form-control" min="1" max="@medication.StockQuantity" value="1" />
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-primary" onclick="addToCart('@medication.SupplierMedicationId', '@medication.SupplierId', '@medication.Name')">Add to Cart</button>
+                                    </td>
                                 </tr>
                             }
                         </tbody>
@@ -120,51 +56,76 @@
         <div class="row mt-4">
             <div class="col-12 text-center">
                 <a href="@Url.Action("SuppliersDetails", "Pharmacist")" class="btn btn-secondary">Back to Supplier List</a>
+                <a href="@Url.Action("Index", "PharmCart")" class="btn btn-success">Go to Cart</a>
             </div>
         </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        // Update quantity of medication based on user action
-        function updateQuantity(medicationId, change) {
-            var quantityElement = document.getElementById('quantity-' + medicationId);
-            var currentQuantity = parseInt(quantityElement.innerText);
-            var newQuantity = currentQuantity + change;
+        function addToCart(medicationId, supplierId, medicationName) {
+            let quantityInput = document.getElementById(`quantity-${medicationId}`);
+            let quantity = quantityInput ? parseInt(quantityInput.value) : 1;
 
-            if (newQuantity >= 0) {
-                quantityElement.innerText = newQuantity;
+            // Validate quantity
+            if (quantity <= 0) {
+                alert("Quantity must be greater than 0.");
+                return;
             }
-        }
 
-        // Add medication to cart (AJAX request to server)
-        function addToCart(medicationId) {
-            var quantityElement = document.getElementById('quantity-' + medicationId);
-            var quantity = parseInt(quantityElement.innerText);
-
-            if (quantity > 0) {
-                // Assuming you have a cart model and action to handle this
-                fetch('@Url.Action("AddToCart", "Cart")', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ medicationId: medicationId, quantity: quantity })
-                })
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.success) {
-                            alert('Medication added to cart!');
-                        } else {
-                            alert('Failed to add medication to cart.');
+            $.ajax({
+                url: '/PharmCart/AddToCart',
+                type: 'POST',
+                data: {
+                    medicationId: medicationId,
+                    quantity: quantity,
+                    supplierId: supplierId,
+                    __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val()
+                },
+                success: function (response) {
+                    if (response.success) {
+                        alert(`${quantity} of "${medicationName}" added to your cart.`);
+                        // Optional: Update cart display or trigger cart refresh
+                    } else if (response.needsConfirmation) {
+                        // Prompt user to clear existing cart
+                        if (confirm(response.message)) {
+                            // If user confirms, clear cart and add new item
+                            $.ajax({
+                                url: '/PharmCart/ClearCartAndChangeSupplier',
+                                type: 'POST',
+                                data: {
+                                    medicationId: medicationId,
+                                    quantity: quantity,
+                                    supplierId: supplierId,
+                                    __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val()
+                                },
+                                success: function (clearResponse) {
+                                    if (clearResponse.success) {
+                                        alert(`${quantity} of "${medicationName}" added to your cart after clearing previous items.`);
+                                        // Optional: Update cart display or trigger cart refresh
+                                    } else {
+                                        alert(clearResponse.message || "Failed to clear cart and add item.");
+                                    }
+                                },
+                                error: function (xhr, status, error) {
+                                    console.error('Error clearing cart:', error);
+                                    alert("An error occurred while clearing the cart.");
+                                }
+                            });
                         }
-                    });
-            } else {
-                alert('Please select a valid quantity.');
-            }
+                    } else {
+                        alert(response.message || "Failed to add item to cart");
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.error('Error:', error);
+                    alert("An error occurred while adding the item to the cart.");
+                }
+            });
         }
     </script>
-
+    @Html.AntiForgeryToken()
 </body>
 </html>

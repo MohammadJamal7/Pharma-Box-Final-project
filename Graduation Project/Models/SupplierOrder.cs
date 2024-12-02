@@ -27,11 +27,11 @@ public class SupplierOrderItem
 
     // relationships :
 
-    public int SupplierOrderId { get; set; }
+    public int? SupplierOrderId { get; set; }
     [ForeignKey("SupplierOrderId")]
     public SupplierOrder SupplierOrder { get; set; }
 
-    public int SupplierMedicationId { get; set; }
+    public int? SupplierMedicationId { get; set; }
     [ForeignKey("SupplierMedicationId")]
     public SupplierMedication SupplierMedication { get; set; }
 }

@@ -142,6 +142,7 @@ namespace Graduation_Project.Controllers
         {
             var suppliers = await _userManager.Users
                 .Where(user => user.UserType == "Supplier").Include(user=>user.SupplierMedication).ToListAsync();
+            Console.Write(suppliers);
             return View(suppliers);
         }
 

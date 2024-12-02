@@ -4,6 +4,7 @@ using Graduation_Project.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Graduation_Project.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241202172649_addingcartforpharmaacist")]
+    partial class addingcartforpharmaacist
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -234,6 +237,7 @@ namespace Graduation_Project.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("SupplierId")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
@@ -544,10 +548,10 @@ namespace Graduation_Project.Migrations
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.Property<int?>("SupplierMedicationId")
+                    b.Property<int>("SupplierMedicationId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("SupplierOrderId")
+                    b.Property<int>("SupplierOrderId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -769,11 +773,15 @@ namespace Graduation_Project.Migrations
                 {
                     b.HasOne("Graduation_Project.Models.SupplierMedication", "SupplierMedication")
                         .WithMany()
-                        .HasForeignKey("SupplierMedicationId");
+                        .HasForeignKey("SupplierMedicationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("SupplierOrder", "SupplierOrder")
                         .WithMany("SupplierOrderItems")
-                        .HasForeignKey("SupplierOrderId");
+                        .HasForeignKey("SupplierOrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("SupplierMedication");
 
