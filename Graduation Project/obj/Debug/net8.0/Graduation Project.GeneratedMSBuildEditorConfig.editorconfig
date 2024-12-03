@@ -17,99 +17,103 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Graduation_Project
 build_property.RootNamespace = Graduation_Project
-build_property.ProjectDir = C:\Users\pc\Desktop\.Net projs\FinalProject\Graduation Project\
+build_property.ProjectDir = C:\Users\USER\Desktop\Uni\Graduation\Graduation Project\Graduation Project\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\pc\Desktop\.Net projs\FinalProject\Graduation Project
+build_property.MSBuildProjectDirectory = C:\Users\USER\Desktop\Uni\Graduation\Graduation Project\Graduation Project
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/pc/Desktop/.Net projs/FinalProject/Graduation Project/Areas/Identity/Pages/Account/Login.cshtml]
+[C:/Users/USER/Desktop/Uni/Graduation/Graduation Project/Graduation Project/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pc/Desktop/.Net projs/FinalProject/Graduation Project/Areas/Identity/Pages/Account/Logout.cshtml]
+[C:/Users/USER/Desktop/Uni/Graduation/Graduation Project/Graduation Project/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pc/Desktop/.Net projs/FinalProject/Graduation Project/Areas/Identity/Pages/Account/Register.cshtml]
+[C:/Users/USER/Desktop/Uni/Graduation/Graduation Project/Graduation Project/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pc/Desktop/.Net projs/FinalProject/Graduation Project/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[C:/Users/USER/Desktop/Uni/Graduation/Graduation Project/Graduation Project/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pc/Desktop/.Net projs/FinalProject/Graduation Project/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[C:/Users/USER/Desktop/Uni/Graduation/Graduation Project/Graduation Project/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pc/Desktop/.Net projs/FinalProject/Graduation Project/Areas/Identity/Pages/_ViewImports.cshtml]
+[C:/Users/USER/Desktop/Uni/Graduation/Graduation Project/Graduation Project/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pc/Desktop/.Net projs/FinalProject/Graduation Project/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/USER/Desktop/Uni/Graduation/Graduation Project/Graduation Project/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pc/Desktop/.Net projs/FinalProject/Graduation Project/Views/Pharmacist/Login.cshtml]
+[C:/Users/USER/Desktop/Uni/Graduation/Graduation Project/Graduation Project/Views/Pharmacist/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhhcm1hY2lzdFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pc/Desktop/.Net projs/FinalProject/Graduation Project/Views/Pharmacist/Register.cshtml]
+[C:/Users/USER/Desktop/Uni/Graduation/Graduation Project/Graduation Project/Views/Pharmacist/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhhcm1hY2lzdFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pc/Desktop/.Net projs/FinalProject/Graduation Project/Views/Pharmacist/SupplierDetails.cshtml]
+[C:/Users/USER/Desktop/Uni/Graduation/Graduation Project/Graduation Project/Views/Pharmacist/SupplierDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhhcm1hY2lzdFxTdXBwbGllckRldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pc/Desktop/.Net projs/FinalProject/Graduation Project/Views/Pharmacist/SupplierMedications.cshtml]
+[C:/Users/USER/Desktop/Uni/Graduation/Graduation Project/Graduation Project/Views/Pharmacist/SupplierMedications.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhhcm1hY2lzdFxTdXBwbGllck1lZGljYXRpb25zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pc/Desktop/.Net projs/FinalProject/Graduation Project/Views/Pharmacist/SuppliersDetails.cshtml]
+[C:/Users/USER/Desktop/Uni/Graduation/Graduation Project/Graduation Project/Views/Pharmacist/SuppliersDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhhcm1hY2lzdFxTdXBwbGllcnNEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pc/Desktop/.Net projs/FinalProject/Graduation Project/Views/Shared/Error.cshtml]
+[C:/Users/USER/Desktop/Uni/Graduation/Graduation Project/Graduation Project/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pc/Desktop/.Net projs/FinalProject/Graduation Project/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/USER/Desktop/Uni/Graduation/Graduation Project/Graduation Project/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pc/Desktop/.Net projs/FinalProject/Graduation Project/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/USER/Desktop/Uni/Graduation/Graduation Project/Graduation Project/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pc/Desktop/.Net projs/FinalProject/Graduation Project/Views/Supplier/Create.cshtml]
+[C:/Users/USER/Desktop/Uni/Graduation/Graduation Project/Graduation Project/Views/Supplier/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pc/Desktop/.Net projs/FinalProject/Graduation Project/Views/Supplier/Login.cshtml]
+[C:/Users/USER/Desktop/Uni/Graduation/Graduation Project/Graduation Project/Views/Supplier/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/Uni/Graduation/Graduation Project/Graduation Project/Views/Supplier/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pc/Desktop/.Net projs/FinalProject/Graduation Project/Views/Supplier/Profile.cshtml]
+[C:/Users/USER/Desktop/Uni/Graduation/Graduation Project/Graduation Project/Views/Supplier/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcUHJvZmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pc/Desktop/.Net projs/FinalProject/Graduation Project/Views/Supplier/Register.cshtml]
+[C:/Users/USER/Desktop/Uni/Graduation/Graduation Project/Graduation Project/Views/Supplier/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pc/Desktop/.Net projs/FinalProject/Graduation Project/Views/_ViewImports.cshtml]
+[C:/Users/USER/Desktop/Uni/Graduation/Graduation Project/Graduation Project/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pc/Desktop/.Net projs/FinalProject/Graduation Project/Views/_ViewStart.cshtml]
+[C:/Users/USER/Desktop/Uni/Graduation/Graduation Project/Graduation Project/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/pc/Desktop/.Net projs/FinalProject/Graduation Project/Views/Shared/_Layout.cshtml]
+[C:/Users/USER/Desktop/Uni/Graduation/Graduation Project/Graduation Project/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-e1cqen20uj

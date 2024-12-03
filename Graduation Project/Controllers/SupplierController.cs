@@ -20,9 +20,9 @@ namespace Graduation_Project.Controllers
             _signInManager = signin;
         }
         [Authorize(Roles = "Supplier")]
-        public async Task<IActionResult> Profile()
+        public async Task<IActionResult> Profile(string id)
         {
-            var supplierMedications = await _context.SupplierMedications.Include(s=>s.Supplier).ToListAsync();
+            var supplierMedications = await _context.SupplierMedications.Include(s=>s.Supplier).Where(s => s.SupplierId == id).ToListAsync();
             return View(supplierMedications);
         }
         [HttpGet]
@@ -49,11 +49,64 @@ namespace Graduation_Project.Controllers
                 _context.Add(supplierMedication);
                 await _context.SaveChangesAsync();
 
-                // Redirect to a success page or the list of supplier medicines
-                return RedirectToAction(nameof(Profile));  // Adjust to appropriate action
-            
+            // Redirect to a success page or the list of supplier medicines
+            return RedirectToAction("Profile", "Supplier", new { id = supplier.Id });
 
+
+        }
+        [HttpGet]
+        public async Task <IActionResult> Edit(int id)
+        {
+            var currentUser = await _userManager.GetUserAsync(User);
+            // Retrieve the medicine to edit based on the id
+            var medicineToEdit = _context.SupplierMedications
+                                         .FirstOrDefault(m => m.SupplierMedicationId == id);
            
+            return View(medicineToEdit);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id,SupplierMedication model)
+        {
+            var currentUser = await _userManager.GetUserAsync(User);
+            var existingMedication = await _context.SupplierMedications
+            .FirstOrDefaultAsync(m => m.SupplierMedicationId == id && m.SupplierId == currentUser.Id);
+
+                // Update the existing medication properties
+                existingMedication.Name = model.Name;
+                existingMedication.ExpiryDate = model.ExpiryDate;
+                existingMedication.Price = model.Price;
+                existingMedication.StockQuantity = model.StockQuantity;
+            
+                _context.Update(existingMedication);
+                await _context.SaveChangesAsync();
+            
+            return RedirectToAction("Profile", "Supplier", new { id = currentUser.Id });
+
+        }
+
+        public async Task<IActionResult> Delete(int id)
+        {
+            var currentUser = await _userManager.GetUserAsync(User);
+
+            // Fetch the existing medication record from the database
+            var medicationToDelete = await _context.SupplierMedications
+                .FirstOrDefaultAsync(m => m.SupplierMedicationId == id && m.SupplierId == currentUser.Id);
+
+            if (medicationToDelete == null)
+            {
+                // Handle the case when the medication is not found (optional)
+                return NotFound();
+            }
+
+            // Remove the medication from the context
+            _context.SupplierMedications.Remove(medicationToDelete);
+
+            // Save changes to the database
+            await _context.SaveChangesAsync();
+
+            // Redirect to the supplier profile
+            return RedirectToAction("Profile", "Supplier", new { id = currentUser.Id });
         }
 
 
@@ -166,8 +219,10 @@ namespace Graduation_Project.Controllers
                 var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, false);
                 if (result.Succeeded)
                 {
+                    var curretnSupplier = await _userManager.FindByEmailAsync(model.Email);  // Retrieve supplier ID
+
                     // Redirect to the default action (e.g., Home/Index) after successful login
-                    return RedirectToAction("Profile", "Supplier");
+                    return RedirectToAction("Profile", "Supplier", new { id = curretnSupplier.Id });
                 }
                 else
                 {
