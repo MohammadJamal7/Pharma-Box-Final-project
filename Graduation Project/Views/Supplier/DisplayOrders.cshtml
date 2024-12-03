@@ -1,0 +1,49 @@
+﻿@model IEnumerable<SupplierOrderViewModel>
+
+@{
+    ViewData["Title"] = "Supplier Orders";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+@if (Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Order Date</th>
+                <th>Pharmacist</th>
+                <th>Branch</th>
+                <th>Items</th>
+                <th>Total</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model)
+            {
+                <tr>
+                    <td>@order.OrderId</td>
+                    <td>@order.OrderDate.ToString("MM/dd/yyyy")</td>
+                    <td>@order.PharmacistName</td>
+                    <td>@order.BranchName</td>
+                    <td>
+                        <ul>
+                            @foreach (var item in order.OrderItems)
+                            {
+                                <li>@item.MedicationName - @item.Quantity x @item.Price</li>
+                            }
+                        </ul>
+                    </td>
+                    <td>@order.OrderItems.Sum(item => item.Total):C2</td>
+                    <td>@order.orderStatus</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No orders found.</p>
+}

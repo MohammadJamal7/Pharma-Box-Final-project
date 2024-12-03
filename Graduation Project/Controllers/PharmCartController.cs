@@ -186,8 +186,11 @@ namespace Graduation_Project.Controllers
                 return Json(new { success = false, message = "User not authenticated." });
             }
 
+            var currentUser = _context.Users.Include(b => b.Branch).FirstOrDefault(u => u.Id == userId);
+
             var cart = await _context.PharmCarts
                 .Include(c => c.CartItems)
+                .ThenInclude(ci => ci.Medication)  // Include the Medication data in CartItems
                 .FirstOrDefaultAsync(c => c.UserId == userId);
 
             if (cart == null || !cart.CartItems.Any())
@@ -195,7 +198,33 @@ namespace Graduation_Project.Controllers
                 return Json(new { success = false, message = "Your cart is empty." });
             }
 
-            // Process the checkout (create order or other logic)
+            // Create the SupplierOrder
+            var pharmacistOrder = new SupplierOrder
+            {
+                Pharmacist = cart.User,
+                PharmacistId = cart.UserId,
+                supplierId = cart.SupplierId,
+                orderStatus = "Pending",
+                OrderDate = DateTime.Now,
+                Branch = currentUser.Branch,
+                SupplierOrderItems = new List<SupplierOrderItem>()  // Initialize the list of order items
+            };
+
+            // Iterate through the CartItems and create SupplierOrderItems
+            foreach (var cartItem in cart.CartItems)
+            {
+                var orderItem = new SupplierOrderItem
+                {
+                    Quantity = cartItem.Quantity,
+                    Price = cartItem.Medication.Price, // Assuming you have a Price property on SupplierMedication
+                    SupplierMedicationId = cartItem.Medication.SupplierMedicationId,
+                };
+
+                pharmacistOrder.SupplierOrderItems.Add(orderItem);
+            }
+
+            // Add the order to the database
+            _context.SupplierOrders.Add(pharmacistOrder);
 
             // Clear the cart after successful checkout
             cart.CartItems.Clear();
