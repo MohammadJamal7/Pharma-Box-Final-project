@@ -18,7 +18,7 @@
                 <th>Price</th>
                 <th>Stock Quantity</th>
                 <th>Expiry Date</th>
-                
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -29,7 +29,10 @@
                     <td>@item.Price</td>
                     <td>@item.StockQuantity</td>
                     <td>@item.ExpiryDate.ToShortDateString()</td>
-                   
+                   <td>
+                        <a class="btn btn-secondary" asp-action="Edit" asp-controller="Supplier" asp-route-id="@item.SupplierMedicationId">Edit</a>
+                        <a class="btn btn-secondary" asp-action="Delete" asp-controller="Supplier" asp-route-id="@item.SupplierMedicationId">Delete</a>
+                    </td>
                 </tr>
             }
         </tbody>

@@ -1,0 +1,29 @@
+﻿@model Graduation_Project.Models.SupplierMedication
+
+@{
+    ViewData["Title"] = "Updating Medicine";
+}
+
+<form asp-action="Edit" asp-controller="Supplier" method="post">
+    <div class="form-group">
+        <label for="Name">Medicine Name</label>
+        <input asp-for="Name" type="text" class="form-control" id="Name" name="Name" value="@Model.Name" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Price">Price</label>
+        <input asp-for="Price" type="number" class="form-control" id="Price" name="Price" step="0.01" value="@Model.Price" required />
+    </div>
+
+    <div class="form-group">
+        <label for="StockQuantity">Stock Quantity</label>
+        <input asp-for="StockQuantity" type="number" class="form-control" id="StockQuantity" name="StockQuantity" value="@Model.StockQuantity" required />
+    </div>
+
+    <div class="form-group">
+        <label for="ExpiryDate">Expiry Date</label>
+        <input asp-for="ExpiryDate" type="date" class="form-control" id="ExpiryDate" name="ExpiryDate" value="@Model.ExpiryDate.ToString("yyyy-MM-dd")" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update Medicine</button>
+</form>
