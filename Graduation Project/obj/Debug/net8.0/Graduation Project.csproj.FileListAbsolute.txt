@@ -636,3 +636,7 @@ C:\Users\pc\Desktop\.Net projs\FinalProject\Graduation Project\obj\Debug\net8.0\
 C:\Users\pc\Desktop\.Net projs\FinalProject\Graduation Project\obj\Debug\net8.0\Graduation Project.pdb
 C:\Users\pc\Desktop\.Net projs\FinalProject\Graduation Project\obj\Debug\net8.0\Graduation Project.genruntimeconfig.cache
 C:\Users\pc\Desktop\.Net projs\FinalProject\Graduation Project\obj\Debug\net8.0\ref\Graduation Project.dll
+C:\Users\pc\Desktop\.Net projs\FinalProject\Graduation Project\bin\Debug\net8.0\Graduation Project.staticwebassets.endpoints.json
+C:\Users\pc\Desktop\.Net projs\FinalProject\Graduation Project\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\pc\Desktop\.Net projs\FinalProject\Graduation Project\obj\Debug\net8.0\staticwebassets\msbuild.Graduation Project.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\pc\Desktop\.Net projs\FinalProject\Graduation Project\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

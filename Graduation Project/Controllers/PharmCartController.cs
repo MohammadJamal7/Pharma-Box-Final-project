@@ -209,7 +209,7 @@ namespace Graduation_Project.Controllers
                 Branch = currentUser.Branch,
                 SupplierOrderItems = new List<SupplierOrderItem>()  // Initialize the list of order items
             };
-
+            Console.WriteLine(pharmacistOrder);
             // Iterate through the CartItems and create SupplierOrderItems
             foreach (var cartItem in cart.CartItems)
             {

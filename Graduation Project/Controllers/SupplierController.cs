@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.SqlServer.Query.Internal;
+using Microsoft.Identity.Client;
 
 namespace Graduation_Project.Controllers
 {
@@ -256,7 +258,7 @@ namespace Graduation_Project.Controllers
                 OrderId = order.Id,
                 OrderDate = order.OrderDate,
                 orderStatus = order.orderStatus,
-                PharmacistName = order.Pharmacist.UserName, // Assuming UserName contains the pharmacist name
+                PharmacistName = order.Pharmacist.FullName, // Assuming UserName contains the pharmacist name
                 BranchName = order.Branch.Name,  // Assuming Branch has a Name property
                 OrderItems = order.SupplierOrderItems.Select(item => new OrderItemViewModel
                 {
@@ -268,6 +270,54 @@ namespace Graduation_Project.Controllers
 
             return View(orderViewModels);
         }
+
+        public async Task<IActionResult> AcceptOrder(int id)
+        {
+            var user = await _context.Users
+                                     .Include(u => u.SupplierMedication)
+                                     .FirstOrDefaultAsync(u => u.UserName == User.Identity.Name);
+
+            var order = await _context.SupplierOrders
+                                       .Include(o => o.SupplierOrderItems)
+                                       .FirstOrDefaultAsync(o => o.Id == id);
+
+            if (user == null || order == null)
+            {
+                return NotFound();
+            }
+
+            order.orderStatus = "Confirmed"; // Update order status to Confirmed
+            var userMedications = user.SupplierMedication.ToList();
+            var orderMedications = order.SupplierOrderItems.ToList();
+
+            // Update medications
+            foreach (var orderItem in orderMedications)
+            {
+                var userMedication = userMedications.FirstOrDefault(med => med.SupplierMedicationId == orderItem.SupplierMedicationId);
+
+                if (userMedication != null)
+                {
+                    userMedication.StockQuantity -= orderItem.Quantity;
+
+                    if (userMedication.StockQuantity < 0)
+                    {
+                        ModelState.AddModelError("", $"Not enough stock for {userMedication.Name}. Available: {userMedication.StockQuantity}, Required: {orderItem.Quantity}");
+                        return Json(new { success = false, message = "Not enough stock." });
+                    }
+
+                    _context.Update(userMedication); // Mark medication as updated
+                }
+            }
+
+            _context.Update(order); // Mark order as updated
+            await _context.SaveChangesAsync(); // Save all changes
+
+            // Return JSON data with the updated order status
+            return Json(new { success = true, orderId = order.Id, orderStatus = order.orderStatus });
+        }
+
+
+
     }
-    
+
 }
