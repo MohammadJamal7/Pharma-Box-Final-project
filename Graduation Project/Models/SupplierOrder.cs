@@ -5,8 +5,8 @@ public class SupplierOrder
 {
     public int Id { get; set; }
     public DateTime OrderDate { get; set; }
-
-
+    public string supplierId { get; set; }
+    public string orderStatus { get; set; }
     // relationships :
     public string PharmacistId { get; set; }  // Foreign Key to ApplicationUser
     [ForeignKey("PharmacistId")]

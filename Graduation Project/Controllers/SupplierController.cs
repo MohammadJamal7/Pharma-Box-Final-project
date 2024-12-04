@@ -20,9 +20,9 @@ namespace Graduation_Project.Controllers
             _signInManager = signin;
         }
         [Authorize(Roles = "Supplier")]
-        public async Task<IActionResult> Profile()
+        public async Task<IActionResult> Profile(string id)
         {
-            var supplierMedications = await _context.SupplierMedications.Include(s=>s.Supplier).ToListAsync();
+            var supplierMedications = await _context.SupplierMedications.Include(s=>s.Supplier).Where(s => s.SupplierId == id).ToListAsync();
             return View(supplierMedications);
         }
         [HttpGet]
@@ -49,11 +49,64 @@ namespace Graduation_Project.Controllers
                 _context.Add(supplierMedication);
                 await _context.SaveChangesAsync();
 
-                // Redirect to a success page or the list of supplier medicines
-                return RedirectToAction(nameof(Profile));  // Adjust to appropriate action
-            
+            // Redirect to a success page or the list of supplier medicines
+            return RedirectToAction("Profile", "Supplier", new { id = supplier.Id });
 
+
+        }
+        [HttpGet]
+        public async Task <IActionResult> Edit(int id)
+        {
+            var currentUser = await _userManager.GetUserAsync(User);
+            // Retrieve the medicine to edit based on the id
+            var medicineToEdit = _context.SupplierMedications
+                                         .FirstOrDefault(m => m.SupplierMedicationId == id);
            
+            return View(medicineToEdit);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id,SupplierMedication model)
+        {
+            var currentUser = await _userManager.GetUserAsync(User);
+            var existingMedication = await _context.SupplierMedications
+            .FirstOrDefaultAsync(m => m.SupplierMedicationId == id && m.SupplierId == currentUser.Id);
+
+                // Update the existing medication properties
+                existingMedication.Name = model.Name;
+                existingMedication.ExpiryDate = model.ExpiryDate;
+                existingMedication.Price = model.Price;
+                existingMedication.StockQuantity = model.StockQuantity;
+            
+                _context.Update(existingMedication);
+                await _context.SaveChangesAsync();
+            
+            return RedirectToAction("Profile", "Supplier", new { id = currentUser.Id });
+
+        }
+
+        public async Task<IActionResult> Delete(int id)
+        {
+            var currentUser = await _userManager.GetUserAsync(User);
+
+            // Fetch the existing medication record from the database
+            var medicationToDelete = await _context.SupplierMedications
+                .FirstOrDefaultAsync(m => m.SupplierMedicationId == id && m.SupplierId == currentUser.Id);
+
+            if (medicationToDelete == null)
+            {
+                // Handle the case when the medication is not found (optional)
+                return NotFound();
+            }
+
+            // Remove the medication from the context
+            _context.SupplierMedications.Remove(medicationToDelete);
+
+            // Save changes to the database
+            await _context.SaveChangesAsync();
+
+            // Redirect to the supplier profile
+            return RedirectToAction("Profile", "Supplier", new { id = currentUser.Id });
         }
 
 
@@ -166,8 +219,10 @@ namespace Graduation_Project.Controllers
                 var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, false);
                 if (result.Succeeded)
                 {
+                    var curretnSupplier = await _userManager.FindByEmailAsync(model.Email);  // Retrieve supplier ID
+
                     // Redirect to the default action (e.g., Home/Index) after successful login
-                    return RedirectToAction("Profile", "Supplier");
+                    return RedirectToAction("Profile", "Supplier", new { id = curretnSupplier.Id });
                 }
                 else
                 {
@@ -185,5 +240,34 @@ namespace Graduation_Project.Controllers
             await _signInManager.SignOutAsync();
             return RedirectToAction("Login", "Supplier");
         }
+
+        // GET: /Supplier/Orders
+        public async Task<IActionResult> DisplayOrders()
+        {
+            var supplierOrders = await _context.SupplierOrders
+          .Include(o => o.Pharmacist)  // Include the Pharmacist (ApplicationUser) to get the name
+          .Include(o => o.Branch)  // Include the Branch to get the branch name
+          .Include(o => o.SupplierOrderItems)
+              .ThenInclude(oi => oi.SupplierMedication) // Include Medication to get the name and price
+          .ToListAsync();
+
+            var orderViewModels = supplierOrders.Select(order => new SupplierOrderViewModel
+            {
+                OrderId = order.Id,
+                OrderDate = order.OrderDate,
+                orderStatus = order.orderStatus,
+                PharmacistName = order.Pharmacist.UserName, // Assuming UserName contains the pharmacist name
+                BranchName = order.Branch.Name,  // Assuming Branch has a Name property
+                OrderItems = order.SupplierOrderItems.Select(item => new OrderItemViewModel
+                {
+                    MedicationName = item.SupplierMedication.Name, // Assuming Name is a property of SupplierMedication
+                    Quantity = item.Quantity,
+                    Price = item.Price
+                }).ToList()
+            }).ToList();
+
+            return View(orderViewModels);
+        }
     }
+    
 }

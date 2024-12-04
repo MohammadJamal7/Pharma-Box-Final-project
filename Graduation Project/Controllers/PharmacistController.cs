@@ -63,14 +63,16 @@ namespace Graduation_Project.Controllers
                     ModelState.AddModelError("", "Passwords do not match.");
                     return View(model);
                 }
-
+                var currentBranch = _context.PharmacyBranch.FirstOrDefault(b => b.BranchId == model.BranchId);
                 // Create a new user
                 var user = new ApplicationUser
                 {
                     UserName = model.Email, // Email used as username
                     Email = model.Email,
                     FullName = model.FullName,
-                    BranchId = model.BranchId
+                    Branch = currentBranch,
+                    BranchId = model.BranchId,
+                    UserType = "Pharmacist"
                 };
 
                 // Create the user with the provided password
