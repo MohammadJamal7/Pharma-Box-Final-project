@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Graduation_Project.Migrations
 {
     /// <inheritdoc />
-    public partial class updatingDatabase : Migration
+    public partial class first : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -23,6 +23,20 @@ namespace Graduation_Project.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetRoles", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "groupMedicines",
+                columns: table => new
+                {
+                    GroupMedicineId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_groupMedicines", x => x.GroupMedicineId);
                 });
 
             migrationBuilder.CreateTable(
@@ -65,10 +79,9 @@ namespace Graduation_Project.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Discriminator = table.Column<string>(type: "nvarchar(21)", maxLength: 21, nullable: false),
-                    FullName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    FullName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Address = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UserType = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UserType = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     BranchId = table.Column<int>(type: "int", nullable: true),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -92,7 +105,8 @@ namespace Graduation_Project.Migrations
                         name: "FK_AspNetUsers_PharmacyBranch_BranchId",
                         column: x => x.BranchId,
                         principalTable: "PharmacyBranch",
-                        principalColumn: "BranchId");
+                        principalColumn: "BranchId",
+                        onDelete: ReferentialAction.SetNull);
                 });
 
             migrationBuilder.CreateTable(
@@ -260,6 +274,26 @@ namespace Graduation_Project.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "PharmCarts",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    SupplierId = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PharmCarts", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_PharmCarts_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "SupplierMedications",
                 columns: table => new
                 {
@@ -289,6 +323,8 @@ namespace Graduation_Project.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     OrderDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    supplierId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    orderStatus = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PharmacistId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     BranchId = table.Column<int>(type: "int", nullable: false)
                 },
@@ -320,7 +356,8 @@ namespace Graduation_Project.Migrations
                     ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ExpiryDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     InventoryId = table.Column<int>(type: "int", nullable: true),
-                    SupplierMedicationId = table.Column<int>(type: "int", nullable: false)
+                    SupplierMedicationId = table.Column<int>(type: "int", nullable: false),
+                    GroupMedicineId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -336,6 +373,38 @@ namespace Graduation_Project.Migrations
                         principalTable: "SupplierMedications",
                         principalColumn: "SupplierMedicationId",
                         onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Medicines_groupMedicines_GroupMedicineId",
+                        column: x => x.GroupMedicineId,
+                        principalTable: "groupMedicines",
+                        principalColumn: "GroupMedicineId");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "PharmCartItems",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    MedicationId = table.Column<int>(type: "int", nullable: false),
+                    Quantity = table.Column<int>(type: "int", nullable: false),
+                    PharmCartId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PharmCartItems", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_PharmCartItems_PharmCarts_PharmCartId",
+                        column: x => x.PharmCartId,
+                        principalTable: "PharmCarts",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_PharmCartItems_SupplierMedications_MedicationId",
+                        column: x => x.MedicationId,
+                        principalTable: "SupplierMedications",
+                        principalColumn: "SupplierMedicationId",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -346,8 +415,8 @@ namespace Graduation_Project.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Quantity = table.Column<int>(type: "int", nullable: false),
                     Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    SupplierOrderId = table.Column<int>(type: "int", nullable: false),
-                    SupplierMedicationId = table.Column<int>(type: "int", nullable: false)
+                    SupplierOrderId = table.Column<int>(type: "int", nullable: true),
+                    SupplierMedicationId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -356,14 +425,12 @@ namespace Graduation_Project.Migrations
                         name: "FK_SupplierOrderItems_SupplierMedications_SupplierMedicationId",
                         column: x => x.SupplierMedicationId,
                         principalTable: "SupplierMedications",
-                        principalColumn: "SupplierMedicationId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "SupplierMedicationId");
                     table.ForeignKey(
                         name: "FK_SupplierOrderItems_SupplierOrders_SupplierOrderId",
                         column: x => x.SupplierOrderId,
                         principalTable: "SupplierOrders",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -455,6 +522,11 @@ namespace Graduation_Project.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
+                name: "IX_Medicines_GroupMedicineId",
+                table: "Medicines",
+                column: "GroupMedicineId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Medicines_InventoryId",
                 table: "Medicines",
                 column: "InventoryId");
@@ -482,6 +554,21 @@ namespace Graduation_Project.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_Orders_UserId",
                 table: "Orders",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_PharmCartItems_MedicationId",
+                table: "PharmCartItems",
+                column: "MedicationId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_PharmCartItems_PharmCartId",
+                table: "PharmCartItems",
+                column: "PharmCartId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_PharmCarts_UserId",
+                table: "PharmCarts",
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
@@ -535,6 +622,9 @@ namespace Graduation_Project.Migrations
                 name: "OrderItems");
 
             migrationBuilder.DropTable(
+                name: "PharmCartItems");
+
+            migrationBuilder.DropTable(
                 name: "SupplierOrderItems");
 
             migrationBuilder.DropTable(
@@ -547,6 +637,9 @@ namespace Graduation_Project.Migrations
                 name: "Orders");
 
             migrationBuilder.DropTable(
+                name: "PharmCarts");
+
+            migrationBuilder.DropTable(
                 name: "SupplierOrders");
 
             migrationBuilder.DropTable(
@@ -554,6 +647,9 @@ namespace Graduation_Project.Migrations
 
             migrationBuilder.DropTable(
                 name: "SupplierMedications");
+
+            migrationBuilder.DropTable(
+                name: "groupMedicines");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");

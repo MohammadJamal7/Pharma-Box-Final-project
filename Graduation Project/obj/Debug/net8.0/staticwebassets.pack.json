@@ -5,12 +5,128 @@
       "PackagePath": "staticwebassets\\Graduation Project.hi2qgzlr1m.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\aos.css",
+      "PackagePath": "staticwebassets\\css\\aos.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\bootstrap\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\bootstrap\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\bootstrap\\bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\css\\jquery-ui.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\magnific-popup.css",
+      "PackagePath": "staticwebassets\\css\\magnific-popup.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\css\\owl.carousel.min.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\owl.theme.default.min.css",
+      "PackagePath": "staticwebassets\\css\\owl.theme.default.min.css"
+    },
+    {
       "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
       "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\Read Me.txt",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\Read Me.txt"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\demo-files\\demo.css",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\demo-files\\demo.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\demo-files\\demo.js",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\demo-files\\demo.js"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\demo.html",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\demo.html"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.eot",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\fonts\\icomoon.eot"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.svg",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\fonts\\icomoon.svg"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.ttf",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\fonts\\icomoon.ttf"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.woff",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\fonts\\icomoon.woff"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\selection.json",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\selection.json"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\style.css",
+      "PackagePath": "staticwebassets\\fonts\\icomoon\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\bg_1.jpg",
+      "PackagePath": "staticwebassets\\images\\bg_1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\bg_2.jpg",
+      "PackagePath": "staticwebassets\\images\\bg_2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\hero_1.jpg",
+      "PackagePath": "staticwebassets\\images\\hero_1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\person_1.jpg",
+      "PackagePath": "staticwebassets\\images\\person_1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\person_2.jpg",
+      "PackagePath": "staticwebassets\\images\\person_2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\person_3.jpg",
+      "PackagePath": "staticwebassets\\images\\person_3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\person_4.jpg",
+      "PackagePath": "staticwebassets\\images\\person_4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\person_5.jpg",
+      "PackagePath": "staticwebassets\\images\\person_5.jpg"
     },
     {
       "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\pharmacist.jpg",
@@ -21,12 +137,92 @@
       "PackagePath": "staticwebassets\\images\\pharmacist2.jpg"
     },
     {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\product_01.png",
+      "PackagePath": "staticwebassets\\images\\product_01.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\product_02.png",
+      "PackagePath": "staticwebassets\\images\\product_02.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\product_03.png",
+      "PackagePath": "staticwebassets\\images\\product_03.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\product_04.png",
+      "PackagePath": "staticwebassets\\images\\product_04.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\product_05.png",
+      "PackagePath": "staticwebassets\\images\\product_05.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\product_06.png",
+      "PackagePath": "staticwebassets\\images\\product_06.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\product_07_large.png",
+      "PackagePath": "staticwebassets\\images\\product_07_large.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\products_1.png",
+      "PackagePath": "staticwebassets\\images\\products_1.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\shoe.png",
+      "PackagePath": "staticwebassets\\images\\shoe.png"
+    },
+    {
       "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\supplier.jpg",
       "PackagePath": "staticwebassets\\images\\supplier.jpg"
     },
     {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\wave.svg",
+      "PackagePath": "staticwebassets\\images\\wave.svg"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\women.jpg",
+      "PackagePath": "staticwebassets\\images\\women.jpg"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\aos.js",
+      "PackagePath": "staticwebassets\\js\\aos.js"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\jquery-3.3.1.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-3.3.1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\jquery-ui.js",
+      "PackagePath": "staticwebassets\\js\\jquery-ui.js"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\jquery.magnific-popup.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.magnific-popup.min.js"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\popper.min.js",
+      "PackagePath": "staticwebassets\\js\\popper.min.js"
+    },
+    {
       "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\slick.min.js",
+      "PackagePath": "staticwebassets\\js\\slick.min.js"
     },
     {
       "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\LICENSE",

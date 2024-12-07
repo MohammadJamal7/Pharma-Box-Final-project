@@ -244,6 +244,7 @@ namespace Graduation_Project.Controllers
         }
 
         // GET: /Supplier/Orders
+        [Authorize(Roles ="Supplier")]
         public async Task<IActionResult> DisplayOrders()
         {
             var supplierOrders = await _context.SupplierOrders
@@ -270,7 +271,7 @@ namespace Graduation_Project.Controllers
 
             return View(orderViewModels);
         }
-
+       
         public async Task<IActionResult> AcceptOrder(int id)
         {
             var user = await _context.Users
@@ -316,7 +317,28 @@ namespace Graduation_Project.Controllers
             return Json(new { success = true, orderId = order.Id, orderStatus = order.orderStatus });
         }
 
+        public async Task<IActionResult> RejectOrder(int id)
+        {
+            var user = await _context.Users
+                                     .Include(u => u.SupplierMedication)
+                                     .FirstOrDefaultAsync(u => u.UserName == User.Identity.Name);
 
+            var order = await _context.SupplierOrders
+                                       .FirstOrDefaultAsync(o => o.Id == id);
+
+            if (user == null || order == null)
+            {
+                return NotFound();
+            }
+
+            order.orderStatus = "Rejected"; // Update order status to Rejected
+
+            _context.Update(order); // Mark order as updated
+            await _context.SaveChangesAsync(); // Save changes
+
+            // Return JSON data with the updated order status
+            return Json(new { success = true, orderId = order.Id, orderStatus = order.orderStatus });
+        }
 
     }
 

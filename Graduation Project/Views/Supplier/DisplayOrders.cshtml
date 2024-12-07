@@ -42,7 +42,8 @@
                                             <button class="btn btn-info btn-sm me-2 details-order" data-order-id="@order.OrderId">
                                                 <i class="fas fa-info-circle"></i> Details
                                             </button>
-                                            <button class="btn" style="background-color: #3B1E54; color: white;" class="btn-sm me-2 accept-order" data-order-id="@order.OrderId">
+                                            <button  style="background-color: #3B1E54; color: white;"
+                                                    class="btn-sm me-2 accept-order" data-order-id="@order.OrderId">
                                                 <i class="fas fa-check"></i> Accept
                                             </button>
                                             <button class="btn btn-danger btn-sm reject-order" data-order-id="@order.OrderId">
@@ -196,7 +197,7 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <script>
-            $(document).ready(function () {
+                                $(document).ready(function () {
                 var orderDetails = @Json.Serialize(Model.Select(order => new
                 {
                     orderId = order.OrderId,
@@ -235,26 +236,25 @@
                     new bootstrap.Modal(document.getElementById('orderDetailsModal')).show();
                 });
 
-                // Accept Order Handler
-                $('.accept-order').on('click', function () {
-                    var orderId = $(this).data('order-id');
-                    $.ajax({
-                        url: '@Url.Action("AcceptOrder", "Supplier")',
-                        type: 'POST',
-                        data: { id: orderId },
-                        success: function (response) {
-                            if (response.success) {
-                                $('#order-' + orderId).remove();
-                                location.reload(); // Reload to reflect changes
-                            } else {
-                                alert(response.message);
-                            }
-                        },
-                        error: function () {
-                            alert('Error accepting the order.');
+                           $(document).on('click', '.accept-order', function () {
+                var orderId = $(this).data('order-id');
+                $.ajax({
+                    url: '@Url.Action("AcceptOrder", "Supplier")',
+                    type: 'POST',
+                    data: { id: orderId },
+                    success: function (response) {
+                        if (response.success) {
+                            $('#order-' + orderId).remove();
+                            location.reload(); // Reload to reflect changes
+                        } else {
+                            alert(response.message);
                         }
-                    });
+                    },
+                    error: function () {
+                        alert('Error accepting the order.');
+                    }
                 });
+            });
 
                 // Reject Order Handler
                 $('.reject-order').on('click', function () {

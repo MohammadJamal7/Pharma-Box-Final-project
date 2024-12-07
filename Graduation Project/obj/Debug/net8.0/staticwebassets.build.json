@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cVQhfu87rW1u7Xho5iHF0XDYi4wH+rXKgo3nw9sioXU=",
+  "Hash": "NOoJvpfem5liRb2IU3axf0t2xKi/plL5Uq8yd6zzgt8=",
   "Source": "Graduation Project",
   "BasePath": "_content/Graduation Project",
   "Mode": "Default",
@@ -1319,6 +1319,216 @@
       "OriginalItemSpec": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Graduation Project.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\aos.css",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "css/aos#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "06l2mg0kns",
+      "Integrity": "WBIMJ0mNBSqKwJmKQQZclbZ/SbowWSeDUVCZ6hy1xlw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\aos.css"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\bootstrap.min.css",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "css/bootstrap.min#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8cjuj1cjx1",
+      "Integrity": "mCtwYptDBXqpudOI/pvs6rVE78WlT1NLmc/BZ2niCJA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\bootstrap.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\bootstrap.min.css.map",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "css/bootstrap.min.css#[.{fingerprint}]?.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "9goqzsa21w",
+      "Integrity": "SRHirZAHxNF9Zcb8zoVgk2/JsiYCo6F849osM0WFkw8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\bootstrap\\bootstrap.css",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "css/bootstrap/bootstrap#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6g2607ybf3",
+      "Integrity": "5q1GFK5RtY4byLB24o/5Q1bKuRBLVtfJ755QJ+2dicY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.css"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\bootstrap\\bootstrap-grid.css",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "css/bootstrap/bootstrap-grid#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "kg8qv30wlb",
+      "Integrity": "VBi2saHIUJBaHKdtZ6MuEtBFZXIkBo+vbhOhm8qVRec=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap-grid.css"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\bootstrap\\bootstrap-reboot.css",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "css/bootstrap/bootstrap-reboot#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3xcqpcitdt",
+      "Integrity": "GXOPmzYPj3zi4/9goUDmysb57I6Rrj+9CT3mhEiDS24=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap-reboot.css"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\jquery-ui.css",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "css/jquery-ui#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "08cyxrusbe",
+      "Integrity": "YF9rvEO6GCVG0AaLIbQWq3+K6KBvJmhWXaDdt/aUChM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\jquery-ui.css"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\magnific-popup.css",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "css/magnific-popup#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ag5t0ab1in",
+      "Integrity": "JucOvvwQM5C0wPAts6sSGx5OsA2/nZzMDy4LFguD8PY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\magnific-popup.css"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\owl.carousel.min.css",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "css/owl.carousel.min#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "uyqknvf41h",
+      "Integrity": "hgjGMxH0Y+1csZ/r2kqu3HVuupUWw0U3Xlp+VuxnpG4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\owl.carousel.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\owl.theme.default.min.css",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "css/owl.theme.default.min#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "9u7knshsau",
+      "Integrity": "sdsmX4iRgmh+ZIsymdE2sgDHx2URxRGZeEP9LbXlm44=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\owl.theme.default.min.css"
+    },
+    {
       "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\site.css",
       "SourceId": "Graduation Project",
       "SourceType": "Discovered",
@@ -1340,6 +1550,27 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\style.css",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "css/style#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4hrbu70sr7",
+      "Integrity": "2Ll5yCPrmkYe75mJ8hLYE5/FIw6uerQUiMzX6NVmWLY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
+    },
+    {
       "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\favicon.ico",
       "SourceId": "Graduation Project",
       "SourceType": "Discovered",
@@ -1359,6 +1590,384 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\demo.html",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "fonts/icomoon/demo#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "sm0l8n7dw6",
+      "Integrity": "jJUkuMnYllHZH0KypHmsgMupvYfclIVMJr0ynec+DJU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\fonts\\icomoon\\demo.html"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\demo-files\\demo.css",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "fonts/icomoon/demo-files/demo#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "yr8gftiii7",
+      "Integrity": "bjOuYo2dwtkgImW64bFE7tH0QUoM4wqP1ijbNX0bet0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\fonts\\icomoon\\demo-files\\demo.css"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\demo-files\\demo.js",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "fonts/icomoon/demo-files/demo#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "e6i7aflm80",
+      "Integrity": "xg3j5VhbFCFIraYfGccXoIdDjUFchUUuJLwoglezrao=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\fonts\\icomoon\\demo-files\\demo.js"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.eot",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "fonts/icomoon/fonts/icomoon#[.{fingerprint}]?.eot",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ypyad2o2fj",
+      "Integrity": "urzECA/1swnDzbbWZUc9qPl3ELKRdimL+ElL9VdVaHQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\fonts\\icomoon\\fonts\\icomoon.eot"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.svg",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "fonts/icomoon/fonts/icomoon#[.{fingerprint}]?.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "sl1hg4ci2v",
+      "Integrity": "YAI0J3hcIdJE+JE/cHdO+rtqkjaWfKP5B3zfn9SCxFQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\fonts\\icomoon\\fonts\\icomoon.svg"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.ttf",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "fonts/icomoon/fonts/icomoon#[.{fingerprint}]?.ttf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "yhkaeze3h6",
+      "Integrity": "up9m6Km6bAP0vSrLJj1JMAC6B2Dq3oF62kxroWC74t0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\fonts\\icomoon\\fonts\\icomoon.ttf"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.woff",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "fonts/icomoon/fonts/icomoon#[.{fingerprint}]?.woff",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "me73zirzx7",
+      "Integrity": "PkMp+pM8045ThJq5UUNuccqqvLaXNmMt9So79m3JPVk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\fonts\\icomoon\\fonts\\icomoon.woff"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\Read Me.txt",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "fonts/icomoon/Read Me#[.{fingerprint}]?.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "emtiog7dw9",
+      "Integrity": "dm61ArtSiE5W7QNNpylUzCz2uROI9729ijdMy3/GUxo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\fonts\\icomoon\\Read Me.txt"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\selection.json",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "fonts/icomoon/selection#[.{fingerprint}]?.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "h4trkxlzk2",
+      "Integrity": "MZR+9eZc4XcTwMo357rXeXrYKTWrtXntLtVCuXCGcKc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\fonts\\icomoon\\selection.json"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\style.css",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "fonts/icomoon/style#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "023v24zamb",
+      "Integrity": "OKPz6QvMQjFbMsOPRlwYAn8s6n+a87mxJNUEDeKei0I=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\fonts\\icomoon\\style.css"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\bg_1.jpg",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "images/bg_1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1dwvpzufs2",
+      "Integrity": "lXrpsZdH49QqYavqCk2pm5CxkjHS91Tjd+10pqkKQDI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\bg_1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\bg_2.jpg",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "images/bg_2#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "zopwpmc9vx",
+      "Integrity": "7eQ1Dnpz5T7TFGj0vydQv0mmwCvyiLQmjnCuXxjYUiI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\bg_2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\hero_1.jpg",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "images/hero_1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "h1hgvfoe89",
+      "Integrity": "uyrNrGy9FabBlZZvuzUXR47AfzLf1uzA8gLJnwtNoWE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\hero_1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\person_1.jpg",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "images/person_1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "m1pskic3o9",
+      "Integrity": "NvZfwV00Ik79Q/n56xnX3CDepHjRa1sbhF5RpWqGcg0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\person_1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\person_2.jpg",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "images/person_2#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "iledc8c2qg",
+      "Integrity": "JnddsFz3AoB6Ag1gyTW/873es4xL4VNehgGQeP8IfDw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\person_2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\person_3.jpg",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "images/person_3#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0yoc14yk0k",
+      "Integrity": "uKVlb5vOErzH7atUYofxnInI7uas3sfquQXm1sxM+lc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\person_3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\person_4.jpg",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "images/person_4#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "p8lsja0apk",
+      "Integrity": "iTX9q/pew8ZdMTiE4rwubtYC1/HMCEXQcx0VaMc4OsA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\person_4.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\person_5.jpg",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "images/person_5#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3dp9n6ksr1",
+      "Integrity": "p3dvndC0m1pYDwX8IhCuUyg4uTzSBOxrIDvP3BvipjQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\person_5.jpg"
     },
     {
       "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\pharmacist.jpg",
@@ -1403,6 +2012,195 @@
       "OriginalItemSpec": "wwwroot\\images\\pharmacist2.jpg"
     },
     {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\product_01.png",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "images/product_01#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "doybj5k14s",
+      "Integrity": "s9Q73iBgCCHaOMm/cgaw7eMjc5/91bE8jPUci3Hm/4M=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\product_01.png"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\product_02.png",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "images/product_02#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vb1jhj3sye",
+      "Integrity": "hWWuQ+cuevKoJdgb0Pobe6/y/oNJ1/eiyt2n/YyCB2Y=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\product_02.png"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\product_03.png",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "images/product_03#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "21e11d0ie3",
+      "Integrity": "uo3wonJAM4W6nqvF8jW6og+ZuKxZhAhHICK2m26tcDA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\product_03.png"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\product_04.png",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "images/product_04#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wzt4ah99mq",
+      "Integrity": "3G6ujhfY8iQt0Gin1p4ENzoiWYcU7/AXJBQqA6eS1qo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\product_04.png"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\product_05.png",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "images/product_05#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0xfzz6da7y",
+      "Integrity": "rJl0hIDGSZvy6zEB4i5MGc0iiQsIXN0dhNLJKJp9Ous=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\product_05.png"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\product_06.png",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "images/product_06#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "exr7m8x8x8",
+      "Integrity": "3nDtxSAaxCzlSzCKTiAulDsvtJ59JiiWtBt5YquSmZc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\product_06.png"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\product_07_large.png",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "images/product_07_large#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4wxlxku3el",
+      "Integrity": "1M8iTniQwkJcYNbvQ5WVDuxZSgMkbtjfthFExCDVXoE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\product_07_large.png"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\products_1.png",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "images/products_1#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "7ed66zysv1",
+      "Integrity": "T9t0jv1w78QZSkoqsLT6FkLCGocR+FGlpdf1y1ONTvo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products_1.png"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\shoe.png",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "images/shoe#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "mr3wg2jdkb",
+      "Integrity": "7lzisH/rl/m3YroMfnfRnhxUDKys6p5zn/sc0/XBM6c=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\shoe.png"
+    },
+    {
       "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\supplier.jpg",
       "SourceId": "Graduation Project",
       "SourceType": "Discovered",
@@ -1424,6 +2222,216 @@
       "OriginalItemSpec": "wwwroot\\images\\supplier.jpg"
     },
     {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\wave.svg",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "images/wave#[.{fingerprint}]?.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "v3ralywo78",
+      "Integrity": "RVuVmFaH4qjQ4VsySttdDXSkFoIohbv5RWCekg5nJyc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\wave.svg"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\women.jpg",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "images/women#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8k4vmdun8z",
+      "Integrity": "2PKz7sRbGwIOpVdFHxJb65Ud8g64u6MIQ5qurGSIaS4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\women.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\aos.js",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "js/aos#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "09a2zrito3",
+      "Integrity": "ZE/y8TM9ZiZqOaZ+uF3KQxW2pC8WNzf6Ym1l2sTAtyo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\aos.js"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\bootstrap.min.js",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "js/bootstrap.min#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "76z56a91om",
+      "Integrity": "Tz+u7EaSlLYQ9sqCqhzCszaP1WYRsxxVHC7iJP6ttBE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\bootstrap.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\jquery.magnific-popup.min.js",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "js/jquery.magnific-popup.min#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "s9b53c4zwx",
+      "Integrity": "sKRc1a7Wbie9juhh0OO3gsjnmEm94y+Q8Hi58kUaNvI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\jquery.magnific-popup.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\jquery-3.3.1.min.js",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "js/jquery-3.3.1.min#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "jsxrs32yp5",
+      "Integrity": "0wthFPuUlq5GsqjN9ZN5yP/blXU0vR3XPmJsfGHH5n0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\jquery-3.3.1.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\jquery-ui.js",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "js/jquery-ui#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8ry2cvob8n",
+      "Integrity": "dMRJGzb87i41kQrNNRtolXltEC+TzkUv4XtHiay83Js=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\jquery-ui.js"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\main.js",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "js/main#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "uak5tj8spi",
+      "Integrity": "Bt8ttXz4DE0Xi5Kc09hzKZpg6j3uFY9aA+HAzb60EWQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\main.js"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\owl.carousel.min.js",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "js/owl.carousel.min#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "xhbu0o0ue3",
+      "Integrity": "tXV6oVP5kcgslJ5jjFa0kTBCGWJA86Qc7FpAwzZtG90=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\owl.carousel.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\popper.min.js",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "js/popper.min#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "thvrelcqsi",
+      "Integrity": "MVrFR5AH0uhkpLUfUF/QeF67vpMaa1EUZ/pJUEoILFg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\popper.min.js"
+    },
+    {
       "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\site.js",
       "SourceId": "Graduation Project",
       "SourceType": "Discovered",
@@ -1443,6 +2451,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\slick.min.js",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "js/slick.min#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "nigmt84j8l",
+      "Integrity": "4aUsCgb6n2XgFbAufsRj/WISEanSrkS2ZgWXkA6Sf7s=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\slick.min.js"
     },
     {
       "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
@@ -2644,6 +3673,826 @@
   ],
   "Endpoints": [
     {
+      "Route": "css/aos.06l2mg0kns.css",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\aos.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "25984"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WBIMJ0mNBSqKwJmKQQZclbZ/SbowWSeDUVCZ6hy1xlw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "06l2mg0kns"
+        },
+        {
+          "Name": "label",
+          "Value": "css/aos.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-WBIMJ0mNBSqKwJmKQQZclbZ/SbowWSeDUVCZ6hy1xlw="
+        }
+      ]
+    },
+    {
+      "Route": "css/aos.css",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\aos.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "25984"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WBIMJ0mNBSqKwJmKQQZclbZ/SbowWSeDUVCZ6hy1xlw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-WBIMJ0mNBSqKwJmKQQZclbZ/SbowWSeDUVCZ6hy1xlw="
+        }
+      ]
+    },
+    {
+      "Route": "css/bootstrap.min.8cjuj1cjx1.css",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\bootstrap.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "159797"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mCtwYptDBXqpudOI/pvs6rVE78WlT1NLmc/BZ2niCJA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8cjuj1cjx1"
+        },
+        {
+          "Name": "label",
+          "Value": "css/bootstrap.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mCtwYptDBXqpudOI/pvs6rVE78WlT1NLmc/BZ2niCJA="
+        }
+      ]
+    },
+    {
+      "Route": "css/bootstrap.min.css",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\bootstrap.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "159797"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mCtwYptDBXqpudOI/pvs6rVE78WlT1NLmc/BZ2niCJA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mCtwYptDBXqpudOI/pvs6rVE78WlT1NLmc/BZ2niCJA="
+        }
+      ]
+    },
+    {
+      "Route": "css/bootstrap.min.css.9goqzsa21w.map",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\bootstrap.min.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "79032"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SRHirZAHxNF9Zcb8zoVgk2/JsiYCo6F849osM0WFkw8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9goqzsa21w"
+        },
+        {
+          "Name": "label",
+          "Value": "css/bootstrap.min.css.map"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-SRHirZAHxNF9Zcb8zoVgk2/JsiYCo6F849osM0WFkw8="
+        }
+      ]
+    },
+    {
+      "Route": "css/bootstrap.min.css.map",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\bootstrap.min.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "79032"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SRHirZAHxNF9Zcb8zoVgk2/JsiYCo6F849osM0WFkw8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-SRHirZAHxNF9Zcb8zoVgk2/JsiYCo6F849osM0WFkw8="
+        }
+      ]
+    },
+    {
+      "Route": "css/bootstrap/bootstrap.6g2607ybf3.css",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\bootstrap\\bootstrap.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "203598"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5q1GFK5RtY4byLB24o/5Q1bKuRBLVtfJ755QJ+2dicY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6g2607ybf3"
+        },
+        {
+          "Name": "label",
+          "Value": "css/bootstrap/bootstrap.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-5q1GFK5RtY4byLB24o/5Q1bKuRBLVtfJ755QJ+2dicY="
+        }
+      ]
+    },
+    {
+      "Route": "css/bootstrap/bootstrap.css",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\bootstrap\\bootstrap.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "203598"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5q1GFK5RtY4byLB24o/5Q1bKuRBLVtfJ755QJ+2dicY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-5q1GFK5RtY4byLB24o/5Q1bKuRBLVtfJ755QJ+2dicY="
+        }
+      ]
+    },
+    {
+      "Route": "css/bootstrap/bootstrap-grid.css",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\bootstrap\\bootstrap-grid.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "47513"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VBi2saHIUJBaHKdtZ6MuEtBFZXIkBo+vbhOhm8qVRec=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VBi2saHIUJBaHKdtZ6MuEtBFZXIkBo+vbhOhm8qVRec="
+        }
+      ]
+    },
+    {
+      "Route": "css/bootstrap/bootstrap-grid.kg8qv30wlb.css",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\bootstrap\\bootstrap-grid.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "47513"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VBi2saHIUJBaHKdtZ6MuEtBFZXIkBo+vbhOhm8qVRec=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kg8qv30wlb"
+        },
+        {
+          "Name": "label",
+          "Value": "css/bootstrap/bootstrap-grid.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VBi2saHIUJBaHKdtZ6MuEtBFZXIkBo+vbhOhm8qVRec="
+        }
+      ]
+    },
+    {
+      "Route": "css/bootstrap/bootstrap-reboot.3xcqpcitdt.css",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\bootstrap\\bootstrap-reboot.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5241"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GXOPmzYPj3zi4/9goUDmysb57I6Rrj+9CT3mhEiDS24=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3xcqpcitdt"
+        },
+        {
+          "Name": "label",
+          "Value": "css/bootstrap/bootstrap-reboot.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-GXOPmzYPj3zi4/9goUDmysb57I6Rrj+9CT3mhEiDS24="
+        }
+      ]
+    },
+    {
+      "Route": "css/bootstrap/bootstrap-reboot.css",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\bootstrap\\bootstrap-reboot.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5241"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GXOPmzYPj3zi4/9goUDmysb57I6Rrj+9CT3mhEiDS24=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-GXOPmzYPj3zi4/9goUDmysb57I6Rrj+9CT3mhEiDS24="
+        }
+      ]
+    },
+    {
+      "Route": "css/jquery-ui.08cyxrusbe.css",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\jquery-ui.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22391"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YF9rvEO6GCVG0AaLIbQWq3+K6KBvJmhWXaDdt/aUChM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "08cyxrusbe"
+        },
+        {
+          "Name": "label",
+          "Value": "css/jquery-ui.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-YF9rvEO6GCVG0AaLIbQWq3+K6KBvJmhWXaDdt/aUChM="
+        }
+      ]
+    },
+    {
+      "Route": "css/jquery-ui.css",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\jquery-ui.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22391"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YF9rvEO6GCVG0AaLIbQWq3+K6KBvJmhWXaDdt/aUChM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-YF9rvEO6GCVG0AaLIbQWq3+K6KBvJmhWXaDdt/aUChM="
+        }
+      ]
+    },
+    {
+      "Route": "css/magnific-popup.ag5t0ab1in.css",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\magnific-popup.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7300"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JucOvvwQM5C0wPAts6sSGx5OsA2/nZzMDy4LFguD8PY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ag5t0ab1in"
+        },
+        {
+          "Name": "label",
+          "Value": "css/magnific-popup.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JucOvvwQM5C0wPAts6sSGx5OsA2/nZzMDy4LFguD8PY="
+        }
+      ]
+    },
+    {
+      "Route": "css/magnific-popup.css",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\magnific-popup.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7300"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JucOvvwQM5C0wPAts6sSGx5OsA2/nZzMDy4LFguD8PY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JucOvvwQM5C0wPAts6sSGx5OsA2/nZzMDy4LFguD8PY="
+        }
+      ]
+    },
+    {
+      "Route": "css/owl.carousel.min.css",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\owl.carousel.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2941"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hgjGMxH0Y+1csZ/r2kqu3HVuupUWw0U3Xlp+VuxnpG4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hgjGMxH0Y+1csZ/r2kqu3HVuupUWw0U3Xlp+VuxnpG4="
+        }
+      ]
+    },
+    {
+      "Route": "css/owl.carousel.min.uyqknvf41h.css",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\owl.carousel.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2941"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hgjGMxH0Y+1csZ/r2kqu3HVuupUWw0U3Xlp+VuxnpG4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "uyqknvf41h"
+        },
+        {
+          "Name": "label",
+          "Value": "css/owl.carousel.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hgjGMxH0Y+1csZ/r2kqu3HVuupUWw0U3Xlp+VuxnpG4="
+        }
+      ]
+    },
+    {
+      "Route": "css/owl.theme.default.min.9u7knshsau.css",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\owl.theme.default.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "979"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sdsmX4iRgmh+ZIsymdE2sgDHx2URxRGZeEP9LbXlm44=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9u7knshsau"
+        },
+        {
+          "Name": "label",
+          "Value": "css/owl.theme.default.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-sdsmX4iRgmh+ZIsymdE2sgDHx2URxRGZeEP9LbXlm44="
+        }
+      ]
+    },
+    {
+      "Route": "css/owl.theme.default.min.css",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\owl.theme.default.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "979"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sdsmX4iRgmh+ZIsymdE2sgDHx2URxRGZeEP9LbXlm44=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-sdsmX4iRgmh+ZIsymdE2sgDHx2URxRGZeEP9LbXlm44="
+        }
+      ]
+    },
+    {
       "Route": "css/site.c2tiyv64ts.css",
       "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -2722,6 +4571,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0="
+        }
+      ]
+    },
+    {
+      "Route": "css/style.4hrbu70sr7.css",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "32955"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2Ll5yCPrmkYe75mJ8hLYE5/FIw6uerQUiMzX6NVmWLY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4hrbu70sr7"
+        },
+        {
+          "Name": "label",
+          "Value": "css/style.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2Ll5yCPrmkYe75mJ8hLYE5/FIw6uerQUiMzX6NVmWLY="
+        }
+      ]
+    },
+    {
+      "Route": "css/style.css",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\css\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "32955"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2Ll5yCPrmkYe75mJ8hLYE5/FIw6uerQUiMzX6NVmWLY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2Ll5yCPrmkYe75mJ8hLYE5/FIw6uerQUiMzX6NVmWLY="
         }
       ]
     },
@@ -2808,6 +4739,826 @@
       ]
     },
     {
+      "Route": "fonts/icomoon/demo.html",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\demo.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1289257"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jJUkuMnYllHZH0KypHmsgMupvYfclIVMJr0ynec+DJU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-jJUkuMnYllHZH0KypHmsgMupvYfclIVMJr0ynec+DJU="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/icomoon/demo.sm0l8n7dw6.html",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\demo.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1289257"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jJUkuMnYllHZH0KypHmsgMupvYfclIVMJr0ynec+DJU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sm0l8n7dw6"
+        },
+        {
+          "Name": "label",
+          "Value": "fonts/icomoon/demo.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-jJUkuMnYllHZH0KypHmsgMupvYfclIVMJr0ynec+DJU="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/icomoon/demo-files/demo.css",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\demo-files\\demo.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2179"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bjOuYo2dwtkgImW64bFE7tH0QUoM4wqP1ijbNX0bet0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bjOuYo2dwtkgImW64bFE7tH0QUoM4wqP1ijbNX0bet0="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/icomoon/demo-files/demo.e6i7aflm80.js",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\demo-files\\demo.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1026"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xg3j5VhbFCFIraYfGccXoIdDjUFchUUuJLwoglezrao=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e6i7aflm80"
+        },
+        {
+          "Name": "label",
+          "Value": "fonts/icomoon/demo-files/demo.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xg3j5VhbFCFIraYfGccXoIdDjUFchUUuJLwoglezrao="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/icomoon/demo-files/demo.js",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\demo-files\\demo.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1026"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xg3j5VhbFCFIraYfGccXoIdDjUFchUUuJLwoglezrao=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xg3j5VhbFCFIraYfGccXoIdDjUFchUUuJLwoglezrao="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/icomoon/demo-files/demo.yr8gftiii7.css",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\demo-files\\demo.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2179"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bjOuYo2dwtkgImW64bFE7tH0QUoM4wqP1ijbNX0bet0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "yr8gftiii7"
+        },
+        {
+          "Name": "label",
+          "Value": "fonts/icomoon/demo-files/demo.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bjOuYo2dwtkgImW64bFE7tH0QUoM4wqP1ijbNX0bet0="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/icomoon/fonts/icomoon.eot",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.eot",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "307332"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.ms-fontobject"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"urzECA/1swnDzbbWZUc9qPl3ELKRdimL+ElL9VdVaHQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-urzECA/1swnDzbbWZUc9qPl3ELKRdimL+ElL9VdVaHQ="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/icomoon/fonts/icomoon.me73zirzx7.woff",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.woff",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "307244"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/font-woff"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PkMp+pM8045ThJq5UUNuccqqvLaXNmMt9So79m3JPVk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "me73zirzx7"
+        },
+        {
+          "Name": "label",
+          "Value": "fonts/icomoon/fonts/icomoon.woff"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PkMp+pM8045ThJq5UUNuccqqvLaXNmMt9So79m3JPVk="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/icomoon/fonts/icomoon.sl1hg4ci2v.svg",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "936870"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YAI0J3hcIdJE+JE/cHdO+rtqkjaWfKP5B3zfn9SCxFQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sl1hg4ci2v"
+        },
+        {
+          "Name": "label",
+          "Value": "fonts/icomoon/fonts/icomoon.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-YAI0J3hcIdJE+JE/cHdO+rtqkjaWfKP5B3zfn9SCxFQ="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/icomoon/fonts/icomoon.svg",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "936870"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YAI0J3hcIdJE+JE/cHdO+rtqkjaWfKP5B3zfn9SCxFQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-YAI0J3hcIdJE+JE/cHdO+rtqkjaWfKP5B3zfn9SCxFQ="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/icomoon/fonts/icomoon.ttf",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.ttf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "307168"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-font-ttf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"up9m6Km6bAP0vSrLJj1JMAC6B2Dq3oF62kxroWC74t0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-up9m6Km6bAP0vSrLJj1JMAC6B2Dq3oF62kxroWC74t0="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/icomoon/fonts/icomoon.woff",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.woff",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "307244"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/font-woff"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PkMp+pM8045ThJq5UUNuccqqvLaXNmMt9So79m3JPVk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PkMp+pM8045ThJq5UUNuccqqvLaXNmMt9So79m3JPVk="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/icomoon/fonts/icomoon.yhkaeze3h6.ttf",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.ttf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "307168"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-font-ttf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"up9m6Km6bAP0vSrLJj1JMAC6B2Dq3oF62kxroWC74t0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "yhkaeze3h6"
+        },
+        {
+          "Name": "label",
+          "Value": "fonts/icomoon/fonts/icomoon.ttf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-up9m6Km6bAP0vSrLJj1JMAC6B2Dq3oF62kxroWC74t0="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/icomoon/fonts/icomoon.ypyad2o2fj.eot",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.eot",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "307332"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.ms-fontobject"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"urzECA/1swnDzbbWZUc9qPl3ELKRdimL+ElL9VdVaHQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ypyad2o2fj"
+        },
+        {
+          "Name": "label",
+          "Value": "fonts/icomoon/fonts/icomoon.eot"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-urzECA/1swnDzbbWZUc9qPl3ELKRdimL+ElL9VdVaHQ="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/icomoon/Read Me.emtiog7dw9.txt",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\Read Me.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "755"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"dm61ArtSiE5W7QNNpylUzCz2uROI9729ijdMy3/GUxo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "emtiog7dw9"
+        },
+        {
+          "Name": "label",
+          "Value": "fonts/icomoon/Read Me.txt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-dm61ArtSiE5W7QNNpylUzCz2uROI9729ijdMy3/GUxo="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/icomoon/Read Me.txt",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\Read Me.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "755"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"dm61ArtSiE5W7QNNpylUzCz2uROI9729ijdMy3/GUxo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-dm61ArtSiE5W7QNNpylUzCz2uROI9729ijdMy3/GUxo="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/icomoon/selection.h4trkxlzk2.json",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\selection.json",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1670904"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MZR+9eZc4XcTwMo357rXeXrYKTWrtXntLtVCuXCGcKc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "h4trkxlzk2"
+        },
+        {
+          "Name": "label",
+          "Value": "fonts/icomoon/selection.json"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MZR+9eZc4XcTwMo357rXeXrYKTWrtXntLtVCuXCGcKc="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/icomoon/selection.json",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\selection.json",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1670904"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MZR+9eZc4XcTwMo357rXeXrYKTWrtXntLtVCuXCGcKc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-MZR+9eZc4XcTwMo357rXeXrYKTWrtXntLtVCuXCGcKc="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/icomoon/style.023v24zamb.css",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "84739"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OKPz6QvMQjFbMsOPRlwYAn8s6n+a87mxJNUEDeKei0I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "023v24zamb"
+        },
+        {
+          "Name": "label",
+          "Value": "fonts/icomoon/style.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-OKPz6QvMQjFbMsOPRlwYAn8s6n+a87mxJNUEDeKei0I="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/icomoon/style.css",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "84739"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OKPz6QvMQjFbMsOPRlwYAn8s6n+a87mxJNUEDeKei0I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-OKPz6QvMQjFbMsOPRlwYAn8s6n+a87mxJNUEDeKei0I="
+        }
+      ]
+    },
+    {
       "Route": "Graduation Project.bundle.scp.css",
       "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Graduation Project.bundle.scp.css",
       "Selectors": [],
@@ -2830,7 +5581,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Dec 2024 17:26:47 GMT"
+          "Value": "Sat, 07 Dec 2024 07:21:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2867,7 +5618,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Dec 2024 17:26:47 GMT"
+          "Value": "Sat, 07 Dec 2024 07:21:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2912,7 +5663,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Dec 2024 17:26:47 GMT"
+          "Value": "Sat, 07 Dec 2024 07:21:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2957,7 +5708,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Dec 2024 17:26:47 GMT"
+          "Value": "Sat, 07 Dec 2024 07:21:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5192,6 +7943,662 @@
       ]
     },
     {
+      "Route": "images/bg_1.1dwvpzufs2.jpg",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\bg_1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "26416"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lXrpsZdH49QqYavqCk2pm5CxkjHS91Tjd+10pqkKQDI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1dwvpzufs2"
+        },
+        {
+          "Name": "label",
+          "Value": "images/bg_1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-lXrpsZdH49QqYavqCk2pm5CxkjHS91Tjd+10pqkKQDI="
+        }
+      ]
+    },
+    {
+      "Route": "images/bg_1.jpg",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\bg_1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "26416"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lXrpsZdH49QqYavqCk2pm5CxkjHS91Tjd+10pqkKQDI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-lXrpsZdH49QqYavqCk2pm5CxkjHS91Tjd+10pqkKQDI="
+        }
+      ]
+    },
+    {
+      "Route": "images/bg_2.jpg",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\bg_2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "103447"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7eQ1Dnpz5T7TFGj0vydQv0mmwCvyiLQmjnCuXxjYUiI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-7eQ1Dnpz5T7TFGj0vydQv0mmwCvyiLQmjnCuXxjYUiI="
+        }
+      ]
+    },
+    {
+      "Route": "images/bg_2.zopwpmc9vx.jpg",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\bg_2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "103447"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7eQ1Dnpz5T7TFGj0vydQv0mmwCvyiLQmjnCuXxjYUiI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zopwpmc9vx"
+        },
+        {
+          "Name": "label",
+          "Value": "images/bg_2.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7eQ1Dnpz5T7TFGj0vydQv0mmwCvyiLQmjnCuXxjYUiI="
+        }
+      ]
+    },
+    {
+      "Route": "images/hero_1.h1hgvfoe89.jpg",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\hero_1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "124721"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uyrNrGy9FabBlZZvuzUXR47AfzLf1uzA8gLJnwtNoWE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "h1hgvfoe89"
+        },
+        {
+          "Name": "label",
+          "Value": "images/hero_1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-uyrNrGy9FabBlZZvuzUXR47AfzLf1uzA8gLJnwtNoWE="
+        }
+      ]
+    },
+    {
+      "Route": "images/hero_1.jpg",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\hero_1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "124721"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uyrNrGy9FabBlZZvuzUXR47AfzLf1uzA8gLJnwtNoWE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-uyrNrGy9FabBlZZvuzUXR47AfzLf1uzA8gLJnwtNoWE="
+        }
+      ]
+    },
+    {
+      "Route": "images/person_1.jpg",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\person_1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "76764"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NvZfwV00Ik79Q/n56xnX3CDepHjRa1sbhF5RpWqGcg0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NvZfwV00Ik79Q/n56xnX3CDepHjRa1sbhF5RpWqGcg0="
+        }
+      ]
+    },
+    {
+      "Route": "images/person_1.m1pskic3o9.jpg",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\person_1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "76764"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NvZfwV00Ik79Q/n56xnX3CDepHjRa1sbhF5RpWqGcg0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m1pskic3o9"
+        },
+        {
+          "Name": "label",
+          "Value": "images/person_1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-NvZfwV00Ik79Q/n56xnX3CDepHjRa1sbhF5RpWqGcg0="
+        }
+      ]
+    },
+    {
+      "Route": "images/person_2.iledc8c2qg.jpg",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\person_2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "28652"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JnddsFz3AoB6Ag1gyTW/873es4xL4VNehgGQeP8IfDw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "iledc8c2qg"
+        },
+        {
+          "Name": "label",
+          "Value": "images/person_2.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JnddsFz3AoB6Ag1gyTW/873es4xL4VNehgGQeP8IfDw="
+        }
+      ]
+    },
+    {
+      "Route": "images/person_2.jpg",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\person_2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "28652"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JnddsFz3AoB6Ag1gyTW/873es4xL4VNehgGQeP8IfDw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JnddsFz3AoB6Ag1gyTW/873es4xL4VNehgGQeP8IfDw="
+        }
+      ]
+    },
+    {
+      "Route": "images/person_3.0yoc14yk0k.jpg",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\person_3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "61697"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uKVlb5vOErzH7atUYofxnInI7uas3sfquQXm1sxM+lc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0yoc14yk0k"
+        },
+        {
+          "Name": "label",
+          "Value": "images/person_3.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-uKVlb5vOErzH7atUYofxnInI7uas3sfquQXm1sxM+lc="
+        }
+      ]
+    },
+    {
+      "Route": "images/person_3.jpg",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\person_3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "61697"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uKVlb5vOErzH7atUYofxnInI7uas3sfquQXm1sxM+lc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-uKVlb5vOErzH7atUYofxnInI7uas3sfquQXm1sxM+lc="
+        }
+      ]
+    },
+    {
+      "Route": "images/person_4.jpg",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\person_4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "86756"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iTX9q/pew8ZdMTiE4rwubtYC1/HMCEXQcx0VaMc4OsA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-iTX9q/pew8ZdMTiE4rwubtYC1/HMCEXQcx0VaMc4OsA="
+        }
+      ]
+    },
+    {
+      "Route": "images/person_4.p8lsja0apk.jpg",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\person_4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "86756"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iTX9q/pew8ZdMTiE4rwubtYC1/HMCEXQcx0VaMc4OsA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "p8lsja0apk"
+        },
+        {
+          "Name": "label",
+          "Value": "images/person_4.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-iTX9q/pew8ZdMTiE4rwubtYC1/HMCEXQcx0VaMc4OsA="
+        }
+      ]
+    },
+    {
+      "Route": "images/person_5.3dp9n6ksr1.jpg",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\person_5.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "86756"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"p3dvndC0m1pYDwX8IhCuUyg4uTzSBOxrIDvP3BvipjQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3dp9n6ksr1"
+        },
+        {
+          "Name": "label",
+          "Value": "images/person_5.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-p3dvndC0m1pYDwX8IhCuUyg4uTzSBOxrIDvP3BvipjQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/person_5.jpg",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\person_5.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "86756"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"p3dvndC0m1pYDwX8IhCuUyg4uTzSBOxrIDvP3BvipjQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-p3dvndC0m1pYDwX8IhCuUyg4uTzSBOxrIDvP3BvipjQ="
+        }
+      ]
+    },
+    {
       "Route": "images/pharmacist.1visyvn5ze.jpg",
       "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\pharmacist.jpg",
       "Selectors": [],
@@ -5356,6 +8763,744 @@
       ]
     },
     {
+      "Route": "images/product_01.doybj5k14s.png",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\product_01.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "38883"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"s9Q73iBgCCHaOMm/cgaw7eMjc5/91bE8jPUci3Hm/4M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "doybj5k14s"
+        },
+        {
+          "Name": "label",
+          "Value": "images/product_01.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-s9Q73iBgCCHaOMm/cgaw7eMjc5/91bE8jPUci3Hm/4M="
+        }
+      ]
+    },
+    {
+      "Route": "images/product_01.png",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\product_01.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "38883"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"s9Q73iBgCCHaOMm/cgaw7eMjc5/91bE8jPUci3Hm/4M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-s9Q73iBgCCHaOMm/cgaw7eMjc5/91bE8jPUci3Hm/4M="
+        }
+      ]
+    },
+    {
+      "Route": "images/product_02.png",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\product_02.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "41767"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hWWuQ+cuevKoJdgb0Pobe6/y/oNJ1/eiyt2n/YyCB2Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hWWuQ+cuevKoJdgb0Pobe6/y/oNJ1/eiyt2n/YyCB2Y="
+        }
+      ]
+    },
+    {
+      "Route": "images/product_02.vb1jhj3sye.png",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\product_02.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "41767"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hWWuQ+cuevKoJdgb0Pobe6/y/oNJ1/eiyt2n/YyCB2Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vb1jhj3sye"
+        },
+        {
+          "Name": "label",
+          "Value": "images/product_02.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hWWuQ+cuevKoJdgb0Pobe6/y/oNJ1/eiyt2n/YyCB2Y="
+        }
+      ]
+    },
+    {
+      "Route": "images/product_03.21e11d0ie3.png",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\product_03.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "87510"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uo3wonJAM4W6nqvF8jW6og+ZuKxZhAhHICK2m26tcDA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "21e11d0ie3"
+        },
+        {
+          "Name": "label",
+          "Value": "images/product_03.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-uo3wonJAM4W6nqvF8jW6og+ZuKxZhAhHICK2m26tcDA="
+        }
+      ]
+    },
+    {
+      "Route": "images/product_03.png",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\product_03.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "87510"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uo3wonJAM4W6nqvF8jW6og+ZuKxZhAhHICK2m26tcDA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-uo3wonJAM4W6nqvF8jW6og+ZuKxZhAhHICK2m26tcDA="
+        }
+      ]
+    },
+    {
+      "Route": "images/product_04.png",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\product_04.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "58788"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3G6ujhfY8iQt0Gin1p4ENzoiWYcU7/AXJBQqA6eS1qo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-3G6ujhfY8iQt0Gin1p4ENzoiWYcU7/AXJBQqA6eS1qo="
+        }
+      ]
+    },
+    {
+      "Route": "images/product_04.wzt4ah99mq.png",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\product_04.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "58788"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3G6ujhfY8iQt0Gin1p4ENzoiWYcU7/AXJBQqA6eS1qo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wzt4ah99mq"
+        },
+        {
+          "Name": "label",
+          "Value": "images/product_04.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-3G6ujhfY8iQt0Gin1p4ENzoiWYcU7/AXJBQqA6eS1qo="
+        }
+      ]
+    },
+    {
+      "Route": "images/product_05.0xfzz6da7y.png",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\product_05.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "58017"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rJl0hIDGSZvy6zEB4i5MGc0iiQsIXN0dhNLJKJp9Ous=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0xfzz6da7y"
+        },
+        {
+          "Name": "label",
+          "Value": "images/product_05.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-rJl0hIDGSZvy6zEB4i5MGc0iiQsIXN0dhNLJKJp9Ous="
+        }
+      ]
+    },
+    {
+      "Route": "images/product_05.png",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\product_05.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "58017"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rJl0hIDGSZvy6zEB4i5MGc0iiQsIXN0dhNLJKJp9Ous=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-rJl0hIDGSZvy6zEB4i5MGc0iiQsIXN0dhNLJKJp9Ous="
+        }
+      ]
+    },
+    {
+      "Route": "images/product_06.exr7m8x8x8.png",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\product_06.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "70501"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3nDtxSAaxCzlSzCKTiAulDsvtJ59JiiWtBt5YquSmZc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "exr7m8x8x8"
+        },
+        {
+          "Name": "label",
+          "Value": "images/product_06.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-3nDtxSAaxCzlSzCKTiAulDsvtJ59JiiWtBt5YquSmZc="
+        }
+      ]
+    },
+    {
+      "Route": "images/product_06.png",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\product_06.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "70501"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3nDtxSAaxCzlSzCKTiAulDsvtJ59JiiWtBt5YquSmZc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-3nDtxSAaxCzlSzCKTiAulDsvtJ59JiiWtBt5YquSmZc="
+        }
+      ]
+    },
+    {
+      "Route": "images/product_07_large.4wxlxku3el.png",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\product_07_large.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "680088"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1M8iTniQwkJcYNbvQ5WVDuxZSgMkbtjfthFExCDVXoE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4wxlxku3el"
+        },
+        {
+          "Name": "label",
+          "Value": "images/product_07_large.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1M8iTniQwkJcYNbvQ5WVDuxZSgMkbtjfthFExCDVXoE="
+        }
+      ]
+    },
+    {
+      "Route": "images/product_07_large.png",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\product_07_large.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "680088"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1M8iTniQwkJcYNbvQ5WVDuxZSgMkbtjfthFExCDVXoE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1M8iTniQwkJcYNbvQ5WVDuxZSgMkbtjfthFExCDVXoE="
+        }
+      ]
+    },
+    {
+      "Route": "images/products_1.7ed66zysv1.png",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\products_1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "750022"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"T9t0jv1w78QZSkoqsLT6FkLCGocR+FGlpdf1y1ONTvo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7ed66zysv1"
+        },
+        {
+          "Name": "label",
+          "Value": "images/products_1.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-T9t0jv1w78QZSkoqsLT6FkLCGocR+FGlpdf1y1ONTvo="
+        }
+      ]
+    },
+    {
+      "Route": "images/products_1.png",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\products_1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "750022"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"T9t0jv1w78QZSkoqsLT6FkLCGocR+FGlpdf1y1ONTvo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-T9t0jv1w78QZSkoqsLT6FkLCGocR+FGlpdf1y1ONTvo="
+        }
+      ]
+    },
+    {
+      "Route": "images/shoe.mr3wg2jdkb.png",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\shoe.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "103830"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7lzisH/rl/m3YroMfnfRnhxUDKys6p5zn/sc0/XBM6c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mr3wg2jdkb"
+        },
+        {
+          "Name": "label",
+          "Value": "images/shoe.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7lzisH/rl/m3YroMfnfRnhxUDKys6p5zn/sc0/XBM6c="
+        }
+      ]
+    },
+    {
+      "Route": "images/shoe.png",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\shoe.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "103830"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7lzisH/rl/m3YroMfnfRnhxUDKys6p5zn/sc0/XBM6c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-7lzisH/rl/m3YroMfnfRnhxUDKys6p5zn/sc0/XBM6c="
+        }
+      ]
+    },
+    {
       "Route": "images/supplier.jpg",
       "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\supplier.jpg",
       "Selectors": [],
@@ -5438,6 +9583,826 @@
       ]
     },
     {
+      "Route": "images/wave.svg",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\wave.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "925"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RVuVmFaH4qjQ4VsySttdDXSkFoIohbv5RWCekg5nJyc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-RVuVmFaH4qjQ4VsySttdDXSkFoIohbv5RWCekg5nJyc="
+        }
+      ]
+    },
+    {
+      "Route": "images/wave.v3ralywo78.svg",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\wave.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "925"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RVuVmFaH4qjQ4VsySttdDXSkFoIohbv5RWCekg5nJyc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "v3ralywo78"
+        },
+        {
+          "Name": "label",
+          "Value": "images/wave.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-RVuVmFaH4qjQ4VsySttdDXSkFoIohbv5RWCekg5nJyc="
+        }
+      ]
+    },
+    {
+      "Route": "images/women.8k4vmdun8z.jpg",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\women.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "117012"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2PKz7sRbGwIOpVdFHxJb65Ud8g64u6MIQ5qurGSIaS4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8k4vmdun8z"
+        },
+        {
+          "Name": "label",
+          "Value": "images/women.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2PKz7sRbGwIOpVdFHxJb65Ud8g64u6MIQ5qurGSIaS4="
+        }
+      ]
+    },
+    {
+      "Route": "images/women.jpg",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\images\\women.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "117012"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2PKz7sRbGwIOpVdFHxJb65Ud8g64u6MIQ5qurGSIaS4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2PKz7sRbGwIOpVdFHxJb65Ud8g64u6MIQ5qurGSIaS4="
+        }
+      ]
+    },
+    {
+      "Route": "js/aos.09a2zrito3.js",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\aos.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14245"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZE/y8TM9ZiZqOaZ+uF3KQxW2pC8WNzf6Ym1l2sTAtyo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "09a2zrito3"
+        },
+        {
+          "Name": "label",
+          "Value": "js/aos.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZE/y8TM9ZiZqOaZ+uF3KQxW2pC8WNzf6Ym1l2sTAtyo="
+        }
+      ]
+    },
+    {
+      "Route": "js/aos.js",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\aos.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14245"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZE/y8TM9ZiZqOaZ+uF3KQxW2pC8WNzf6Ym1l2sTAtyo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZE/y8TM9ZiZqOaZ+uF3KQxW2pC8WNzf6Ym1l2sTAtyo="
+        }
+      ]
+    },
+    {
+      "Route": "js/bootstrap.min.76z56a91om.js",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\bootstrap.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "51045"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Tz+u7EaSlLYQ9sqCqhzCszaP1WYRsxxVHC7iJP6ttBE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "76z56a91om"
+        },
+        {
+          "Name": "label",
+          "Value": "js/bootstrap.min.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Tz+u7EaSlLYQ9sqCqhzCszaP1WYRsxxVHC7iJP6ttBE="
+        }
+      ]
+    },
+    {
+      "Route": "js/bootstrap.min.js",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\bootstrap.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "51045"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Tz+u7EaSlLYQ9sqCqhzCszaP1WYRsxxVHC7iJP6ttBE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Tz+u7EaSlLYQ9sqCqhzCszaP1WYRsxxVHC7iJP6ttBE="
+        }
+      ]
+    },
+    {
+      "Route": "js/jquery.magnific-popup.min.js",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\jquery.magnific-popup.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20219"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sKRc1a7Wbie9juhh0OO3gsjnmEm94y+Q8Hi58kUaNvI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-sKRc1a7Wbie9juhh0OO3gsjnmEm94y+Q8Hi58kUaNvI="
+        }
+      ]
+    },
+    {
+      "Route": "js/jquery.magnific-popup.min.s9b53c4zwx.js",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\jquery.magnific-popup.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20219"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sKRc1a7Wbie9juhh0OO3gsjnmEm94y+Q8Hi58kUaNvI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "s9b53c4zwx"
+        },
+        {
+          "Name": "label",
+          "Value": "js/jquery.magnific-popup.min.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-sKRc1a7Wbie9juhh0OO3gsjnmEm94y+Q8Hi58kUaNvI="
+        }
+      ]
+    },
+    {
+      "Route": "js/jquery-3.3.1.min.js",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\jquery-3.3.1.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "86927"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0wthFPuUlq5GsqjN9ZN5yP/blXU0vR3XPmJsfGHH5n0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0wthFPuUlq5GsqjN9ZN5yP/blXU0vR3XPmJsfGHH5n0="
+        }
+      ]
+    },
+    {
+      "Route": "js/jquery-3.3.1.min.jsxrs32yp5.js",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\jquery-3.3.1.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "86927"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0wthFPuUlq5GsqjN9ZN5yP/blXU0vR3XPmJsfGHH5n0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jsxrs32yp5"
+        },
+        {
+          "Name": "label",
+          "Value": "js/jquery-3.3.1.min.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0wthFPuUlq5GsqjN9ZN5yP/blXU0vR3XPmJsfGHH5n0="
+        }
+      ]
+    },
+    {
+      "Route": "js/jquery-ui.8ry2cvob8n.js",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\jquery-ui.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "47533"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"dMRJGzb87i41kQrNNRtolXltEC+TzkUv4XtHiay83Js=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8ry2cvob8n"
+        },
+        {
+          "Name": "label",
+          "Value": "js/jquery-ui.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-dMRJGzb87i41kQrNNRtolXltEC+TzkUv4XtHiay83Js="
+        }
+      ]
+    },
+    {
+      "Route": "js/jquery-ui.js",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\jquery-ui.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "47533"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"dMRJGzb87i41kQrNNRtolXltEC+TzkUv4XtHiay83Js=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-dMRJGzb87i41kQrNNRtolXltEC+TzkUv4XtHiay83Js="
+        }
+      ]
+    },
+    {
+      "Route": "js/main.js",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\main.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5731"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Bt8ttXz4DE0Xi5Kc09hzKZpg6j3uFY9aA+HAzb60EWQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Bt8ttXz4DE0Xi5Kc09hzKZpg6j3uFY9aA+HAzb60EWQ="
+        }
+      ]
+    },
+    {
+      "Route": "js/main.uak5tj8spi.js",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\main.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5731"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Bt8ttXz4DE0Xi5Kc09hzKZpg6j3uFY9aA+HAzb60EWQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "uak5tj8spi"
+        },
+        {
+          "Name": "label",
+          "Value": "js/main.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Bt8ttXz4DE0Xi5Kc09hzKZpg6j3uFY9aA+HAzb60EWQ="
+        }
+      ]
+    },
+    {
+      "Route": "js/owl.carousel.min.js",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\owl.carousel.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "42772"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tXV6oVP5kcgslJ5jjFa0kTBCGWJA86Qc7FpAwzZtG90=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tXV6oVP5kcgslJ5jjFa0kTBCGWJA86Qc7FpAwzZtG90="
+        }
+      ]
+    },
+    {
+      "Route": "js/owl.carousel.min.xhbu0o0ue3.js",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\owl.carousel.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "42772"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tXV6oVP5kcgslJ5jjFa0kTBCGWJA86Qc7FpAwzZtG90=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xhbu0o0ue3"
+        },
+        {
+          "Name": "label",
+          "Value": "js/owl.carousel.min.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tXV6oVP5kcgslJ5jjFa0kTBCGWJA86Qc7FpAwzZtG90="
+        }
+      ]
+    },
+    {
+      "Route": "js/popper.min.js",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\popper.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20340"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MVrFR5AH0uhkpLUfUF/QeF67vpMaa1EUZ/pJUEoILFg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-MVrFR5AH0uhkpLUfUF/QeF67vpMaa1EUZ/pJUEoILFg="
+        }
+      ]
+    },
+    {
+      "Route": "js/popper.min.thvrelcqsi.js",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\popper.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20340"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MVrFR5AH0uhkpLUfUF/QeF67vpMaa1EUZ/pJUEoILFg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "thvrelcqsi"
+        },
+        {
+          "Name": "label",
+          "Value": "js/popper.min.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MVrFR5AH0uhkpLUfUF/QeF67vpMaa1EUZ/pJUEoILFg="
+        }
+      ]
+    },
+    {
       "Route": "js/site.js",
       "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\site.js",
       "Selectors": [],
@@ -5516,6 +10481,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo="
+        }
+      ]
+    },
+    {
+      "Route": "js/slick.min.js",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\slick.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "42864"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4aUsCgb6n2XgFbAufsRj/WISEanSrkS2ZgWXkA6Sf7s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4aUsCgb6n2XgFbAufsRj/WISEanSrkS2ZgWXkA6Sf7s="
+        }
+      ]
+    },
+    {
+      "Route": "js/slick.min.nigmt84j8l.js",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\FinalProject\\Graduation Project\\wwwroot\\js\\slick.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "42864"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4aUsCgb6n2XgFbAufsRj/WISEanSrkS2ZgWXkA6Sf7s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Dec 2024 07:06:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nigmt84j8l"
+        },
+        {
+          "Name": "label",
+          "Value": "js/slick.min.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4aUsCgb6n2XgFbAufsRj/WISEanSrkS2ZgWXkA6Sf7s="
         }
       ]
     },
