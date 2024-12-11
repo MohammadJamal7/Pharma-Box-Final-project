@@ -5,21 +5,21 @@
 namespace Graduation_Project.Migrations
 {
     /// <inheritdoc />
-    public partial class addGroupMedicine2 : Migration
+    public partial class third : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_Medicines_GroupMedicine_GroupMedicineId",
+                name: "FK_Medicines_groupMedicines_GroupMedicineId",
                 table: "Medicines");
 
             migrationBuilder.DropPrimaryKey(
-                name: "PK_GroupMedicine",
-                table: "GroupMedicine");
+                name: "PK_groupMedicines",
+                table: "groupMedicines");
 
             migrationBuilder.RenameTable(
-                name: "GroupMedicine",
+                name: "groupMedicines",
                 newName: "GroupMedicines");
 
             migrationBuilder.AddPrimaryKey(
@@ -48,18 +48,18 @@ namespace Graduation_Project.Migrations
 
             migrationBuilder.RenameTable(
                 name: "GroupMedicines",
-                newName: "GroupMedicine");
+                newName: "groupMedicines");
 
             migrationBuilder.AddPrimaryKey(
-                name: "PK_GroupMedicine",
-                table: "GroupMedicine",
+                name: "PK_groupMedicines",
+                table: "groupMedicines",
                 column: "GroupMedicineId");
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Medicines_GroupMedicine_GroupMedicineId",
+                name: "FK_Medicines_groupMedicines_GroupMedicineId",
                 table: "Medicines",
                 column: "GroupMedicineId",
-                principalTable: "GroupMedicine",
+                principalTable: "groupMedicines",
                 principalColumn: "GroupMedicineId");
         }
     }

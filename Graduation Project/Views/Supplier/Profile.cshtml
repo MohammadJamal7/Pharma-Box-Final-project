@@ -8,7 +8,9 @@
 <a class="btn btn-secondary" asp-action="Create" asp-controller="Supplier">
     Add new Medicine
 </a>
-
+<a class="btn btn-secondary" asp-action="DisplayOrders" asp-controller="Supplier">
+    Go to orders
+</a>
 @if (Model != null && Model.Any())
 {
     <table class="table">

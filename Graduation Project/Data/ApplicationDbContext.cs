@@ -21,8 +21,7 @@ namespace Graduation_Project.Data
         public DbSet<ChatMessage> ChatMessages { get; set; }
         public DbSet<Branch> PharmacyBranch { get; set; }
         public DbSet<SupplierMedication> SupplierMedications { get; set; }
-        
-        // Add DbSet for PharmCart and PharmCartItem
+        public DbSet<GroupMedicine> GroupMedicines { get; set; }        // Add DbSet for PharmCart and PharmCartItem
         public DbSet<PharmCart> PharmCarts { get; set; }
         public DbSet<PharmCartItem> PharmCartItems { get; set; }
 
@@ -69,6 +68,20 @@ namespace Graduation_Project.Data
                 .WithMany()  // Medication can be in many PharmCartItems
                 .HasForeignKey(c => c.MedicationId)  // Foreign key in PharmCartItem
                 .OnDelete(DeleteBehavior.Restrict);  // Avoid cascading deletes for Medicines
+
+            // Configure the relationship between Order and OrderItem
+            builder.Entity<OrderItem>()
+                .HasOne(oi => oi.Order)  // Each OrderItem belongs to one Order
+                .WithMany()  // An Order can have many OrderItems
+                .HasForeignKey(oi => oi.OrderId)  // Foreign key is OrderId
+                .OnDelete(DeleteBehavior.Restrict);  // Avoid cascading deletes on the Order side
+
+            // Configure the relationship between OrderItem and Medicine
+            builder.Entity<OrderItem>()
+                .HasOne(oi => oi.Product)  // Each OrderItem is linked to a Medicine (Product)
+                .WithMany()  // A Medicine can appear in many OrderItems
+                .HasForeignKey(oi => oi.MedicineId)  // Foreign key is MedicineId
+                .OnDelete(DeleteBehavior.Restrict);  // Avoid cascading deletes on the Medicine side
         }
     }
 }

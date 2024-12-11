@@ -229,7 +229,13 @@ namespace Graduation_Project.Migrations
                     b.Property<int>("MedicineId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("MedicineId1")
+                        .HasColumnType("int");
+
                     b.Property<int>("OrderId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("OrderId1")
                         .HasColumnType("int");
 
                     b.Property<decimal>("Price")
@@ -242,7 +248,11 @@ namespace Graduation_Project.Migrations
 
                     b.HasIndex("MedicineId");
 
+                    b.HasIndex("MedicineId1");
+
                     b.HasIndex("OrderId");
+
+                    b.HasIndex("OrderId1");
 
                     b.ToTable("OrderItems");
                 });
@@ -645,16 +655,24 @@ namespace Graduation_Project.Migrations
             modelBuilder.Entity("Graduation_Project.Models.OrderItem", b =>
                 {
                     b.HasOne("Medicine", "Product")
-                        .WithMany("OrderItems")
+                        .WithMany()
                         .HasForeignKey("MedicineId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("Graduation_Project.Models.Order", "Order")
+                    b.HasOne("Medicine", null)
                         .WithMany("OrderItems")
+                        .HasForeignKey("MedicineId1");
+
+                    b.HasOne("Graduation_Project.Models.Order", "Order")
+                        .WithMany()
                         .HasForeignKey("OrderId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+
+                    b.HasOne("Graduation_Project.Models.Order", null)
+                        .WithMany("OrderItems")
+                        .HasForeignKey("OrderId1");
 
                     b.Navigation("Order");
 
