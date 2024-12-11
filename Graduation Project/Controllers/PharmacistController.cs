@@ -1,6 +1,7 @@
 ﻿using Graduation_Project.Areas.Identity.Pages.Account;
 using Graduation_Project.Data;
 using Graduation_Project.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Build.Framework;
@@ -139,7 +140,7 @@ namespace Graduation_Project.Controllers
         }
 
 
-
+        [Authorize(Roles ="Pharmacist")]
         public async Task<IActionResult> SuppliersDetails()
         {
             var suppliers = await _userManager.Users

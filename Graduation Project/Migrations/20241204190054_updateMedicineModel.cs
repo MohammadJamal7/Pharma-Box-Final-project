@@ -5,7 +5,7 @@
 namespace Graduation_Project.Migrations
 {
     /// <inheritdoc />
-    public partial class addGroupMedicine : Migration
+    public partial class updateMedicineModel : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -17,7 +17,7 @@ namespace Graduation_Project.Migrations
                 nullable: true);
 
             migrationBuilder.CreateTable(
-                name: "GroupMedicine",
+                name: "GroupMedicines",
                 columns: table => new
                 {
                     GroupMedicineId = table.Column<int>(type: "int", nullable: false)
@@ -27,7 +27,7 @@ namespace Graduation_Project.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_GroupMedicine", x => x.GroupMedicineId);
+                    table.PrimaryKey("PK_GroupMedicines", x => x.GroupMedicineId);
                 });
 
             migrationBuilder.CreateIndex(
@@ -36,10 +36,10 @@ namespace Graduation_Project.Migrations
                 column: "GroupMedicineId");
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Medicines_GroupMedicine_GroupMedicineId",
+                name: "FK_Medicines_GroupMedicines_GroupMedicineId",
                 table: "Medicines",
                 column: "GroupMedicineId",
-                principalTable: "GroupMedicine",
+                principalTable: "GroupMedicines",
                 principalColumn: "GroupMedicineId");
         }
 
@@ -47,11 +47,11 @@ namespace Graduation_Project.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_Medicines_GroupMedicine_GroupMedicineId",
+                name: "FK_Medicines_GroupMedicines_GroupMedicineId",
                 table: "Medicines");
 
             migrationBuilder.DropTable(
-                name: "GroupMedicine");
+                name: "GroupMedicines");
 
             migrationBuilder.DropIndex(
                 name: "IX_Medicines_GroupMedicineId",

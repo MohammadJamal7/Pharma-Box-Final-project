@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Graduation_Project.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241203180639_addingCartSupplier")]
-    partial class addingCartSupplier
+    [Migration("20241204190054_updateMedicineModel")]
+    partial class updateMedicineModel
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -161,6 +161,28 @@ namespace Graduation_Project.Migrations
                     b.HasIndex("SenderId");
 
                     b.ToTable("ChatMessages");
+                });
+
+            modelBuilder.Entity("Graduation_Project.Models.GroupMedicine", b =>
+                {
+                    b.Property<int>("GroupMedicineId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("GroupMedicineId"));
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("GroupMedicineId");
+
+                    b.ToTable("GroupMedicines");
                 });
 
             modelBuilder.Entity("Graduation_Project.Models.Order", b =>
@@ -346,6 +368,9 @@ namespace Graduation_Project.Migrations
                     b.Property<DateTime>("ExpiryDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("GroupMedicineId")
+                        .HasColumnType("int");
+
                     b.Property<string>("HowToUse")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -361,6 +386,8 @@ namespace Graduation_Project.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("MedicineId");
+
+                    b.HasIndex("GroupMedicineId");
 
                     b.HasIndex("InventoryId");
 
@@ -524,6 +551,14 @@ namespace Graduation_Project.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("orderStatus")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("supplierId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("BranchId");
@@ -683,6 +718,10 @@ namespace Graduation_Project.Migrations
 
             modelBuilder.Entity("Medicine", b =>
                 {
+                    b.HasOne("Graduation_Project.Models.GroupMedicine", "GroupMedicine")
+                        .WithMany("Medicines")
+                        .HasForeignKey("GroupMedicineId");
+
                     b.HasOne("Inventory", "Inventory")
                         .WithMany("Medicines")
                         .HasForeignKey("InventoryId");
@@ -692,6 +731,8 @@ namespace Graduation_Project.Migrations
                         .HasForeignKey("SupplierMedicationId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("GroupMedicine");
 
                     b.Navigation("Inventory");
 
@@ -800,6 +841,11 @@ namespace Graduation_Project.Migrations
                     b.Navigation("patientOrders");
 
                     b.Navigation("suppliers");
+                });
+
+            modelBuilder.Entity("Graduation_Project.Models.GroupMedicine", b =>
+                {
+                    b.Navigation("Medicines");
                 });
 
             modelBuilder.Entity("Graduation_Project.Models.Order", b =>

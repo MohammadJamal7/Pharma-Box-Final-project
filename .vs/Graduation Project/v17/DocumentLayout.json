@@ -3,48 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\models\\medicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\models\\medicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:1:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\controllers\\suppliercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:1:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\controllers\\suppliercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\views\\supplier\\displayorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\supplier\\displayorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\views\\homepage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\homepage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\controllers\\homepagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\controllers\\homepagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\viewmodels\\pharmacistlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\viewmodels\\pharmacistlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\views\\pharmacist\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\pharmacist\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\models\\medicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\models\\medicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\models\\suppliermedication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\models\\suppliermedication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\viewmodels\\supplierorderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\viewmodels\\supplierorderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\models\\supplierorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\models\\supplierorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\models\\groupmedicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\models\\groupmedicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\controllers\\pharmcartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\controllers\\pharmcartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\views\\homepage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\homepage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\views\\pharmacist\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\pharmacist\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\models\\groupmedicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\models\\groupmedicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -91,14 +99,6 @@
       "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\controllers\\pharmacistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\viewmodels\\supplierorderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\viewmodels\\supplierorderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\models\\supplierorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\models\\supplierorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\models\\pharmcartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\models\\pharmcartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -119,10 +119,6 @@
       "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\viewmodels\\pharmacistregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -131,24 +127,8 @@
       "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\pharmacist\\suppliermedications.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\migrations\\20241129232850_udpatinguserbranch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\migrations\\20241129232850_udpatinguserbranch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\models\\suppliermedication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\models\\suppliermedication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\views\\pharmacist\\supplierdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\pharmacist\\supplierdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\migrations\\20241130135854_updatingonmodelcreate.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\migrations\\20241130135854_updatingonmodelcreate.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -169,10 +149,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\models\\branch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\models\\branch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\views\\supplier\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\supplier\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241129080242_updatingSupplierOrders4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -271,40 +247,52 @@
       "RelativeMoniker": "D:2:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\controllers\\suppliercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:1:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\migrations\\20241130135854_updatingonmodelcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:1:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\migrations\\20241130135854_updatingonmodelcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\migrations\\20241204190054_updatemedicinemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\migrations\\20241204190054_updatemedicinemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:1:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\migrations\\20241129145744_updatingdatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:1:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\migrations\\20241129145744_updatingdatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241204175146_addGroupMedicine2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Graduation Project\\Migrations\\20241204175146_addGroupMedicine2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:2:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\migrations\\20241129145744_updatingdatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:2:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\migrations\\20241129145744_updatingdatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241204175021_addGroupMedicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Graduation Project\\Migrations\\20241204175021_addGroupMedicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:2:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\migrations\\20241130135854_updatingonmodelcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:2:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\migrations\\20241130135854_updatingonmodelcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241203231409_AddingStatusOrder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Graduation Project\\Migrations\\20241203231409_AddingStatusOrder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\migrations\\20241203231409_addingstatusorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\migrations\\20241203231409_addingstatusorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241203223022_updateOrderSupplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Graduation Project\\Migrations\\20241203223022_updateOrderSupplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\migrations\\20241203223022_updateordersupplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\migrations\\20241203223022_updateordersupplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241203180639_addingCartSupplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Graduation Project\\Migrations\\20241203180639_addingCartSupplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\migrations\\20241203180639_addingcartsupplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\migrations\\20241203180639_addingcartsupplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241130135854_updatingonmodelcreate.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Graduation Project\\Migrations\\20241130135854_updatingonmodelcreate.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\migrations\\20241204175146_addgroupmedicine2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\migrations\\20241204175146_addgroupmedicine2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241129232850_udpatinguserbranch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Graduation Project\\Migrations\\20241129232850_udpatinguserbranch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\migrations\\20241204175021_addgroupmedicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\migrations\\20241204175021_addgroupmedicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241130135854_updatingonmodelcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Graduation Project\\Migrations\\20241130135854_updatingonmodelcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241129145744_updatingDatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Graduation Project\\Migrations\\20241129145744_updatingDatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241129145744_updatingDatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Graduation Project\\Migrations\\20241129145744_updatingDatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241130135854_updatingonmodelcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Graduation Project\\Migrations\\20241130135854_updatingonmodelcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -314,21 +302,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 294,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "PharmCartController.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Controllers\\PharmCartController.cs",
-              "RelativeDocumentMoniker": "Graduation Project\\Controllers\\PharmCartController.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Controllers\\PharmCartController.cs",
-              "RelativeToolTip": "Graduation Project\\Controllers\\PharmCartController.cs",
-              "ViewState": "AgIAAL0AAAAAAAAAAAAYwMkAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T13:54:38.831Z",
-              "IsPinned": true
-            },
             {
               "$type": "Document",
               "DocumentIndex": 9,
@@ -337,76 +312,27 @@
               "RelativeDocumentMoniker": "Graduation Project\\wwwroot\\css\\style.css",
               "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\css\\style.css",
               "RelativeToolTip": "Graduation Project\\wwwroot\\css\\style.css",
-              "ViewState": "AgIAAPMDAAAAAAAAAAAtwP4DAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAO0DAAAAAAAAAAAtwP4DAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-12-04T17:18:05.748Z",
               "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\HomePage\\Index.cshtml",
-              "RelativeDocumentMoniker": "Graduation Project\\Views\\HomePage\\Index.cshtml",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\HomePage\\Index.cshtml",
-              "RelativeToolTip": "Graduation Project\\Views\\HomePage\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-04T16:57:50.945Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Medicine.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Models\\Medicine.cs",
-              "RelativeDocumentMoniker": "Graduation Project\\Models\\Medicine.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Models\\Medicine.cs",
-              "RelativeToolTip": "Graduation Project\\Models\\Medicine.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAmwBwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T15:50:59.365Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DisplayOrders.cshtml",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Supplier\\DisplayOrders.cshtml",
-              "RelativeDocumentMoniker": "Graduation Project\\Views\\Supplier\\DisplayOrders.cshtml",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Supplier\\DisplayOrders.cshtml",
-              "RelativeToolTip": "Graduation Project\\Views\\Supplier\\DisplayOrders.cshtml",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAABQBAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-03T22:21:32.174Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "SupplierController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Controllers\\SupplierController.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Controllers\\SupplierController.cs",
               "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Controllers\\SupplierController.cs",
               "RelativeToolTip": "Graduation Project\\Controllers\\SupplierController.cs",
-              "ViewState": "AgIAACIBAAAAAAAAAAAqwBIBAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAANwAAAAAAAAAAAAgwO4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T21:16:46.44Z",
+              "WhenOpened": "2024-12-11T11:23:11.594Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HomePageController.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Controllers\\HomePageController.cs",
-              "RelativeDocumentMoniker": "Graduation Project\\Controllers\\HomePageController.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Controllers\\HomePageController.cs",
-              "RelativeToolTip": "Graduation Project\\Controllers\\HomePageController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAQwBMAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T16:57:37.328Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "PharmacistLogin.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\ViewModels\\PharmacistLogin.cs",
               "RelativeDocumentMoniker": "Graduation Project\\ViewModels\\PharmacistLogin.cs",
@@ -418,7 +344,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
+              "Title": "SupplierMedication.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Models\\SupplierMedication.cs",
+              "RelativeDocumentMoniker": "Graduation Project\\Models\\SupplierMedication.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Models\\SupplierMedication.cs",
+              "RelativeToolTip": "Graduation Project\\Models\\SupplierMedication.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T20:35:33.871Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Medicine.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Models\\Medicine.cs",
+              "RelativeDocumentMoniker": "Graduation Project\\Models\\Medicine.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Models\\Medicine.cs",
+              "RelativeToolTip": "Graduation Project\\Models\\Medicine.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T15:50:59.365Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\HomePage\\Index.cshtml",
+              "RelativeDocumentMoniker": "Graduation Project\\Views\\HomePage\\Index.cshtml",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\HomePage\\Index.cshtml",
+              "RelativeToolTip": "Graduation Project\\Views\\HomePage\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-04T16:57:50.945Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\appsettings.json",
+              "RelativeDocumentMoniker": "Graduation Project\\appsettings.json",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\appsettings.json",
+              "RelativeToolTip": "Graduation Project\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-02T16:58:10.026Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Pharmacist\\Login.cshtml",
               "RelativeDocumentMoniker": "Graduation Project\\Views\\Pharmacist\\Login.cshtml",
@@ -430,43 +404,89 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
-              "Title": "20241204175146_addGroupMedicine2.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241204175146_addGroupMedicine2.cs",
-              "RelativeDocumentMoniker": "Graduation Project\\Migrations\\20241204175146_addGroupMedicine2.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241204175146_addGroupMedicine2.cs",
-              "RelativeToolTip": "Graduation Project\\Migrations\\20241204175146_addGroupMedicine2.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAArAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "Graduation Project\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Models\\Order.cs",
+              "RelativeToolTip": "Graduation Project\\Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T17:51:46.753Z"
+              "WhenOpened": "2024-12-03T18:39:26.379Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
-              "Title": "20241204175021_addGroupMedicine.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241204175021_addGroupMedicine.cs",
-              "RelativeDocumentMoniker": "Graduation Project\\Migrations\\20241204175021_addGroupMedicine.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241204175021_addGroupMedicine.cs",
-              "RelativeToolTip": "Graduation Project\\Migrations\\20241204175021_addGroupMedicine.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "SupplierOrder.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Models\\SupplierOrder.cs",
+              "RelativeDocumentMoniker": "Graduation Project\\Models\\SupplierOrder.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Models\\SupplierOrder.cs",
+              "RelativeToolTip": "Graduation Project\\Models\\SupplierOrder.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T17:50:21.236Z"
+              "WhenOpened": "2024-11-27T10:36:26.164Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
+              "Title": "SupplierOrderViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\ViewModels\\SupplierOrderViewModel.cs",
+              "RelativeDocumentMoniker": "Graduation Project\\ViewModels\\SupplierOrderViewModel.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\ViewModels\\SupplierOrderViewModel.cs",
+              "RelativeToolTip": "Graduation Project\\ViewModels\\SupplierOrderViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T22:53:12.376Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "20241204190054_updateMedicineModel.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241204190054_updateMedicineModel.cs",
+              "RelativeDocumentMoniker": "Graduation Project\\Migrations\\20241204190054_updateMedicineModel.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241204190054_updateMedicineModel.cs",
+              "RelativeToolTip": "Graduation Project\\Migrations\\20241204190054_updateMedicineModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T19:00:55.022Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Data\\ApplicationDbContext.cs",
               "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Data\\ApplicationDbContext.cs",
               "RelativeToolTip": "Graduation Project\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAQwBcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-02T17:27:38.079Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 62,
+              "Title": "20241204175146_addGroupMedicine2.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241204175146_addGroupMedicine2.cs",
+              "RelativeDocumentMoniker": "Graduation Project\\Migrations\\20241204175146_addGroupMedicine2.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241204175146_addGroupMedicine2.cs",
+              "RelativeToolTip": "Graduation Project\\Migrations\\20241204175146_addGroupMedicine2.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T11:23:11.625Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "20241204175021_addGroupMedicine.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241204175021_addGroupMedicine.cs",
+              "RelativeDocumentMoniker": "Graduation Project\\Migrations\\20241204175021_addGroupMedicine.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241204175021_addGroupMedicine.cs",
+              "RelativeToolTip": "Graduation Project\\Migrations\\20241204175021_addGroupMedicine.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T11:23:11.629Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "GroupMedicine.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Models\\GroupMedicine.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Models\\GroupMedicine.cs",
@@ -478,7 +498,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "Graduation Project\\wwwroot\\css\\site.css",
@@ -490,7 +510,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "owl.theme.default.min.css",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\css\\owl.theme.default.min.css",
               "RelativeDocumentMoniker": "Graduation Project\\wwwroot\\css\\owl.theme.default.min.css",
@@ -502,7 +522,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "magnific-popup.css",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\css\\magnific-popup.css",
               "RelativeDocumentMoniker": "Graduation Project\\wwwroot\\css\\magnific-popup.css",
@@ -514,7 +534,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "Error.cshtml",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Shared\\Error.cshtml",
               "RelativeDocumentMoniker": "Graduation Project\\Views\\Shared\\Error.cshtml",
@@ -526,7 +546,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "aos.css",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\css\\aos.css",
               "RelativeDocumentMoniker": "Graduation Project\\wwwroot\\css\\aos.css",
@@ -538,7 +558,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "jquery-ui.css",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\css\\jquery-ui.css",
               "RelativeDocumentMoniker": "Graduation Project\\wwwroot\\css\\jquery-ui.css",
@@ -550,7 +570,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "bootstrap.min.css",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\css\\bootstrap.min.css",
               "RelativeDocumentMoniker": "Graduation Project\\wwwroot\\css\\bootstrap.min.css",
@@ -562,7 +582,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "_ValidationScriptsPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "Graduation Project\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
@@ -574,7 +594,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "PharmacistController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Controllers\\PharmacistController.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Controllers\\PharmacistController.cs",
@@ -582,11 +602,12 @@
               "RelativeToolTip": "Graduation Project\\Controllers\\PharmacistController.cs",
               "ViewState": "AgIAAIQAAAAAAAAAAAAmwI4AAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T18:33:54.867Z"
+              "WhenOpened": "2024-12-03T18:33:54.867Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "_LoginPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeDocumentMoniker": "Graduation Project\\Views\\Shared\\_LoginPartial.cshtml",
@@ -598,7 +619,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Graduation Project\\Views\\Shared\\_Layout.cshtml",
@@ -610,51 +631,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 64,
               "Title": "20241203231409_AddingStatusOrder.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241203231409_AddingStatusOrder.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Migrations\\20241203231409_AddingStatusOrder.cs",
               "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241203231409_AddingStatusOrder.cs",
               "RelativeToolTip": "Graduation Project\\Migrations\\20241203231409_AddingStatusOrder.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T23:14:09.379Z"
+              "WhenOpened": "2024-12-11T11:23:11.666Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "SupplierOrderViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\ViewModels\\SupplierOrderViewModel.cs",
-              "RelativeDocumentMoniker": "Graduation Project\\ViewModels\\SupplierOrderViewModel.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\ViewModels\\SupplierOrderViewModel.cs",
-              "RelativeToolTip": "Graduation Project\\ViewModels\\SupplierOrderViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAA6wAQAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T22:53:12.376Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "SupplierOrder.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Models\\SupplierOrder.cs",
-              "RelativeDocumentMoniker": "Graduation Project\\Models\\SupplierOrder.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Models\\SupplierOrder.cs",
-              "RelativeToolTip": "Graduation Project\\Models\\SupplierOrder.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T10:36:26.164Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 65,
               "Title": "20241203223022_updateOrderSupplier.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241203223022_updateOrderSupplier.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Migrations\\20241203223022_updateOrderSupplier.cs",
               "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241203223022_updateOrderSupplier.cs",
               "RelativeToolTip": "Graduation Project\\Migrations\\20241203223022_updateOrderSupplier.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T22:30:22.585Z"
+              "WhenOpened": "2024-12-11T11:23:11.674Z"
             },
             {
               "$type": "Document",
@@ -706,18 +701,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Order.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Models\\Order.cs",
-              "RelativeDocumentMoniker": "Graduation Project\\Models\\Order.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Models\\Order.cs",
-              "RelativeToolTip": "Graduation Project\\Models\\Order.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T18:39:26.379Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 28,
               "Title": "PharmacistRegister.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\ViewModels\\PharmacistRegister.cs",
@@ -730,7 +713,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 29,
               "Title": "DbInitializer.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Data\\DbInitializer.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Data\\DbInitializer.cs",
@@ -742,19 +725,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 66,
               "Title": "20241203180639_addingCartSupplier.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241203180639_addingCartSupplier.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Migrations\\20241203180639_addingCartSupplier.cs",
               "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241203180639_addingCartSupplier.cs",
               "RelativeToolTip": "Graduation Project\\Migrations\\20241203180639_addingCartSupplier.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T18:06:39.249Z"
+              "WhenOpened": "2024-12-11T11:23:11.7Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 30,
               "Title": "SupplierMedications.cshtml",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Pharmacist\\SupplierMedications.cshtml",
               "RelativeDocumentMoniker": "Graduation Project\\Views\\Pharmacist\\SupplierMedications.cshtml",
@@ -766,55 +748,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 67,
               "Title": "20241130135854_updatingonmodelcreate.Designer.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241130135854_updatingonmodelcreate.Designer.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Migrations\\20241130135854_updatingonmodelcreate.Designer.cs",
               "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241130135854_updatingonmodelcreate.Designer.cs",
               "RelativeToolTip": "Graduation Project\\Migrations\\20241130135854_updatingonmodelcreate.Designer.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAIBJwA8AAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T17:33:17.681Z"
+              "WhenOpened": "2024-12-11T11:23:11.709Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 68,
               "Title": "20241129232850_udpatinguserbranch.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241129232850_udpatinguserbranch.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Migrations\\20241129232850_udpatinguserbranch.cs",
               "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241129232850_udpatinguserbranch.cs",
               "RelativeToolTip": "Graduation Project\\Migrations\\20241129232850_udpatinguserbranch.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T17:33:20.135Z"
+              "WhenOpened": "2024-12-11T11:23:11.712Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\appsettings.json",
-              "RelativeDocumentMoniker": "Graduation Project\\appsettings.json",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\appsettings.json",
-              "RelativeToolTip": "Graduation Project\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAACzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-02T16:58:10.026Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "SupplierMedication.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Models\\SupplierMedication.cs",
-              "RelativeDocumentMoniker": "Graduation Project\\Models\\SupplierMedication.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Models\\SupplierMedication.cs",
-              "RelativeToolTip": "Graduation Project\\Models\\SupplierMedication.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T20:35:33.871Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 59,
               "Title": "SuppliersDetails.cshtml",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Pharmacist\\SuppliersDetails.cshtml",
               "RelativeDocumentMoniker": "Graduation Project\\Views\\Pharmacist\\SuppliersDetails.cshtml",
@@ -826,7 +782,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 31,
               "Title": "SupplierDetails.cshtml",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Pharmacist\\SupplierDetails.cshtml",
               "RelativeDocumentMoniker": "Graduation Project\\Views\\Pharmacist\\SupplierDetails.cshtml",
@@ -838,7 +794,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 34,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Supplier\\Login.cshtml",
               "RelativeDocumentMoniker": "Graduation Project\\Views\\Supplier\\Login.cshtml",
@@ -850,7 +806,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 32,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Models\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Models\\ApplicationUser.cs",
@@ -862,7 +818,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 60,
               "Title": "SupplierController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Controllers\\SupplierController.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Controllers\\SupplierController.cs",
@@ -874,7 +830,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 35,
               "Title": "Profile.cshtml",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Supplier\\Profile.cshtml",
               "RelativeDocumentMoniker": "Graduation Project\\Views\\Supplier\\Profile.cshtml",
@@ -886,7 +842,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 33,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Supplier\\Register.cshtml",
               "RelativeDocumentMoniker": "Graduation Project\\Views\\Supplier\\Register.cshtml",
@@ -898,19 +854,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 69,
               "Title": "20241130135854_updatingonmodelcreate.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241130135854_updatingonmodelcreate.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Migrations\\20241130135854_updatingonmodelcreate.cs",
               "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241130135854_updatingonmodelcreate.cs",
               "RelativeToolTip": "Graduation Project\\Migrations\\20241130135854_updatingonmodelcreate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T13:58:54.683Z"
+              "WhenOpened": "2024-12-11T11:23:11.741Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 36,
               "Title": "Branch.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Models\\Branch.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Models\\Branch.cs",
@@ -922,31 +877,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 70,
               "Title": "20241129145744_updatingDatabase.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241129145744_updatingDatabase.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Migrations\\20241129145744_updatingDatabase.cs",
               "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241129145744_updatingDatabase.cs",
               "RelativeToolTip": "Graduation Project\\Migrations\\20241129145744_updatingDatabase.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAMBdwGIAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T14:57:44.308Z"
+              "WhenOpened": "2024-12-11T11:23:11.746Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Supplier\\Create.cshtml",
-              "RelativeDocumentMoniker": "Graduation Project\\Views\\Supplier\\Create.cshtml",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Supplier\\Create.cshtml",
-              "RelativeToolTip": "Graduation Project\\Views\\Supplier\\Create.cshtml",
-              "ViewState": "AgIAAA0AAAAAAAAAAEBVwBAAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-29T14:09:49.669Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 37,
               "Title": "20241129080242_updatingSupplierOrders4.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241129080242_updatingSupplierOrders4.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Migrations\\20241129080242_updatingSupplierOrders4.cs",
@@ -957,7 +899,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 38,
               "Title": "20241129075926_updatingSupplierOrders2.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241129075926_updatingSupplierOrders2.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Migrations\\20241129075926_updatingSupplierOrders2.cs",
@@ -968,7 +910,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 39,
               "Title": "20241129042928_settingUpNewDb.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241129042928_settingUpNewDb.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Migrations\\20241129042928_settingUpNewDb.cs",
@@ -979,7 +921,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 40,
               "Title": "20241129042818_settingUpNewDb6.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Data\\Migrations\\20241129042818_settingUpNewDb6.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Data\\Migrations\\20241129042818_settingUpNewDb6.cs",
@@ -990,7 +932,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 41,
               "Title": "20241129042706_settingUpNewDb5.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Data\\Migrations\\20241129042706_settingUpNewDb5.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Data\\Migrations\\20241129042706_settingUpNewDb5.cs",
@@ -1001,7 +943,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 42,
               "Title": "20241129042608_settingUpNewDb4.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Data\\Migrations\\20241129042608_settingUpNewDb4.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Data\\Migrations\\20241129042608_settingUpNewDb4.cs",
@@ -1012,7 +954,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 43,
               "Title": "20241129042153_settingUpNewDb3.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Data\\Migrations\\20241129042153_settingUpNewDb3.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Data\\Migrations\\20241129042153_settingUpNewDb3.cs",
@@ -1023,7 +965,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 44,
               "Title": "20241129041953_settingUpNewDb2.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Data\\Migrations\\20241129041953_settingUpNewDb2.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Data\\Migrations\\20241129041953_settingUpNewDb2.cs",
@@ -1034,7 +976,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 45,
               "Title": "20241129041817_settingUpNewDb.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Data\\Migrations\\20241129041817_settingUpNewDb.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Data\\Migrations\\20241129041817_settingUpNewDb.cs",
@@ -1045,7 +987,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 46,
               "Title": "Inventory.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Models\\Inventory.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Models\\Inventory.cs",
@@ -1057,7 +999,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 47,
               "Title": "20241129041448_updatingTheWholeDB6.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Data\\Migrations\\20241129041448_updatingTheWholeDB6.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Data\\Migrations\\20241129041448_updatingTheWholeDB6.cs",
@@ -1068,7 +1010,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 48,
               "Title": "20241128235254_updatingTheWholeDB4.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Data\\Migrations\\20241128235254_updatingTheWholeDB4.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Data\\Migrations\\20241128235254_updatingTheWholeDB4.cs",
@@ -1079,7 +1021,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 49,
               "Title": "20241128235152_updatingTheWholeDB3.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Data\\Migrations\\20241128235152_updatingTheWholeDB3.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Data\\Migrations\\20241128235152_updatingTheWholeDB3.cs",
@@ -1090,7 +1032,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 50,
               "Title": "20241128234142_updatingTheWholeDB2.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Data\\Migrations\\20241128234142_updatingTheWholeDB2.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Data\\Migrations\\20241128234142_updatingTheWholeDB2.cs",
@@ -1101,7 +1043,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 51,
               "Title": "20241128233833_updatingTheWholeDB.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Data\\Migrations\\20241128233833_updatingTheWholeDB.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Data\\Migrations\\20241128233833_updatingTheWholeDB.cs",
@@ -1112,7 +1054,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 52,
               "Title": "ChatMessage.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Models\\ChatMessage.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Models\\ChatMessage.cs",
@@ -1124,7 +1066,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 53,
               "Title": "20241128214626_updateSupplierModel.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Data\\Migrations\\20241128214626_updateSupplierModel.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Data\\Migrations\\20241128214626_updateSupplierModel.cs",
@@ -1135,7 +1077,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 54,
               "Title": "20241128212610_addingIdentityAndSupplierModel2.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Data\\Migrations\\20241128212610_addingIdentityAndSupplierModel2.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Data\\Migrations\\20241128212610_addingIdentityAndSupplierModel2.cs",
@@ -1146,7 +1088,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 55,
               "Title": "20241128203810_addingIdentityAndSupplierModel.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Data\\Migrations\\20241128203810_addingIdentityAndSupplierModel.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Data\\Migrations\\20241128203810_addingIdentityAndSupplierModel.cs",
@@ -1157,7 +1099,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 56,
               "Title": "20241127104609_FirstMigration.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Data\\Migrations\\20241127104609_FirstMigration.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Data\\Migrations\\20241127104609_FirstMigration.cs",
@@ -1168,7 +1110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 57,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\appsettings.Development.json",
               "RelativeDocumentMoniker": "Graduation Project\\appsettings.Development.json",
@@ -1180,7 +1122,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 58,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "Graduation Project\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
@@ -1192,7 +1134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 71,
               "Title": "20241129145744_updatingDatabase.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241129145744_updatingDatabase.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Migrations\\20241129145744_updatingDatabase.cs",
@@ -1200,11 +1142,11 @@
               "RelativeToolTip": "Graduation Project\\Migrations\\20241129145744_updatingDatabase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T10:40:57.05Z"
+              "WhenOpened": "2024-12-11T11:23:11.8Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 72,
               "Title": "20241130135854_updatingonmodelcreate.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Migrations\\20241130135854_updatingonmodelcreate.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Migrations\\20241130135854_updatingonmodelcreate.cs",
@@ -1212,7 +1154,7 @@
               "RelativeToolTip": "Graduation Project\\Migrations\\20241130135854_updatingonmodelcreate.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAABRwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T15:48:22.917Z"
+              "WhenOpened": "2024-12-11T11:23:11.803Z"
             }
           ]
         },
