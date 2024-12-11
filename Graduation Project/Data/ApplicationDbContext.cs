@@ -21,7 +21,6 @@ namespace Graduation_Project.Data
         public DbSet<ChatMessage> ChatMessages { get; set; }
         public DbSet<Branch> PharmacyBranch { get; set; }
         public DbSet<SupplierMedication> SupplierMedications { get; set; }
-        public DbSet<GroupMedicine> GroupMedicines { get; set; }        // Add DbSet for PharmCart and PharmCartItem
         public DbSet<PharmCart> PharmCarts { get; set; }
         public DbSet<PharmCartItem> PharmCartItems { get; set; }
 
