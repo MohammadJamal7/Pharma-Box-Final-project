@@ -12,6 +12,7 @@ namespace Graduation_Project.Data
         }
 
         public DbSet<Medicine> Medicines { get; set; }
+        public DbSet<GroupMedicine> GroupMedicines { get; set; }
         public DbSet<Inventory> Inventory { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
