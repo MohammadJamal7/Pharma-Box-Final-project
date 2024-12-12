@@ -1,0 +1,174 @@
+﻿@{
+    Layout = null;
+}
+@model IEnumerable<Branch>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Branch Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #3B1E54;
+            --secondary-color: #F5F5F5;
+        }
+
+        body {
+            background-color: var(--secondary-color);
+            font-family: 'Arial', sans-serif;
+        }
+
+        .page-container {
+            padding: 1rem;
+        }
+
+        .header-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .title {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .add-branch-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 6px rgba(59, 30, 84, 0.2);
+            margin-top: 0.5rem;
+        }
+
+            .add-branch-btn:hover {
+                background-color: #5a2e82;
+                transform: translateY(-2px);
+                box-shadow: 0 6px 8px rgba(59, 30, 84, 0.3);
+            }
+
+        .branch-table {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+            .branch-table thead {
+                background-color: var(--primary-color);
+                color: white;
+            }
+
+            .branch-table tbody tr:hover {
+                background-color: rgba(59, 30, 84, 0.05);
+            }
+
+        .action-buttons .btn {
+            margin: 0.25rem;
+            transition: all 0.3s ease;
+        }
+
+            .action-buttons .btn:hover {
+                transform: scale(1.05);
+            }
+
+        @@media (max-width: 768px) {
+            .header-section {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .title {
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            .add-branch-btn {
+                align-self: center;
+            }
+
+            .table-responsive {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <div class="header-section">
+            <h1 class="title">
+                <i class="bi bi-building me-2"></i>Branch Management
+            </h1>
+            <a class="btn add-branch-btn px-4 py-2 rounded-pill" href="@Url.Action("AddBranch","Admin")">
+                <i class="bi bi-plus-circle"></i> Add New Branch
+            </a>
+        </div>
+
+        <div class="branch-table table-responsive">
+            <table class="table table-hover mb-0">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Location</th>
+                        <th>Contact</th>
+                        <th class="text-center">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var branch in Model)
+                    {
+                        <tr>
+                            <td>@branch.BranchId</td>
+                            <td>@branch.Name</td>
+                            <td>@branch.Location</td>
+                            <td>@branch.ContactNumber</td>
+                            <td class="text-center action-buttons">
+                                <a class="btn btn-sm btn-outline-primary" asp-action="EditBranch" asp-route-id="@branch.BranchId">
+                                    <i class="bi bi-pencil"></i>
+                                </a>
+                                <button class="btn btn-sm btn-outline-danger" onclick="confirmDelete(@branch.BranchId)">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function confirmDelete(branchId) {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "This branch will be deleted permanently!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#3085d6',
+                confirmButtonText: 'Yes, delete it!',
+                cancelButtonText: 'No, cancel!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Dynamically generate the delete URL for the branch
+                    window.location.href = '@Url.Action("DeleteBranch", "Admin")?id=' + branchId;
+                }
+            });
+        }
+    </script>
+</body>
+</html>

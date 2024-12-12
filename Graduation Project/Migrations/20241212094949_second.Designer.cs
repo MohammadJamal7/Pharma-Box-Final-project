@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Graduation_Project.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241207075629_first")]
-    partial class first
+    [Migration("20241212094949_second")]
+    partial class second
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -114,9 +114,15 @@ namespace Graduation_Project.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BranchId"));
 
+                    b.Property<string>("ContactNumber")
+                        .IsRequired()
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
+
                     b.Property<string>("Location")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -182,7 +188,7 @@ namespace Graduation_Project.Migrations
 
                     b.HasKey("GroupMedicineId");
 
-                    b.ToTable("groupMedicines");
+                    b.ToTable("GroupMedicines");
                 });
 
             modelBuilder.Entity("Graduation_Project.Models.Order", b =>
@@ -232,7 +238,13 @@ namespace Graduation_Project.Migrations
                     b.Property<int>("MedicineId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("MedicineId1")
+                        .HasColumnType("int");
+
                     b.Property<int>("OrderId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("OrderId1")
                         .HasColumnType("int");
 
                     b.Property<decimal>("Price")
@@ -245,7 +257,11 @@ namespace Graduation_Project.Migrations
 
                     b.HasIndex("MedicineId");
 
+                    b.HasIndex("MedicineId1");
+
                     b.HasIndex("OrderId");
+
+                    b.HasIndex("OrderId1");
 
                     b.ToTable("OrderItems");
                 });
@@ -648,16 +664,24 @@ namespace Graduation_Project.Migrations
             modelBuilder.Entity("Graduation_Project.Models.OrderItem", b =>
                 {
                     b.HasOne("Medicine", "Product")
-                        .WithMany("OrderItems")
+                        .WithMany()
                         .HasForeignKey("MedicineId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("Graduation_Project.Models.Order", "Order")
+                    b.HasOne("Medicine", null)
                         .WithMany("OrderItems")
+                        .HasForeignKey("MedicineId1");
+
+                    b.HasOne("Graduation_Project.Models.Order", "Order")
+                        .WithMany()
                         .HasForeignKey("OrderId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+
+                    b.HasOne("Graduation_Project.Models.Order", null)
+                        .WithMany("OrderItems")
+                        .HasForeignKey("OrderId1");
 
                     b.Navigation("Order");
 

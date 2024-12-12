@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Graduation_Project.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241207080014_sec")]
-    partial class sec
+    [Migration("20241212101102_third")]
+    partial class third
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -114,9 +114,15 @@ namespace Graduation_Project.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BranchId"));
 
+                    b.Property<string>("ContactNumber")
+                        .IsRequired()
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
+
                     b.Property<string>("Location")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -182,7 +188,7 @@ namespace Graduation_Project.Migrations
 
                     b.HasKey("GroupMedicineId");
 
-                    b.ToTable("groupMedicines");
+                    b.ToTable("GroupMedicines");
                 });
 
             modelBuilder.Entity("Graduation_Project.Models.Order", b =>
@@ -853,8 +859,7 @@ namespace Graduation_Project.Migrations
 
             modelBuilder.Entity("Branch", b =>
                 {
-                    b.Navigation("Inventory")
-                        .IsRequired();
+                    b.Navigation("Inventory");
 
                     b.Navigation("patientOrders");
 

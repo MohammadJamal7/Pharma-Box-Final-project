@@ -26,7 +26,7 @@ namespace Graduation_Project.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "groupMedicines",
+                name: "GroupMedicines",
                 columns: table => new
                 {
                     GroupMedicineId = table.Column<int>(type: "int", nullable: false)
@@ -36,7 +36,7 @@ namespace Graduation_Project.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_groupMedicines", x => x.GroupMedicineId);
+                    table.PrimaryKey("PK_GroupMedicines", x => x.GroupMedicineId);
                 });
 
             migrationBuilder.CreateTable(
@@ -363,6 +363,11 @@ namespace Graduation_Project.Migrations
                 {
                     table.PrimaryKey("PK_Medicines", x => x.MedicineId);
                     table.ForeignKey(
+                        name: "FK_Medicines_GroupMedicines_GroupMedicineId",
+                        column: x => x.GroupMedicineId,
+                        principalTable: "GroupMedicines",
+                        principalColumn: "GroupMedicineId");
+                    table.ForeignKey(
                         name: "FK_Medicines_Inventory_InventoryId",
                         column: x => x.InventoryId,
                         principalTable: "Inventory",
@@ -373,11 +378,6 @@ namespace Graduation_Project.Migrations
                         principalTable: "SupplierMedications",
                         principalColumn: "SupplierMedicationId",
                         onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Medicines_groupMedicines_GroupMedicineId",
-                        column: x => x.GroupMedicineId,
-                        principalTable: "groupMedicines",
-                        principalColumn: "GroupMedicineId");
                 });
 
             migrationBuilder.CreateTable(
@@ -442,7 +442,9 @@ namespace Graduation_Project.Migrations
                     Quantity = table.Column<int>(type: "int", nullable: false),
                     Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     OrderId = table.Column<int>(type: "int", nullable: false),
-                    MedicineId = table.Column<int>(type: "int", nullable: false)
+                    MedicineId = table.Column<int>(type: "int", nullable: false),
+                    MedicineId1 = table.Column<int>(type: "int", nullable: true),
+                    OrderId1 = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -452,13 +454,23 @@ namespace Graduation_Project.Migrations
                         column: x => x.MedicineId,
                         principalTable: "Medicines",
                         principalColumn: "MedicineId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_OrderItems_Medicines_MedicineId1",
+                        column: x => x.MedicineId1,
+                        principalTable: "Medicines",
+                        principalColumn: "MedicineId");
                     table.ForeignKey(
                         name: "FK_OrderItems_Orders_OrderId",
                         column: x => x.OrderId,
                         principalTable: "Orders",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_OrderItems_Orders_OrderId1",
+                        column: x => x.OrderId1,
+                        principalTable: "Orders",
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateIndex(
@@ -542,9 +554,19 @@ namespace Graduation_Project.Migrations
                 column: "MedicineId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_OrderItems_MedicineId1",
+                table: "OrderItems",
+                column: "MedicineId1");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_OrderItems_OrderId",
                 table: "OrderItems",
                 column: "OrderId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_OrderItems_OrderId1",
+                table: "OrderItems",
+                column: "OrderId1");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Orders_BranchId",
@@ -643,13 +665,13 @@ namespace Graduation_Project.Migrations
                 name: "SupplierOrders");
 
             migrationBuilder.DropTable(
+                name: "GroupMedicines");
+
+            migrationBuilder.DropTable(
                 name: "Inventory");
 
             migrationBuilder.DropTable(
                 name: "SupplierMedications");
-
-            migrationBuilder.DropTable(
-                name: "groupMedicines");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");

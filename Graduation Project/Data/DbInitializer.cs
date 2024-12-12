@@ -66,7 +66,8 @@ namespace Graduation_Project.Data
                 var defaultBranch = new Branch
                 {
                     Name = "Default Pharmacy",
-                    Location = "Main Street, City"
+                    Location = "Main Street, City",
+                    ContactNumber = "0777888555"
                 };
 
                 context.PharmacyBranch.Add(defaultBranch);
