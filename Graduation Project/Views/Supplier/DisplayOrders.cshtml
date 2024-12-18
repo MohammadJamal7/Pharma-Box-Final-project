@@ -69,7 +69,7 @@
                 <h3 class="mb-0">Confirmed Orders</h3>
             </div>
             <div class="card-body">
-                @if (Model.Any(o => o.orderStatus == "Confirmed"))
+                @if (Model.Any(o => o.orderStatus == "Confirmed" || o.orderStatus == "Preparing" || o.orderStatus == "Delivered"))
                 {
                     <table class="table table-hover table-striped">
                         <thead style="background-color: #f7f7f7; color: #3B1E54;">
@@ -80,11 +80,12 @@
                                 <th>Branch</th>
                                 <th>Total Items</th>
                                 <th>Total Price</th>
+                                <th>Order Status</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody id="confirmed-orders">
-                            @foreach (var order in Model.Where(o => o.orderStatus == "Confirmed"))
+                            @foreach (var order in Model.Where(o => o.orderStatus == "Confirmed" || o.orderStatus == "Preparing" || o.orderStatus == "Delivered"))
                             {
                                 <tr id="confirmed-order-@order.OrderId" class="align-middle">
                                     <td>@order.OrderId</td>
@@ -93,6 +94,7 @@
                                     <td>@order.BranchName</td>
                                     <td>@order.OrderItems.Count</td>
                                     <td>$@order.OrderItems.Sum(item => item.Total).ToString("F2")</td>
+                                    <td>@order.orderStatus</td>
                                     <td>
                                         <button class="btn btn-info btn-sm details-order" data-order-id="@order.OrderId">
                                             <i class="fas fa-info-circle"></i> Details

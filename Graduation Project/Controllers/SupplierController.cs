@@ -1,6 +1,7 @@
 ﻿using Graduation_Project.Data;
 using Graduation_Project.Models;
 using Graduation_Project.ViewModels;
+using Hangfire;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -313,6 +314,13 @@ namespace Graduation_Project.Controllers
             _context.Update(order); // Mark order as updated
             await _context.SaveChangesAsync(); // Save all changes
 
+            // Schedule a background job to change the order status to "Preparong" after one Minute
+            BackgroundJob.Schedule(() => UpdateOrderStatusToPreparing(order.Id), TimeSpan.FromSeconds(25));
+
+            // Schedule a background job to change the order status to "Delivered" after one day
+            BackgroundJob.Schedule(() => UpdateOrderStatusToDelivered(order.Id), TimeSpan.FromDays(1));
+
+
             // Return JSON data with the updated order status
             return Json(new { success = true, orderId = order.Id, orderStatus = order.orderStatus });
         }
@@ -339,6 +347,30 @@ namespace Graduation_Project.Controllers
             // Return JSON data with the updated order status
             return Json(new { success = true, orderId = order.Id, orderStatus = order.orderStatus });
         }
+
+
+        public async Task UpdateOrderStatusToPreparing(int orderId)
+        {
+            var order = await _context.SupplierOrders.FirstOrDefaultAsync(o => o.Id == orderId);
+            if (order != null)
+            {
+                order.orderStatus = "Preparing";
+                _context.Update(order);
+                await _context.SaveChangesAsync();
+            }
+        }
+
+        public async Task UpdateOrderStatusToDelivered(int orderId)
+        {
+            var order = await _context.SupplierOrders.FirstOrDefaultAsync(o => o.Id == orderId);
+            if (order != null)
+            {
+                order.orderStatus = "Delivered";
+                _context.Update(order);
+                await _context.SaveChangesAsync();
+            }
+        }
+
 
     }
 

@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Graduation_Project.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241212094737_first")]
+    [Migration("20241213044838_first")]
     partial class first
     {
         /// <inheritdoc />
@@ -114,9 +114,15 @@ namespace Graduation_Project.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BranchId"));
 
+                    b.Property<string>("ContactNumber")
+                        .IsRequired()
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
+
                     b.Property<string>("Location")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -853,8 +859,7 @@ namespace Graduation_Project.Migrations
 
             modelBuilder.Entity("Branch", b =>
                 {
-                    b.Navigation("Inventory")
-                        .IsRequired();
+                    b.Navigation("Inventory");
 
                     b.Navigation("patientOrders");
 

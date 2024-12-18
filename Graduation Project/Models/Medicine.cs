@@ -8,9 +8,12 @@ using System.ComponentModel.DataAnnotations.Schema;
         [Key]
         public int MedicineId { get; set; }
         public string Description { get; set; }
+        public string Name { get; set; }
         public string HowToUse { get; set; }
         public string ImageUrl { get; set; }  
+        public int StockQuantity { get; set; }  
         public DateTime ExpiryDate { get; set; }
+
 
 
     // relationships : 

@@ -395,6 +395,13 @@ namespace Graduation_Project.Migrations
                     b.Property<int?>("InventoryId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("StockQuantity")
+                        .HasColumnType("int");
+
                     b.Property<int>("SupplierMedicationId")
                         .HasColumnType("int");
 
