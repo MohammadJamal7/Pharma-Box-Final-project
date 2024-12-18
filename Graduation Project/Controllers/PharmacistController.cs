@@ -120,7 +120,7 @@ namespace Graduation_Project.Controllers
                 if (result.Succeeded)
                 {
                     // Redirect to the default action (e.g., Home/Index) after successful login
-                    return RedirectToAction("SuppliersDetails", "Pharmacist");
+                    return RedirectToAction("Profile", "Pharmacist");
                 }
                 else
                 {
@@ -155,6 +155,46 @@ namespace Graduation_Project.Controllers
             var user = await _userManager.Users.Include(user=>user.SupplierMedication).FirstOrDefaultAsync(user => user.Id == id);
             
             return View(user);
+        }
+
+        public async Task<IActionResult> PharmacistOrders()
+        {
+            var currentUser = await _userManager.GetUserAsync(User);
+            var supplierOrders = await _context.SupplierOrders
+          .Include(o => o.Pharmacist).Where(u=>u.Pharmacist.Email == currentUser.Email)  // Include the Pharmacist (ApplicationUser) to get the name
+          .Include(o => o.Branch)  // Include the Branch to get the branch name
+          .Include(o => o.SupplierOrderItems)
+              .ThenInclude(oi => oi.SupplierMedication) // Include Medication to get the name and price
+          .ToListAsync();
+
+            var orderViewModels = supplierOrders.Select(order => new SupplierOrderViewModel
+            {
+                OrderId = order.Id,
+                OrderDate = order.OrderDate,
+                orderStatus = order.orderStatus,
+                PharmacistName = order.Pharmacist.FullName, // Assuming UserName contains the pharmacist name
+                BranchName = order.Branch.Name,  // Assuming Branch has a Name property
+                OrderItems = order.SupplierOrderItems.Select(item => new OrderItemViewModel
+                {
+                    MedicationName = item.SupplierMedication.Name, // Assuming Name is a property of SupplierMedication
+                    Quantity = item.Quantity,
+                    Price = item.Price
+                }).ToList()
+            }).ToList();
+
+            return View(orderViewModels);
+        }
+
+        public IActionResult Profile()
+        {
+            return View();
+        }
+
+        public async Task<IActionResult> Medications()
+        {
+                var pharmacistMedications = await _context.Medicines.ToListAsync();
+                return View(pharmacistMedications);
+            
         }
 
     }

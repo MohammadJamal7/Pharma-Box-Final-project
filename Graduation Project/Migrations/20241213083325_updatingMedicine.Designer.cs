@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Graduation_Project.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241212094949_second")]
-    partial class second
+    [Migration("20241213083325_updatingMedicine")]
+    partial class updatingMedicine
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -396,6 +396,13 @@ namespace Graduation_Project.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("InventoryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("StockQuantity")
                         .HasColumnType("int");
 
                     b.Property<int>("SupplierMedicationId")
@@ -859,8 +866,7 @@ namespace Graduation_Project.Migrations
 
             modelBuilder.Entity("Branch", b =>
                 {
-                    b.Navigation("Inventory")
-                        .IsRequired();
+                    b.Navigation("Inventory");
 
                     b.Navigation("patientOrders");
 

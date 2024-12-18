@@ -963,3 +963,21 @@ C:\Users\pc\Desktop\.Net projs\PharmaBox\Graduation Project\obj\Debug\net8.0\ref
 C:\Users\pc\Desktop\.Net projs\PharmaBox\Graduation Project\obj\Debug\net8.0\Graduation Project.pdb
 C:\Users\pc\Desktop\.Net projs\PharmaBox\Graduation Project\obj\Debug\net8.0\Graduation Project.genruntimeconfig.cache
 C:\Users\pc\Desktop\.Net projs\PharmaBox\Graduation Project\obj\Debug\net8.0\ref\Graduation Project.dll
+C:\Users\USER\Desktop\Uni\Graduation\Graduation Project\Graduation Project\bin\Debug\net8.0\Hangfire.AspNetCore.dll
+C:\Users\USER\Desktop\Uni\Graduation\Graduation Project\Graduation Project\bin\Debug\net8.0\Hangfire.Core.dll
+C:\Users\USER\Desktop\Uni\Graduation\Graduation Project\Graduation Project\bin\Debug\net8.0\Hangfire.NetCore.dll
+C:\Users\USER\Desktop\Uni\Graduation\Graduation Project\Graduation Project\bin\Debug\net8.0\Hangfire.SqlServer.dll
+C:\Users\USER\Desktop\Uni\Graduation\Graduation Project\Graduation Project\bin\Debug\net8.0\ca\Hangfire.Core.resources.dll
+C:\Users\USER\Desktop\Uni\Graduation\Graduation Project\Graduation Project\bin\Debug\net8.0\de\Hangfire.Core.resources.dll
+C:\Users\USER\Desktop\Uni\Graduation\Graduation Project\Graduation Project\bin\Debug\net8.0\es\Hangfire.Core.resources.dll
+C:\Users\USER\Desktop\Uni\Graduation\Graduation Project\Graduation Project\bin\Debug\net8.0\fa\Hangfire.Core.resources.dll
+C:\Users\USER\Desktop\Uni\Graduation\Graduation Project\Graduation Project\bin\Debug\net8.0\fr\Hangfire.Core.resources.dll
+C:\Users\USER\Desktop\Uni\Graduation\Graduation Project\Graduation Project\bin\Debug\net8.0\nb\Hangfire.Core.resources.dll
+C:\Users\USER\Desktop\Uni\Graduation\Graduation Project\Graduation Project\bin\Debug\net8.0\nl\Hangfire.Core.resources.dll
+C:\Users\USER\Desktop\Uni\Graduation\Graduation Project\Graduation Project\bin\Debug\net8.0\pt-BR\Hangfire.Core.resources.dll
+C:\Users\USER\Desktop\Uni\Graduation\Graduation Project\Graduation Project\bin\Debug\net8.0\pt-PT\Hangfire.Core.resources.dll
+C:\Users\USER\Desktop\Uni\Graduation\Graduation Project\Graduation Project\bin\Debug\net8.0\pt\Hangfire.Core.resources.dll
+C:\Users\USER\Desktop\Uni\Graduation\Graduation Project\Graduation Project\bin\Debug\net8.0\sv\Hangfire.Core.resources.dll
+C:\Users\USER\Desktop\Uni\Graduation\Graduation Project\Graduation Project\bin\Debug\net8.0\tr-TR\Hangfire.Core.resources.dll
+C:\Users\USER\Desktop\Uni\Graduation\Graduation Project\Graduation Project\bin\Debug\net8.0\zh-TW\Hangfire.Core.resources.dll
+C:\Users\USER\Desktop\Uni\Graduation\Graduation Project\Graduation Project\bin\Debug\net8.0\zh\Hangfire.Core.resources.dll

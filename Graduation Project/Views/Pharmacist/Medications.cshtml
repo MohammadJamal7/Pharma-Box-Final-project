@@ -1,0 +1,54 @@
+﻿@model List<Medicine>
+
+@{
+    ViewData["Title"] = "Pharmacist Medicines";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<!-- Buttons for Actions -->
+<a class="btn btn-secondary" asp-action="Create" asp-controller="Pharmacist">
+    Add new Medicine
+</a>
+<a class="btn btn-secondary" asp-action="PharmacistOrders" asp-controller="Pharmacist">
+    View Orders
+</a>
+
+@if (Model != null && Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Medicine Image</th>  <!-- Updated header for image column -->
+                <th>Medicine Name</th>
+                <th>Medicine Group</th>
+                <th>Stock Quantity</th>
+                <th>Expiry Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <!-- Image column with rounded-circle class for circular shape -->
+                        <img src="@item.ImageUrl" alt="@item.Name" class="img-fluid rounded-circle" style="width: 50px; height: 50px;">
+                    </td>
+                    <td>@item.Name</td>
+                    <td>@item.GroupMedicine</td>
+                    <td>@item.StockQuantity</td>
+                    <td>@item.ExpiryDate.ToShortDateString()</td>
+                    <td>
+                        <a class="btn btn-secondary" asp-action="Edit" asp-controller="Pharmacist" asp-route-id="@item.MedicineId">Edit</a>
+                        <a class="btn btn-danger" asp-action="Delete" asp-controller="Pharmacist" asp-route-id="@item.MedicineId">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No medicines available in the inventory.</p>
+}

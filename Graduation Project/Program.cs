@@ -1,7 +1,7 @@
 using Graduation_Project.Data;
+using Hangfire; // Import Hangfire namespace
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,7 +21,10 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
     .AddRoles<IdentityRole>()  // Add role management support
     .AddEntityFrameworkStores<ApplicationDbContext>();  // Use ApplicationDbContext for Identity
 
-
+// Add Hangfire services
+builder.Services.AddHangfire(config =>
+    config.UseSqlServerStorage(connectionString)); // Use the same database connection
+builder.Services.AddHangfireServer(); // Add Hangfire background job server
 
 // Build the app
 var app = builder.Build();
@@ -52,7 +55,9 @@ else
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
-
+// Add Hangfire middleware
+app.UseHangfireDashboard(); // Enables the dashboard at "/hangfire"
+app.UseHangfireServer();    // Starts the Hangfire server
 
 // Enable routing and authorization
 app.UseRouting();
@@ -61,7 +66,7 @@ app.UseAuthorization();
 // Configure the default route
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Supplier}/{action=Login}/{id?}");
+    pattern: "{controller=Pharmacist}/{action=Login}/{id?}");
 app.MapRazorPages();
 
 // Run the application

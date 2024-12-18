@@ -11,7 +11,6 @@ namespace Graduation_Project.Models
         public DateTime? DeliveredDate { get; set; }  // When the order is delivered
 
 
-
         // relationships :
 
         public string UserId { get; set; }  // Foreign Key to ApplicationUser
