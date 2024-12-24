@@ -20,5 +20,9 @@ namespace Graduation_Project.Controllers
             return View(groupMedicines);
         }
 
+        public IActionResult About()
+        {
+            return View();
+        }
     }
 }
