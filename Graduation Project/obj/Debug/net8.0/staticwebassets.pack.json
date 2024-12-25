@@ -109,6 +109,22 @@
       "PackagePath": "staticwebassets\\images\\hero_1.jpg"
     },
     {
+      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\logo.jpg",
+      "PackagePath": "staticwebassets\\images\\logo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\medicines\\063336fe-b657-497b-b1e7-db77bf82f32b_OIP.jpeg",
+      "PackagePath": "staticwebassets\\images\\medicines\\063336fe-b657-497b-b1e7-db77bf82f32b_OIP.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\medicines\\c92e0cf6-d4f0-41cf-a403-79fc2a76afc1_ice-cream-sundae-fruit-sherbets-decorated-wafers-fresh-strawberries-37368479.png",
+      "PackagePath": "staticwebassets\\images\\medicines\\c92e0cf6-d4f0-41cf-a403-79fc2a76afc1_ice-cream-sundae-fruit-sherbets-decorated-wafers-fresh-strawberries-37368479.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\medicines\\fff489f7-d77b-4c0b-a382-1908c61432e9_fruit-salad-7-735x980.png",
+      "PackagePath": "staticwebassets\\images\\medicines\\fff489f7-d77b-4c0b-a382-1908c61432e9_fruit-salad-7-735x980.png"
+    },
+    {
       "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\person_1.jpg",
       "PackagePath": "staticwebassets\\images\\person_1.jpg"
     },
@@ -143,10 +159,6 @@
     {
       "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\product_02.png",
       "PackagePath": "staticwebassets\\images\\product_02.png"
-    },
-    {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\product_03.png",
-      "PackagePath": "staticwebassets\\images\\product_03.png"
     },
     {
       "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\product_04.png",
@@ -187,6 +199,10 @@
     {
       "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\js\\aos.js",
       "PackagePath": "staticwebassets\\js\\aos.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js"
     },
     {
       "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\js\\bootstrap.min.js",

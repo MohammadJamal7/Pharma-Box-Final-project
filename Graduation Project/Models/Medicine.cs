@@ -27,7 +27,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 
     // Relationships
-    public int SupplierMedicationId { get; set; }  // This should be nullable in case there's no supplier stock yet
+    public int? SupplierMedicationId { get; set; }  // This should be nullable in case there's no supplier stock yet
     public SupplierMedication SupplierMedication { get; set; }  // Reference to the supplier's medicine entry
 
     // Relationship to GroupMedicine
