@@ -72,7 +72,22 @@ namespace Graduation_Project.Data
 
                 context.PharmacyBranch.Add(defaultBranch);
                 await context.SaveChangesAsync();
+
+                if (defaultBranch.Inventory==null)
+                {
+                    //Seed a default Inventory for the Branch
+                    var defaultInventory = new Inventory
+                    {
+                        Branch = defaultBranch,
+                        BranchId = defaultBranch.BranchId,
+
+                    };
+                    context.Inventory.Add(defaultInventory);
+                    await context.SaveChangesAsync();
+                }
             }
+
+         
         }
     }
 }

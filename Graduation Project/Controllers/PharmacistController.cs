@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Mvc.Abstractions;
 using Microsoft.Build.Framework;
 using Microsoft.Build.ObjectModelRemoting;
 using Microsoft.EntityFrameworkCore;
@@ -438,6 +439,55 @@ namespace Graduation_Project.Controllers
             ViewBag.GroupMedicineList = groups;
             return View();
         }
+        public async Task<IActionResult> GroupsOfMedicines()
+        {
+            var groups = await _context.GroupMedicines.Include(g=>g.Medicines).ToListAsync();
+            return View(groups);
+        }
+
+        [HttpGet]
+        public IActionResult AddGroupMed()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddGroupMed(string Name, IFormFile Image)
+        {
+            if (!string.IsNullOrWhiteSpace(Name) && Image != null)
+            {
+                // Step 1: Handle file upload
+                var fileExtension = Path.GetExtension(Image.FileName);  // Get file extension
+                var fileName = Path.GetFileNameWithoutExtension(Image.FileName);  // Get file name without extension
+                var newFileName = fileName + DateTime.Now.ToString("yyyyMMddHHmmss") + fileExtension;  // Create a unique file name
+
+                // Path to save the image (wwwroot/images folder)
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", newFileName);
+
+                // Step 2: Save the file to disk
+                using (var fileStream = new FileStream(path, FileMode.Create))
+                {
+                    await Image.CopyToAsync(fileStream);
+                }
+
+                // Step 3: Create and save the new GroupMedicine object to the database
+                var groupMedicine = new GroupMedicine
+                {
+                    Name = Name,
+                    ImageUrl = "/images/" + newFileName  // Save the relative path of the image
+                };
+
+                _context.GroupMedicines.Add(groupMedicine);
+                await _context.SaveChangesAsync();
+
+                // Step 4: Redirect or return success message
+                return RedirectToAction("GroupsOfMedicines");  // Redirect to a page that shows the list of group medicines
+            }
+
+            // If validation fails, show the same form with an error message
+            ViewBag.ErrorMessage = "Please fill in all fields.";
+            return View();
+        }
 
 
         [HttpPost]
@@ -550,11 +600,7 @@ namespace Graduation_Project.Controllers
                 if (!string.IsNullOrEmpty(medicine.ImageUrl))
                 {
                     var oldImagePath = Path.Combine(_webHostEnvironment.WebRootPath, medicine.ImageUrl.TrimStart('/'));
-                    if (System.IO.File.Exists(oldImagePath))
-                    {
-                        System.IO.File.Delete(oldImagePath);
-                    }
-                }
+                     }
 
                 // Save the new image
                 string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "images/medicines");
@@ -598,8 +644,78 @@ namespace Graduation_Project.Controllers
         }
 
 
+        [HttpGet]
+        public async Task<IActionResult> EditGroup(int id)
+        {
+            var groupMedicine = await _context.GroupMedicines.FindAsync(id);
+            if (groupMedicine == null)
+            {
+                return NotFound();
+            }
 
+            return View(groupMedicine);
+        }
 
+        // POST: Edit group method
+        [HttpPost]
+        public async Task<IActionResult> EditGroup(int id, string Name, IFormFile Image)
+        {
+            if (!string.IsNullOrWhiteSpace(Name))
+            {
+                var groupMedicine = await _context.GroupMedicines.FindAsync(id);
+                if (groupMedicine == null)
+                {
+                    return NotFound();
+                }
+
+                // Update the group name
+                groupMedicine.Name = Name;
+
+                // If a new image is uploaded, save the new image
+                if (Image != null)
+                {
+                    // Delete the old image file (if exists)
+                    var oldImagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", groupMedicine.ImageUrl.TrimStart('/'));
+                    if (System.IO.File.Exists(oldImagePath))
+                    {
+                        System.IO.File.Delete(oldImagePath);
+                    }
+
+                    // Save the new image
+                    var fileExtension = Path.GetExtension(Image.FileName);
+                    var fileName = Path.GetFileNameWithoutExtension(Image.FileName);
+                    var newFileName = fileName + DateTime.Now.ToString("yyyyMMddHHmmss") + fileExtension;
+                    var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", newFileName);
+
+                    using (var fileStream = new FileStream(path, FileMode.Create))
+                    {
+                        await Image.CopyToAsync(fileStream);
+                    }
+
+                    // Update the ImagePath in the database
+                    groupMedicine.ImageUrl = "/images/" + newFileName;
+                }
+
+                // Save changes to the database
+                _context.Update(groupMedicine);
+                await _context.SaveChangesAsync();
+
+                // Redirect to the list or details page
+                return RedirectToAction("GroupsOfMedicines");  // Or redirect to a specific page after editing
+            }
+
+            // If validation fails, show the same form with an error message
+            ViewBag.ErrorMessage = "Please fill in all fields.";
+            return View();
+        }
+
+        public async Task<IActionResult> DeleteGroup(int id)
+        {
+            var group = await _context.GroupMedicines.FindAsync(id);
+             _context.GroupMedicines.Remove(group);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("GroupsOfMedicines");
+        }
 
     }
 

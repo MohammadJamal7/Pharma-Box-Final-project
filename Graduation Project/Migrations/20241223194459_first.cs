@@ -117,7 +117,7 @@ namespace Graduation_Project.Migrations
                     InventoryId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     QuantityAvailable = table.Column<int>(type: "int", nullable: false),
-                    BranchId = table.Column<int>(type: "int", nullable: false)
+                    BranchId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -126,8 +126,7 @@ namespace Graduation_Project.Migrations
                         name: "FK_Inventory_PharmacyBranch_BranchId",
                         column: x => x.BranchId,
                         principalTable: "PharmacyBranch",
-                        principalColumn: "BranchId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "BranchId");
                 });
 
             migrationBuilder.CreateTable(
@@ -353,8 +352,10 @@ namespace Graduation_Project.Migrations
                     MedicineId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HowToUse = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    StockQuantity = table.Column<int>(type: "int", nullable: false),
                     ExpiryDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     InventoryId = table.Column<int>(type: "int", nullable: true),
                     SupplierMedicationId = table.Column<int>(type: "int", nullable: false),
@@ -532,7 +533,8 @@ namespace Graduation_Project.Migrations
                 name: "IX_Inventory_BranchId",
                 table: "Inventory",
                 column: "BranchId",
-                unique: true);
+                unique: true,
+                filter: "[BranchId] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Medicines_GroupMedicineId",

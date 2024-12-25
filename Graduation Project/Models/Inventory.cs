@@ -10,10 +10,10 @@ public class Inventory
 
 
     // relationships (with branch (one to one) and with medicine (one to many) )
-    public int BranchId { get; set; }
+    public int ? BranchId { get; set; }
     [ForeignKey("BranchId")]
-    public Branch Branch { get; set; }
+    public Branch ? Branch { get; set; }
 
-    public List<Medicine> Medicines { get; set; }
+    public List<Medicine> ? Medicines { get; set; }
 
 }

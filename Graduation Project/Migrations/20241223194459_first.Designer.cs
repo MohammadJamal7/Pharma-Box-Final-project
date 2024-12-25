@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Graduation_Project.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241213044838_first")]
+    [Migration("20241223194459_first")]
     partial class first
     {
         /// <inheritdoc />
@@ -355,7 +355,7 @@ namespace Graduation_Project.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("InventoryId"));
 
-                    b.Property<int>("BranchId")
+                    b.Property<int?>("BranchId")
                         .HasColumnType("int");
 
                     b.Property<int>("QuantityAvailable")
@@ -364,7 +364,8 @@ namespace Graduation_Project.Migrations
                     b.HasKey("InventoryId");
 
                     b.HasIndex("BranchId")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[BranchId] IS NOT NULL");
 
                     b.ToTable("Inventory");
                 });
@@ -396,6 +397,13 @@ namespace Graduation_Project.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("InventoryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("StockQuantity")
                         .HasColumnType("int");
 
                     b.Property<int>("SupplierMedicationId")
@@ -733,9 +741,7 @@ namespace Graduation_Project.Migrations
                 {
                     b.HasOne("Branch", "Branch")
                         .WithOne("Inventory")
-                        .HasForeignKey("Inventory", "BranchId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("Inventory", "BranchId");
 
                     b.Navigation("Branch");
                 });
