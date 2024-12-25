@@ -21,6 +21,8 @@ wwwroot\fonts\icomoon\fonts\icomoon.woff
 wwwroot\fonts\icomoon\Read Me.txt
 wwwroot\fonts\icomoon\selection.json
 wwwroot\fonts\icomoon\style.css
+wwwroot\images\520241221142923.png
+wwwroot\images\520241221143421.png
 wwwroot\images\bg_1.jpg
 wwwroot\images\bg_2.jpg
 wwwroot\images\hero_1.jpg
@@ -39,6 +41,7 @@ wwwroot\images\product_05.png
 wwwroot\images\product_06.png
 wwwroot\images\product_07_large.png
 wwwroot\images\products_1.png
+wwwroot\images\Screenshot 2024-04-15 14483820241221142926.png
 wwwroot\images\shoe.png
 wwwroot\images\supplier.jpg
 wwwroot\images\wave.svg

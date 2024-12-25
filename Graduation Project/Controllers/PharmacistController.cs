@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Mvc.Abstractions;
 using Microsoft.Build.Framework;
 using Microsoft.Build.ObjectModelRemoting;
 using Microsoft.EntityFrameworkCore;
@@ -423,183 +423,129 @@ namespace Graduation_Project.Controllers
             return View(pharmacistMedications);
         }
 
-        [HttpGet]
-        public IActionResult CreateMedicine()
+        public async Task<IActionResult> GroupsOfMedicines()
         {
-            // Assuming _context is your DbContext
-            var groups = _context.GroupMedicines
-                .Select(g => new SelectListItem
-                {
-                    Value = g.GroupMedicineId.ToString(), // The ID of the group
-                    Text = g.Name // The name of the group
-                })
-                .ToList();
+            var groups = await _context.GroupMedicines.Include(g=>g.Medicines).ToListAsync();
+            return View(groups);
+        }
 
-            ViewBag.GroupMedicineList = groups;
+        [HttpGet]
+        public IActionResult AddGroupMed()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddGroupMed(string Name, IFormFile Image)
+        {
+            if (!string.IsNullOrWhiteSpace(Name) && Image != null)
+            {
+                // Step 1: Handle file upload
+                var fileExtension = Path.GetExtension(Image.FileName);  // Get file extension
+                var fileName = Path.GetFileNameWithoutExtension(Image.FileName);  // Get file name without extension
+                var newFileName = fileName + DateTime.Now.ToString("yyyyMMddHHmmss") + fileExtension;  // Create a unique file name
+
+                // Path to save the image (wwwroot/images folder)
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", newFileName);
+
+                // Step 2: Save the file to disk
+                using (var fileStream = new FileStream(path, FileMode.Create))
+                {
+                    await Image.CopyToAsync(fileStream);
+                }
+
+                // Step 3: Create and save the new GroupMedicine object to the database
+                var groupMedicine = new GroupMedicine
+                {
+                    Name = Name,
+                    ImageUrl = "/images/" + newFileName  // Save the relative path of the image
+                };
+
+                _context.GroupMedicines.Add(groupMedicine);
+                await _context.SaveChangesAsync();
+
+                // Step 4: Redirect or return success message
+                return RedirectToAction("GroupsOfMedicines");  // Redirect to a page that shows the list of group medicines
+            }
+
+            // If validation fails, show the same form with an error message
+            ViewBag.ErrorMessage = "Please fill in all fields.";
             return View();
         }
 
 
-        [HttpPost]
-        public async Task<IActionResult> CreateMedicine(MedicineViewModel model)
-        {
-            var selectedMedicineGroup = await _context.GroupMedicines.FirstOrDefaultAsync(g=>g.GroupMedicineId==model.GroupMedicineId);
-            string uniqueFileName = null;
-
-            // Save the uploaded image to wwwroot/images/medicines
-            if (model.ImageFile != null)
-            {
-                string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "images/medicines");
-
-                // Ensure the directory exists
-                if (!Directory.Exists(uploadsFolder))
-                {
-                    Directory.CreateDirectory(uploadsFolder);
-                }
-
-                // Generate a unique file name
-                uniqueFileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(model.ImageFile.FileName);
-                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
-
-                // Save the file
-                using (var fileStream = new FileStream(filePath, FileMode.Create))
-                {
-                    await model.ImageFile.CopyToAsync(fileStream);
-                }
-            }
-
-            // Create a new Medicine and save the file path to ImageUrl
-            Medicine medicine = new Medicine
-            {
-                Name = model.Name,
-                HowToUse = model.HowToUse,
-                StockQuantity = model.StockQuantity,
-                ExpiryDate = model.ExpiryDate,
-                Description = model.Description,
-                GroupMedicine = selectedMedicineGroup,
-                GroupMedicineId = model.GroupMedicineId,
-                InventoryId = 1,
-                ImageUrl = uniqueFileName != null ? "/images/medicines/" + uniqueFileName : "/images/default-medicine.jpg" // Set default image if no file uploaded
-            };
-
-            // Save to the database
-            _context.Medicines.Add(medicine);
-            await _context.SaveChangesAsync();
-
-            return RedirectToAction("Medications");
-        }
         [HttpGet]
-        public async Task<IActionResult> EditMedicine(int id)
+        public async Task<IActionResult> EditGroup(int id)
         {
-            var groups = _context.GroupMedicines
-                .Select(g => new SelectListItem
-                {
-                    Value = g.GroupMedicineId.ToString(), // The ID of the group
-                    Text = g.Name // The name of the group
-                })
-                .ToList();
-
-            ViewBag.GroupMedicineList = groups;
-
-            var model = _context.Medicines.Include(g=>g.GroupMedicine).FirstOrDefault(m=>m.MedicineId==id);
-            var group = model.GroupMedicine;
-            var groupName = "Undefined";
-            if (group != null)
+            var groupMedicine = await _context.GroupMedicines.FindAsync(id);
+            if (groupMedicine == null)
             {
-                groupName = model.GroupMedicine.Name;
+                return NotFound();
             }
-            
-            var viewModel = new MedicineViewModel
-            {
-                Name = model.Name,
-                HowToUse = model.HowToUse,
-                StockQuantity = model.StockQuantity,
-                ExpiryDate = model.ExpiryDate,
-                Description = model.Description,
-                GroupMedicineId = model.GroupMedicineId,
-                GroupMedicineName = groupName,
-                ExistingImagePath = model.ImageUrl,
-            };
-            return View(viewModel);
+
+            return View(groupMedicine);
         }
 
-        
+        // POST: Edit group method
         [HttpPost]
-        public async Task<IActionResult> EditMedicine(int id, MedicineViewModel model)
+        public async Task<IActionResult> EditGroup(int id, string Name, IFormFile Image)
         {
-            var medicine = _context.Medicines.FirstOrDefault(m => m.MedicineId == id);
-
-            if (medicine == null)
+            if (!string.IsNullOrWhiteSpace(Name))
             {
-                return NotFound(); // Handle not found case
-            }
-
-            // Update other medicine properties
-            medicine.Name = model.Name;
-            medicine.HowToUse = model.HowToUse;
-            medicine.StockQuantity = model.StockQuantity;
-            medicine.ExpiryDate = model.ExpiryDate;
-            medicine.Description = model.Description;
-            medicine.GroupMedicineId = model.GroupMedicineId;
-           
-
-            // Handle image upload
-            if (model.ImageFile != null)
-            {
-                // Delete the existing image if it exists
-                if (!string.IsNullOrEmpty(medicine.ImageUrl))
+                var groupMedicine = await _context.GroupMedicines.FindAsync(id);
+                if (groupMedicine == null)
                 {
-                    var oldImagePath = Path.Combine(_webHostEnvironment.WebRootPath, medicine.ImageUrl.TrimStart('/'));
+                    return NotFound();
+                }
+
+                // Update the group name
+                groupMedicine.Name = Name;
+
+                // If a new image is uploaded, save the new image
+                if (Image != null)
+                {
+                    // Delete the old image file (if exists)
+                    var oldImagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", groupMedicine.ImageUrl.TrimStart('/'));
                     if (System.IO.File.Exists(oldImagePath))
                     {
                         System.IO.File.Delete(oldImagePath);
                     }
+
+                    // Save the new image
+                    var fileExtension = Path.GetExtension(Image.FileName);
+                    var fileName = Path.GetFileNameWithoutExtension(Image.FileName);
+                    var newFileName = fileName + DateTime.Now.ToString("yyyyMMddHHmmss") + fileExtension;
+                    var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", newFileName);
+
+                    using (var fileStream = new FileStream(path, FileMode.Create))
+                    {
+                        await Image.CopyToAsync(fileStream);
+                    }
+
+                    // Update the ImagePath in the database
+                    groupMedicine.ImageUrl = "/images/" + newFileName;
                 }
 
-                // Save the new image
-                string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "images/medicines");
-                if (!Directory.Exists(uploadsFolder))
-                {
-                    Directory.CreateDirectory(uploadsFolder);
-                }
+                // Save changes to the database
+                _context.Update(groupMedicine);
+                await _context.SaveChangesAsync();
 
-                string uniqueFileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(model.ImageFile.FileName);
-                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
-
-                using (var fileStream = new FileStream(filePath, FileMode.Create))
-                {
-                    await model.ImageFile.CopyToAsync(fileStream);
-                }
-
-                // Update the ImageUrl property
-                medicine.ImageUrl = "/images/medicines/" + uniqueFileName;
+                // Redirect to the list or details page
+                return RedirectToAction("GroupsOfMedicines");  // Or redirect to a specific page after editing
             }
 
-            _context.Medicines.Update(medicine);
-            await _context.SaveChangesAsync();
-
-            return RedirectToAction("Medications"); // Redirect to the relevant page
+            // If validation fails, show the same form with an error message
+            ViewBag.ErrorMessage = "Please fill in all fields.";
+            return View();
         }
 
-        [HttpPost]
-        public IActionResult DeleteMedicine(int id)
+        public async Task<IActionResult> DeleteGroup(int id)
         {
-            // Your logic to delete the medicine entry
-            var medicine = _context.Medicines.Find(id);
-            if (medicine == null)
-            {
-                return Json(new { success = false, message = "Medicine not found." });
-            }
-
-            _context.Medicines.Remove(medicine);
-            _context.SaveChanges();
-
-            return Json(new { success = true });
+            var group = await _context.GroupMedicines.FindAsync(id);
+             _context.GroupMedicines.Remove(group);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("GroupsOfMedicines");
         }
-
-
-
-
 
     }
 

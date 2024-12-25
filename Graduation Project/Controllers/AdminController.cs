@@ -44,6 +44,14 @@ namespace Graduation_Project.Controllers
             {
                 _context.PharmacyBranch.Add(model);
                 await _context.SaveChangesAsync();
+                var Inventory = new Inventory
+                {
+
+                    BranchId = model.BranchId,
+
+                };
+                _context.Inventory.Add(Inventory);
+                await _context.SaveChangesAsync();
                 return RedirectToAction("Branches");
             }
             return View(model);
