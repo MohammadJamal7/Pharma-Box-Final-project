@@ -1,9 +1,8 @@
-﻿@model List<Medicine>
+﻿@model Graduation_Project.ViewModels.MedicineViewModel
 @{
     Layout = null;
-    ViewData["Title"] = "Pharmacist Medicines";
+    ViewData["Title"] = "Create New Medicine";
 }
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +12,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <style>
         import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
         :root {
@@ -26,21 +24,17 @@
             --normal-font-size: 1rem;
             --z-fixed: 100;
         }
-
         *, ::before, ::after {
             box-sizing: border-box;
         }
-
-        .outlined-purple {
-            border: 1px solid #6f42c1;
+        .outlined-purple{
+            border:1px solid #6f42c1;
             color: #5a379d;
         }
-
-            .outlined-purple:hover {
-                background-color: #6f42c1;
-                color: white;
-            }
-
+        .outlined-purple:hover{
+            background-color: #6f42c1;
+            color: white;
+        }
         body {
             position: relative;
             margin: var(--header-height) 0 0 0;
@@ -49,11 +43,9 @@
             font-size: var(--normal-font-size);
             transition: .5s;
         }
-
         a {
             text-decoration: none;
         }
-
         .header {
             width: 100%;
             height: var(--header-height);
@@ -68,13 +60,11 @@
             z-index: var(--z-fixed);
             transition: .5s;
         }
-
         .header_toggle {
             color: var(--first-color);
             font-size: 1.5rem;
             cursor: pointer;
         }
-
         .header_img {
             width: 35px;
             height: 35px;
@@ -83,11 +73,9 @@
             border-radius: 50%;
             overflow: hidden;
         }
-
-            .header_img img {
-                width: 40px;
-            }
-
+        .header_img img {
+            width: 40px;
+        }
         .l-navbar {
             position: fixed;
             top: 0;
@@ -99,7 +87,6 @@
             transition: .5s;
             z-index: var(--z-fixed);
         }
-
         .nav {
             height: 100%;
             display: flex;
@@ -107,7 +94,6 @@
             justify-content: space-between;
             overflow: hidden;
         }
-
         .nav_logo, .nav_link {
             display: grid;
             grid-template-columns: max-content max-content;
@@ -115,123 +101,101 @@
             column-gap: 1rem;
             padding: .5rem 0 .5rem 1.5rem;
         }
-
         .nav_logo {
             margin-bottom: 2rem;
         }
-
         .nav_logo-icon {
             font-size: 1.25rem;
             color: var(--white-color);
         }
-
         .nav_logo-name {
             color: var(--white-color);
             font-weight: 700;
         }
-
         .nav_link {
             position: relative;
             color: var(--first-color-light);
             margin-bottom: 1.5rem;
             transition: .3s;
         }
-
-            .nav_link:hover {
-                color: var(--white-color);
-            }
-
+        .nav_link:hover {
+            color: var(--white-color);
+        }
         .nav_icon {
             font-size: 1.25rem;
         }
-
         .show {
             left: 0;
         }
-
         .body-pd {
             padding-left: calc(var(--nav-width) + 1rem);
         }
-
         .active {
             color: var(--white-color);
         }
-
-            .active::before {
-                content: '';
-                position: absolute;
-                left: 0;
-                width: 2px;
-                height: 32px;
-                background-color: var(--white-color);
-            }
-
+        .active::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 2px;
+            height: 32px;
+            background-color: var(--white-color);
+        }
         .height-100 {
             height: 100vh;
         }
 
         /* .user-nav {
-                    display: flex;
-                    gap: 1rem;
-                }
+            display: flex;
+            gap: 1rem;
+        }
 
-                .user-nav .nav-link {
-                    color: #6c757d;
-                    padding: 0.5rem 1rem;
-                    border-radius: 0.25rem;
-                    transition: all 0.2s;
-                }
+        .user-nav .nav-link {
+            color: #6c757d;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            transition: all 0.2s;
+        }
 
-                .user-nav .nav-link:hover {
-                    background-color: #f8f9fa;
-                }
+        .user-nav .nav-link:hover {
+            background-color: #f8f9fa;
+        }
 
-                .user-nav .nav-link.active {
-                    color: var(--first-color) !important;
-                    font-weight: 500;
-                } */
+        .user-nav .nav-link.active {
+            color: var(--first-color) !important;
+            font-weight: 500;
+        } */
 
         media screen and (min-width: 768px) {
-            body
-
-        {
-            margin: calc(var(--header-height) + 1rem) 0 0 0;
-            padding-left: calc(var(--nav-width) + 2rem);
-        }
-
-        .header {
-            height: calc(var(--header-height) + 1rem);
-            padding: 0 2rem 0 calc(var(--nav-width) + 2rem);
-        }
-
-        .header_img {
-            width: 40px;
-            height: 40px;
-        }
-
+            body {
+                margin: calc(var(--header-height) + 1rem) 0 0 0;
+                padding-left: calc(var(--nav-width) + 2rem);
+            }
+            .header {
+                height: calc(var(--header-height) + 1rem);
+                padding: 0 2rem 0 calc(var(--nav-width) + 2rem);
+            }
+            .header_img {
+                width: 40px;
+                height: 40px;
+            }
             .header_img img {
                 width: 45px;
             }
-
-        .l-navbar {
-            left: 0;
-            padding: 1rem 1rem 0 0;
-        }
-
-        .show {
-            width: calc(var(--nav-width) + 156px);
-        }
-
-        .body-pd {
-            padding-left: calc(var(--nav-width) + 188px);
-        }
-
+            .l-navbar {
+                left: 0;
+                padding: 1rem 1rem 0 0;
+            }
+            .show {
+                width: calc(var(--nav-width) + 156px);
+            }
+            .body-pd {
+                padding-left: calc(var(--nav-width) + 188px);
+            }
         }
     </style>
 </head>
 <body id="body-pd">
-
-
     <header class="header" id="header">
 
         <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
@@ -242,7 +206,7 @@
             <div>
                 <div>
                     <a href="../location-sec/index.html" class="nav_link  text-white ps-2">
-                        <img src="~/images/logo.jpg" class="p-0 " style="height: 20px;" alt="">
+                        <img src="/logo.jpg" class="p-0 " style="height: 20px;" alt="">
                         <span class="nav_loc-name">
                             PharmaBox
                         </span>
@@ -288,95 +252,63 @@
         </nav>
     </div>
     <div class="container mt-5">
-        <h2 class="fw-bold">Inventory &gt; <span class="text-primary">List of Medicines (298)</span></h2>
-        <p>List of medicines available for sales.</p>
+        <h2 class="fw-bold">
+            Inventory &gt; <span class="text-primary">List of Medicines</span> &gt; <span class="text-dark">Add New Medicine</span>
+        </h2>
+        <p class="text-muted">* All fields are mandatory, except mentioned as (optional).</p>
 
 
-        <div class="d-flex justify-content-between mb-3">
-            <input type="text" class="form-control w-25" placeholder="Search Medicine Inventory...">
-            <form asp-action="CreateMedicine" asp-controller="Pharmacist" method="get" >
-                <button class="btn btn-primary"><i class="fa fa-plus"></i> Add New Medicine</button>
-            </form>
-        </div>
+        <form asp-action="CreateMedicine" asp-controller="Pharmacist" method="post">
 
-        <div class="mb-3">
-            <select class="form-select w-25">
-                <option selected>- Select Group -</option>
-                <option value="1">Generic Medicine</option>
-                <option value="2">Diabetes</option>
-            </select>
-        </div>
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label"></label>
+                <input asp-for="Name" class="form-control" id="medicineName" placeholder="Enter medicine name" required />
+            </div>
+            <div class="mb-3">
+                <label asp-for="ImageFile" class="form-label"></label>
+                <input asp-for="ImageFile" type="file" class="form-control" id="medicinePic" placeholder="Upload medicine picture" required />
+            </div>
 
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <label asp-for="GroupMedicineId" class="form-label"></label>
+                    <select asp-for="GroupMedicineId" class="form-select" id="medicineGroup" required>
+                        <option selected disabled>- Select Group -</option>
+                        @foreach (var group in ViewBag.GroupMedicineList as List<SelectListItem>)
+                        {
+                            <option value="@group.Value">@group.Text</option>
+                        }
+                    </select>
 
-        @if (Model != null && Model.Any())
-        {
-            <table class="table table-striped table-hover">
-                <thead class="table-light">
-                    <tr>
-                        <th>Medicine Name</th>
-                        <th>Group Name</th>
-                        <th>Expire Date</th>
-                        <th>Stock in Qty</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model)
-                    {
-                        <tr id="row-id-@item.MedicineId">
-                            <td>@item.Name</td>
-                            <td>@(item.GroupMedicineId != null ? item.GroupMedicine.Name : "undefined")</td>
-                            <td>@item.ExpiryDate.ToString("MM, yyyy")</td>
-                            <td>@item.StockQuantity</td>
-                            <td>
-                                <form asp-action="EditMedicine" asp-controller="Pharmacist" method="get" asp-route-id="@item.MedicineId">
-                                    <button class="btn btn-success btn-sm"><i class="fas fa-edit"></i></button>
-                                </form>
-                                <button class="btn btn-danger btn-sm" onclick="confirmDelete(@item.MedicineId)"><i class="fas fa-trash-alt"></i></button>
-                            </td>
-                        </tr>
-                    }
+                </div>
+                <div class="col-md-4">
+                    <label asp-for="StockQuantity" class="form-label"></label>
+                    <input asp-for="StockQuantity" type="number" class="form-control" id="quantity" placeholder="Enter quantity" required />
+                </div>
+                <div class="col-md-4">
+                    <label asp-for="ExpiryDate" class="form-label"></label>
+                    <input asp-for="ExpiryDate" type="date" class="form-control" id="expirydate" placeholder="Enter expiry date" required />
+                </div>
+            </div>
 
-                </tbody>
-            </table>
-        }
-        else
-        {
-            <p>No medicines available in the inventory.</p>
-        }
+            <div class="mb-3">
+                <label asp-for="HowToUse" class="form-label"></label>
+                <textarea asp-for="HowToUse" class="form-control" id="howToUse" rows="3" placeholder="Enter usage instructions" required></textarea>
+            </div>
 
+            <div class="mb-4">
+                <label asp-for="Description" class="form-label"></label>
+                <textarea asp-for="Description" class="form-control" id="sideEffects" rows="3" placeholder="Enter side effects" required></textarea>
+            </div>
 
+            <button type="submit" class="btn btn-danger">Add Medicine</button>
+        </form>
 
-        <div class="d-flex justify-content-between align-items-center">
-            <span>Showing 1 - 8 results of 298</span>
-            <nav>
-                <ul class="pagination mb-0">
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">&laquo;</a>
-                    </li>
-                    <li class="page-item active">
-                        <a class="page-link" href="#">1</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">2</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">3</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">&raquo;</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
     </div>
 
-    <input type="hidden" name="__RequestVerificationToken" value="Antiforgery.GetTokens(HttpContext).RequestToken" />
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
     <script>
@@ -418,65 +350,6 @@
                 });
             });
         });
-
-
-        function confirmDelete(medicineId) {
-            Swal.fire({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#d33',
-                cancelButtonColor: '#3085d6',
-                confirmButtonText: 'Yes, delete it!'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    // Ensure medicineId is being passed correctly
-                    console.log('Deleting medicine with ID:', medicineId);
-
-                    $.ajax({
-                        url: '/Pharmacist/DeleteMedicine',  // Make sure the URL is correct
-                        type: 'POST',
-                       
-                        data: { id: medicineId },  // Ensure the data is in the correct format
-                        headers: {
-                            'Accept': 'application/json'
-                        },
-                        success: function (data) {
-                            if (data.success) {
-                                // Remove the row with the corresponding medicineId
-                                $('#row-id-' + medicineId).remove();
-
-                                Swal.fire(
-                                    'Deleted!',
-                                    'The medicine has been deleted.',
-                                    'success'
-                                ).then(() => {
-                                    location.reload();  // Reload page to reflect the changes
-                                });
-                            } else {
-                                Swal.fire(
-                                    'Error!',
-                                    'Unable to delete the medicine.',
-                                    'error'
-                                );
-                            }
-                        },
-                        error: function (xhr, status, error) {
-                            Swal.fire(
-                                'Error!',
-                                'An unexpected error occurred.',
-                                'error'
-                            );
-                            console.error('Error:', error);
-                        }
-                    });
-                }
-            });
-        }
-
-
-
     </script>
 </body>
 </html>

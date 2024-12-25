@@ -4,6 +4,7 @@ using Graduation_Project.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Graduation_Project.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241221135833_changesuppliermedicationId")]
+    partial class changesuppliermedicationId
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -352,7 +355,7 @@ namespace Graduation_Project.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("InventoryId"));
 
-                    b.Property<int?>("BranchId")
+                    b.Property<int>("BranchId")
                         .HasColumnType("int");
 
                     b.Property<int>("QuantityAvailable")
@@ -361,8 +364,7 @@ namespace Graduation_Project.Migrations
                     b.HasKey("InventoryId");
 
                     b.HasIndex("BranchId")
-                        .IsUnique()
-                        .HasFilter("[BranchId] IS NOT NULL");
+                        .IsUnique();
 
                     b.ToTable("Inventory");
                 });
@@ -738,7 +740,9 @@ namespace Graduation_Project.Migrations
                 {
                     b.HasOne("Branch", "Branch")
                         .WithOne("Inventory")
-                        .HasForeignKey("Inventory", "BranchId");
+                        .HasForeignKey("Inventory", "BranchId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Branch");
                 });
