@@ -23,7 +23,7 @@ namespace Graduation_Project.Controllers
             _signInManager = signin;
         }
         [Authorize(Roles = "Supplier")]
-        public async Task<IActionResult> Profile(string id)
+        public async Task<IActionResult> Medicines(string id)
         {
             var supplierMedications = await _context.SupplierMedications.Include(s=>s.Supplier).Where(s => s.SupplierId == id).ToListAsync();
             return View(supplierMedications);
