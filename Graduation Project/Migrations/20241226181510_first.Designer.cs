@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Graduation_Project.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241225095653_first")]
+    [Migration("20241226181510_first")]
     partial class first
     {
         /// <inheritdoc />
@@ -406,7 +406,7 @@ namespace Graduation_Project.Migrations
                     b.Property<int>("StockQuantity")
                         .HasColumnType("int");
 
-                    b.Property<int>("SupplierMedicationId")
+                    b.Property<int?>("SupplierMedicationId")
                         .HasColumnType("int");
 
                     b.HasKey("MedicineId");
@@ -758,9 +758,7 @@ namespace Graduation_Project.Migrations
 
                     b.HasOne("Graduation_Project.Models.SupplierMedication", "SupplierMedication")
                         .WithMany()
-                        .HasForeignKey("SupplierMedicationId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("SupplierMedicationId");
 
                     b.Navigation("GroupMedicine");
 

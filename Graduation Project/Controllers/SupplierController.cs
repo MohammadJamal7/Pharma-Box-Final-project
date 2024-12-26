@@ -288,7 +288,7 @@ namespace Graduation_Project.Controllers
                 return NotFound();
             }
 
-            order.orderStatus = "Confirmed"; // Update order status to Confirmed
+            order.orderStatus = "Preparing"; // Update order status to Confirmed
             var userMedications = user.SupplierMedication.ToList();
             var orderMedications = order.SupplierOrderItems.ToList();
 
@@ -314,8 +314,8 @@ namespace Graduation_Project.Controllers
             _context.Update(order); // Mark order as updated
             await _context.SaveChangesAsync(); // Save all changes
 
-            // Schedule a background job to change the order status to "Preparong" after one Minute
-            BackgroundJob.Schedule(() => UpdateOrderStatusToPreparing(order.Id), TimeSpan.FromSeconds(25));
+            //// Schedule a background job to change the order status to "Preparong" after one Minute
+            //BackgroundJob.Schedule(() => UpdateOrderStatusToPreparing(order.Id), TimeSpan.FromDays(1));
 
             // Schedule a background job to change the order status to "Delivered" after one day
             BackgroundJob.Schedule(() => UpdateOrderStatusToDelivered(order.Id), TimeSpan.FromDays(1));
@@ -358,6 +358,7 @@ namespace Graduation_Project.Controllers
                 _context.Update(order);
                 await _context.SaveChangesAsync();
             }
+
         }
 
         public async Task UpdateOrderStatusToDelivered(int orderId)

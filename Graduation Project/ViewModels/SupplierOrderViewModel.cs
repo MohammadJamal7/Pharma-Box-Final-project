@@ -5,6 +5,9 @@
     public string orderStatus { get; set; }
     public string PharmacistName { get; set; }
     public string BranchName { get; set; }
+    public string SupplierId { get; set; }
+    public string SupplierName { get; set; }
+
     public List<OrderItemViewModel> OrderItems { get; set; }
 }
 

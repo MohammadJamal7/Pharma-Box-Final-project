@@ -295,7 +295,7 @@
                         <td>
                             <button class="icon-btn text-warning"><i class="fa fa-plus-circle"></i></button>
                             <a class="icon-btn text-success" href="@Url.Action("EditGroup","Pharmacist", new { id = group.GroupMedicineId })"><i class="fa fa-edit"></i></a>
-                            <button class="icon-btn text-danger"><i class="fa fa-trash"></i></button>
+                            <a class="icon-btn text-danger" href="@Url.Action("DeleteGroup", "Pharmacist", new { id = group.GroupMedicineId })"><i class="fa fa-trash"></i></a>
                         </td>
                     </tr>
                 }

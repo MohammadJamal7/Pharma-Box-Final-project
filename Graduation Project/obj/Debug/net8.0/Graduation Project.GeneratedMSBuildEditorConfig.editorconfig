@@ -118,6 +118,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhhcm1hY2lzdFxNZWRpY2F0aW9ucy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/USER/Desktop/Uni/Graduation/Graduation Project/Graduation Project/Views/Pharmacist/PharmacistChat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhhcm1hY2lzdFxQaGFybWFjaXN0Q2hhdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/USER/Desktop/Uni/Graduation/Graduation Project/Graduation Project/Views/Pharmacist/PharmacistOrders.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhhcm1hY2lzdFxQaGFybWFjaXN0T3JkZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -184,6 +188,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/USER/Desktop/Uni/Graduation/Graduation Project/Graduation Project/Views/Supplier/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/Uni/Graduation/Graduation Project/Graduation Project/Views/User/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/Uni/Graduation/Graduation Project/Graduation Project/Views/User/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/Uni/Graduation/Graduation Project/Graduation Project/Views/User/UserChat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2VyQ2hhdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/USER/Desktop/Uni/Graduation/Graduation Project/Graduation Project/Views/_ViewImports.cshtml]
