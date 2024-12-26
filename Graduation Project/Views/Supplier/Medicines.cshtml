@@ -1,13 +1,10 @@
 ﻿@{
     Layout = null;
 }
-
-@model Graduation_Project.Models.SupplierMedication
-
 @{
-    ViewData["Title"] = "Create New Medicine";
+    ViewData["Title"] = "Supplier Medicines";
 }
-
+@model List<Graduation_Project.Models.SupplierMedication>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -209,25 +206,25 @@
                 color: #600946;
             }
         /* .user-nav {
-                                           display: flex;
-                                           gap: 1rem;
-                                       }
+                                   display: flex;
+                                   gap: 1rem;
+                               }
 
-                                       .user-nav .nav-link {
-                                           color: #6c757d;
-                                           padding: 0.5rem 1rem;
-                                           border-radius: 0.25rem;
-                                           transition: all 0.2s;
-                                       }
+                               .user-nav .nav-link {
+                                   color: #6c757d;
+                                   padding: 0.5rem 1rem;
+                                   border-radius: 0.25rem;
+                                   transition: all 0.2s;
+                               }
 
-                                       .user-nav .nav-link:hover {
-                                           background-color: #f8f9fa;
-                                       }
+                               .user-nav .nav-link:hover {
+                                   background-color: #f8f9fa;
+                               }
 
-                                       .user-nav .nav-link.active {
-                                           color: var(--first-color) !important;
-                                           font-weight: 500;
-                                       } */
+                               .user-nav .nav-link.active {
+                                   color: var(--first-color) !important;
+                                   font-weight: 500;
+                               } */
 
         @@media screen and (min-width: 768px) {
             body {
@@ -287,7 +284,7 @@
                         <span class="nav_name ">OverView</span>
 
                     </a>
-                    <a href="#" class="nav_link ">
+                    <a href="#" class="nav_link active">
                         <i class="fa-solid fa-capsules"></i>
                         <span class="nav_name">Medications</span>
                     </a>
@@ -303,33 +300,66 @@
         </nav>
     </div>
 
-    <h2>@ViewData["Title"]</h2>
 
-    <form asp-action="Create" method="post">
-        <div class="form-group">
-            <label for="Name">Medicine Name</label>
-            <input type="text" class="form-control" id="Name" name="Name" required />
+
+
+    <div class="container mt-5" style="margin-top:50px">
+        <div class="d-flex justify-content-between align-items-center mb-4 ">
+            <h2 class="display-5">@ViewData["Title"]</h2>
+            <div>
+                <a class="btn " style="background-color:#6f42c1;color:white" asp-action="Create" asp-controller="Supplier">
+                    <i class="fa fa-plus-circle me-2"></i> Add New
+                </a>
+
+            </div>
         </div>
 
-        <div class="form-group">
-            <label for="Price">Price</label>
-            <input type="number" class="form-control" id="Price" name="Price" step="0.01" required />
-        </div>
+        @if (Model != null && Model.Any())
+        {
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Medicine Name</th>
+                            <th>Price</th>
+                            <th>Stock Quantity</th>
+                            <th>Expiry Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.Name</td>
+                                <td>@item.Price.ToString("C")</td> <!-- Format Price as Currency -->
+                                <td>@item.StockQuantity</td>
+                                <td>@item.ExpiryDate.ToShortDateString()</td>
+                                <td>
+                                    <a class="btn btn-warning btn-sm" asp-action="Edit" asp-controller="Supplier" asp-route-id="@item.SupplierMedicationId">
+                                        <i class="fa fa-edit"></i> Edit
+                                    </a>
+                                    <a class="btn btn-danger btn-sm" asp-action="Delete" asp-controller="Supplier" asp-route-id="@item.SupplierMedicationId">
+                                        <i class="fa fa-trash"></i> Delete
+                                    </a>
+                                </td>
+                            </tr>
 
-        <div class="form-group">
-            <label for="StockQuantity">Stock Quantity</label>
-            <input type="number" class="form-control" id="StockQuantity" name="StockQuantity" required />
-        </div>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+        else
+        {
+            <div class="alert alert-info" role="alert">
+                No medicines available for this supplier.
+            </div>
+        }
+    </div>
 
-        <div class="form-group">
-            <label for="ExpiryDate">Expiry Date</label>
-            <input type="date" class="form-control" id="ExpiryDate" name="ExpiryDate" required />
-        </div>
 
-        <button type="submit" class="btn btn-primary">Add Medicine</button>
-    </form>
-
-
+    </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function(event) {

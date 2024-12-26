@@ -26,6 +26,10 @@ wwwroot\images\520241221143421.png
 wwwroot\images\bg_1.jpg
 wwwroot\images\bg_2.jpg
 wwwroot\images\hero_1.jpg
+wwwroot\images\logo.jpg
+wwwroot\images\medicines\063336fe-b657-497b-b1e7-db77bf82f32b_OIP.jpeg
+wwwroot\images\medicines\c92e0cf6-d4f0-41cf-a403-79fc2a76afc1_ice-cream-sundae-fruit-sherbets-decorated-wafers-fresh-strawberries-37368479.png
+wwwroot\images\medicines\fff489f7-d77b-4c0b-a382-1908c61432e9_fruit-salad-7-735x980.png
 wwwroot\images\person_1.jpg
 wwwroot\images\person_2.jpg
 wwwroot\images\person_3.jpg
@@ -35,7 +39,6 @@ wwwroot\images\pharmacist.jpg
 wwwroot\images\pharmacist2.jpg
 wwwroot\images\product_01.png
 wwwroot\images\product_02.png
-wwwroot\images\product_03.png
 wwwroot\images\product_04.png
 wwwroot\images\product_05.png
 wwwroot\images\product_06.png
@@ -47,6 +50,7 @@ wwwroot\images\supplier.jpg
 wwwroot\images\wave.svg
 wwwroot\images\women.jpg
 wwwroot\js\aos.js
+wwwroot\js\bootstrap.bundle.min.js
 wwwroot\js\bootstrap.min.js
 wwwroot\js\jquery.magnific-popup.min.js
 wwwroot\js\jquery-3.3.1.min.js
