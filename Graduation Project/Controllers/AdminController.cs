@@ -1,4 +1,4 @@
-﻿using Graduation_Project.Data;
+using Graduation_Project.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -19,7 +19,7 @@ namespace Graduation_Project.Controllers
         }
 
 
-        public IActionResult Index()
+        public IActionResult OverView()
         {
             return View();
         }
