@@ -358,7 +358,7 @@ namespace Graduation_Project.Migrations
                     StockQuantity = table.Column<int>(type: "int", nullable: false),
                     ExpiryDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     InventoryId = table.Column<int>(type: "int", nullable: true),
-                    SupplierMedicationId = table.Column<int>(type: "int", nullable: false),
+                    SupplierMedicationId = table.Column<int>(type: "int", nullable: true),
                     GroupMedicineId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
@@ -378,8 +378,7 @@ namespace Graduation_Project.Migrations
                         name: "FK_Medicines_SupplierMedications_SupplierMedicationId",
                         column: x => x.SupplierMedicationId,
                         principalTable: "SupplierMedications",
-                        principalColumn: "SupplierMedicationId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "SupplierMedicationId");
                 });
 
             migrationBuilder.CreateTable(

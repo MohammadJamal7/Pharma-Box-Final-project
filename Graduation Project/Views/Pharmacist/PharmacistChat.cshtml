@@ -1,0 +1,71 @@
+﻿@model IEnumerable<ApplicationUser>
+
+<h2>Chat Dashboard</h2>
+
+<div>
+    <h3>Users</h3>
+    <ul id="userList" style="list-style: none; padding: 0;">
+        @foreach (var user in Model)
+        {
+            <li style="margin-bottom: 10px; cursor: pointer;" onclick="openChat('@user.Id', '@user.FullName')">
+                @user.FullName (@user.Email)
+            </li>
+        }
+    </ul>
+</div>
+
+<!-- Chat Window -->
+<div id="chatWindow" style="display: none; border: 1px solid #ccc; height: 300px; overflow-y: auto; margin-top: 20px; padding: 10px;">
+    <h3>Chat with <span id="currentUser"></span></h3>
+    <div id="chatMessages" style="height: 200px; overflow-y: auto;"></div>
+    <input type="text" id="messageInput" placeholder="Type your message..." style="width: 80%; margin-top: 10px;" />
+    <button onclick="sendMessage()" style="padding: 5px 10px;">Send</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.0/signalr.min.js"></script>
+
+<script>
+    const connection = new signalR.HubConnectionBuilder()
+        .withUrl("/chatHub")
+        .build();
+
+    let selectedUserId = null;
+
+    connection.start().then(() => {
+        console.log("SignalR connected!");
+    }).catch(err => console.error("SignalR connection error:", err));
+
+    connection.on("ReceiveMessage", (sender, message) => {
+        if (sender === selectedUserId) {
+            appendMessage(sender, message);
+        }
+    });
+
+    function openChat(userId, userName) {
+        selectedUserId = userId;
+        document.getElementById("currentUser").textContent = userName;
+        document.getElementById("chatWindow").style.display = "block";
+        document.getElementById("chatMessages").innerHTML = ""; // Clear previous messages
+    }
+
+    function sendMessage() {
+        const message = document.getElementById("messageInput").value;
+        if (!message.trim()) {
+            alert("Message cannot be empty.");
+            return;
+        }
+
+        connection.invoke("SendMessage", selectedUserId, message)
+            .catch(err => console.error(err));
+        appendMessage("Me", message);
+        document.getElementById("messageInput").value = "";
+    }
+
+    function appendMessage(sender, message) {
+        const chatMessages = document.getElementById("chatMessages");
+        const msgElement = document.createElement("div");
+        msgElement.textContent = `${sender}: ${message}`;
+        chatMessages.appendChild(msgElement);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+</script>

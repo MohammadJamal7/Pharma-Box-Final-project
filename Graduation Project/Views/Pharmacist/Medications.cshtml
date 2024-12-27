@@ -293,15 +293,15 @@
 
 
         <div class="d-flex justify-content-between mb-3">
-            <input type="text" class="form-control w-25" placeholder="Search Medicine Inventory...">
-            <form asp-action="CreateMedicine" asp-controller="Pharmacist" method="get" >
+            <input type="text" id="searchInput" class="form-control w-25" placeholder="Search Medicine Inventory..." oninput="searchMedicine()">
+            <form asp-action="CreateMedicine" asp-controller="Pharmacist" method="get">
                 <button class="btn btn-primary"><i class="fa fa-plus"></i> Add New Medicine</button>
             </form>
         </div>
 
         <div class="mb-3">
-            <select class="form-select w-25">
-                <option selected>- Select Group -</option>
+            <select id="groupFilter" class="form-select w-25" onchange="filterTable()">
+                <option value="" selected>- Select Group -</option>
                 <option value="1">Generic Medicine</option>
                 <option value="2">Diabetes</option>
             </select>
@@ -320,15 +320,15 @@
                         <th>Actions</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="medicineTable">
                     @foreach (var item in Model)
                     {
-                        <tr id="row-id-@item.MedicineId">
+                        <tr id="row-id-@item.MedicineId" data-group-id="@item.GroupMedicineId" data-name="@item.Name.ToLower()">
                             <td>@item.Name</td>
                             <td>@(item.GroupMedicineId != null ? item.GroupMedicine.Name : "undefined")</td>
                             <td>@item.ExpiryDate.ToString("MM, yyyy")</td>
                             <td>@item.StockQuantity</td>
-                            <td>
+                            <td class="d-flex flex-row  gap-2 align-items-center">
                                 <form asp-action="EditMedicine" asp-controller="Pharmacist" method="get" asp-route-id="@item.MedicineId">
                                     <button class="btn btn-success btn-sm"><i class="fas fa-edit"></i></button>
                                 </form>
@@ -336,7 +336,6 @@
                             </td>
                         </tr>
                     }
-
                 </tbody>
             </table>
         }
@@ -380,6 +379,40 @@
 
 
     <script>
+
+        function filterTable() {
+            var selectedGroupId = document.getElementById("groupFilter").value;
+            var rows = document.querySelectorAll("#medicineTable tr");
+
+            rows.forEach(function (row) {
+                var groupId = row.getAttribute("data-group-id");
+
+                if (selectedGroupId === "" || groupId === selectedGroupId) {
+                    row.style.display = ""; // Show row
+                } else {
+                    row.style.display = "none"; // Hide row
+                }
+            });
+
+           
+        }
+
+        function searchMedicine() {
+            var searchQuery = document.getElementById("searchInput").value.toLowerCase();
+            var rows = document.querySelectorAll("#medicineTable tr");
+
+            rows.forEach(function (row) {
+                var name = row.getAttribute("data-name");
+                // Check if the search query matches the name (case insensitive)
+                if (name.includes(searchQuery)) {
+                    row.style.display = ""; // Show row
+                } else {
+                    row.style.display = "none"; // Hide row
+                }
+            });
+        }
+
+
         document.addEventListener("DOMContentLoaded", function(event) {
             const showNavbar = (toggleId, navId, bodyId, headerId) => {
                 const toggle = document.getElementById(toggleId),
