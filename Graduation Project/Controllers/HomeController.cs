@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Graduation_Project.Controllers
 {
-    public class HomePageController : Controller
+    public class HomeController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public HomePageController(ApplicationDbContext context)
+        public HomeController(ApplicationDbContext context)
         {
             _context = context;
         }

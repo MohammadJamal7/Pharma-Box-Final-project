@@ -53,7 +53,7 @@ namespace Graduation_Project.Controllers
                 await _context.SaveChangesAsync();
 
             // Redirect to a success page or the list of supplier medicines
-            return RedirectToAction("Profile", "Supplier", new { id = supplier.Id });
+            return RedirectToAction("Medicines", "Supplier", new { id = supplier.Id });
 
 
         }
@@ -84,7 +84,7 @@ namespace Graduation_Project.Controllers
                 _context.Update(existingMedication);
                 await _context.SaveChangesAsync();
             
-            return RedirectToAction("Profile", "Supplier", new { id = currentUser.Id });
+            return RedirectToAction("Medicines", "Supplier", new { id = currentUser.Id });
 
         }
 
@@ -109,7 +109,7 @@ namespace Graduation_Project.Controllers
             await _context.SaveChangesAsync();
 
             // Redirect to the supplier profile
-            return RedirectToAction("Profile", "Supplier", new { id = currentUser.Id });
+            return RedirectToAction("Medicines", "Supplier", new { id = currentUser.Id });
         }
 
 
@@ -225,7 +225,7 @@ namespace Graduation_Project.Controllers
                     var curretnSupplier = await _userManager.FindByEmailAsync(model.Email);  // Retrieve supplier ID
 
                     // Redirect to the default action (e.g., Home/Index) after successful login
-                    return RedirectToAction("Profile", "Supplier", new { id = curretnSupplier.Id });
+                    return RedirectToAction("Medicines", "Supplier", new { id = curretnSupplier.Id });
                 }
                 else
                 {

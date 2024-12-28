@@ -215,7 +215,9 @@ namespace Graduation_Project.Controllers
 
         public async Task<IActionResult> Medications()
         {
-            var pharmacistMedications = await _context.Medicines.Include(g => g.GroupMedicine).ToListAsync();
+            var currentPharmacist =await _userManager.GetUserAsync(User);
+            
+            var pharmacistMedications = await _context.Medicines.Include(g => g.GroupMedicine).Where(b=>b.Inventory.BranchId == currentPharmacist.BranchId).ToListAsync();
             return View(pharmacistMedications);
         }
 
@@ -235,13 +237,123 @@ namespace Graduation_Project.Controllers
             return View();
         }
 
+        [HttpPost]
+        public async Task<IActionResult> AcceptOrder(int orderId)
+        {
+            // Get the order and its related items
+            var supplierOrder = await _context.SupplierOrders
+                .Include(o => o.SupplierOrderItems)
+                    .ThenInclude(oi => oi.SupplierMedication)
+                .FirstOrDefaultAsync(o => o.Id == orderId);
+
+            if (supplierOrder == null || supplierOrder.orderStatus != "Delivered")
+            {
+                return NotFound("Order not found or not delivered yet.");
+            }
+
+            // Get the pharmacist's inventory
+            var pharmacistInventory = await _context.Inventory
+                .FirstOrDefaultAsync(i => i.BranchId == supplierOrder.BranchId);
+
+            if (pharmacistInventory == null)
+            {
+                return NotFound("Pharmacist inventory not found.");
+            }
+
+            // Process each item in the order
+            foreach (var item in supplierOrder.SupplierOrderItems)
+            {
+                var supplierMedication = item.SupplierMedication;
+
+                if (supplierMedication != null)
+                {
+                    // Check if the medicine already exists in the pharmacist's inventory
+                    var existingMedicine = await _context.Medicines
+                        .FirstOrDefaultAsync(m => m.SupplierMedicationId == supplierMedication.SupplierMedicationId);
+
+                    if (existingMedicine != null)
+                    {
+                        // Update existing medicine (e.g., stock quantity)
+                        existingMedicine.ExpiryDate = supplierMedication.ExpiryDate > existingMedicine.ExpiryDate
+                            ? supplierMedication.ExpiryDate
+                            : existingMedicine.ExpiryDate; // Keep the latest expiry date
+                        existingMedicine.StockQuantity += item.Quantity; // Increment stock quantity
+                    }
+                    else
+                    {
+                        // Add a new medicine entry
+                        var newMedicine = new Medicine
+                        {
+                            Name = supplierMedication.Name,
+                            StockQuantity = supplierMedication.StockQuantity,
+                            Description = supplierMedication.Name,
+                            HowToUse = "Follow prescription", // Default usage instructions
+                            ImageUrl = "/images/product_03.png", // Set if an image is available
+                            ExpiryDate = supplierMedication.ExpiryDate,
+                            InventoryId = pharmacistInventory.InventoryId,
+                            SupplierMedicationId = supplierMedication.SupplierMedicationId,
+                            GroupMedicineId = null, // Set group ID if applicable
+                            Inventory = pharmacistInventory,
+
+                        };
+
+                        _context.Medicines.Add(newMedicine);
+                    }
+                }
+            }
+
+            // Mark the order as "Accepted"
+            supplierOrder.orderStatus = "Completed";
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("PharmacistOrders", "Pharmacist"); // Redirect to the Orders view after accepting the order
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> RejectOrder(int orderId)
+        {
+            // Get the order and its related items
+            var supplierOrder = await _context.SupplierOrders
+                .Include(o => o.SupplierOrderItems)
+                    .ThenInclude(oi => oi.SupplierMedication)
+                .FirstOrDefaultAsync(o => o.Id == orderId);
+
+            if (supplierOrder == null || supplierOrder.orderStatus != "Delivered")
+            {
+                return NotFound("Order not found or not delivered yet.");
+            }
+
+            // Process each item in the order
+            foreach (var item in supplierOrder.SupplierOrderItems)
+            {
+                var supplierMedication = item.SupplierMedication;
+
+                if (supplierMedication != null)
+                {
+                    // Adjust the quantity of the supplier medication to account for the rejected order
+                    supplierMedication.StockQuantity += item.Quantity;
+                }
+            }
+
+            // Mark the order as "Rejected"
+            supplierOrder.orderStatus = "Returned";
+
+            // Save the changes to the database
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("PharmacistOrders", "Pharmacist"); // Redirect to the Orders view after rejecting the order
+        }
+
 
         [HttpPost]
         public async Task<IActionResult> CreateMedicine(MedicineViewModel model)
         {
-            var currentUser =await _userManager.GetUserAsync(User);
-            var currentBranch = await _context.PharmacyBranch.Include(i=>i.Inventory).FirstOrDefaultAsync(b => b.BranchId == currentUser.BranchId);
-            var selectedMedicineGroup = await _context.GroupMedicines.FirstOrDefaultAsync(g => g.GroupMedicineId == model.GroupMedicineId);
+            var currentUser = await _userManager.GetUserAsync(User);
+            var currentBranch = await _context.PharmacyBranch
+                .Include(i => i.Inventory)
+                .FirstOrDefaultAsync(b => b.BranchId == currentUser.BranchId);
+            var selectedMedicineGroup = await _context.GroupMedicines
+                .FirstOrDefaultAsync(g => g.GroupMedicineId == model.GroupMedicineId);
             string uniqueFileName = null;
 
             // Save the uploaded image to wwwroot/images/medicines
@@ -277,7 +389,8 @@ namespace Graduation_Project.Controllers
                 GroupMedicine = selectedMedicineGroup,
                 GroupMedicineId = model.GroupMedicineId,
                 InventoryId = currentBranch.Inventory.InventoryId,
-                ImageUrl = uniqueFileName != null ? "/images/medicines/" + uniqueFileName : "/images/default-medicine.jpg" // Set default image if no file uploaded
+                ImageUrl = uniqueFileName != null ? "/images/medicines/" + uniqueFileName : null,
+                RequiresPrescription = model.RequiresPrescription // Save checkbox value
             };
 
             // Save to the database
@@ -286,6 +399,7 @@ namespace Graduation_Project.Controllers
 
             return RedirectToAction("Medications");
         }
+
         [HttpGet]
         public async Task<IActionResult> EditMedicine(int id)
         {
@@ -317,6 +431,7 @@ namespace Graduation_Project.Controllers
                 GroupMedicineId = model.GroupMedicineId,
                 GroupMedicineName = groupName,
                 ExistingImagePath = model.ImageUrl,
+                RequiresPrescription = model.RequiresPrescription
             };
             return View(viewModel);
         }
@@ -325,7 +440,7 @@ namespace Graduation_Project.Controllers
         [HttpPost]
         public async Task<IActionResult> EditMedicine(int id, MedicineViewModel model)
         {
-            var medicine = _context.Medicines.FirstOrDefault(m => m.MedicineId == id);
+            var medicine = await _context.Medicines.FirstOrDefaultAsync(m => m.MedicineId == id);
 
             if (medicine == null)
             {
@@ -339,13 +454,13 @@ namespace Graduation_Project.Controllers
             medicine.ExpiryDate = model.ExpiryDate;
             medicine.Description = model.Description;
             medicine.GroupMedicineId = model.GroupMedicineId;
-
+            medicine.RequiresPrescription = model.RequiresPrescription; // Update RequiresPrescription
 
             // Handle image upload
             if (model.ImageFile != null)
             {
                 // Delete the existing image if it exists
-                if (!string.IsNullOrEmpty(medicine.ImageUrl))
+                if (!string.IsNullOrEmpty(medicine.ImageUrl) && !medicine.ImageUrl.Contains("default-medicine.jpg"))
                 {
                     var oldImagePath = Path.Combine(_webHostEnvironment.WebRootPath, medicine.ImageUrl.TrimStart('/'));
                     if (System.IO.File.Exists(oldImagePath))
@@ -373,11 +488,13 @@ namespace Graduation_Project.Controllers
                 medicine.ImageUrl = "/images/medicines/" + uniqueFileName;
             }
 
+            // Save the updated data to the database
             _context.Medicines.Update(medicine);
             await _context.SaveChangesAsync();
 
             return RedirectToAction("Medications"); // Redirect to the relevant page
         }
+
 
         [HttpPost]
         public IActionResult DeleteMedicine(int id)
@@ -521,113 +638,7 @@ namespace Graduation_Project.Controllers
         }
 
 
-        [HttpPost]
-        public async Task<IActionResult> AcceptOrder(int orderId)
-        {
-            // Get the order and its related items
-            var supplierOrder = await _context.SupplierOrders
-                .Include(o => o.SupplierOrderItems)
-                    .ThenInclude(oi => oi.SupplierMedication)
-                .FirstOrDefaultAsync(o => o.Id == orderId);
-
-            if (supplierOrder == null || supplierOrder.orderStatus != "Delivered")
-            {
-                return NotFound("Order not found or not delivered yet.");
-            }
-
-            // Get the pharmacist's inventory
-            var pharmacistInventory = await _context.Inventory
-                .FirstOrDefaultAsync(i => i.BranchId == supplierOrder.BranchId);
-
-            if (pharmacistInventory == null)
-            {
-                return NotFound("Pharmacist inventory not found.");
-            }
-
-            // Process each item in the order
-            foreach (var item in supplierOrder.SupplierOrderItems)
-            {
-                var supplierMedication = item.SupplierMedication;
-
-                if (supplierMedication != null)
-                {
-                    // Check if the medicine already exists in the pharmacist's inventory
-                    var existingMedicine = await _context.Medicines
-                        .FirstOrDefaultAsync(m => m.SupplierMedicationId == supplierMedication.SupplierMedicationId);
-
-                    if (existingMedicine != null)
-                    {
-                        // Update existing medicine (e.g., stock quantity)
-                        existingMedicine.ExpiryDate = supplierMedication.ExpiryDate > existingMedicine.ExpiryDate
-                            ? supplierMedication.ExpiryDate
-                            : existingMedicine.ExpiryDate; // Keep the latest expiry date
-                        existingMedicine.StockQuantity += item.Quantity; // Increment stock quantity
-                    }
-                    else
-                    {
-                        // Add a new medicine entry
-                        var newMedicine = new Medicine
-                        {
-                            Name = supplierMedication.Name,
-                            StockQuantity = supplierMedication.StockQuantity,
-                            Description = supplierMedication.Name,
-                            HowToUse = "Follow prescription", // Default usage instructions
-                            ImageUrl = "/images/product_03.png", // Set if an image is available
-                            ExpiryDate = supplierMedication.ExpiryDate,
-                            InventoryId = pharmacistInventory.InventoryId,
-                            SupplierMedicationId = supplierMedication.SupplierMedicationId,
-                            GroupMedicineId = null, // Set group ID if applicable
-                            Inventory = pharmacistInventory,
-
-                        };
-
-                        _context.Medicines.Add(newMedicine);
-                    }
-                }
-            }
-
-            // Mark the order as "Accepted"
-            supplierOrder.orderStatus = "Completed";
-            await _context.SaveChangesAsync();
-
-            return RedirectToAction("PharmacistOrders", "Pharmacist"); // Redirect to the Orders view after accepting the order
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> RejectOrder(int orderId)
-        {
-            // Get the order and its related items
-            var supplierOrder = await _context.SupplierOrders
-                .Include(o => o.SupplierOrderItems)
-                    .ThenInclude(oi => oi.SupplierMedication)
-                .FirstOrDefaultAsync(o => o.Id == orderId);
-
-            if (supplierOrder == null || supplierOrder.orderStatus != "Delivered")
-            {
-                return NotFound("Order not found or not delivered yet.");
-            }
-
-            // Process each item in the order
-            foreach (var item in supplierOrder.SupplierOrderItems)
-            {
-                var supplierMedication = item.SupplierMedication;
-
-                if (supplierMedication != null)
-                {
-                    // Adjust the quantity of the supplier medication to account for the rejected order
-                    supplierMedication.StockQuantity += item.Quantity;
-                }
-            }
-
-            // Mark the order as "Rejected"
-            supplierOrder.orderStatus = "Returned";
-
-            // Save the changes to the database
-            await _context.SaveChangesAsync();
-
-            return RedirectToAction("PharmacistOrders", "Pharmacist"); // Redirect to the Orders view after rejecting the order
-        }
-
+        
         public async Task<IActionResult> PharmacistChat()
         {
             // Get all users with the "User" role

@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Branch>
+
+<div class="container mt-5">
+    <h2 class="text-center">Available Branches</h2>
+    <div class="row mt-4">
+        @foreach (var branch in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">@branch.Name</h5>
+                        <p class="card-text">
+                            Location: @branch.Location <br />
+                            Contact: @branch.ContactNumber
+                        </p>
+                        <a asp-action="Index" asp-route-id="@branch.BranchId" class="btn btn-primary">
+                            Visit Shop
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
