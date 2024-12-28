@@ -300,25 +300,25 @@
                 color: #600946;
             }
         /* .user-nav {
-                                                   display: flex;
-                                                   gap: 1rem;
-                                               }
+                                                           display: flex;
+                                                           gap: 1rem;
+                                                       }
 
-                                               .user-nav .nav-link {
-                                                   color: #6c757d;
-                                                   padding: 0.5rem 1rem;
-                                                   border-radius: 0.25rem;
-                                                   transition: all 0.2s;
-                                               }
+                                                       .user-nav .nav-link {
+                                                           color: #6c757d;
+                                                           padding: 0.5rem 1rem;
+                                                           border-radius: 0.25rem;
+                                                           transition: all 0.2s;
+                                                       }
 
-                                               .user-nav .nav-link:hover {
-                                                   background-color: #f8f9fa;
-                                               }
+                                                       .user-nav .nav-link:hover {
+                                                           background-color: #f8f9fa;
+                                                       }
 
-                                               .user-nav .nav-link.active {
-                                                   color: var(--first-color) !important;
-                                                   font-weight: 500;
-                                               } */
+                                                       .user-nav .nav-link.active {
+                                                           color: var(--first-color) !important;
+                                                           font-weight: 500;
+                                                       } */
 
         @@media screen and (min-width: 768px) {
             body {
@@ -381,7 +381,7 @@
                 </div>
                 <br />
                 <div class="nav_list">
-                    <a href="#" class="nav_link ">
+                    <a href="#" class="nav_link active">
                         <i class="fa-sharp fa-solid fa-table-columns"></i>
                         <span class="nav_name">OverView</span>
                     </a>
@@ -389,7 +389,7 @@
                         <i class="fa-solid fa-code-branch"></i>
                         <span class="nav_name">Branches</span>
                     </a>
-                    <a href="@Url.Action("Admins")" class="nav_link active">
+                    <a href="@Url.Action("Admins")" class="nav_link ">
                         <i class="fa-solid fa-user-doctor"></i>
                         <span class="nav_name">Pharmacists</span>
                     </a>
@@ -404,46 +404,11 @@
     <div class="page-container">
         <div class="header-section">
             <h1 class="title">
-                <i class="bi bi-building me-2"></i>Pharmacist Management
+                <i class="bi bi-building me-2"></i>OverView
             </h1>
-            <a class="btn add-branch-btn px-4 py-2 rounded-pill" href="@Url.Action("AddBranch","Admin")">
-                <i class="bi bi-plus-circle"></i> Add New Pharmacist
-            </a>
+           
         </div>
-        <div class="branch-table">
-            <div class="table-responsive">
-                <table class="table table-hover mb-0">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Branch</th>
-                            <th class="text-center">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                        @foreach (var Admin in Model)
-                        {
-                            <tr>
-                                <td>@Admin.FullName</td>
-                                <td>@Admin.Email</td>
-                                <td>@Admin.Branch.Name</td>
-
-                                <td class="text-center action-buttons">
-
-                                    <button class="btn btn-sm btn-outline-danger" onclick="confirmDelete('@Admin.Id')">
-                                        <i class="bi bi-trash"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                        }
-
-
-                    </tbody>
-                </table>
-            </div>
-        </div>
+       
 
 
 
@@ -492,23 +457,7 @@
             });
         });
 
-        function confirmDelete(adminId) {
-            Swal.fire({
-                title: 'Are you sure?',
-                text: "This Admin will be deleted permanently!",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#d33',
-                cancelButtonColor: '#3085d6',
-                confirmButtonText: 'Yes, delete it!',
-                cancelButtonText: 'No, cancel!'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    // Dynamically generate the delete URL for the branch
-                    window.location.href = '@Url.Action("DeleteAdmin", "Admin")?id=' + adminId;
-                }
-            });
-        }
+        
     </script>
 </body>
 </html>
