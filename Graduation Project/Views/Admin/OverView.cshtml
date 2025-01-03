@@ -1,7 +1,7 @@
 @{
     Layout = null;
 }
-@model IEnumerable<ApplicationUser>
+@model Graduation_Project.ViewModels.OverViewViewModel
 
 <!DOCTYPE html>
 <html lang="en">
@@ -404,16 +404,42 @@
     <div class="page-container">
         <div class="header-section">
             <h1 class="title">
-                <i class="bi bi-building me-2"></i>OverView
+                <i class="bi bi-graph-up me-2"></i>Overview
             </h1>
-           
         </div>
-       
-
-
-
-
+        <div class="statistics-container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="stat-card rounded shadow-lg p-4 bg-white">
+                        <h4 class="text-primary">Number of Branches</h4>
+                        <p class="fs-3 text-dark"><strong>@Model.NumberOfBranches</strong></p>
+                        <div class="stat-card-footer text-muted">
+                            <i class="bi bi-building me-2"></i>Total Branches
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-card rounded shadow-lg p-4 bg-white">
+                        <h4 class="text-success">Number of Suppliers</h4>
+                        <p class="fs-3 text-dark"><strong>@Model.NumberOfSuppliers</strong></p>
+                        <div class="stat-card-footer text-muted">
+                            <i class="bi bi-person-bounding-box me-2"></i>Active Suppliers
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-card rounded shadow-lg p-4 bg-white">
+                        <h4 class="text-info">Number of Patients</h4>
+                        <p class="fs-3 text-dark"><strong>@Model.NumberOfUsers</strong></p>
+                        <div class="stat-card-footer text-muted">
+                            <i class="bi bi-person-lines-fill me-2"></i>Total Users
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>

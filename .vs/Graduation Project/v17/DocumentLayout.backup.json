@@ -1,90 +1,114 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\",
+  "WorkspaceRootPath": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\views\\pharmacist\\suppliermedications.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\pharmacist\\suppliermedications.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\views\\pharmacist\\suppliersdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\pharmacist\\suppliersdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\views\\pharmcart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\pharmcart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\views\\admin\\branches.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\admin\\branches.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\views\\pharmacist\\medications.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\pharmacist\\medications.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\views\\pharmacist\\groupsofmedicines.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\pharmacist\\groupsofmedicines.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\views\\pharmacist\\inventory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\pharmacist\\inventory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\controllers\\pharmacistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\pharma\\graduation project\\controllers\\pharmacistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\controllers\\pharmacistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\viewmodels\\medicineviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\pharma\\graduation project\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\pharma\\graduation project\\views\\admin\\overview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\admin\\overview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\pharma\\graduation project\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\pharma\\graduation project\\views\\admin\\suppliers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\admin\\suppliers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\pharma\\graduation project\\views\\admin\\branches.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\admin\\branches.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\pharma\\graduation project\\views\\admin\\admins.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\admin\\admins.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\pharma\\graduation project\\viewmodels\\overviewviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\viewmodels\\overviewviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\pharma\\graduation project\\views\\pharmacist\\medications.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\pharmacist\\medications.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\pharma\\graduation project\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\pharma\\graduation project\\views\\pharmcart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\pharmcart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\pharma\\graduation project\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\pharma\\graduation project\\views\\pharmacist\\suppliermedications.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\pharmacist\\suppliermedications.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\pharma\\graduation project\\views\\pharmacist\\suppliersdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\pharmacist\\suppliersdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\pharma\\graduation project\\views\\pharmacist\\groupsofmedicines.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\pharmacist\\groupsofmedicines.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\pharma\\graduation project\\views\\pharmacist\\inventory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\pharmacist\\inventory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\pharma\\graduation project\\viewmodels\\medicineviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\viewmodels\\medicineviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\views\\supplier\\displayorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\pharma\\graduation project\\views\\supplier\\displayorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\supplier\\displayorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\controllers\\suppliercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\pharma\\graduation project\\controllers\\suppliercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\controllers\\suppliercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\pharma\\graduation project\\controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\pharma\\graduation project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\views\\pharmacist\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\pharma\\graduation project\\views\\pharmacist\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\pharmacist\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\views\\shop\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\pharma\\graduation project\\views\\shop\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\shop\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\models\\medicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\pharma\\graduation project\\models\\medicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\models\\medicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\views\\shop\\branches.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\pharma\\graduation project\\views\\shop\\branches.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\shop\\branches.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\views\\pharmacist\\createmedicine.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\pharma\\graduation project\\views\\pharmacist\\createmedicine.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\pharmacist\\createmedicine.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\models\\suppliermedication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\pharma\\graduation project\\models\\suppliermedication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\models\\suppliermedication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\user\\desktop\\uni\\graduation\\graduation project\\graduation project\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -94,15 +118,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 294,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 21,
               "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Pharmacist\\Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Views\\Pharmacist\\Register.cshtml",
               "RelativeDocumentMoniker": "Graduation Project\\Views\\Pharmacist\\Register.cshtml",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Pharmacist\\Register.cshtml",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Views\\Pharmacist\\Register.cshtml",
               "RelativeToolTip": "Graduation Project\\Views\\Pharmacist\\Register.cshtml",
               "ViewState": "AgIAAI0AAAAAAAAAAAAAAJ0AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -111,63 +135,171 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
               "Title": "PharmacistController.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Controllers\\PharmacistController.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Controllers\\PharmacistController.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Controllers\\PharmacistController.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Controllers\\PharmacistController.cs",
-              "RelativeToolTip": "Graduation Project\\Controllers\\PharmacistController.cs",
-              "ViewState": "AgIAAJEAAAAAAAAAAAAhwJsAAAAhAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Controllers\\PharmacistController.cs*",
+              "RelativeToolTip": "Graduation Project\\Controllers\\PharmacistController.cs*",
+              "ViewState": "AgIAAHQCAAAAAAAAAAAAAIACAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-27T10:00:42.987Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Medications.cshtml",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Views\\Pharmacist\\Medications.cshtml",
+              "RelativeDocumentMoniker": "Graduation Project\\Views\\Pharmacist\\Medications.cshtml",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Views\\Pharmacist\\Medications.cshtml",
+              "RelativeToolTip": "Graduation Project\\Views\\Pharmacist\\Medications.cshtml",
+              "ViewState": "AgIAACMBAAAAAAAAAAAAADgBAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-27T21:17:02.4Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Medications.cshtml",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Pharmacist\\Medications.cshtml",
-              "RelativeDocumentMoniker": "Graduation Project\\Views\\Pharmacist\\Medications.cshtml",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Pharmacist\\Medications.cshtml",
-              "RelativeToolTip": "Graduation Project\\Views\\Pharmacist\\Medications.cshtml",
-              "ViewState": "AgIAACcBAAAAAAAAAAAAAC4BAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-27T21:17:02.4Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "Branches.cshtml",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Admin\\Branches.cshtml",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Views\\Admin\\Branches.cshtml",
               "RelativeDocumentMoniker": "Graduation Project\\Views\\Admin\\Branches.cshtml",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Admin\\Branches.cshtml",
-              "RelativeToolTip": "Graduation Project\\Views\\Admin\\Branches.cshtml",
-              "ViewState": "AgIAAHQBAAAAAAAAAAAAAIMBAAA1AAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Views\\Admin\\Branches.cshtml*",
+              "RelativeToolTip": "Graduation Project\\Views\\Admin\\Branches.cshtml*",
+              "ViewState": "AgIAAHQBAAAAAAAAAAAAAH8BAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-12-30T07:44:13.469Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Graduation Project\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Graduation Project\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAsAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Graduation Project\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Controllers\\AdminController.cs*",
+              "RelativeToolTip": "Graduation Project\\Controllers\\AdminController.cs*",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-31T08:23:41.388Z",
+              "WhenOpened": "2025-01-03T20:45:29.558Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "OverView.cshtml",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Views\\Admin\\OverView.cshtml",
+              "RelativeDocumentMoniker": "Graduation Project\\Views\\Admin\\OverView.cshtml",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Views\\Admin\\OverView.cshtml*",
+              "RelativeToolTip": "Graduation Project\\Views\\Admin\\OverView.cshtml*",
+              "ViewState": "AgIAAJUBAAAAAAAAAAAAAKABAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-03T20:42:46.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Graduation Project\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Controllers\\UserController.cs*",
+              "RelativeToolTip": "Graduation Project\\Controllers\\UserController.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T08:47:49.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Admins.cshtml",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Views\\Admin\\Admins.cshtml",
+              "RelativeDocumentMoniker": "Graduation Project\\Views\\Admin\\Admins.cshtml",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Views\\Admin\\Admins.cshtml*",
+              "RelativeToolTip": "Graduation Project\\Views\\Admin\\Admins.cshtml*",
+              "ViewState": "AgIAAHEBAAAAAAAAAAAAAIIBAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-03T20:47:54.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Suppliers.cshtml",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Views\\Admin\\Suppliers.cshtml",
+              "RelativeDocumentMoniker": "Graduation Project\\Views\\Admin\\Suppliers.cshtml",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Views\\Admin\\Suppliers.cshtml*",
+              "RelativeToolTip": "Graduation Project\\Views\\Admin\\Suppliers.cshtml*",
+              "ViewState": "AgIAAG4BAAAAAAAAAAAAAH8BAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-03T20:48:38.759Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OverViewViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\ViewModels\\OverViewViewModel.cs",
+              "RelativeDocumentMoniker": "Graduation Project\\ViewModels\\OverViewViewModel.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\ViewModels\\OverViewViewModel.cs",
+              "RelativeToolTip": "Graduation Project\\ViewModels\\OverViewViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-03T20:44:55.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\appsettings.json",
+              "RelativeDocumentMoniker": "Graduation Project\\appsettings.json",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\appsettings.json",
+              "RelativeToolTip": "Graduation Project\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-03T13:59:07.674Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Views\\PharmCart\\Index.cshtml",
+              "RelativeDocumentMoniker": "Graduation Project\\Views\\PharmCart\\Index.cshtml",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Views\\PharmCart\\Index.cshtml",
+              "RelativeToolTip": "Graduation Project\\Views\\PharmCart\\Index.cshtml",
+              "ViewState": "AgIAAFABAAAAAAAAAAAAAGgBAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-30T18:38:17.647Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Graduation Project\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Graduation Project\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-31T08:23:41.388Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "SuppliersDetails.cshtml",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Pharmacist\\SuppliersDetails.cshtml",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Views\\Pharmacist\\SuppliersDetails.cshtml",
               "RelativeDocumentMoniker": "Graduation Project\\Views\\Pharmacist\\SuppliersDetails.cshtml",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Pharmacist\\SuppliersDetails.cshtml",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Views\\Pharmacist\\SuppliersDetails.cshtml",
               "RelativeToolTip": "Graduation Project\\Views\\Pharmacist\\SuppliersDetails.cshtml",
               "ViewState": "AgIAAA4BAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -175,11 +307,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 12,
               "Title": "SupplierMedications.cshtml",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Pharmacist\\SupplierMedications.cshtml",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Views\\Pharmacist\\SupplierMedications.cshtml",
               "RelativeDocumentMoniker": "Graduation Project\\Views\\Pharmacist\\SupplierMedications.cshtml",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Pharmacist\\SupplierMedications.cshtml",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Views\\Pharmacist\\SupplierMedications.cshtml",
               "RelativeToolTip": "Graduation Project\\Views\\Pharmacist\\SupplierMedications.cshtml",
               "ViewState": "AgIAADQBAAAAAAAAAAAAAEMBAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -187,23 +319,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\PharmCart\\Index.cshtml",
-              "RelativeDocumentMoniker": "Graduation Project\\Views\\PharmCart\\Index.cshtml",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\PharmCart\\Index.cshtml",
-              "RelativeToolTip": "Graduation Project\\Views\\PharmCart\\Index.cshtml",
-              "ViewState": "AgIAAB0BAAAAAAAAAAAAAC8BAABUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-30T18:38:17.647Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 14,
               "Title": "GroupsOfMedicines.cshtml",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Pharmacist\\GroupsOfMedicines.cshtml",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Views\\Pharmacist\\GroupsOfMedicines.cshtml",
               "RelativeDocumentMoniker": "Graduation Project\\Views\\Pharmacist\\GroupsOfMedicines.cshtml",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Pharmacist\\GroupsOfMedicines.cshtml",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Views\\Pharmacist\\GroupsOfMedicines.cshtml",
               "RelativeToolTip": "Graduation Project\\Views\\Pharmacist\\GroupsOfMedicines.cshtml",
               "ViewState": "AgIAAA8BAAAAAAAAAAAAABcBAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -211,11 +331,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "Inventory.cshtml",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Pharmacist\\Inventory.cshtml",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Views\\Pharmacist\\Inventory.cshtml",
               "RelativeDocumentMoniker": "Graduation Project\\Views\\Pharmacist\\Inventory.cshtml",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Pharmacist\\Inventory.cshtml",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Views\\Pharmacist\\Inventory.cshtml",
               "RelativeToolTip": "Graduation Project\\Views\\Pharmacist\\Inventory.cshtml",
               "ViewState": "AgIAANAAAAAAAAAAAAAAAOMAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -223,11 +343,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "SupplierController.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Controllers\\SupplierController.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Controllers\\SupplierController.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Controllers\\SupplierController.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Controllers\\SupplierController.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Controllers\\SupplierController.cs",
               "RelativeToolTip": "Graduation Project\\Controllers\\SupplierController.cs",
               "ViewState": "AgIAAEcBAAAAAAAAAAAywD4BAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -235,11 +355,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 24,
               "Title": "Branches.cshtml",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Shop\\Branches.cshtml",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Views\\Shop\\Branches.cshtml",
               "RelativeDocumentMoniker": "Graduation Project\\Views\\Shop\\Branches.cshtml",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Shop\\Branches.cshtml",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Views\\Shop\\Branches.cshtml",
               "RelativeToolTip": "Graduation Project\\Views\\Shop\\Branches.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -247,11 +367,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 16,
               "Title": "MedicineViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\ViewModels\\MedicineViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\ViewModels\\MedicineViewModel.cs",
               "RelativeDocumentMoniker": "Graduation Project\\ViewModels\\MedicineViewModel.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\ViewModels\\MedicineViewModel.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\ViewModels\\MedicineViewModel.cs",
               "RelativeToolTip": "Graduation Project\\ViewModels\\MedicineViewModel.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAqwA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -259,11 +379,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 17,
               "Title": "DisplayOrders.cshtml",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Supplier\\DisplayOrders.cshtml",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Views\\Supplier\\DisplayOrders.cshtml",
               "RelativeDocumentMoniker": "Graduation Project\\Views\\Supplier\\DisplayOrders.cshtml",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Supplier\\DisplayOrders.cshtml",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Views\\Supplier\\DisplayOrders.cshtml",
               "RelativeToolTip": "Graduation Project\\Views\\Supplier\\DisplayOrders.cshtml",
               "ViewState": "AgIAAFcCAAAAAAAAAAAAAGkCAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -271,11 +391,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 23,
               "Title": "Medicine.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Models\\Medicine.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Models\\Medicine.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Models\\Medicine.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Models\\Medicine.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Models\\Medicine.cs",
               "RelativeToolTip": "Graduation Project\\Models\\Medicine.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -283,11 +403,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 26,
               "Title": "SupplierMedication.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Models\\SupplierMedication.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Models\\SupplierMedication.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Models\\SupplierMedication.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Models\\SupplierMedication.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Models\\SupplierMedication.cs",
               "RelativeToolTip": "Graduation Project\\Models\\SupplierMedication.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAxwA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -295,11 +415,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 19,
               "Title": "ShopController.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Controllers\\ShopController.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Controllers\\ShopController.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Controllers\\ShopController.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Controllers\\ShopController.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Controllers\\ShopController.cs",
               "RelativeToolTip": "Graduation Project\\Controllers\\ShopController.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAqwBoAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -307,11 +427,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 20,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Program.cs",
               "RelativeDocumentMoniker": "Graduation Project\\Program.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Program.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Program.cs",
               "RelativeToolTip": "Graduation Project\\Program.cs",
               "ViewState": "AgIAADkAAAAAAAAAAAAAAD8AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -319,11 +439,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 22,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Shop\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Views\\Shop\\Index.cshtml",
               "RelativeDocumentMoniker": "Graduation Project\\Views\\Shop\\Index.cshtml",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Shop\\Index.cshtml",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Views\\Shop\\Index.cshtml",
               "RelativeToolTip": "Graduation Project\\Views\\Shop\\Index.cshtml",
               "ViewState": "AgIAABUAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -331,27 +451,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 25,
               "Title": "CreateMedicine.cshtml",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Pharmacist\\CreateMedicine.cshtml",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Views\\Pharmacist\\CreateMedicine.cshtml",
               "RelativeDocumentMoniker": "Graduation Project\\Views\\Pharmacist\\CreateMedicine.cshtml",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Pharmacist\\CreateMedicine.cshtml",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Views\\Pharmacist\\CreateMedicine.cshtml",
               "RelativeToolTip": "Graduation Project\\Views\\Pharmacist\\CreateMedicine.cshtml",
               "ViewState": "AgIAAA4BAAAAAAAAAAAAAAwBAACCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-12-27T10:18:14.452Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Graduation Project\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Graduation Project\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T08:47:49.295Z"
             }
           ]
         },

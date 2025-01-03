@@ -299,7 +299,7 @@
 
 
     <div class="container mt-5">
-        <h2 class="fw-bold">Inventory &gt; <span class="text-primary">List of Medicines (298)</span></h2>
+        <h2 class="fw-bold"><a href="@Url.Action("Inventory")">Inventory</a> &gt; <span class="text-primary">List of Medicines (@Model.Count())</span></h2>
         <p>List of medicines available for sales.</p>
 
 
@@ -352,33 +352,15 @@
         }
         else
         {
-            <p>No medicines available in the inventory.</p>
+            <div class="alert alert-warning text-center mt-4" role="alert">
+                <h4 class="alert-heading">No Medicines Available</h4>
+                <p class="mb-0">Unfortunately, there are no medicines available in the inventory at the moment.</p>
+            </div>
         }
 
 
 
-        <div class="d-flex justify-content-between align-items-center">
-            <span>Showing 1 - 8 results of 298</span>
-            <nav>
-                <ul class="pagination mb-0">
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">&laquo;</a>
-                    </li>
-                    <li class="page-item active">
-                        <a class="page-link" href="#">1</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">2</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">3</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">&raquo;</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+      
     </div>
 
     <input type="hidden" name="__RequestVerificationToken" value="Antiforgery.GetTokens(HttpContext).RequestToken" />

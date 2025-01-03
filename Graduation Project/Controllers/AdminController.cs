@@ -1,4 +1,5 @@
 using Graduation_Project.Data;
+using Graduation_Project.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -19,10 +20,19 @@ namespace Graduation_Project.Controllers
         }
 
 
-        public IActionResult OverView()
+        public IActionResult Overview()
         {
-            return View();
+            var model = new OverViewViewModel
+            {
+                NumberOfBranches = _context.PharmacyBranch.Count(), // Assuming _context is your DbContext
+                NumberOfSuppliers = _context.SupplierMedications.Count(),
+                NumberOfUsers = _context.Users.Where(user=>user.UserType=="Patient").Count()
+            };
+
+            return View(model);
         }
+
+
         public async Task<IActionResult> Branches()
         {
             var branches = await _context.PharmacyBranch.ToListAsync();

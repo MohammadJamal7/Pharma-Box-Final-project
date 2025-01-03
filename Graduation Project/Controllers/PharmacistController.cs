@@ -636,14 +636,7 @@ namespace Graduation_Project.Controllers
 
 
         
-        public async Task<IActionResult> PharmacistChat()
-        {
-            // Get all users with the "User" role
-            var users = await _userManager.GetUsersInRoleAsync("Patient");
-            return View(users); // Pass the user list to the view
-            
-        }
-
+     
         public IActionResult Inventory()
         {
             return View();

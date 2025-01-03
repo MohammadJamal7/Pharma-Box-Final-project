@@ -20,10 +20,7 @@ namespace Graduation_Project.Controllers
 
 
 
-        public IActionResult UserChat()
-        {
-            return View();
-        }
+       
         [HttpGet]
         public IActionResult Register()
         {
@@ -59,7 +56,7 @@ namespace Graduation_Project.Controllers
                     PhoneNumber = model.PhoneNumber, // Include phone number
                     Address = model.Address, // Include address
                     FullName = model.FullName,
-                    UserType = "User" // Specify the user type
+                    UserType = "Patient" // Specify the user type
                 };
 
                 // Create the user with the provided password

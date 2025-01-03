@@ -23,11 +23,22 @@ wwwroot\fonts\icomoon\selection.json
 wwwroot\fonts\icomoon\style.css
 wwwroot\images\520241221142923.png
 wwwroot\images\520241221143421.png
+wwwroot\images\batch-25---monogram-1-high-resolution-logo-transparent (2).png
 wwwroot\images\bg_1.jpg
 wwwroot\images\bg_2.jpg
+wwwroot\images\depositphotos_6341829-stock-photo-multi-flavor-ice-cream-glass20241226223620.jpg
+wwwroot\images\depositphotos_6341829-stock-photo-multi-flavor-ice-cream-glass20241226223805.jpg
+wwwroot\images\desktop.ini
+wwwroot\images\fruit-salad-7-735x98020241226223642.png
 wwwroot\images\hero_1.jpg
+wwwroot\images\IMG-20241101-WA003320241226223707.jpg
 wwwroot\images\logo.jpg
 wwwroot\images\medicines\063336fe-b657-497b-b1e7-db77bf82f32b_OIP.jpeg
+wwwroot\images\medicines\37d610fa-e69b-4992-9d69-d598d47735ba_night-mode-removebg-preview.webp
+wwwroot\images\medicines\94713c93-51ff-495e-baeb-313145349b90_IMG-20241101-WA0033.jpg
+wwwroot\images\medicines\998434ae-4431-4bf0-a924-d1f8c5fe4604_ice-cream-sundae-fruit-sherbets-decorated-wafers-fresh-strawberries-37368479.png
+wwwroot\images\medicines\ba540b53-c6ba-404f-b739-9daf3f234547_night-mode-removebg-preview.webp
+wwwroot\images\medicines\c43a6ae5-96db-46a8-b9e9-0eb78fd657e4_R.jpeg
 wwwroot\images\medicines\c92e0cf6-d4f0-41cf-a403-79fc2a76afc1_ice-cream-sundae-fruit-sherbets-decorated-wafers-fresh-strawberries-37368479.png
 wwwroot\images\medicines\fff489f7-d77b-4c0b-a382-1908c61432e9_fruit-salad-7-735x980.png
 wwwroot\images\person_1.jpg
