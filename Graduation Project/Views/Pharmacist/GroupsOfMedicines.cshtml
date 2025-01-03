@@ -215,41 +215,49 @@
 </head>
 <body id="body-pd">
     <header class="header" id="header">
+
         <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
         <div class="header_img"> <img src="../../MainAssets/logo-color.png" alt=""> </div>
     </header>
     <div class="l-navbar" id="nav-bar">
         <nav class="nav">
             <div>
-                <div>
-                    <a href="../location-sec/index.html" class="nav_link  text-white ps-2">
-                        <img src="/logo.jpg" class="p-0 " style="height: 20px;" alt="">
-                        <span class="nav_loc-name">
-                            PharmaBox
-                        </span>
+                <div class="ms-3">
+                    <a href="../location-sec/index.html" class="nav_link text-white ps-2">
+                        <i class="fa-solid fa-user"></i>
+                        <span class="nav_loc-name">Branch Name</span>
                     </a>
                 </div>
+                <br />
                 <div class="nav_list">
                     <a href="../Dashboard-sec/index.html" class="nav_link ">
                         <i class="fa-sharp fa-solid fa-table-columns"></i>
                         <span class="nav_name ">Dashboard</span>
+
                     </a>
-                    <a href="../inventory-sec/index.html" class="nav_link active">
+                    <a href="@Url.Action("Inventory")" class="nav_link ">
                         <i class="fa-solid fa-boxes-stacked"></i>
                         <span class="nav_name">Inventory</span>
                     </a>
-                    <a href="../distrinutor-sec/index.html" class="nav_link">
+
+                    <a href="@Url.Action("Medications")" class="nav_link">
+                        <i class="fa-solid fa-grip"></i>
+                        <span class="nav_name">Medications</span>
+                    </a>
+                    <a href="@Url.Action("GroupsOfMedicines")" class="nav_link active">
+                        <i class="fa-solid fa-grip"></i>
+                        <span class="nav_name">Medicine Groups</span>
+                    </a>
+
+                    <a href="@Url.Action("SuppliersDetails")" class="nav_link">
                         <i class="fa-solid fa-arrow-trend-up"></i>
-                        <span class="nav_name">Distributors</span>
+                        <span class="nav_name">Suppliers</span>
                     </a>
                     <a href="../Orders-sec/index.html" class="nav_link">
                         <i class="fa-solid fa-arrow-down-9-1"></i>
                         <span class="nav_name">Orders</span>
                     </a>
-                    <a href="../med-group-sec/index.html" class="nav_link">
-                        <i class="fa-solid fa-grip"></i>
-                        <span class="nav_name">Medicine Groups</span>
-                    </a>
+
                     <a href="../Notification-sec/index.html" class="nav_link">
                         <i class="fa-regular fa-bell"></i>
                         <span class="nav_name">Notifications</span>
@@ -257,15 +265,17 @@
                     <a href="../chats-sec/index.html" class="nav_link">
                         <i class='bx bx-message'></i>
                         <span class="nav_name">Chats</span>
+                        <a href="../Branch-sec/index.html" class="nav_link">
+                            <i class="fa-solid fa-code-branch"></i>
+                            <span class="nav_name">Branchs</span>
+                        </a>
                     </a>
-                    <a href="../Branch-sec/index.html" class="nav_link">
-                        <i class="fa-solid fa-code-branch"></i>
-                        <span class="nav_name">Branches</span>
-                    </a>
+
                 </div>
             </div>
         </nav>
     </div>
+
     <div class="container mt-5">
         <h2 class="fw-bold">Medicine Groups <span class="text-primary">(02)</span></h2>
         <p>List of medicines groups.</p>
@@ -293,7 +303,6 @@
                         <td>@group.Name</td>
                         <td>@group.Medicines.Count</td>
                         <td>
-                            <button class="icon-btn text-warning"><i class="fa fa-plus-circle"></i></button>
                             <a class="icon-btn text-success" href="@Url.Action("EditGroup","Pharmacist", new { id = group.GroupMedicineId })"><i class="fa fa-edit"></i></a>
                             <a class="icon-btn text-danger" href="@Url.Action("DeleteGroup", "Pharmacist", new { id = group.GroupMedicineId })"><i class="fa fa-trash"></i></a>
                         </td>
