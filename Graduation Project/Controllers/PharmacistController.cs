@@ -210,9 +210,6 @@ namespace Graduation_Project.Controllers
             return View();
         }
 
-
-
-
         public async Task<IActionResult> Medications()
         {
             var currentPharmacist =await _userManager.GetUserAsync(User);
@@ -647,6 +644,10 @@ namespace Graduation_Project.Controllers
             
         }
 
+        public IActionResult Inventory()
+        {
+            return View();
+        }
     }
 
 

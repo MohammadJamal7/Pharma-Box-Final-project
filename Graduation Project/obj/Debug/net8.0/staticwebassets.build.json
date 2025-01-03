@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iL80b4Wc1MVUZQGFBZL5tq09Gkujh6SHXYt7tPBk/LE=",
+  "Hash": "tEoRvWBsXNu4IsfqJqtQqVrGgMaJJy5w3K4XFYxlYZo=",
   "Source": "Graduation Project",
   "BasePath": "_content/Graduation Project",
   "Mode": "Default",
@@ -1670,6 +1670,25 @@
       "OriginalItemSpec": "wwwroot\\images\\520241221143421.png"
     },
     {
+      "Identity": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\batch-25---monogram-1-high-resolution-logo-transparent (2).png",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "images/batch-25---monogram-1-high-resolution-logo-transparent (2).png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\batch-25---monogram-1-high-resolution-logo-transparent (2).png"
+    },
+    {
       "Identity": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\bg_1.jpg",
       "SourceId": "Graduation Project",
       "SourceType": "Discovered",
@@ -1744,6 +1763,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\depositphotos_6341829-stock-photo-multi-flavor-ice-cream-glass20241226223805.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\desktop.ini",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "images/desktop.ini",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\desktop.ini"
     },
     {
       "Identity": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\fruit-salad-7-735x98020241226223642.png",
