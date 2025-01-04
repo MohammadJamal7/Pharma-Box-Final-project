@@ -1,7 +1,9 @@
 ﻿using Graduation_Project.Data;
 using Graduation_Project.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Graduation_Project.Controllers
 {
@@ -125,5 +127,17 @@ namespace Graduation_Project.Controllers
             return RedirectToAction("Login", "User");
         }
 
+        [Authorize]
+        public async Task<IActionResult> profile()
+        {
+            var user = await _userManager.GetUserAsync(User);
+            var orders = await _context.Orders.Where(o=>o.UserId==user!.Id).ToListAsync();
+            var model = new userProfileViewModel
+            {
+                orders = orders,
+                user = user,
+            };
+            return View(model);
+        } 
     }
 }
