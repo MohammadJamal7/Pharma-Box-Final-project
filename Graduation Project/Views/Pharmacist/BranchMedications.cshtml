@@ -1,7 +1,7 @@
-﻿@model List<Medicine>
+﻿@model Graduation_Project.ViewModels.BranchMedicationViewModel
+
 @{
     Layout = null;
-    ViewData["Title"] = "Pharmacist Medicines";
 }
 
 <!DOCTYPE html>
@@ -9,17 +9,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>list of medicines</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
-
-
+    <title>sales report</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <style>
         @@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+
         :root {
             --header-height: 3rem;
             --nav-width: 68px;
@@ -174,6 +171,38 @@
             height: 100vh;
         }
 
+        .search-bar {
+            max-width: 400px;
+            margin-bottom: 20px;
+        }
+
+        .supplier-header h4 {
+            font-weight: bold;
+        }
+
+        .supplier-header span {
+            color: #6c757d;
+        }
+
+        .table-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-view {
+            background-color: #d0b2f4;
+            border: none;
+            border-radius: 20px;
+            color: #fff;
+            padding: 5px 15px;
+            font-weight: bold;
+        }
+
+            .btn-view:hover {
+                background-color: #b48cf2;
+            }
         /* .user-nav {
                     display: flex;
                     gap: 1rem;
@@ -196,40 +225,37 @@
                 } */
 
         @@media screen and (min-width: 768px) {
-            body
-
-        {
-            margin: calc(var(--header-height) + 1rem) 0 0 0;
-            padding-left: calc(var(--nav-width) + 2rem);
-        }
-
-        .header {
-            height: calc(var(--header-height) + 1rem);
-            padding: 0 2rem 0 calc(var(--nav-width) + 2rem);
-        }
-
-        .header_img {
-            width: 40px;
-            height: 40px;
-        }
-
-            .header_img img {
-                width: 45px;
+            body {
+                margin: calc(var(--header-height) + 1rem) 0 0 0;
+                padding-left: calc(var(--nav-width) + 2rem);
             }
 
-        .l-navbar {
-            left: 0;
-            padding: 1rem 1rem 0 0;
-        }
+            .header {
+                height: calc(var(--header-height) + 1rem);
+                padding: 0 2rem 0 calc(var(--nav-width) + 2rem);
+            }
 
-        .show {
-            width: calc(var(--nav-width) + 156px);
-        }
+            .header_img {
+                width: 40px;
+                height: 40px;
+            }
 
-        .body-pd {
-            padding-left: calc(var(--nav-width) + 188px);
-        }
+                .header_img img {
+                    width: 45px;
+                }
 
+            .l-navbar {
+                left: 0;
+                padding: 1rem 1rem 0 0;
+            }
+
+            .show {
+                width: calc(var(--nav-width) + 156px);
+            }
+
+            .body-pd {
+                padding-left: calc(var(--nav-width) + 188px);
+            }
         }
     </style>
 </head>
@@ -260,14 +286,14 @@
                         <span class="nav_name">Inventory</span>
                     </a>
 
-                    <a href="@Url.Action("Medications")" class="nav_link active">
-                        <i class="fa-solid fa-capsules"></i>
+                    <a href="@Url.Action("Medications")" class="nav_link">
+                        <i class="fa-solid fa-grip"></i>
                         <span class="nav_name">Medications</span>
                     </a>
                     <a href="@Url.Action("GroupsOfMedicines")" class="nav_link">
-						<i class="fa-solid fa-grip"></i>
-						<span class="nav_name">Medicine Groups</span>
-					</a>
+                        <i class="fa-solid fa-grip"></i>
+                        <span class="nav_name">Medicine Groups</span>
+                    </a>
 
                     <a href="@Url.Action("Suppliers")" class="nav_link">
                         <i class="fa-solid fa-arrow-trend-up"></i>
@@ -295,119 +321,125 @@
 
 
     <div class="container mt-5">
-        <h2 class="fw-bold"><a href="@Url.Action("Inventory")">Inventory</a> &gt; <span class="text-primary">List of Medicines (@Model.Count())</span></h2>
-        <p>List of medicines available for sales.</p>
+        <h2 class="fw-bold">Suppliers &gt; <span class="text-primary">@Model.branch.Name</span></h2>
+        <p>List of medicines groups.</p>
 
 
-        <div class="d-flex justify-content-between mb-3">
-            <input type="text" id="searchInput" class="form-control w-25" placeholder="Search Medicine Inventory..." oninput="searchMedicine()">
-            <form asp-action="CreateMedicine" asp-controller="Pharmacist" method="get">
-                <button class="btn btn-primary"><i class="fa fa-plus"></i> Add New Medicine</button>
-            </form>
-        </div>
-
-        <div class="mb-3">
-            <select id="groupFilter" class="form-select w-25" onchange="filterTable()">
-                <option value="" selected>- Select Group -</option>
-                <option value="1">Generic Medicine</option>
-                <option value="2">Diabetes</option>
-            </select>
-        </div>
-
-
-        @if (Model != null && Model.Any())
-        {
-            <table class="table table-striped table-hover">
-                <thead class="table-light">
-                    <tr>
-                        <th>Medicine Name</th>
-                        <th>Group Name</th>
-                        <th>Expire Date</th>
-                        <th>Stock in Qty</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody id="medicineTable">
-                    @foreach (var item in Model)
-                    {
-                        <tr id="row-id-@item.MedicineId" data-group-id="@item.GroupMedicineId" data-name="@item.Name.ToLower()">
-                            <td>@item.Name</td>
-                            <td>@(item.GroupMedicineId != null ? item.GroupMedicine.Name : "undefined")</td>
-                            <td>@item.ExpiryDate.ToString("MM, yyyy")</td>
-                            <td>@item.StockQuantity</td>
-                            <td class="d-flex flex-row  gap-2 align-items-center">
-                                <form asp-action="EditMedicine" asp-controller="Pharmacist" method="get" asp-route-id="@item.MedicineId">
-                                    <button class="btn btn-success btn-sm"><i class="fas fa-edit"></i></button>
-                                </form>
-                                <button class="btn btn-danger btn-sm" onclick="confirmDelete(@item.MedicineId)"><i class="fas fa-trash-alt"></i></button>
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
-        }
-        else
-        {
-            <div class="alert alert-warning text-center mt-4" role="alert">
-                <h4 class="alert-heading">No Medicines Available</h4>
-                <p class="mb-0">Unfortunately, there are no medicines available in the inventory at the moment.</p>
+        <div class="search-bar d-flex justify-content-end">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search for anything here..">
+                <button class="btn btn-outline-secondary" type="button"><i class="fas fa-search"></i></button>
             </div>
-        }
+        </div>
 
+        <div class="row">
+            <div class="col-12">
+                <div class="table-container">
+                    <table class="table table-borderless align-middle">
+                        <thead>
+                            <tr>
+                                <th scope="col">Medicine Name</th>
+                                <th scope="col">In Stock</th>
+                             
+                                <th scope="col">Expiration Date</th>
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var medication in Model.medicines)
+                            {
+                                <tr>
+                                    <td>@medication.Name</td>
+                                    <td>@medication.StockQuantity</td>
+                                    <td>@medication.ExpiryDate.ToString("dd/MM/yyyy")</td>
+                                   
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
 
-
-      
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <a href="@Url.Action("SuppliersDetails", "Pharmacist")" class="btn btn-secondary">Back to Supplier List</a>
+                <a href="@Url.Action("Index", "PharmCart")" class="btn btn-success">Go to Cart</a>
+            </div>
+        </div>
     </div>
 
-    <input type="hidden" name="__RequestVerificationToken" value="Antiforgery.GetTokens(HttpContext).RequestToken" />
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
+        function addToCart(medicationId, supplierId, medicationName) {
+            let quantityInput = document.getElementById(`quantity-${medicationId}`);
+            let quantity = quantityInput ? parseInt(quantityInput.value) : 1;
 
-        function filterTable() {
-            var selectedGroupId = document.getElementById("groupFilter").value;
-            var rows = document.querySelectorAll("#medicineTable tr");
+            // Validate quantity
+            if (quantity <= 0) {
+                alert("Quantity must be greater than 0.");
+                return;
+            }
 
-            rows.forEach(function (row) {
-                var groupId = row.getAttribute("data-group-id");
-
-                if (selectedGroupId === "" || groupId === selectedGroupId) {
-                    row.style.display = ""; // Show row
-                } else {
-                    row.style.display = "none"; // Hide row
+            $.ajax({
+                url: '/PharmCart/AddToCart',
+                type: 'POST',
+                data: {
+                    medicationId: medicationId,
+                    quantity: quantity,
+                    supplierId: supplierId,
+                    __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val()
+                },
+                success: function (response) {
+                    if (response.success) {
+                        alert(`${quantity} of "${medicationName}" added to your cart.`);
+                        // Optional: Update cart display or trigger cart refresh
+                    } else if (response.needsConfirmation) {
+                        // Prompt user to clear existing cart
+                        if (confirm(response.message)) {
+                            // If user confirms, clear cart and add new item
+                            $.ajax({
+                                url: '/PharmCart/ClearCartAndChangeSupplier',
+                                type: 'POST',
+                                data: {
+                                    medicationId: medicationId,
+                                    quantity: quantity,
+                                    supplierId: supplierId,
+                                    __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val()
+                                },
+                                success: function (clearResponse) {
+                                    if (clearResponse.success) {
+                                        alert(`${quantity} of "${medicationName}" added to your cart after clearing previous items.`);
+                                        // Optional: Update cart display or trigger cart refresh
+                                    } else {
+                                        alert(clearResponse.message || "Failed to clear cart and add item.");
+                                    }
+                                },
+                                error: function (xhr, status, error) {
+                                    console.error('Error clearing cart:', error);
+                                    alert("An error occurred while clearing the cart.");
+                                }
+                            });
+                        }
+                    } else {
+                        alert(response.message || "Failed to add item to cart");
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.error('Error:', error);
+                    alert("An error occurred while adding the item to the cart.");
                 }
             });
-
-           
         }
 
-        function searchMedicine() {
-            var searchQuery = document.getElementById("searchInput").value.toLowerCase();
-            var rows = document.querySelectorAll("#medicineTable tr");
-
-            rows.forEach(function (row) {
-                var name = row.getAttribute("data-name");
-                // Check if the search query matches the name (case insensitive)
-                if (name.includes(searchQuery)) {
-                    row.style.display = ""; // Show row
-                } else {
-                    row.style.display = "none"; // Hide row
-                }
-            });
-        }
-
-
-        document.addEventListener("DOMContentLoaded", function(event) {
+        document.addEventListener("DOMContentLoaded", function (event) {
             const showNavbar = (toggleId, navId, bodyId, headerId) => {
                 const toggle = document.getElementById(toggleId),
-                      nav = document.getElementById(navId),
-                      bodypd = document.getElementById(bodyId),
-                      headerpd = document.getElementById(headerId);
+                    nav = document.getElementById(navId),
+                    bodypd = document.getElementById(bodyId),
+                    headerpd = document.getElementById(headerId);
 
                 if (toggle && nav && bodypd && headerpd) {
                     toggle.addEventListener('click', () => {
@@ -434,71 +466,20 @@
             // Add click handling for user management navigation
             const userNavLinks = document.querySelectorAll('.user-nav .nav-link');
             userNavLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
+                link.addEventListener('click', function (e) {
                     userNavLinks.forEach(l => l.classList.remove('active'));
                     this.classList.add('active');
                 });
             });
         });
 
-
-        function confirmDelete(medicineId) {
-            Swal.fire({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#d33',
-                cancelButtonColor: '#3085d6',
-                confirmButtonText: 'Yes, delete it!'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    // Ensure medicineId is being passed correctly
-                    console.log('Deleting medicine with ID:', medicineId);
-
-                    $.ajax({
-                        url: '/Pharmacist/DeleteMedicine',  // Make sure the URL is correct
-                        type: 'POST',
-                       
-                        data: { id: medicineId },  // Ensure the data is in the correct format
-                        headers: {
-                            'Accept': 'application/json'
-                        },
-                        success: function (data) {
-                            if (data.success) {
-                                // Remove the row with the corresponding medicineId
-                                $('#row-id-' + medicineId).remove();
-
-                                Swal.fire(
-                                    'Deleted!',
-                                    'The medicine has been deleted.',
-                                    'success'
-                                ).then(() => {
-                                    location.reload();  // Reload page to reflect the changes
-                                });
-                            } else {
-                                Swal.fire(
-                                    'Error!',
-                                    'Unable to delete the medicine.',
-                                    'error'
-                                );
-                            }
-                        },
-                        error: function (xhr, status, error) {
-                            Swal.fire(
-                                'Error!',
-                                'An unexpected error occurred.',
-                                'error'
-                            );
-                            console.error('Error:', error);
-                        }
-                    });
-                }
-            });
-        }
-
-
-
     </script>
+
+    @Html.AntiForgeryToken()
 </body>
 </html>
+
+
+
+
+

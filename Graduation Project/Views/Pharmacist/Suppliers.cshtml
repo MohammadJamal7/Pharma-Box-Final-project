@@ -146,7 +146,7 @@
             height: 100vh;
         }
         .search-bar {
-            max-width: 400px;
+           
             margin-bottom: 20px;
         }
         .supplier-header h4 {
@@ -240,10 +240,9 @@
                 </div>
                 <br />
                 <div class="nav_list">
-                    <a href="../Dashboard-sec/index.html" class="nav_link ">
+                    <a href="@Url.Action("Overview")" class="nav_link ">
                         <i class="fa-sharp fa-solid fa-table-columns"></i>
-                        <span class="nav_name ">Dashboard</span>
-
+                        <span class="nav_name ">Overview</span>
                     </a>
                     <a href="@Url.Action("Inventory")" class="nav_link ">
                         <i class="fa-solid fa-boxes-stacked"></i>
@@ -251,7 +250,7 @@
                     </a>
 
                     <a href="@Url.Action("Medications")" class="nav_link">
-                        <i class="fa-solid fa-grip"></i>
+                        <i class="fa-solid fa-capsules"></i>
                         <span class="nav_name">Medications</span>
                     </a>
                     <a href="@Url.Action("GroupsOfMedicines")" class="nav_link">
@@ -259,27 +258,24 @@
                         <span class="nav_name">Medicine Groups</span>
                     </a>
 
-                    <a href="@Url.Action("SuppliersDetails")" class="nav_link active">
+                    <a href="@Url.Action("Suppliers")" class="nav_link active">
                         <i class="fa-solid fa-arrow-trend-up"></i>
                         <span class="nav_name">Suppliers</span>
                     </a>
-                    <a href="../Orders-sec/index.html" class="nav_link">
+                    <a href="@Url.Action("PharmacistOrders")" class="nav_link">
                         <i class="fa-solid fa-arrow-down-9-1"></i>
-                        <span class="nav_name">Orders</span>
+                        <span class="nav_name">My Orders</span>
                     </a>
 
                     <a href="../Notification-sec/index.html" class="nav_link">
                         <i class="fa-regular fa-bell"></i>
                         <span class="nav_name">Notifications</span>
                     </a>
-                    <a href="../chats-sec/index.html" class="nav_link">
-                        <i class='bx bx-message'></i>
-                        <span class="nav_name">Chats</span>
-                        <a href="../Branch-sec/index.html" class="nav_link">
-                            <i class="fa-solid fa-code-branch"></i>
-                            <span class="nav_name">Branchs</span>
-                        </a>
+                    <a href="@Url.Action("Branches")" class="nav_link">
+                        <i class="fa-solid fa-code-branch"></i>
+                        <span class="nav_name">Branchs</span>
                     </a>
+
 
                 </div>
             </div>
@@ -296,12 +292,22 @@
             Choose one supplier and shop your mediciatons.
         </p>
 
-        <div class="search-bar d-flex justify-content-end">
-            <div class="input-group">
+        <div class="mb-3 d-flex justify-content-between align-items-center">
+            <div class="input-group " style="max-width:400px";>
                 <input type="text" class="form-control" placeholder="Search for anything here..">
-                <button class="btn btn-outline-secondary" type="button"><i class="fas fa-search"></i></button>
+                <button class="btn btn-outline-secondary" type="button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div>
+                <form asp-action="PharmacistOrders" asp-controller="Pharmacist" method="get" >
+
+                    <button class="btn btn-primary" type="submit">View My Orders</button>
+                
+                </form>
             </div>
         </div>
+
     
             <div class="table-container">
                 <table class="table table-borderless align-middle">

@@ -127,7 +127,7 @@ namespace Graduation_Project.Controllers
                 if (result.Succeeded)
                 {
                     // Redirect to the default action (e.g., Home/Index) after successful login
-                    return RedirectToAction("Profile", "Pharmacist");
+                    return RedirectToAction("Inventory", "Pharmacist");
                 }
                 else
                 {
@@ -148,7 +148,7 @@ namespace Graduation_Project.Controllers
 
 
         [Authorize(Roles ="Pharmacist")]
-        public async Task<IActionResult> SuppliersDetails()
+        public async Task<IActionResult> Suppliers()
         {
             var suppliers = await _userManager.Users
                 .Where(user => user.UserType == "Supplier").Include(user=>user.SupplierMedication).ToListAsync();
@@ -157,11 +157,41 @@ namespace Graduation_Project.Controllers
         }
 
 
+
+
         public async Task<IActionResult> SupplierMedications(string id)
         {
             var user = await _userManager.Users.Include(user=>user.SupplierMedication).FirstOrDefaultAsync(user => user.Id == id);
             
             return View(user);
+        }
+
+
+        public async Task<IActionResult> Branches()
+        {
+            var branches = await _context.PharmacyBranch.Include(i => i.Inventory).ThenInclude(m=>m.Medicines).ToListAsync();
+            Console.Write(branches);
+            return View(branches);
+        }
+
+        public async Task<IActionResult> BranchMedications(int id)
+        {
+            
+            var medicines = await _context.Medicines.Where(m => m.Inventory.BranchId == id).ToListAsync();
+
+            var currentBranch = await _context.PharmacyBranch.FirstOrDefaultAsync(b => b.BranchId == id);
+
+            var branchMedicinesViewModel = new BranchMedicationViewModel
+            {
+                branch = currentBranch,
+                medicines = medicines
+            };
+
+            return View(branchMedicinesViewModel);
+        }
+        public IActionResult Orders()
+        {
+            return View();
         }
 
         public async Task<IActionResult> PharmacistOrders()
@@ -205,7 +235,7 @@ namespace Graduation_Project.Controllers
         }
 
 
-        public IActionResult Profile()
+        public IActionResult Overview()
         {
             return View();
         }

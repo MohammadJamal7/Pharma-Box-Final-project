@@ -55,8 +55,7 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
-// Map SignalR hubs
-app.MapHub<ChatHubs>("/chatHub"); // Map the ChatHub to /chatHub
+
 
 // Map default routes
 app.MapControllerRoute(
