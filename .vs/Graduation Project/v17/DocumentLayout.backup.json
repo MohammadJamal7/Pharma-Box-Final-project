@@ -567,7 +567,7 @@
               "RelativeToolTip": "Graduation Project\\Views\\Admin\\Admins.cshtml",
               "ViewState": "AgIAAHEBAAAAAAAAAAAAAIIBAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-03T20:47:54.033Z",
+              "WhenOpened": "2024-12-27T10:41:09.891Z",
               "EditorCaption": ""
             },
             {
@@ -619,7 +619,19 @@
               "RelativeToolTip": "Graduation Project\\ViewModels\\OverViewViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T20:44:55.17Z",
+              "WhenOpened": "2025-01-04T13:59:20.845Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Graduation Project",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Graduation Project.csproj",
+              "RelativeDocumentMoniker": "Graduation Project\\Graduation Project.csproj",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\Graduation Project.csproj",
+              "RelativeToolTip": "Graduation Project\\Graduation Project.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-04T17:07:12.697Z",
               "EditorCaption": ""
             },
             {
@@ -630,7 +642,7 @@
               "RelativeDocumentMoniker": "Graduation Project\\Views\\PharmCart\\Index.cshtml",
               "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\PharmCart\\Index.cshtml",
               "RelativeToolTip": "Graduation Project\\Views\\PharmCart\\Index.cshtml",
-              "ViewState": "AgIAAFABAAAAAAAAAAAAAGgBAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAE4BAAAAAAAAAABBwGgBAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-12-30T18:38:17.647Z",
               "EditorCaption": ""
@@ -669,7 +681,7 @@
               "RelativeDocumentMoniker": "Graduation Project\\Views\\Supplier\\DisplayOrders.cshtml",
               "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Views\\Supplier\\DisplayOrders.cshtml",
               "RelativeToolTip": "Graduation Project\\Views\\Supplier\\DisplayOrders.cshtml",
-              "ViewState": "AgIAAFcCAAAAAAAAAAAAAGkCAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAFUCAAAAAAAAAABBwGkCAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-12-27T14:13:02.28Z",
               "EditorCaption": ""
@@ -695,7 +707,7 @@
               "RelativeDocumentMoniker": "Graduation Project\\Models\\SupplierMedication.cs",
               "ToolTip": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\Models\\SupplierMedication.cs",
               "RelativeToolTip": "Graduation Project\\Models\\SupplierMedication.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwA0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-27T10:06:12.227Z",
               "EditorCaption": ""

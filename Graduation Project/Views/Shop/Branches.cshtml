@@ -1,24 +1,87 @@
-﻿@model IEnumerable<Branch>
+﻿@{
+    Layout = null;
+}
 
-<div class="container mt-5">
-    <h2 class="text-center">Available Branches</h2>
-    <div class="row mt-4">
-        @foreach (var branch in Model)
-        {
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">@branch.Name</h5>
-                        <p class="card-text">
-                            Location: @branch.Location <br />
-                            Contact: @branch.ContactNumber
-                        </p>
-                        <a asp-action="Index" asp-route-id="@branch.BranchId" class="btn btn-primary">
-                            Visit Shop
-                        </a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Branch List</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #e9ecef, #f8f9fa);
+            min-height: 100vh;
+        }
+
+        h2 {
+            font-weight: bold;
+            color: #600946;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: none;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
+
+        .card-title {
+            font-size: 1.5rem;
+            color: #343a40;
+        }
+
+        .btn-primary {
+            background-color: #600946;
+            border: none;
+            border-radius: 50px;
+            padding: 0.5rem 1.5rem;
+        }
+
+            .btn-primary:hover {
+                background-color: #600946;
+            }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Available Branches</h2>
+        <div class="row mt-5">
+            @foreach (var branch in Model)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">@branch.Name</h5>
+                            <p class="card-text">
+                                <strong>Location:</strong> @branch.Location <br />
+                                <strong>Contact:</strong> @branch.ContactNumber
+                            </p>
+                            <a asp-action="Index" asp-route-id="@branch.BranchId" class="btn btn-primary">
+                                Explore
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        }
+            }
+        </div>
     </div>
-</div>
+
+    
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

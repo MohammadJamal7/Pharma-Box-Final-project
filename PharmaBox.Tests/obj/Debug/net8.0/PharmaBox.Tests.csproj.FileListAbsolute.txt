@@ -1,0 +1,8 @@
+C:\Users\pc\Desktop\.Net projs\Pharma\PharmaBox.Tests\bin\Debug\net8.0\CoverletSourceRootsMapping_PharmaBox.Tests
+C:\Users\pc\Desktop\.Net projs\Pharma\PharmaBox.Tests\obj\Debug\net8.0\PharmaBox.Tests.csproj.AssemblyReference.cache
+C:\Users\pc\Desktop\.Net projs\Pharma\PharmaBox.Tests\obj\Debug\net8.0\MvcTestingAppManifest.json
+C:\Users\pc\Desktop\.Net projs\Pharma\PharmaBox.Tests\obj\Debug\net8.0\PharmaBox.Tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pc\Desktop\.Net projs\Pharma\PharmaBox.Tests\obj\Debug\net8.0\PharmaBox.Tests.AssemblyInfoInputs.cache
+C:\Users\pc\Desktop\.Net projs\Pharma\PharmaBox.Tests\obj\Debug\net8.0\PharmaBox.Tests.AssemblyInfo.cs
+C:\Users\pc\Desktop\.Net projs\Pharma\PharmaBox.Tests\obj\Debug\net8.0\PharmaBox.Tests.csproj.CoreCompileInputs.cache
+C:\Users\pc\Desktop\.Net projs\Pharma\PharmaBox.Tests\obj\Debug\net8.0\PharmaBox.Tests.sourcelink.json
