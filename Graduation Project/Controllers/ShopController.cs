@@ -38,7 +38,7 @@ namespace Graduation_Project.Controllers
                 .Where(g => g.InventoryId == currentBranch.Inventory.InventoryId
                             && g.GroupMedicine != null
                             && g.ImageUrl != null
-                            && !g.RequiresPrescription)
+                            )
                 .ToListAsync();
 
             // Pass branch name for display in the view

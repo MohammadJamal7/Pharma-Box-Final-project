@@ -280,13 +280,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Graduation Project.hi2qgzlr1m.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-ORu3re/jB4E6gT6KLPvMDG6bb\u002BFfY8APDb6YlqNawVQ="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1136"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022ORu3re/jB4E6gT6KLPvMDG6bb\u002BFfY8APDb6YlqNawVQ=\u0022"},{"Name":"Last-Modified","Value":"Fri, 03 Jan 2025 13:58:17 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1136"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022ORu3re/jB4E6gT6KLPvMDG6bb\u002BFfY8APDb6YlqNawVQ=\u0022"},{"Name":"Last-Modified","Value":"Sat, 04 Jan 2025 17:13:05 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Graduation Project/Graduation Project.hi2qgzlr1m.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Graduation Project.hi2qgzlr1m.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"hi2qgzlr1m"},{"Name":"integrity","Value":"sha256-ORu3re/jB4E6gT6KLPvMDG6bb\u002BFfY8APDb6YlqNawVQ="},{"Name":"label","Value":"_content/Graduation Project/Graduation Project.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1136"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022ORu3re/jB4E6gT6KLPvMDG6bb\u002BFfY8APDb6YlqNawVQ=\u0022"},{"Name":"Last-Modified","Value":"Fri, 03 Jan 2025 13:58:17 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1136"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022ORu3re/jB4E6gT6KLPvMDG6bb\u002BFfY8APDb6YlqNawVQ=\u0022"},{"Name":"Last-Modified","Value":"Sat, 04 Jan 2025 17:13:05 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Graduation Project/images/520241221142923.8oqihmr29n.png">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\520241221142923.png'))</AssetFile>

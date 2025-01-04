@@ -1,4 +1,5 @@
 ﻿using Graduation_Project.Data;
+using Graduation_Project.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,9 +17,15 @@ namespace Graduation_Project.Controllers
         public async Task<IActionResult> Index()
         {
             var groupMedicines = await _context.GroupMedicines.ToListAsync();
-
-            return View(groupMedicines);
+            var branches = await _context.PharmacyBranch.ToListAsync();
+            var model = new HomeViewModel
+            {
+                branches = branches,
+                categories = groupMedicines
+            };
+            return View(model);
         }
+
         public IActionResult About()
         {
             return View();
