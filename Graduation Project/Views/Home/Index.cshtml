@@ -58,28 +58,26 @@
                         <nav class="site-navigation text-right text-md-center" role="navigation">
                             <ul class="site-menu js-clone-nav d-none d-lg-block">
                                 <li class="active"><a href="index.html">Home</a></li>
-                                <li><a href="shop.html">Store</a></li>
-
+                                <li><a href="#branches">Store</a></li>
+                              
                                 <li><a href="@Url.Action("Branches", "Shop")">Branches</a></li>
-
+                                
                             </ul>
                         </nav>
                     </div>
                     <div class="icons">
 
-                        @if (User.Identity.IsAuthenticated)
-                        {
+                        @if(User.Identity.IsAuthenticated){
                             <a href="@Url.Action("profile", "User")" class="icons-btn d-inline-block ">
                                 <span class="icon-user"></span>
                             </a>
                         }
-                        else
-                        {
+                        else{
                             <a href="@Url.Action("Login", "User")" class="btn btn-primary">Login</a>
                         }
                         <a href="cart.html" class="icons-btn d-inline-block bag">
                             <span class="icon-shopping-bag"></span>
-
+                            
                         </a>
                         <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none">
                             <span class="icon-menu"></span>
@@ -173,7 +171,7 @@
 
 
 
-
+        
 
         <footer class="site-footer bg-light">
             <div class="container ">
@@ -191,7 +189,7 @@
                     <div class="col-lg-3 mx-auto mb-3 mb-lg-0">
                         <h3 class="footer-heading mb-4">Quick Links</h3>
                         <ul class="list-unstyled">
-
+                            
                             <li><a href="@Url.Action("login","user")">Login</a></li>
                             <li><a href="@Url.Action("register","user")">Register</a></li>
                             <li><a href="@Url.Action("index","Shop")">Shop</a></li>
@@ -212,7 +210,7 @@
 
                     </div>
                 </div>
-
+               
             </div>
         </footer>
     </div>
