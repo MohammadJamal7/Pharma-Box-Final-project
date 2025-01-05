@@ -54,5 +54,24 @@ namespace Graduation_Project.Controllers
             return View(branches);
         }
 
+        // GET: Medicine/Details/5
+        public async Task<IActionResult> Details(int id)
+        {
+            if (id == 0)
+            {
+                return NotFound();
+            }
+
+            var medication = await _context.Medicines
+                .FirstOrDefaultAsync(m => m.MedicineId == id);
+
+            if (medication == null)
+            {
+                return NotFound();
+            }
+
+            return View(medication);
+        }
+
     }
 }

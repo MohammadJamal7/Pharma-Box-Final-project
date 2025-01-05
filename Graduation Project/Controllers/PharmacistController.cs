@@ -545,7 +545,7 @@ namespace Graduation_Project.Controllers
                 var groupMedicine = new GroupMedicine
                 {
                     Name = Name,
-                    ImageUrl = "/images/" + newFileName  // Save the relative path of the image
+                    ImageUrl = "images/" + newFileName  // Save the relative path of the image
                 };
 
                 _context.GroupMedicines.Add(groupMedicine);
@@ -610,7 +610,7 @@ namespace Graduation_Project.Controllers
                     }
 
                     // Update the ImagePath in the database
-                    groupMedicine.ImageUrl = "/images/" + newFileName;
+                    groupMedicine.ImageUrl = "images/" + newFileName;
                 }
 
                 // Save changes to the database

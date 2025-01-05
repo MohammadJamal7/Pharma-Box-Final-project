@@ -118,7 +118,7 @@
                             @foreach (var group in Model.categories)
                             {
                                 <div class="col-sm-6 col-lg-4 text-center item mb-4">
-                                    <a href="#branches"> <img src="~/~@group.ImageUrl" width="200px" height="250px" alt="Image"></a>
+                                    <a href="#branches"> <img src="/@group.ImageUrl" width="200px" height="250px" alt="Image"></a>
                                     <h3 class="text-dark"><a href="#branch">@group.Name</a></h3>
                                 </div>
                             }
@@ -133,7 +133,7 @@
 
         <div class="site-section" id="branches">
             <div class="container">
-                <div class="row" >
+                <div class="row">
                     <div class="title-section text-center col-12">
                         <h2 class="text-uppercase">Available branches</h2>
                     </div>
@@ -141,7 +141,7 @@
 
                 <div class="row">
                     <div class="container mt-5">
-                       
+
                         <div class="row mt-5">
                             @foreach (var branch in Model.branches)
                             {
@@ -164,7 +164,7 @@
                     </div>
 
                 </div>
-              
+
             </div>
         </div>
 

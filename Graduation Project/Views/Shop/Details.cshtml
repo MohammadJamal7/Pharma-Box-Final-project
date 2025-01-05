@@ -1,9 +1,7 @@
-﻿@{
+﻿@model Medicine
+@{
     Layout = null;
 }
-
-@model IEnumerable<Medicine>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,6 +9,7 @@
     <title>Pharma &mdash; Colorlib Template</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,700|Crimson+Text:400,400i" rel="stylesheet">
     <link rel="stylesheet" href="~/fonts/icomoon/style.css">
@@ -26,12 +25,12 @@
 
     <link rel="stylesheet" href="~/css/style.css">
 
+
 </head>
 
 <body>
 
     <div class="site-wrap">
-
         <div class="site-navbar py-2">
 
             <div class="search-wrap">
@@ -53,7 +52,7 @@
                     <div class="main-nav d-none d-lg-block">
                         <nav class="site-navigation text-right text-md-center" role="navigation">
                             <ul class="site-menu js-clone-nav d-none d-lg-block">
-                                <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                                <li ><a href="@Url.Action("Index", "Home")">Home</a></li>
                                 <li class="active"><a href="@Url.Action("Index", "Shop")">Store</a></li>
 
                                 <li ><a href="@Url.Action("Branches", "Shop")">Branches</a></li>
@@ -84,77 +83,59 @@
                 </div>
             </div>
         </div>
-        </div>
         <div class="bg-light py-3">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12 mb-0"><a href="index.html">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Store</strong></div>
+                    <div class="col-md-12 mb-0">
+                        <a href="index.html">Home</a> <span class="mx-2 mb-0">/</span> <a href="shop.html">Store</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">@Model.Name</strong>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="site-section">
             <div class="container">
-
                 <div class="row">
-                    <input type="text" class="form-control" placeholder="Search keyword and hit enter...">
-
-                </div>
-
-                <div class="container mt-5">
-    <h2 class="text-center mb-4">Shop - @ViewBag.BranchName</h2>
-
-    @if (!Model.Any())
-    {
-        <div class="text-center">
-            <p class="text-muted">No medicines available at this branch currently. Please check back later!</p>
-        </div>
-    }
-    else
-    {
-        <div class="row">
-            @foreach (var medication in Model)
-            {
-                                <div class="col-sm-6 col-lg-4 text-center item mb-4">
-                                    <a asp-action="Details" asp-controller="Shop" asp-route-id="@medication.MedicineId">
-                                        <img src="@medication.ImageUrl" alt="@medication.Name" class="img-fluid mb-3" style="width: 200px; height: 250px; object-fit: cover;">
-                                    </a>
-                                    <h3 class="text-dark">
-                                        <a asp-action="Details" asp-controller="Shop" asp-route-id="@medication.MedicineId" class="text-decoration-none">
-                                            @medication.Name
-                                        </a>
-                                    </h3>
-                                    <p class="price text-primary fw-bold">
-                                        5.00 JOD
-                                    </p>
-                                </div>
-
-            }
-        </div>
-    }
-</div>
-
-                <div class="row mt-5">
-                    <div class="col-md-12 text-center">
-                        <div class="site-block-27">
-                            <ul>
-                                <li><a href="#">&lt;</a></li>
-                                <li class="active"><span>1</span></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li><a href="#">&gt;</a></li>
-                            </ul>
+                    <div class="col-md-5 mr-auto">
+                        <div class="border text-center">
+                            <img src="@Model.ImageUrl" alt="Image" class="img-fluid p-5">
                         </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h2 class="text-black">@Model.Name</h2>
+                        <p>
+                           @Model.Description
+                        </p>
+
+
+                        <p><strong class="text-primary h4"> 55.00 JOD </strong></p>
+
+
+
+                        <div class="mb-5">
+                            <div class="input-group mb-3" style="max-width: 220px;">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
+                                </div>
+                                <input type="text" class="form-control text-center" value="1" placeholder=""
+                                       aria-label="Example text with button addon" aria-describedby="button-addon1">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <p><a href="cart.html" class="buy-now btn btn-sm height-auto px-4 py-3 btn-primary">Add To Cart</a></p>
+
+                       
+
                     </div>
                 </div>
             </div>
         </div>
 
-
-        <footer class="site-footer">
-            <div class="container">
+        <footer class="site-footer bg-light">
+            <div class="container ">
                 <div class="row">
                     <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
 
@@ -166,7 +147,7 @@
                         </div>
 
                     </div>
-                    <div class="col-lg-3 mx-auto mb-5 mb-lg-0">
+                    <div class="col-lg-3 mx-auto mb-3 mb-lg-0">
                         <h3 class="footer-heading mb-4">Quick Links</h3>
                         <ul class="list-unstyled">
 
@@ -178,7 +159,7 @@
                     </div>
 
                     <div class="col-md-6 col-lg-3">
-                        <div class="block-5 mb-5">
+                        <div class="block-5 mb-1">
                             <h3 class="footer-heading mb-4">Contact Info</h3>
                             <ul class="list-unstyled">
                                 <li class="address">123 Al-Jame'a Street, University Circle, Irbid, Jordan</li>
