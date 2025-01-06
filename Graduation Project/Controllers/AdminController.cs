@@ -2,6 +2,7 @@ using Graduation_Project.Data;
 using Graduation_Project.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.Operations;
 using Microsoft.EntityFrameworkCore;
 
 namespace Graduation_Project.Controllers
@@ -103,17 +104,45 @@ namespace Graduation_Project.Controllers
             return View(model); // If validation fails, return the model back to the view
         }
 
-        public IActionResult DeleteBranch(int id)
+        public async Task<IActionResult> DeleteBranch(int id)
         {
-            // Your logic for deleting the branch, e.g., find and remove the branch
-            var branch = _context.PharmacyBranch.FirstOrDefault(b => b.BranchId == id);
-            if (branch != null)
+            // Find the branch to delete, including its inventory.
+            var branchToDelete = _context.PharmacyBranch
+                .Include(b => b.Inventory)
+                .FirstOrDefault(b => b.BranchId == id);
+
+            if (branchToDelete != null)
             {
-                _context.PharmacyBranch.Remove(branch);
-                _context.SaveChanges();
+                // Find the pharmacist associated with the branch.
+                var branchPharmacist = await _userManager.Users
+                    .FirstOrDefaultAsync(u => u.BranchId == branchToDelete.BranchId);
+
+                // If a pharmacist is found, delete them.
+                if (branchPharmacist != null)
+                {
+                    var deleteUserResult = await _userManager.DeleteAsync(branchPharmacist);
+                    if (!deleteUserResult.Succeeded)
+                    {
+                        // Handle user deletion failure if needed.
+                        ModelState.AddModelError("", "Failed to delete pharmacist.");
+                        return View(branchToDelete); // Return the view with an error message.
+                    }
+                }
+
+                // Remove the inventory items related to the branch.
+                _context.Inventory.RemoveRange(branchToDelete.Inventory);
+
+                // Remove the branch itself.
+                _context.PharmacyBranch.Remove(branchToDelete);
+
+                // Save changes to the database.
+                await _context.SaveChangesAsync();
             }
-            return RedirectToAction("Branches"); // Redirect to the list or another page after deletion
+
+            // Redirect to the Branches page after deletion.
+            return RedirectToAction("Branches");
         }
+
 
 
         public async Task<IActionResult> Suppliers()

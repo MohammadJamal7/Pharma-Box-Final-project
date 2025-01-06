@@ -300,25 +300,25 @@
                 color: #600946;
             }
         /* .user-nav {
-                                                   display: flex;
-                                                   gap: 1rem;
-                                               }
+                                                           display: flex;
+                                                           gap: 1rem;
+                                                       }
 
-                                               .user-nav .nav-link {
-                                                   color: #6c757d;
-                                                   padding: 0.5rem 1rem;
-                                                   border-radius: 0.25rem;
-                                                   transition: all 0.2s;
-                                               }
+                                                       .user-nav .nav-link {
+                                                           color: #6c757d;
+                                                           padding: 0.5rem 1rem;
+                                                           border-radius: 0.25rem;
+                                                           transition: all 0.2s;
+                                                       }
 
-                                               .user-nav .nav-link:hover {
-                                                   background-color: #f8f9fa;
-                                               }
+                                                       .user-nav .nav-link:hover {
+                                                           background-color: #f8f9fa;
+                                                       }
 
-                                               .user-nav .nav-link.active {
-                                                   color: var(--first-color) !important;
-                                                   font-weight: 500;
-                                               } */
+                                                       .user-nav .nav-link.active {
+                                                           color: var(--first-color) !important;
+                                                           font-weight: 500;
+                                                       } */
 
         @@media screen and (min-width: 768px) {
             body {
@@ -365,7 +365,7 @@
         <div class="header_toggle">
             <i class='bx bx-menu' id="header-toggle"></i>
         </div>
-       
+        
     </header>
     <br />
     <div class="l-navbar" id="nav-bar">
@@ -404,7 +404,7 @@
             <h1 class="title">
                 <i class="bi bi-building me-2"></i>Pharmacist Management
             </h1>
-            <a class="btn add-branch-btn px-4 py-2 rounded-pill" href="@Url.Action("AddBranch","Admin")">
+            <a class="btn add-branch-btn px-4 py-2 rounded-pill" href="@Url.Action("Register","Pharmacist")">
                 <i class="bi bi-plus-circle"></i> Add New Pharmacist
             </a>
         </div>
@@ -452,12 +452,12 @@
     <script>
 
 
-        document.addEventListener("DOMContentLoaded", function(event) {
+        document.addEventListener("DOMContentLoaded", function (event) {
             const showNavbar = (toggleId, navId, bodyId, headerId) => {
                 const toggle = document.getElementById(toggleId),
-                      nav = document.getElementById(navId),
-                      bodypd = document.getElementById(bodyId),
-                      headerpd = document.getElementById(headerId);
+                    nav = document.getElementById(navId),
+                    bodypd = document.getElementById(bodyId),
+                    headerpd = document.getElementById(headerId);
 
                 if (toggle && nav && bodypd && headerpd) {
                     toggle.addEventListener('click', () => {
@@ -465,7 +465,8 @@
                         toggle.classList.toggle('bx-x');
                         bodypd.classList.toggle('body-pd');
                         headerpd.classList.toggle('body-pd');
-                    });    }
+                    });
+                }
             };
 
             showNavbar('header-toggle', 'nav-bar', 'body-pd', 'header');
@@ -483,7 +484,7 @@
             // Add click handling for user management navigation
             const userNavLinks = document.querySelectorAll('.user-nav .nav-link');
             userNavLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
+                link.addEventListener('click', function (e) {
                     userNavLinks.forEach(l => l.classList.remove('active'));
                     this.classList.add('active');
                 });
