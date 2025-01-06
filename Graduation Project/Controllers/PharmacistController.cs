@@ -129,7 +129,6 @@ namespace Graduation_Project.Controllers
                 {
                     // Redirect to the default action (e.g., Home/Index) after successful login
                     return RedirectToAction("Overview", "Pharmacist");
-                 
                 }
                 else
                 {
@@ -140,12 +139,6 @@ namespace Graduation_Project.Controllers
 
             // If we got this far, something failed, redisplay form
             return View(model);
-        }
-
-        public async Task<IActionResult> Logout()
-        {
-            await _signInManager.SignOutAsync();
-            return RedirectToAction("Login", "Pharmacist");
         }
 
 
@@ -666,5 +659,27 @@ namespace Graduation_Project.Controllers
         {
             return View();
         }
+
+
+        public async Task<IActionResult> Notifications()
+        {
+            var currentUser = await _userManager.GetUserAsync(User);
+            var notifications = _context.OrderNotifications
+         .Where(n => n.PharmacistId == currentUser.Id)
+         .OrderByDescending(n => n.NotificationDate) // Most recent notifications first
+         .ToList();
+
+
+            return View(notifications);
+        }
+
+
+        public async Task<IActionResult> LogOut()
+        {
+            await _signInManager.SignOutAsync();  // Signs out the user
+            return RedirectToAction("Login", "Pharmacist");  // Redirects to the Login action
+        }
+
+
     }
 }

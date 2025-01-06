@@ -1,6 +1,7 @@
 ﻿using Graduation_Project.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection.Emit;
 
 namespace Graduation_Project.Data
 {
@@ -23,10 +24,14 @@ namespace Graduation_Project.Data
         public DbSet<SupplierMedication> SupplierMedications { get; set; }
         public DbSet<PharmCart> PharmCarts { get; set; }
         public DbSet<PharmCartItem> PharmCartItems { get; set; }
+        public DbSet<OrderNotifications> OrderNotifications { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+
             base.OnModelCreating(builder);
+
+            
 
             // Configure the one-to-one relationship between branch and inventory
             builder.Entity<Branch>()
@@ -78,6 +83,30 @@ namespace Graduation_Project.Data
 
             // Configure the relationship between OrderItem and Medicine
             builder.Entity<OrderItem>()
+                .HasOne(oi => oi.Product)  // Each OrderItem is linked to a Medicine (Product)
+                .WithMany()  // A Medicine can appear in many OrderItems
+                .HasForeignKey(oi => oi.MedicineId)  // Foreign key is MedicineId
+                .OnDelete(DeleteBehavior.Restrict);  // Avoid cascading deletes on the Medicine side
+
+            // Configure relationships for OrderNotifications
+            builder.Entity<OrderNotifications>()
+                .HasOne(n => n.SupplierOrder)  // Link OrderNotification to SupplierOrder
+                .WithMany()                    // No collection of notifications in SupplierOrder
+                .HasForeignKey(n => n.OrderId)
+                .OnDelete(DeleteBehavior.Restrict);  // Prevent cascade delete for Order
+
+            builder.Entity<OrderNotifications>()
+                .HasOne(n => n.Pharmacist)    // Link OrderNotification to Pharmacist (ApplicationUser)
+                .WithMany()                    // No collection of notifications in ApplicationUser
+                .HasForeignKey(n => n.PharmacistId)
+                .OnDelete(DeleteBehavior.Restrict);  // Prevent cascade delete for Pharmacist
+
+            // Configure SupplierOrder and SupplierOrderItem
+            builder.Entity<SupplierOrder>()
+                .HasMany(o => o.SupplierOrderItems) // SupplierOrder can have many SupplierOrderItems
+                .WithOne()                          // SupplierOrderItem links to SupplierOrder
+                .HasForeignKey(o => o.SupplierOrderId)
+                .OnDelete(DeleteBehavior.Restrict); // Prevent cascade delete for SupplierOrder
                 .HasOne(oi => oi.Product)
                 .WithMany()
                 .HasForeignKey(oi => oi.MedicineId)

@@ -354,9 +354,10 @@ namespace Graduation_Project.Migrations
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HowToUse = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     StockQuantity = table.Column<int>(type: "int", nullable: false),
                     ExpiryDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    RequiresPrescription = table.Column<bool>(type: "bit", nullable: false),
                     InventoryId = table.Column<int>(type: "int", nullable: true),
                     SupplierMedicationId = table.Column<int>(type: "int", nullable: true),
                     GroupMedicineId = table.Column<int>(type: "int", nullable: true)
@@ -409,6 +410,36 @@ namespace Graduation_Project.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "OrderNotifications",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    OrderId = table.Column<int>(type: "int", nullable: false),
+                    PharmacistId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Message = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
+                    NotificationDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    IsRead = table.Column<bool>(type: "bit", nullable: false),
+                    NotificationType = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_OrderNotifications", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_OrderNotifications_AspNetUsers_PharmacistId",
+                        column: x => x.PharmacistId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_OrderNotifications_SupplierOrders_OrderId",
+                        column: x => x.OrderId,
+                        principalTable: "SupplierOrders",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "SupplierOrderItems",
                 columns: table => new
                 {
@@ -417,6 +448,7 @@ namespace Graduation_Project.Migrations
                     Quantity = table.Column<int>(type: "int", nullable: false),
                     Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     SupplierOrderId = table.Column<int>(type: "int", nullable: true),
+                    SupplierOrderId1 = table.Column<int>(type: "int", nullable: false),
                     SupplierMedicationId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
@@ -431,7 +463,14 @@ namespace Graduation_Project.Migrations
                         name: "FK_SupplierOrderItems_SupplierOrders_SupplierOrderId",
                         column: x => x.SupplierOrderId,
                         principalTable: "SupplierOrders",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_SupplierOrderItems_SupplierOrders_SupplierOrderId1",
+                        column: x => x.SupplierOrderId1,
+                        principalTable: "SupplierOrders",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -571,6 +610,16 @@ namespace Graduation_Project.Migrations
                 column: "OrderId1");
 
             migrationBuilder.CreateIndex(
+                name: "IX_OrderNotifications_OrderId",
+                table: "OrderNotifications",
+                column: "OrderId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_OrderNotifications_PharmacistId",
+                table: "OrderNotifications",
+                column: "PharmacistId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Orders_BranchId",
                 table: "Orders",
                 column: "BranchId");
@@ -611,6 +660,11 @@ namespace Graduation_Project.Migrations
                 column: "SupplierOrderId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_SupplierOrderItems_SupplierOrderId1",
+                table: "SupplierOrderItems",
+                column: "SupplierOrderId1");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_SupplierOrders_BranchId",
                 table: "SupplierOrders",
                 column: "BranchId");
@@ -644,6 +698,9 @@ namespace Graduation_Project.Migrations
 
             migrationBuilder.DropTable(
                 name: "OrderItems");
+
+            migrationBuilder.DropTable(
+                name: "OrderNotifications");
 
             migrationBuilder.DropTable(
                 name: "PharmCartItems");

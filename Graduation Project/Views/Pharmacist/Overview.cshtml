@@ -266,7 +266,7 @@
                         <i class="fa-solid fa-arrow-down-9-1"></i>
                         <span class="nav_name">My Orders</span>
                     </a>
-                    <a href="../Notification-sec/index.html" class="nav_link">
+                    <a href="@Url.Action("Notifications")" class="nav_link">
                         <i class="fa-regular fa-bell"></i>
                         <span class="nav_name">Notifications</span>
                     </a>
@@ -275,7 +275,10 @@
                         <span class="nav_name">Branchs</span>
                     </a>
 
-
+                    <a href="@Url.Action("LogOut")" class="nav_link">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span class="nav_name">Log Out</span>
+                    </a>
                 </div>
             </div>
         </nav>
@@ -288,12 +291,9 @@
         <p class="text-muted">Easily access most important information</p>
     </div>
 
-    <div class="mb-4">
-        <input type="text" class="form-control" placeholder="Search Medicine Groups...">
-    </div>
-
+   
     <div class="row text-center">
-        <div class="col-md-3 mb-3">
+        <div class="col-md-4 mb-3">
             <div class="card border-success">
                 <div class="card-body">
                     <h5 class="card-title text-success">300</h5>
@@ -302,7 +302,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3 mb-3">
+        <div class="col-md-4 mb-3">
             <div class="card border-warning">
                 <div class="card-body">
                     <h5 class="card-title text-warning">20,000</h5>
@@ -311,7 +311,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3 mb-3">
+        <div class="col-md-4 mb-3">
             <div class="card border-primary">
                 <div class="card-body">
                     <h5 class="card-title text-primary">298</h5>
@@ -320,15 +320,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3 mb-3">
-            <div class="card border-danger">
-                <div class="card-body">
-                    <h5 class="card-title text-danger">01</h5>
-                    <p class="card-text">Medicine Shortage</p>
-                    <a href="#" class="btn btn-outline-danger btn-sm">Resolve Now</a>
-                </div>
-            </div>
-        </div>
+      
     </div>
 
     <div class="row mt-12">

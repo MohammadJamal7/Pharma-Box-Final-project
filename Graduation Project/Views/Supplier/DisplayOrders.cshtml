@@ -293,7 +293,10 @@
                         <span class="nav_name">Orders</span>
                     </a>
 
-
+                    <a href="@Url.Action("LogOut")" class="nav_link">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span class="nav_name">Log Out</span>
+                    </a>
 
                 </div>
             </div>
@@ -399,6 +402,18 @@
                                                 <button class="btn btn-info btn-sm details-order" data-order-id="@order.OrderId">
                                                     <i class="fas fa-info-circle"></i> Details
                                                 </button>
+                                                
+                                                @if (order.orderStatus == "Delivered")
+                                                {
+                                                    <span class="text-success delivered-badge">Delivered</span>
+                                                }
+                                                else
+                                                {
+                                                    <button class="btn btn-success btn-sm deliver-order ps-2" data-order-id="@order.OrderId">
+                                                        <i class="fa-solid fa-check"></i> Delivered
+                                                    </button>
+                                                }
+
                                             </td>
                                         </tr>
                                     }
@@ -442,7 +457,7 @@
                                             <td>$@order.OrderItems.Sum(item => item.Total).ToString("F2")</td>
                                             <td>
                                                 <button class="btn btn-info btn-sm details-order btn-outline-dark" data-order-id="@order.OrderId">
-                                                    Details
+                                                    <i class="fas fa-info-circle"></i> Details
                                                 </button>
                                             </td>
                                         </tr>
@@ -578,26 +593,31 @@
                 new bootstrap.Modal(document.getElementById('orderDetailsModal')).show();
                         });
 
-                // Accept Order Handler
-                $('.accept-order').on('click', function () {
-                            var orderId = $(this).data('order-id');
+                           // Accept Order Handler
+            $('.accept-order').on('click', function () {
+                var orderId = $(this).data('order-id');
+
                 $.ajax({
                     url: '@Url.Action("AcceptOrder", "Supplier")',
-                type: 'POST',
-                data: {id: orderId },
-                success: function (response) {
-                                    if (response.success) {
-                    $('#order-' + orderId).remove();
-                location.reload(); // Reload to reflect changes
-                                    } else {
-                    alert(response.message);
-                                    }
-                                },
-                error: function () {
-                    alert('Error accepting the order.');
-                                }
-                            });
-                        });
+                    type: 'POST',
+                    data: { id: orderId },
+                    success: function (response) {
+                        // Check if the response indicates success
+                        if (response.success) {
+                            // Remove the order from the DOM and reload the page
+                            $('#order-' + orderId).remove();
+                            location.reload(); // Reload to reflect changes
+                        } else {
+                            // If success is false, show the error message returned from the server
+                            alert(response.message);
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        $('#order-' + orderId).remove();
+                            location.reload();
+                    }
+                });
+            });
 
                 // Reject Order Handler
                 $('.reject-order').on('click', function () {
@@ -620,6 +640,35 @@
                             });
                         });
                     });
+
+                    // handle deliver order
+                   var token = $('input[name="__RequestVerificationToken"]').val();
+
+                     $('.deliver-order').on('click', function () {
+                var orderId = $(this).data('order-id');
+                console.log("Delivering order with ID:", orderId);
+
+                $.ajax({
+                    url: '@Url.Action("DeliverOrder", "Supplier")',
+                    type: 'POST',
+                    data: { id: orderId },
+                    success: function (response) {
+                        console.log(response);  // Check the server response
+                        if (response.success) {
+                            var row = $('#confirmed-order-' + orderId);
+                            row.find('.deliver-order').hide();
+                            row.find('.delivered-badge').show();
+                            alert('Order marked as delivered!');
+                        } else {
+                            alert('Error: ' + response.message);
+                        }
+                    },
+                    error: function () {
+                        alert('Error updating order status.');
+                    }
+                });
+            });
+
             </script>
             
 

@@ -10,20 +10,20 @@ namespace Graduation_Project.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<bool>(
-                name: "RequiresPrescription",
-                table: "Medicines",
-                type: "bit",
-                nullable: false,
-                defaultValue: false);
+            migrationBuilder.DropColumn(
+                name: "IsRead",
+                table: "OrderNotifications");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropColumn(
-                name: "RequiresPrescription",
-                table: "Medicines");
+            migrationBuilder.AddColumn<bool>(
+                name: "IsRead",
+                table: "OrderNotifications",
+                type: "bit",
+                nullable: false,
+                defaultValue: false);
         }
     }
 }

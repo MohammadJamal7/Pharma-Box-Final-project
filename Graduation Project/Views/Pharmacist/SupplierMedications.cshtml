@@ -303,7 +303,7 @@
                         <span class="nav_name">My Orders</span>
                     </a>
 
-                    <a href="../Notification-sec/index.html" class="nav_link">
+                    <a href="@Url.Action("Notifications")" class="nav_link">
                         <i class="fa-regular fa-bell"></i>
                         <span class="nav_name">Notifications</span>
                     </a>
@@ -312,7 +312,10 @@
                         <span class="nav_name">Branchs</span>
                     </a>
 
-
+                    <a href="@Url.Action("LogOut")" class="nav_link">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span class="nav_name">Log Out</span>
+                    </a>
                 </div>
             </div>
         </nav>
@@ -369,7 +372,7 @@
 
         <div class="row mt-4">
             <div class="col-12 text-center">
-                <a href="@Url.Action("SuppliersDetails", "Pharmacist")" class="btn btn-secondary">Back to Supplier List</a>
+                <a href="@Url.Action("Suppliers", "Pharmacist")" class="btn btn-secondary">Back to Supplier List</a>
                 <a href="@Url.Action("Index", "PharmCart")" class="btn btn-success">Go to Cart</a>
             </div>
         </div>

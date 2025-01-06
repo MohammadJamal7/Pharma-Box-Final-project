@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inventory</title>
+    <title>sales report</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
@@ -169,6 +169,39 @@
         .height-100 {
             height: 100vh;
         }
+
+        .search-bar {
+            max-width: 400px;
+            margin-bottom: 20px;
+        }
+
+        .supplier-header h4 {
+            font-weight: bold;
+        }
+
+        .supplier-header span {
+            color: #6c757d;
+        }
+
+        .table-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-view {
+            background-color: #d0b2f4;
+            border: none;
+            border-radius: 20px;
+            color: #fff;
+            padding: 5px 15px;
+            font-weight: bold;
+        }
+
+            .btn-view:hover {
+                background-color: #b48cf2;
+            }
         /* .user-nav {
                            display: flex;
                            gap: 1rem;
@@ -226,6 +259,7 @@
     </style>
 </head>
 <body id="body-pd">
+
     <header class="header" id="header">
 
         <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
@@ -242,16 +276,17 @@
                 </div>
                 <br />
                 <div class="nav_list">
-                    <a href="@Url.Action("Overview")" class="nav_link">
+                    <a href="@Url.Action("Overview")" class="nav_link ">
                         <i class="fa-sharp fa-solid fa-table-columns"></i>
                         <span class="nav_name ">Overview</span>
                     </a>
-                    <a href="@Url.Action("Inventory")" class="nav_link active">
+                    <a href="@Url.Action("Inventory")" class="nav_link ">
                         <i class="fa-solid fa-boxes-stacked"></i>
                         <span class="nav_name">Inventory</span>
                     </a>
+
                     <a href="@Url.Action("Medications")" class="nav_link">
-                        <i class="fa-solid fa-capsules"></i>
+                        <i class="fa-solid fa-grip"></i>
                         <span class="nav_name">Medications</span>
                     </a>
                     <a href="@Url.Action("GroupsOfMedicines")" class="nav_link">
@@ -268,23 +303,26 @@
                         <span class="nav_name">My Orders</span>
                     </a>
 
-                    <a href="../Notification-sec/index.html" class="nav_link">
+                    <a href="@Url.Action("Notifications")" class="nav_link">
                         <i class="fa-regular fa-bell"></i>
                         <span class="nav_name">Notifications</span>
                     </a>
-                    <a href="@Url.Action("Branches")" class="nav_link">
-                        <i class="fa-solid fa-code-branch"></i>
+                    <a href="@Url.Action("Branches")" class="nav_link ">
                         <span class="nav_name">Branchs</span>
                     </a>
 
 
-
+                    <a href="@Url.Action("LogOut")" class="nav_link">
 
 
                 </div>
             </div>
         </nav>
     </div>
+
+
+
+
 
     <div class="container mt-5">
         <h2 class="fw-bold">
@@ -351,6 +389,19 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
     <script>
         document.addEventListener("DOMContentLoaded", function(event) {
             const showNavbar = (toggleId, navId, bodyId, headerId) => {
@@ -365,8 +416,7 @@
                         toggle.classList.toggle('bx-x');
                         bodypd.classList.toggle('body-pd');
                         headerpd.classList.toggle('body-pd');
-                    });
-                }
+                    });    }
             };
 
             showNavbar('header-toggle', 'nav-bar', 'body-pd', 'header');
@@ -390,6 +440,7 @@
                 });
             });
         });
+
     </script>
 </body>
 </html>

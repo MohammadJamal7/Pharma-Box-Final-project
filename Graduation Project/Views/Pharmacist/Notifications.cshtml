@@ -1,13 +1,13 @@
-﻿@{
-    Layout = null;
-}
+﻿@model IEnumerable<Graduation_Project.Models.OrderNotifications>
 
-@model List<Medicine>
+@{
+    ViewData["Title"] = "Pharmacist Notifications";
+}
 @{
     Layout = null;
-    ViewData["Title"] = "Pharmacist Medicines";
 }
 
+<h2>@ViewData["Title"]</h2>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <style>
         @@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+
         :root {
             --header-height: 3rem;
             --nav-width: 68px;
@@ -179,61 +180,58 @@
         }
 
         /* .user-nav {
-                    display: flex;
-                    gap: 1rem;
-                }
+                            display: flex;
+                            gap: 1rem;
+                        }
 
-                .user-nav .nav-link {
-                    color: #6c757d;
-                    padding: 0.5rem 1rem;
-                    border-radius: 0.25rem;
-                    transition: all 0.2s;
-                }
+                        .user-nav .nav-link {
+                            color: #6c757d;
+                            padding: 0.5rem 1rem;
+                            border-radius: 0.25rem;
+                            transition: all 0.2s;
+                        }
 
-                .user-nav .nav-link:hover {
-                    background-color: #f8f9fa;
-                }
+                        .user-nav .nav-link:hover {
+                            background-color: #f8f9fa;
+                        }
 
-                .user-nav .nav-link.active {
-                    color: var(--first-color) !important;
-                    font-weight: 500;
-                } */
+                        .user-nav .nav-link.active {
+                            color: var(--first-color) !important;
+                            font-weight: 500;
+                        } */
 
         @@media screen and (min-width: 768px) {
-            body
-
-        {
-            margin: calc(var(--header-height) + 1rem) 0 0 0;
-            padding-left: calc(var(--nav-width) + 2rem);
-        }
-
-        .header {
-            height: calc(var(--header-height) + 1rem);
-            padding: 0 2rem 0 calc(var(--nav-width) + 2rem);
-        }
-
-        .header_img {
-            width: 40px;
-            height: 40px;
-        }
-
-            .header_img img {
-                width: 45px;
+            body {
+                margin: calc(var(--header-height) + 1rem) 0 0 0;
+                padding-left: calc(var(--nav-width) + 2rem);
             }
 
-        .l-navbar {
-            left: 0;
-            padding: 1rem 1rem 0 0;
-        }
+            .header {
+                height: calc(var(--header-height) + 1rem);
+                padding: 0 2rem 0 calc(var(--nav-width) + 2rem);
+            }
 
-        .show {
-            width: calc(var(--nav-width) + 156px);
-        }
+            .header_img {
+                width: 40px;
+                height: 40px;
+            }
 
-        .body-pd {
-            padding-left: calc(var(--nav-width) + 188px);
-        }
+                .header_img img {
+                    width: 45px;
+                }
 
+            .l-navbar {
+                left: 0;
+                padding: 1rem 1rem 0 0;
+            }
+
+            .show {
+                width: calc(var(--nav-width) + 156px);
+            }
+
+            .body-pd {
+                padding-left: calc(var(--nav-width) + 188px);
+            }
         }
     </style>
 </head>
@@ -264,14 +262,14 @@
                         <span class="nav_name">Inventory</span>
                     </a>
 
-                    <a href="@Url.Action("Medications")" class="nav_link active">
+                    <a href="@Url.Action("Medications")" class="nav_link ">
                         <i class="fa-solid fa-capsules"></i>
                         <span class="nav_name">Medications</span>
                     </a>
                     <a href="@Url.Action("GroupsOfMedicines")" class="nav_link">
-						<i class="fa-solid fa-grip"></i>
-						<span class="nav_name">Medicine Groups</span>
-					</a>
+                        <i class="fa-solid fa-grip"></i>
+                        <span class="nav_name">Medicine Groups</span>
+                    </a>
 
                     <a href="@Url.Action("Suppliers")" class="nav_link">
                         <i class="fa-solid fa-arrow-trend-up"></i>
@@ -282,7 +280,7 @@
                         <span class="nav_name">My Orders</span>
                     </a>
 
-                    <a href="@Url.Action("Notifications")" class="nav_link">
+                    <a href=#" class="nav_link active">
                         <i class="fa-regular fa-bell"></i>
                         <span class="nav_name">Notifications</span>
                     </a>
@@ -302,68 +300,82 @@
 
 
     <div class="container mt-5">
-        <h2 class="fw-bold"><a href="@Url.Action("Inventory")">Inventory</a> &gt; <span class="text-primary">List of Medicines (@Model.Count())</span></h2>
-        <p>List of medicines available for sales.</p>
 
-
-        <div class="d-flex justify-content-between mb-3">
-            <input type="text" id="searchInput" class="form-control w-25" placeholder="Search Medicine Inventory..." oninput="searchMedicine()">
-            <form asp-action="CreateMedicine" asp-controller="Pharmacist" method="get">
-                <button class="btn btn-primary"><i class="fa fa-plus"></i> Add New Medicine</button>
-            </form>
-        </div>
-
-        <div class="mb-3">
-            <select id="groupFilter" class="form-select w-25" onchange="filterTable()">
-                <option value="" selected>- Select Group -</option>
-                <option value="1">Generic Medicine</option>
-                <option value="2">Diabetes</option>
-            </select>
-        </div>
-
-
-        @if (Model != null && Model.Any())
-        {
-            <table class="table table-striped table-hover">
-                <thead class="table-light">
-                    <tr>
-                        <th>Medicine Name</th>
-                        <th>Group Name</th>
-                        <th>Expire Date</th>
-                        <th>Stock in Qty</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody id="medicineTable">
-                    @foreach (var item in Model)
-                    {
-                        <tr id="row-id-@item.MedicineId" data-group-id="@item.GroupMedicineId" data-name="@item.Name.ToLower()">
-                            <td>@item.Name</td>
-                            <td>@(item.GroupMedicineId != null ? item.GroupMedicine.Name : "undefined")</td>
-                            <td>@item.ExpiryDate.ToString("MM, yyyy")</td>
-                            <td>@item.StockQuantity</td>
-                            <td class="d-flex flex-row  gap-2 align-items-center">
-                                <form asp-action="EditMedicine" asp-controller="Pharmacist" method="get" asp-route-id="@item.MedicineId">
-                                    <button class="btn btn-success btn-sm"><i class="fas fa-edit"></i></button>
-                                </form>
-                                <button class="btn btn-danger btn-sm" onclick="confirmDelete(@item.MedicineId)"><i class="fas fa-trash-alt"></i></button>
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
-        }
-        else
-        {
-            <div class="alert alert-warning text-center mt-4" role="alert">
-                <h4 class="alert-heading">No Medicines Available</h4>
-                <p class="mb-0">Unfortunately, there are no medicines available in the inventory at the moment.</p>
-            </div>
-        }
 
 
 
       
+
+        <div class="row">
+            <!-- Fake Data: Notification 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <strong>Order Accepted</strong>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Order ID: 101</h5>
+                        <p class="card-text">Your order has been accepted by the supplier. The items will be shipped soon.</p>
+                        <p class="text-muted">
+                            <i class="bi bi-calendar-event"></i> 2025-01-05 10:30 AM
+                        </p>
+                        <span class="badge bg-warning">Pending</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fake Data: Notification 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <strong>Order Delivered</strong>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Order ID: 102</h5>
+                        <p class="card-text">Your order has been successfully delivered. You can now check your inventory.</p>
+                        <p class="text-muted">
+                            <i class="bi bi-calendar-event"></i> 2025-01-04 02:15 PM
+                        </p>
+                        <span class="badge bg-success">Delivered</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fake Data: Notification 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <strong>Order Dispatched</strong>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Order ID: 103</h5>
+                        <p class="card-text">Your order has been dispatched from the supplier. It will arrive soon.</p>
+                        <p class="text-muted">
+                            <i class="bi bi-calendar-event"></i> 2025-01-03 09:00 AM
+                        </p>
+                        <span class="badge bg-warning">Pending</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fake Data: Notification 4 -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <strong>Order Cancelled</strong>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Order ID: 104</h5>
+                        <p class="card-text">Unfortunately, your order has been cancelled by the supplier. Please check your other orders.</p>
+                        <p class="text-muted">
+                            <i class="bi bi-calendar-event"></i> 2025-01-02 04:30 PM
+                        </p>
+                        <span class="badge bg-danger">Cancelled</span>
+                    </div>
+                </div>
+            </div>
+
+
     </div>
 
     <input type="hidden" name="__RequestVerificationToken" value="Antiforgery.GetTokens(HttpContext).RequestToken" />
@@ -390,7 +402,7 @@
                 }
             });
 
-           
+
         }
 
         function searchMedicine() {
@@ -466,7 +478,7 @@
                     $.ajax({
                         url: '/Pharmacist/DeleteMedicine',  // Make sure the URL is correct
                         type: 'POST',
-                       
+
                         data: { id: medicineId },  // Ensure the data is in the correct format
                         headers: {
                             'Accept': 'application/json'
