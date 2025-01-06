@@ -60,7 +60,7 @@ app.UseAuthorization();
 // Map default routes
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Cart}/{action=Checkout}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
 
 app.Run();
