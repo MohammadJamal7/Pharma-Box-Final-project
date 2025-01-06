@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.SqlServer.Query.Internal;
 using Microsoft.Identity.Client;
+using Microsoft.VisualBasic;
 
 namespace Graduation_Project.Controllers
 {
@@ -225,7 +226,7 @@ namespace Graduation_Project.Controllers
                     var curretnSupplier = await _userManager.FindByEmailAsync(model.Email);  // Retrieve supplier ID
 
                     // Redirect to the default action (e.g., Home/Index) after successful login
-                    return RedirectToAction("Medicines", "Supplier", new { id = curretnSupplier.Id });
+                    return RedirectToAction("OverView", "Supplier", new { id = curretnSupplier.Id });
                 }
                 else
                 {
@@ -238,11 +239,6 @@ namespace Graduation_Project.Controllers
             return View(model);
         }
 
-        public async Task<IActionResult> Logout()
-        {
-            await _signInManager.SignOutAsync();
-            return RedirectToAction("Login", "Supplier");
-        }
 
         // GET: /Supplier/Orders
         [Authorize(Roles ="Supplier")]
@@ -272,7 +268,6 @@ namespace Graduation_Project.Controllers
 
             return View(orderViewModels);
         }
-       
         public async Task<IActionResult> AcceptOrder(int id)
         {
             var user = await _context.Users
@@ -288,7 +283,7 @@ namespace Graduation_Project.Controllers
                 return NotFound();
             }
 
-            order.orderStatus = "Preparing"; // Update order status to Confirmed
+            order.orderStatus = "Preparing"; // Update order status to Preparing
             var userMedications = user.SupplierMedication.ToList();
             var orderMedications = order.SupplierOrderItems.ToList();
 
@@ -311,19 +306,27 @@ namespace Graduation_Project.Controllers
                 }
             }
 
-            _context.Update(order); // Mark order as updated
-            await _context.SaveChangesAsync(); // Save all changes
+            // Update order status
+            _context.Update(order);
 
-            //// Schedule a background job to change the order status to "Preparong" after one Minute
-            //BackgroundJob.Schedule(() => UpdateOrderStatusToPreparing(order.Id), TimeSpan.FromDays(1));
+            try
+            {
+                await _context.SaveChangesAsync(); // Save all changes to database
+            }
+            catch (Exception ex)
+            {
+                // Log the exception for better debugging
+               
+                return Json(new { success = false, message = "An error occurred while saving changes." });
+            }
 
-            // Schedule a background job to change the order status to "Delivered" after one day
+            // Schedule background job to update order status to "Delivered" after one day
             BackgroundJob.Schedule(() => UpdateOrderStatusToDelivered(order.Id), TimeSpan.FromDays(1));
 
-
-            // Return JSON data with the updated order status
+            // Return success JSON response with order details
             return Json(new { success = true, orderId = order.Id, orderStatus = order.orderStatus });
         }
+
 
         public async Task<IActionResult> RejectOrder(int id)
         {
@@ -371,6 +374,60 @@ namespace Graduation_Project.Controllers
                 await _context.SaveChangesAsync();
             }
         }
+        [Authorize(Roles ="Supplier")]
+        public async Task<IActionResult> OverView()
+        {
+            var user = await _userManager.GetUserAsync(User);
+            var medicines = await _context.SupplierMedications.Where(usr=>usr.SupplierId==user!.Id).CountAsync();
+            var completedOrders = await _context.SupplierOrders.Where(o=>o.orderStatus =="Delivered").CountAsync();
+            var pendingOrders = await _context.SupplierOrders.Where(o=>o.orderStatus =="Preparing").CountAsync();
+            var rejectedOrders = await _context.SupplierOrders.Where(o=>o.orderStatus =="Rejected").CountAsync();
+
+            var model = new SupplierOverViewVM
+            {
+                TotalMedicines = medicines,
+                CompletedOrders = completedOrders,
+                PendingOrders = pendingOrders,
+                RejectedOrders = rejectedOrders
+            };
+            return View(model);
+        }
+
+        public async Task<IActionResult> LogOut()
+        {
+            await _signInManager.SignOutAsync();  // Signs out the user
+            return RedirectToAction("Login", "Supplier");  // Redirects to the Login action
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> DeliverOrder(int id)
+        {
+            var order = await _context.SupplierOrders.FirstOrDefaultAsync(o => o.Id == id);
+
+            if (order == null)
+            {
+                return Json(new { success = false, message = "Order not found." });
+            }
+
+            if (order.orderStatus == "Delivered")
+            {
+                return Json(new { success = false, message = "Order is already marked as delivered." });
+            }
+
+            order.orderStatus = "Delivered";
+
+            try
+            {
+                await _context.SaveChangesAsync();
+                return Json(new { success = true });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = "An error occurred while updating the order." });
+            }
+        }
+
 
 
     }

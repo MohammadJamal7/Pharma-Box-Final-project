@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Embgfx3l5umUEAbUQypwSHdwWSJooQ1Kd2cUOtsoEL0=",
+  "Hash": "dUb/3kKpvNZU+LttArVTMahaO7UiSDHFhW500gytbuU=",
   "Source": "Graduation Project",
   "BasePath": "_content/Graduation Project",
   "Mode": "Default",
@@ -2577,6 +2577,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\supplier.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\wwwroot\\images\\user.jpg",
+      "SourceId": "Graduation Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\wwwroot\\",
+      "BasePath": "_content/Graduation Project",
+      "RelativePath": "images/user#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "sjrzpdwnet",
+      "Integrity": "OEPQQ2fkSoVzZPPUvanKWZU7KuqIlKewa7Mf2xKFjOc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\user.jpg"
     },
     {
       "Identity": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\wwwroot\\images\\wave.svg",
@@ -11351,6 +11372,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-0Qkj+L+71G7LB5/rKKpzUCiIjbMM5CZTdre+9gaYn14="
+        }
+      ]
+    },
+    {
+      "Route": "images/user.jpg",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\wwwroot\\images\\user.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "644122"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OEPQQ2fkSoVzZPPUvanKWZU7KuqIlKewa7Mf2xKFjOc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Jan 2025 08:02:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-OEPQQ2fkSoVzZPPUvanKWZU7KuqIlKewa7Mf2xKFjOc="
+        }
+      ]
+    },
+    {
+      "Route": "images/user.sjrzpdwnet.jpg",
+      "AssetFile": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\wwwroot\\images\\user.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "644122"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OEPQQ2fkSoVzZPPUvanKWZU7KuqIlKewa7Mf2xKFjOc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Jan 2025 08:02:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sjrzpdwnet"
+        },
+        {
+          "Name": "label",
+          "Value": "images/user.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-OEPQQ2fkSoVzZPPUvanKWZU7KuqIlKewa7Mf2xKFjOc="
         }
       ]
     },

@@ -270,7 +270,7 @@
                         <span class="nav_name">My Orders</span>
                     </a>
 
-                    <a href="../Notification-sec/index.html" class="nav_link">
+                    <a href="@Url.Action("Notifications")" class="nav_link">
                         <i class="fa-regular fa-bell"></i>
                         <span class="nav_name">Notifications</span>
                     </a>
@@ -279,13 +279,16 @@
                         <span class="nav_name">Branchs</span>
                     </a>
 
-
+                    <a href="@Url.Action("LogOut")" class="nav_link">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span class="nav_name">Log Out</span>
+                    </a>
                 </div>
             </div>
         </nav>
     </div>
 
-  
+    <h2 class="fw-bold mb-4">Orders from users</h2>
     <div class="container-fluid">
         <h2 class="mb-4" style="color: #3B1E54;">@ViewData["Title"]</h2>
 

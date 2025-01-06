@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Graduation_Project.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241227062520_second")]
+    [Migration("20250106181134_second")]
     partial class second
     {
         /// <inheritdoc />
@@ -266,6 +266,43 @@ namespace Graduation_Project.Migrations
                     b.ToTable("OrderItems");
                 });
 
+            modelBuilder.Entity("Graduation_Project.Models.OrderNotifications", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<DateTime>("NotificationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("NotificationType")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int>("OrderId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("PharmacistId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrderId");
+
+                    b.HasIndex("PharmacistId");
+
+                    b.ToTable("OrderNotifications");
+                });
+
             modelBuilder.Entity("Graduation_Project.Models.PharmCart", b =>
                 {
                     b.Property<int>("Id")
@@ -393,7 +430,6 @@ namespace Graduation_Project.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImageUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("InventoryId")
@@ -615,11 +651,16 @@ namespace Graduation_Project.Migrations
                     b.Property<int?>("SupplierOrderId")
                         .HasColumnType("int");
 
+                    b.Property<int>("SupplierOrderId1")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("SupplierMedicationId");
 
                     b.HasIndex("SupplierOrderId");
+
+                    b.HasIndex("SupplierOrderId1");
 
                     b.ToTable("SupplierOrderItems");
                 });
@@ -697,6 +738,25 @@ namespace Graduation_Project.Migrations
                     b.Navigation("Order");
 
                     b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("Graduation_Project.Models.OrderNotifications", b =>
+                {
+                    b.HasOne("SupplierOrder", "SupplierOrder")
+                        .WithMany()
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("ApplicationUser", "Pharmacist")
+                        .WithMany()
+                        .HasForeignKey("PharmacistId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Pharmacist");
+
+                    b.Navigation("SupplierOrder");
                 });
 
             modelBuilder.Entity("Graduation_Project.Models.PharmCart", b =>
@@ -846,9 +906,16 @@ namespace Graduation_Project.Migrations
                         .WithMany()
                         .HasForeignKey("SupplierMedicationId");
 
-                    b.HasOne("SupplierOrder", "SupplierOrder")
+                    b.HasOne("SupplierOrder", null)
                         .WithMany("SupplierOrderItems")
-                        .HasForeignKey("SupplierOrderId");
+                        .HasForeignKey("SupplierOrderId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("SupplierOrder", "SupplierOrder")
+                        .WithMany()
+                        .HasForeignKey("SupplierOrderId1")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("SupplierMedication");
 

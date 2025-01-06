@@ -238,7 +238,7 @@
                         <span class="nav_name">My Orders</span>
                     </a>
 
-                    <a href="../Notification-sec/index.html" class="nav_link">
+                    <a href="@Url.Action("Notifications")" class="nav_link">
                         <i class="fa-regular fa-bell"></i>
                         <span class="nav_name">Notifications</span>
                     </a>
@@ -247,8 +247,11 @@
                         <span class="nav_name">Branchs</span>
                     </a>
 
-                  
-                      
+
+                    <a href="@Url.Action("LogOut")" class="nav_link">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span class="nav_name">Log Out</span>
+                    </a>
                  
 
                 </div>
@@ -262,20 +265,10 @@
         <h2 class="fw-bold mb-4">Inventory</h2>
         <p class="text-muted">List of medicines available for sales.</p>
 
-        <div class="row g-4">
-
-            <div class="col-md-4">
-                <div class="card border-0 shadow-sm">
-                    <div class="card-body text-center">
-                        <h2 class="display-5 fw-bold">00</h2>
-                        <p class="text-secondary mb-3">Medicines Available</p>
-                        <a href="#" class="btn btn-outline-primary">View Full List &raquo;</a>
-                    </div>
-                </div>
-            </div>
+        <div class="row g-4" style="margin-top:40px">
 
 
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="card border-0 shadow-sm">
                     <div class="card-body text-center">
                         <h2 class="display-5 fw-bold">00</h2>
@@ -286,7 +279,7 @@
             </div>
 
 
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="card border-0 shadow-sm">
                     <div class="card-body text-center">
                         <h2 class="display-5 fw-bold text-danger">00</h2>

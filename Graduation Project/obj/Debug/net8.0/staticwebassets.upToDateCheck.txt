@@ -58,6 +58,7 @@ wwwroot\images\products_1.png
 wwwroot\images\Screenshot 2024-04-15 14483820241221142926.png
 wwwroot\images\shoe.png
 wwwroot\images\supplier.jpg
+wwwroot\images\user.jpg
 wwwroot\images\wave.svg
 wwwroot\images\women.jpg
 wwwroot\js\aos.js

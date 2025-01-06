@@ -7225,6 +7225,88 @@
       ]
     },
     {
+      "Route": "images/user.jpg",
+      "AssetFile": "images/user.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "644122"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OEPQQ2fkSoVzZPPUvanKWZU7KuqIlKewa7Mf2xKFjOc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Jan 2025 08:02:21 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-OEPQQ2fkSoVzZPPUvanKWZU7KuqIlKewa7Mf2xKFjOc="
+        }
+      ]
+    },
+    {
+      "Route": "images/user.sjrzpdwnet.jpg",
+      "AssetFile": "images/user.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "644122"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OEPQQ2fkSoVzZPPUvanKWZU7KuqIlKewa7Mf2xKFjOc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Jan 2025 08:02:21 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sjrzpdwnet"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-OEPQQ2fkSoVzZPPUvanKWZU7KuqIlKewa7Mf2xKFjOc="
+        },
+        {
+          "Name": "label",
+          "Value": "images/user.jpg"
+        }
+      ]
+    },
+    {
       "Route": "images/wave.svg",
       "AssetFile": "images/wave.svg",
       "Selectors": [],

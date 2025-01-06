@@ -26,7 +26,8 @@ namespace Graduation_Project.Controllers
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public PharmacistController(IWebHostEnvironment webHostEnvironment, ApplicationDbContext context, UserManager<ApplicationUser> usermanager, RoleManager<IdentityRole> rolemanager, SignInManager<ApplicationUser> signin) {
+        public PharmacistController(IWebHostEnvironment webHostEnvironment, ApplicationDbContext context, UserManager<ApplicationUser> usermanager, RoleManager<IdentityRole> rolemanager, SignInManager<ApplicationUser> signin)
+        {
             _webHostEnvironment = webHostEnvironment ?? throw new ArgumentNullException(nameof(webHostEnvironment));
 
             _context = context;
@@ -127,7 +128,8 @@ namespace Graduation_Project.Controllers
                 if (result.Succeeded)
                 {
                     // Redirect to the default action (e.g., Home/Index) after successful login
-                    return RedirectToAction("Medications", "Pharmacist");
+                    return RedirectToAction("Overview", "Pharmacist");
+
                 }
                 else
                 {
@@ -140,18 +142,13 @@ namespace Graduation_Project.Controllers
             return View(model);
         }
 
-        public async Task<IActionResult> Logout()
-        {
-            await _signInManager.SignOutAsync();
-            return RedirectToAction("Login", "Pharmacist");
-        }
 
+        [Authorize(Roles = "Pharmacist")]
 
-        [Authorize(Roles ="Pharmacist")]
-        public async Task<IActionResult> SuppliersDetails()
+        public async Task<IActionResult> Suppliers()
         {
             var suppliers = await _userManager.Users
-                .Where(user => user.UserType == "Supplier").Include(user=>user.SupplierMedication).ToListAsync();
+                .Where(user => user.UserType == "Supplier").Include(user => user.SupplierMedication).ToListAsync();
             Console.Write(suppliers);
             return View(suppliers);
         }
@@ -159,11 +156,33 @@ namespace Graduation_Project.Controllers
 
         public async Task<IActionResult> SupplierMedications(string id)
         {
-            var user = await _userManager.Users.Include(user=>user.SupplierMedication).FirstOrDefaultAsync(user => user.Id == id);
-            
+            var user = await _userManager.Users.Include(user => user.SupplierMedication).FirstOrDefaultAsync(user => user.Id == id);
+
             return View(user);
         }
 
+        public async Task<IActionResult> Branches()
+        {
+            var branches = await _context.PharmacyBranch.Include(i => i.Inventory).ThenInclude(m => m.Medicines).ToListAsync();
+            Console.Write(branches);
+            return View(branches);
+        }
+        public async Task<IActionResult> BranchMedications(int id)
+        {
+
+            var medicines = await _context.Medicines.Where(m => m.Inventory.BranchId == id).ToListAsync();
+            var currentBranch = await _context.PharmacyBranch.FirstOrDefaultAsync(b => b.BranchId == id);
+            var branchMedicinesViewModel = new BranchMedicationViewModel
+            {
+                branch = currentBranch,
+                medicines = medicines
+            };
+            return View(branchMedicinesViewModel);
+        }
+        public IActionResult Orders()
+        {
+            return View();
+        }
         public async Task<IActionResult> PharmacistOrders()
         {
             var currentUser = await _userManager.GetUserAsync(User);
@@ -205,16 +224,16 @@ namespace Graduation_Project.Controllers
         }
 
 
-        public IActionResult Profile()
+        public IActionResult Overview()
         {
             return View();
         }
 
         public async Task<IActionResult> Medications()
         {
-            var currentPharmacist =await _userManager.GetUserAsync(User);
-            
-            var pharmacistMedications = await _context.Medicines.Include(g => g.GroupMedicine).Where(b=>b.Inventory.BranchId == currentPharmacist.BranchId).ToListAsync();
+            var currentPharmacist = await _userManager.GetUserAsync(User);
+
+            var pharmacistMedications = await _context.Medicines.Include(g => g.GroupMedicine).Where(b => b.Inventory.BranchId == currentPharmacist.BranchId).ToListAsync();
             return View(pharmacistMedications);
         }
 
@@ -512,7 +531,7 @@ namespace Graduation_Project.Controllers
 
         public async Task<IActionResult> GroupsOfMedicines()
         {
-            var groups = await _context.GroupMedicines.Include(g=>g.Medicines).ToListAsync();
+            var groups = await _context.GroupMedicines.Include(g => g.Medicines).ToListAsync();
             return View(groups);
         }
 
@@ -629,20 +648,39 @@ namespace Graduation_Project.Controllers
         public async Task<IActionResult> DeleteGroup(int id)
         {
             var group = await _context.GroupMedicines.FindAsync(id);
-             _context.GroupMedicines.Remove(group);
+            _context.GroupMedicines.Remove(group);
             await _context.SaveChangesAsync();
             return RedirectToAction("GroupsOfMedicines");
         }
 
 
-        
-     
+
+
         public IActionResult Inventory()
         {
             return View();
         }
+
+
+        public async Task<IActionResult> Notifications()
+        {
+            var currentUser = await _userManager.GetUserAsync(User);
+            var notifications = _context.OrderNotifications
+         .Where(n => n.PharmacistId == currentUser.Id)
+         .OrderByDescending(n => n.NotificationDate) // Most recent notifications first
+         .ToList();
+
+
+            return View(notifications);
+        }
+
+
+        public async Task<IActionResult> LogOut()
+        {
+            await _signInManager.SignOutAsync();  // Signs out the user
+            return RedirectToAction("Login", "Pharmacist");  // Redirects to the Login action
+        }
+
+
     }
-
-
 }
-

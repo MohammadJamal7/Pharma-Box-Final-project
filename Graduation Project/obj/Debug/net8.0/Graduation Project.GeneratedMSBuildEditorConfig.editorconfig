@@ -136,6 +136,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhhcm1hY2lzdFxNZWRpY2F0aW9ucy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/pc/Desktop/.Net projs/Pharma/Graduation Project/Views/Pharmacist/Notifications.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhhcm1hY2lzdFxOb3RpZmljYXRpb25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/pc/Desktop/.Net projs/Pharma/Graduation Project/Views/Pharmacist/Orders.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhhcm1hY2lzdFxPcmRlcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -206,6 +210,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/pc/Desktop/.Net projs/Pharma/Graduation Project/Views/Supplier/Medicines.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcTWVkaWNpbmVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pc/Desktop/.Net projs/Pharma/Graduation Project/Views/Supplier/OverView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcT3ZlclZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/pc/Desktop/.Net projs/Pharma/Graduation Project/Views/Supplier/Register.cshtml]

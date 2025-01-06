@@ -245,6 +245,10 @@
       "PackagePath": "staticwebassets\\images\\supplier.jpg"
     },
     {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\wwwroot\\images\\user.jpg",
+      "PackagePath": "staticwebassets\\images\\user.jpg"
+    },
+    {
       "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\Pharma\\Graduation Project\\wwwroot\\images\\wave.svg",
       "PackagePath": "staticwebassets\\images\\wave.svg"
     },
