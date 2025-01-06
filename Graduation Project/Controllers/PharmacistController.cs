@@ -129,7 +129,6 @@ namespace Graduation_Project.Controllers
                 {
                     // Redirect to the default action (e.g., Home/Index) after successful login
                     return RedirectToAction("Overview", "Pharmacist");
-
                 }
                 else
                 {

@@ -5,6 +5,7 @@ namespace Graduation_Project.Data
 {
     public class DbInitializer
     {
+
         public static async Task SeedRolesAndAdminAsync(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager, ApplicationDbContext context)
         {
             string[] roleNames = { "Admin", "Pharmacist", "Supplier", "Patient" };
@@ -87,7 +88,12 @@ namespace Graduation_Project.Data
                 }
             }
 
+
+
+
          
         }
+
+
     }
 }

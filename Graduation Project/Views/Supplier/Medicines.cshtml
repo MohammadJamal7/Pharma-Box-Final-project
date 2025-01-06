@@ -265,7 +265,7 @@
     <header class="header" id="header">
 
         <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
-        <div class="header_img mt-2"> <i class="fa-solid fa-user"></i> </div>
+  
     </header>
     <div class="l-navbar" id="nav-bar">
         <nav class="nav">
@@ -284,11 +284,11 @@
                         <span class="nav_name ">OverView</span>
 
                     </a>
-                    <a href="#" class="nav_link active">
+                    <a href="@Url.Action("Medicines")" class="nav_link active  ">
                         <i class="fa-solid fa-capsules"></i>
                         <span class="nav_name">Medications</span>
                     </a>
-                    <a href="@Url.Action("DisplayOrders")" class="nav_link">
+                    <a href="@Url.Action("DisplayOrders")" class="nav_link ">
                         <i class="fa-solid fa-cart-shopping"></i>
                         <span class="nav_name">Orders</span>
                     </a>
@@ -335,7 +335,7 @@
                         {
                             <tr>
                                 <td>@item.Name</td>
-                                <td>@item.Price.ToString("C")</td> <!-- Format Price as Currency -->
+                                <td>@item.Price JOD</td> <!-- Format Price as Currency -->
                                 <td>@item.StockQuantity</td>
                                 <td>@item.ExpiryDate.ToShortDateString()</td>
                                 <td>

@@ -37,48 +37,49 @@ namespace Graduation_Project.Data
             builder.Entity<Branch>()
                 .HasOne(b => b.Inventory)
                 .WithOne(i => i.Branch)
-                .HasForeignKey<Inventory>(i => i.BranchId);
+                .HasForeignKey<Inventory>(i => i.BranchId)
+                .OnDelete(DeleteBehavior.Cascade);  // Enabled Cascade Delete
 
             // Configure the relationship between ApplicationUser and Branch
             builder.Entity<ApplicationUser>()
-                .HasOne(u => u.Branch) // Each ApplicationUser may have one Branch
-                .WithMany(b => b.suppliers) // A Branch can have many suppliers
-                .HasForeignKey(u => u.BranchId) // Foreign Key on ApplicationUser
-                .OnDelete(DeleteBehavior.SetNull); // Allow BranchId to be null for suppliers
+                .HasOne(u => u.Branch)
+                .WithMany(b => b.suppliers)
+                .HasForeignKey(u => u.BranchId)
+                .OnDelete(DeleteBehavior.SetNull);
 
             // Configure the relationship between ApplicationUser and ChatMessages
             builder.Entity<ChatMessage>()
-                .HasOne(c => c.Sender)  // Each ChatMessage has one Sender (ApplicationUser)
-                .WithMany(u => u.ChatMessages)  // A User can have many ChatMessages
-                .HasForeignKey(c => c.SenderId)  // SenderId is the FK
-                .OnDelete(DeleteBehavior.Restrict);  // Avoid cascading deletes
+                .HasOne(c => c.Sender)
+                .WithMany(u => u.ChatMessages)
+                .HasForeignKey(c => c.SenderId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             builder.Entity<ChatMessage>()
-                .HasOne(c => c.Receiver)  // Each ChatMessage has one Receiver (ApplicationUser)
-                .WithMany()  // A User (Receiver) does not need to have a collection of ChatMessages
-                .HasForeignKey(c => c.ReceiverId)  // ReceiverId is the FK
-                .OnDelete(DeleteBehavior.Restrict);  // Avoid cascading deletes
+                .HasOne(c => c.Receiver)
+                .WithMany()
+                .HasForeignKey(c => c.ReceiverId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             // Configure the relationship between PharmCart and PharmCartItem
             builder.Entity<PharmCart>()
-                .HasMany(p => p.CartItems)  // PharmCart has many PharmCartItems
-                .WithOne(c => c.PharmCart)  // Each PharmCartItem belongs to one PharmCart
-                .HasForeignKey(c => c.PharmCartId)  // Foreign key in PharmCartItem
-                .OnDelete(DeleteBehavior.Cascade);  // If PharmCart is deleted, delete the items too
+                .HasMany(p => p.CartItems)
+                .WithOne(c => c.PharmCart)
+                .HasForeignKey(c => c.PharmCartId)
+                .OnDelete(DeleteBehavior.Cascade);
 
             // Configure the relationship between PharmCartItem and Medicine
             builder.Entity<PharmCartItem>()
-                .HasOne(c => c.Medication)  // Each PharmCartItem has one Medication
-                .WithMany()  // Medication can be in many PharmCartItems
-                .HasForeignKey(c => c.MedicationId)  // Foreign key in PharmCartItem
-                .OnDelete(DeleteBehavior.Restrict);  // Avoid cascading deletes for Medicines
+                .HasOne(c => c.Medication)
+                .WithMany()
+                .HasForeignKey(c => c.MedicationId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             // Configure the relationship between Order and OrderItem
             builder.Entity<OrderItem>()
-                .HasOne(oi => oi.Order)  // Each OrderItem belongs to one Order
-                .WithMany()  // An Order can have many OrderItems
-                .HasForeignKey(oi => oi.OrderId)  // Foreign key is OrderId
-                .OnDelete(DeleteBehavior.Restrict);  // Avoid cascading deletes on the Order side
+                .HasOne(oi => oi.Order)
+                .WithMany()
+                .HasForeignKey(oi => oi.OrderId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             // Configure the relationship between OrderItem and Medicine
             builder.Entity<OrderItem>()
@@ -106,6 +107,29 @@ namespace Graduation_Project.Data
                 .WithOne()                          // SupplierOrderItem links to SupplierOrder
                 .HasForeignKey(o => o.SupplierOrderId)
                 .OnDelete(DeleteBehavior.Restrict); // Prevent cascade delete for SupplierOrder
+                .HasOne(oi => oi.Product)
+                .WithMany()
+                .HasForeignKey(oi => oi.MedicineId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // Configure the relationship between Branch and Inventory (Cascade Delete)
+            builder.Entity<Branch>()
+                .HasOne(b => b.Inventory)
+                .WithOne(i => i.Branch)
+                .HasForeignKey<Inventory>(i => i.BranchId)
+                .OnDelete(DeleteBehavior.Cascade);  // Cascade Inventory when Branch is deleted
+
+            // Configure the relationship between Inventory and Medicines (Cascade Delete)
+            builder.Entity<Inventory>()
+                .HasMany(i => i.Medicines)
+                .WithOne(m => m.Inventory)
+                .HasForeignKey(m => m.InventoryId)
+                .OnDelete(DeleteBehavior.Cascade);  // Cascade Medicines when Inventory is deleted
+
+
+
         }
+
+
     }
 }

@@ -26,7 +26,8 @@ namespace Graduation_Project.Controllers
         [Authorize(Roles = "Supplier")]
         public async Task<IActionResult> Medicines(string id)
         {
-            var supplierMedications = await _context.SupplierMedications.Include(s=>s.Supplier).Where(s => s.SupplierId == id).ToListAsync();
+            var currrentSupplier = await _userManager.GetUserAsync(User);
+            var supplierMedications = await _context.SupplierMedications.Include(s=>s.Supplier).Where(s => s.SupplierId == currrentSupplier.Id).ToListAsync();
             return View(supplierMedications);
         }
         [HttpGet]

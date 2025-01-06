@@ -292,9 +292,7 @@
     <div class="container-fluid">
         <h2 class="mb-4" style="color: #3B1E54;">@ViewData["Title"]</h2>
 
-        @if (Model.Any())
-        {
-           
+       
             <!-- All Orders Section -->
             <div class="card mt-4">
                 <div class="card-header" style="background-color: #3B1E54; color: white;">
@@ -314,26 +312,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach (var order in Model)
-                            {
-                                <tr class="align-middle">
-                                    <td>@order.Id</td>
-                                    <td>@order.OrderDate.ToString("MM/dd/yyyy")</td>
-                                    <td>@order.Branch.Name</td>
-                                    <td>@order.OrderItems.Count</td>
-                                    <td>$@order.TotalAmount.ToString("F2")</td>
-                                    <td>
-                                        <span class="badge @(order.Status == OrderStatus.Delivered ? "bg-success" : order.Status == OrderStatus.Cancelled ? "bg-danger" : "bg-secondary")">
-                                            @order.Status
-                                        </span>
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-info btn-sm details-order" data-order-id="@order.Id">
-                                            <i class="fas fa-info-circle"></i> Details
-                                        </button>
-                                    </td>
-                                </tr>
-                            }
+                           
                         </tbody>
                     </table>
                 </div>
@@ -369,11 +348,7 @@
                     </div>
                 </div>
             </div>
-        }
-        else
-        {
-            <div class="alert alert-info">No orders found.</div>
-        }
+       
     </div>
 
 

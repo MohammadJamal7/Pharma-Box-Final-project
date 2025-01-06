@@ -801,7 +801,8 @@ namespace Graduation_Project.Migrations
                 {
                     b.HasOne("Branch", "Branch")
                         .WithOne("Inventory")
-                        .HasForeignKey("Inventory", "BranchId");
+                        .HasForeignKey("Inventory", "BranchId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("Branch");
                 });
@@ -814,7 +815,8 @@ namespace Graduation_Project.Migrations
 
                     b.HasOne("Inventory", "Inventory")
                         .WithMany("Medicines")
-                        .HasForeignKey("InventoryId");
+                        .HasForeignKey("InventoryId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("Graduation_Project.Models.SupplierMedication", "SupplierMedication")
                         .WithMany()
