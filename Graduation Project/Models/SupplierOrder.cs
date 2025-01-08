@@ -15,7 +15,7 @@ public class SupplierOrder
     public int BranchId { get; set; }
     [ForeignKey("BranchId")]
     public Branch Branch { get; set; }
-    public List<SupplierOrderItem> SupplierOrderItems { get; set; }
+    public virtual ICollection<SupplierOrderItem> SupplierOrderItems { get; set; }
 }
 
 public class SupplierOrderItem
@@ -24,14 +24,9 @@ public class SupplierOrderItem
     public int Quantity { get; set; }
     public decimal Price { get; set; }
 
-
-    // relationships :
-
-    public int? SupplierOrderId { get; set; }
-    [ForeignKey("SupplierOrderId")]
-    public SupplierOrder SupplierOrder { get; set; }
+    public int SupplierOrderId { get; set; }
+    public virtual SupplierOrder SupplierOrder { get; set; }
 
     public int? SupplierMedicationId { get; set; }
-    [ForeignKey("SupplierMedicationId")]
-    public SupplierMedication SupplierMedication { get; set; }
+    public virtual SupplierMedication SupplierMedication { get; set; }
 }

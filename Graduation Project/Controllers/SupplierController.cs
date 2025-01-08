@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.SqlServer.Query.Internal;
 using Microsoft.Identity.Client;
 using Microsoft.VisualBasic;
+using System.Diagnostics;
 
 namespace Graduation_Project.Controllers
 {
@@ -242,7 +243,7 @@ namespace Graduation_Project.Controllers
 
 
         // GET: /Supplier/Orders
-        [Authorize(Roles ="Supplier")]
+        [Authorize(Roles = "Supplier")]
         public async Task<IActionResult> DisplayOrders()
         {
             var supplierOrders = await _context.SupplierOrders
@@ -269,6 +270,66 @@ namespace Graduation_Project.Controllers
 
             return View(orderViewModels);
         }
+
+        //// GET: /Supplier/Orders
+        //[Authorize(Roles = "Supplier")]
+        //public IActionResult DisplayOrders()
+        //{
+        //    try
+        //    {
+        //        // Fake data for SupplierOrders
+        //        var supplierOrders = new List<SupplierOrderViewModel>
+        //{
+        //    new SupplierOrderViewModel
+        //    {
+        //        OrderId = 1,
+        //        OrderDate = DateTime.Now.AddDays(-2),
+        //        orderStatus = "Pending",
+        //        PharmacistName = "Dr. John Doe",
+        //        BranchName = "Main Branch",
+        //        OrderItems = new List<OrderItemViewModel>
+        //        {
+        //            new OrderItemViewModel
+        //            {
+        //                MedicationName = "Paracetamol",
+        //                Quantity = 10,
+        //                Price = 5.00m
+        //            },
+        //            new OrderItemViewModel
+        //            {
+        //                MedicationName = "Ibuprofen",
+        //                Quantity = 20,
+        //                Price = 3.50m
+        //            }
+        //        }
+        //    },
+        //    new SupplierOrderViewModel
+        //    {
+        //        OrderId = 2,
+        //        OrderDate = DateTime.Now.AddDays(-5),
+        //        orderStatus = "Preparing",
+        //        PharmacistName = "Pharmacist 1",
+        //        BranchName = "Default branch",
+        //        OrderItems = new List<OrderItemViewModel>
+        //        {
+        //            new OrderItemViewModel
+        //            {
+        //                MedicationName = "Amoxicillin",
+        //                Quantity = 15,
+        //                Price = 7.00m
+        //            }
+        //        }
+        //    }
+        //};
+
+        //        return View(supplierOrders); // Pass fake data to the view
+        //    }
+        //    catch (Exception ex)
+        //    {
+
+        //        return View("Error", new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        //    }
+        //}
         public async Task<IActionResult> AcceptOrder(int id)
         {
             var user = await _context.Users
