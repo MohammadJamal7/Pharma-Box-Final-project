@@ -186,79 +186,75 @@ namespace Graduation_Project.Controllers
                 return Json(new { success = false, message = "User not authenticated." });
             }
 
-            var currentUser = _context.Users.Include(b => b.Branch).FirstOrDefault(u => u.Id == userId);
+            using var transaction = await _context.Database.BeginTransactionAsync();
 
-            var cart = await _context.PharmCarts
-                .Include(c => c.CartItems)
-                .ThenInclude(ci => ci.Medication)  // Include the Medication data in CartItems
-                .FirstOrDefaultAsync(c => c.UserId == userId);
+            try
+            {
+                var cart = await _context.PharmCarts
+                    .Include(c => c.CartItems)
+                    .ThenInclude(ci => ci.Medication)
+                    .Include(c => c.User)
+                    .FirstOrDefaultAsync(c => c.UserId == userId);
 
-            if (cart == null || !cart.CartItems.Any())
-            {
-                return Json(new { success = false, message = "Your cart is empty." });
-            }
-
-            // Create the SupplierOrder
-            var pharmacistOrder = new SupplierOrder
-            {
-                Pharmacist = cart.User,
-                PharmacistId = cart.UserId,
-                supplierId = cart.SupplierId,
-                orderStatus = "Pending",
-                OrderDate = DateTime.Now,
-                Branch = currentUser.Branch,
-                SupplierOrderItems = new List<SupplierOrderItem>()  // Initialize the list of order items
-            };
-            Console.WriteLine(pharmacistOrder);
-            // Iterate through the CartItems and create SupplierOrderItems
-            foreach (var cartItem in cart.CartItems)
-            {
-                var orderItem = new SupplierOrderItem
+                if (cart == null || !cart.CartItems.Any())
                 {
-                    Quantity = cartItem.Quantity,
-                    Price = cartItem.Medication.Price, // Assuming you have a Price property on SupplierMedication
-                    SupplierMedicationId = cartItem.Medication.SupplierMedicationId,
+                    return Json(new { success = false, message = "Your cart is empty." });
+                }
+
+                var currentUser = await _context.Users
+                    .Include(b => b.Branch)
+                    .FirstOrDefaultAsync(u => u.Id == userId);
+
+                // Create and save the SupplierOrder first
+                var pharmacistOrder = new SupplierOrder
+                {
+                    PharmacistId = userId,
+                    supplierId = cart.SupplierId,
+                    orderStatus = "Pending",
+                    OrderDate = DateTime.Now,
+                    BranchId = currentUser.Branch.BranchId,
+                    SupplierOrderItems = new List<SupplierOrderItem>()
                 };
 
-                pharmacistOrder.SupplierOrderItems.Add(orderItem);
-            }
+                _context.SupplierOrders.Add(pharmacistOrder);
+                await _context.SaveChangesAsync();
 
-            // Add the order to the database
-            _context.SupplierOrders.Add(pharmacistOrder);
+                // Create and add each SupplierOrderItem
+                foreach (var cartItem in cart.CartItems)
+                {
+                    var orderItem = new SupplierOrderItem
+                    {
+                        SupplierOrderId = pharmacistOrder.Id,  // This is now required
+                        Quantity = cartItem.Quantity,
+                        Price = cartItem.Medication.Price,
+                        SupplierMedicationId = cartItem.Medication.SupplierMedicationId
+                    };
 
-            // Clear the cart after successful checkout
-            cart.CartItems.Clear();
-            cart.SupplierId = null;
+                    _context.SupplierOrderItems.Add(orderItem);
+                }
 
-            await _context.SaveChangesAsync();
+                // Save the order items
+                await _context.SaveChangesAsync();
 
-            return Json(new { success = true, message = "Checkout successful! Cart cleared." });
-        }
-
-        // Clear cart manually
-        [HttpPost]
-        public async Task<IActionResult> ClearCart()
-        {
-            var userId = await GetCurrentUserIdAsync();
-            if (userId == null)
-            {
-                return Json(new { success = false, message = "User not authenticated." });
-            }
-
-            var cart = await _context.PharmCarts
-                .Include(c => c.CartItems)
-                .FirstOrDefaultAsync(c => c.UserId == userId);
-
-            if (cart != null)
-            {
-                cart.CartItems.Clear();
+                // Clear the cart
+                _context.PharmCartItems.RemoveRange(cart.CartItems);
                 cart.SupplierId = null;
                 await _context.SaveChangesAsync();
+
+                await transaction.CommitAsync();
+                return Json(new { success = true, message = "Checkout successful! Cart cleared." });
             }
-
-            return Json(new { success = true, message = "Cart cleared." });
+            catch (Exception ex)
+            {
+                await transaction.RollbackAsync();
+                Console.WriteLine($"Error during checkout: {ex.Message}");
+                if (ex.InnerException != null)
+                {
+                    Console.WriteLine($"Inner exception: {ex.InnerException.Message}");
+                }
+                return Json(new { success = false, message = "An error occurred during checkout." });
+            }
         }
-
         // Get the current cart state (GET method)
         [HttpGet]
         public async Task<IActionResult> GetCart()

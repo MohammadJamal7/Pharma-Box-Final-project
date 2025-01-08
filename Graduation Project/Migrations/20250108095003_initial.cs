@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Graduation_Project.Migrations
 {
     /// <inheritdoc />
-    public partial class first : Migration
+    public partial class initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -126,7 +126,8 @@ namespace Graduation_Project.Migrations
                         name: "FK_Inventory_PharmacyBranch_BranchId",
                         column: x => x.BranchId,
                         principalTable: "PharmacyBranch",
-                        principalColumn: "BranchId");
+                        principalColumn: "BranchId",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -374,7 +375,8 @@ namespace Graduation_Project.Migrations
                         name: "FK_Medicines_Inventory_InventoryId",
                         column: x => x.InventoryId,
                         principalTable: "Inventory",
-                        principalColumn: "InventoryId");
+                        principalColumn: "InventoryId",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Medicines_SupplierMedications_SupplierMedicationId",
                         column: x => x.SupplierMedicationId,
@@ -419,7 +421,6 @@ namespace Graduation_Project.Migrations
                     PharmacistId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Message = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
                     NotificationDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    IsRead = table.Column<bool>(type: "bit", nullable: false),
                     NotificationType = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
                 },
                 constraints: table =>

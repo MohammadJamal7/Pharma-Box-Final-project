@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Graduation_Project.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250106171302_first")]
-    partial class first
+    [Migration("20250108121126_RemoveSupplierOrderId1")]
+    partial class RemoveSupplierOrderId1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -244,9 +244,6 @@ namespace Graduation_Project.Migrations
                     b.Property<int>("OrderId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("OrderId1")
-                        .HasColumnType("int");
-
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
@@ -261,8 +258,6 @@ namespace Graduation_Project.Migrations
 
                     b.HasIndex("OrderId");
 
-                    b.HasIndex("OrderId1");
-
                     b.ToTable("OrderItems");
                 });
 
@@ -273,9 +268,6 @@ namespace Graduation_Project.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<bool>("IsRead")
-                        .HasColumnType("bit");
 
                     b.Property<string>("Message")
                         .IsRequired()
@@ -651,10 +643,7 @@ namespace Graduation_Project.Migrations
                     b.Property<int?>("SupplierMedicationId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("SupplierOrderId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SupplierOrderId1")
+                    b.Property<int>("SupplierOrderId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -662,8 +651,6 @@ namespace Graduation_Project.Migrations
                     b.HasIndex("SupplierMedicationId");
 
                     b.HasIndex("SupplierOrderId");
-
-                    b.HasIndex("SupplierOrderId1");
 
                     b.ToTable("SupplierOrderItems");
                 });
@@ -729,14 +716,10 @@ namespace Graduation_Project.Migrations
                         .HasForeignKey("MedicineId1");
 
                     b.HasOne("Graduation_Project.Models.Order", "Order")
-                        .WithMany()
+                        .WithMany("OrderItems")
                         .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
-
-                    b.HasOne("Graduation_Project.Models.Order", null)
-                        .WithMany("OrderItems")
-                        .HasForeignKey("OrderId1");
 
                     b.Navigation("Order");
 
@@ -807,7 +790,8 @@ namespace Graduation_Project.Migrations
                 {
                     b.HasOne("Branch", "Branch")
                         .WithOne("Inventory")
-                        .HasForeignKey("Inventory", "BranchId");
+                        .HasForeignKey("Inventory", "BranchId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("Branch");
                 });
@@ -820,7 +804,8 @@ namespace Graduation_Project.Migrations
 
                     b.HasOne("Inventory", "Inventory")
                         .WithMany("Medicines")
-                        .HasForeignKey("InventoryId");
+                        .HasForeignKey("InventoryId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("Graduation_Project.Models.SupplierMedication", "SupplierMedication")
                         .WithMany()
@@ -909,14 +894,9 @@ namespace Graduation_Project.Migrations
                         .WithMany()
                         .HasForeignKey("SupplierMedicationId");
 
-                    b.HasOne("SupplierOrder", null)
+                    b.HasOne("SupplierOrder", "SupplierOrder")
                         .WithMany("SupplierOrderItems")
                         .HasForeignKey("SupplierOrderId")
-                        .OnDelete(DeleteBehavior.Restrict);
-
-                    b.HasOne("SupplierOrder", "SupplierOrder")
-                        .WithMany()
-                        .HasForeignKey("SupplierOrderId1")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

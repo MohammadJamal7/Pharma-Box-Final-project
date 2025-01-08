@@ -14,6 +14,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.SqlServer.Query.Internal;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 
 namespace Graduation_Project.Controllers
@@ -182,6 +183,7 @@ namespace Graduation_Project.Controllers
         {
             return View();
         }
+
         public async Task<IActionResult> PharmacistOrders()
         {
             var currentUser = await _userManager.GetUserAsync(User);

@@ -107,7 +107,7 @@ namespace Graduation_Project.Controllers
                 if (result.Succeeded)
                 {
                     // Redirect to the user's profile or dashboard after successful login
-                    return RedirectToAction("UserChat", "User");
+                    return RedirectToAction("Index", "Home");
                 }
                 else
                 {
