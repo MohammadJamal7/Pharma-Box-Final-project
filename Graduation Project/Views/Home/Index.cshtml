@@ -104,7 +104,7 @@
         </div>
 
 
-        <div class="site-section bg-light">
+        <div class="site-section ">
             <div class="container">
                 <div class="row">
                     <div class="title-section text-center col-12">
@@ -117,9 +117,9 @@
 
                             @foreach (var group in Model.categories)
                             {
-                                <div class="col-sm-6 col-lg-4 text-center item mb-4">
-                                    <a href="#branches"> <img src="/@group.ImageUrl" width="200px" height="250px" alt="Image"></a>
-                                    <h3 class="text-dark"><a href="#branch">@group.Name</a></h3>
+                                <div class="col-sm-6 col-lg-4 item mb-4">
+                                    <a href="#branches"> <img src="/@group.ImageUrl" style="width:250px; height:200px" alt="Image"></a>
+                                    <h5 class="text-dark"  style="width:300%">@group.Name</h5>
                                 </div>
                             }
 
@@ -131,7 +131,7 @@
 
 
 
-        <div class="site-section" id="branches">
+        <div class="site-section bg-light" id="branches">
             <div class="container">
                 <div class="row">
                     <div class="title-section text-center col-12">
@@ -140,9 +140,9 @@
                 </div>
 
                 <div class="row">
-                    <div class="container mt-5">
+                    <div class="container mt-0">
 
-                        <div class="row mt-5">
+                        <div class="row mt-0">
                             @foreach (var branch in Model.branches)
                             {
                                 <div class="col-md-4 mb-4">
@@ -173,7 +173,7 @@
 
         
 
-        <footer class="site-footer bg-light">
+        <footer class="site-footer ">
             <div class="container ">
                 <div class="row">
                     <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
