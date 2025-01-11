@@ -22,7 +22,7 @@ namespace Graduation_Project.Controllers
 
 
 
-       
+
         [HttpGet]
         public IActionResult Register()
         {
@@ -131,7 +131,7 @@ namespace Graduation_Project.Controllers
         public async Task<IActionResult> profile()
         {
             var user = await _userManager.GetUserAsync(User);
-            var orders = await _context.Orders.Where(o=>o.UserId==user!.Id).ToListAsync();
+            var orders = await _context.Orders.Where(o => o.UserId == user!.Id).ToListAsync();
             var model = new userProfileViewModel
             {
                 orders = orders,

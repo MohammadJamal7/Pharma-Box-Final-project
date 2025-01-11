@@ -23,7 +23,22 @@
     <link rel="stylesheet" href="~/css/aos.css">
 
     <link rel="stylesheet" href="~/css/style.css">
+    <style>
+        .product-thumbnail img {
+            max-width: 100px;
+            height: auto;
+        }
 
+        .input-group input {
+            -moz-appearance: textfield;
+        }
+
+            .input-group input::-webkit-outer-spin-button,
+            .input-group input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+    </style>
 </head>
 
 <body>
@@ -86,7 +101,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 mb-0">
-                        <a href="index.html">Home</a> <span class="mx-2 mb-0">/</span>
+                        <a asp-controller="Home" asp-action="Index">Home</a> <span class="mx-2 mb-0">/</span>
                         <strong class="text-black">Cart</strong>
                     </div>
                 </div>
@@ -96,7 +111,7 @@
         <div class="site-section">
             <div class="container">
                 <div class="row mb-5">
-                    <form class="col-md-12" method="post">
+                    <div class="col-md-12">
                         <div class="site-blocks-table">
                             <table class="table table-bordered">
                                 <thead>
@@ -109,106 +124,54 @@
                                         <th class="product-remove">Remove</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="product-thumbnail">
-                                            <img src="~/images/product_02.png" alt="Image" class="img-fluid">
-                                        </td>
-                                        <td class="product-name">
-                                            <h2 class="h5 text-black">Ibuprofen</h2>
-                                        </td>
-                                        <td>5.00</td>
-                                        <td>
-                                            <div class="input-group mb-3" style="max-width: 120px;">
-                                                <div class="input-group-prepend">
-                                                    <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
-                                                </div>
-                                                <input type="text" class="form-control text-center" value="1" placeholder=""
-                                                       aria-label="Example text with button addon" aria-describedby="button-addon1">
-                                                <div class="input-group-append">
-                                                    <button class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
-                                                </div>
-                                            </div>
-
-                                        </td>
-                                        <td>5.00</td>
-                                        <td><a href="#" class="btn btn-primary height-auto btn-sm">X</a></td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="product-thumbnail">
-                                            <img src="~/images/product_01.png" alt="Image" class="img-fluid">
-                                        </td>
-                                        <td class="product-name">
-                                            <h2 class="h5 text-black">Bioderma</h2>
-                                        </td>
-                                        <td>5.00</td>
-                                        <td>
-                                            <div class="input-group mb-3" style="max-width: 120px;">
-                                                <div class="input-group-prepend">
-                                                    <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
-                                                </div>
-                                                <input type="text" class="form-control text-center" value="1" placeholder=""
-                                                       aria-label="Example text with button addon" aria-describedby="button-addon1">
-                                                <div class="input-group-append">
-                                                    <button class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
-                                                </div>
-                                            </div>
-
-                                        </td>
-                                        <td>10.00</td>
-                                        <td><a href="#" class="btn btn-primary height-auto btn-sm">X</a></td>
-                                    </tr>
+                                <tbody id="cartTableBody">
+                                    <!-- Cart items will be dynamically inserted here -->
                                 </tbody>
                             </table>
                         </div>
-                    </form>
+                    </div>
                 </div>
 
+                <!-- Cart Summary -->
                 <div class="row">
                     <div class="col-md-6">
                         <div class="row mb-5">
-                            <div class="col-md-6 mb-3 mb-md-0">
-                                <button class="btn btn-primary btn-md btn-block">Update Cart</button>
-                            </div>
                             <div class="col-md-6">
-                                <button class="btn btn-outline-primary btn-md btn-block">Continue Shopping</button>
+                                <button onclick="clearCart()" class="btn btn-outline-primary btn-lg py-3 btn-block">Clear Cart</button>
                             </div>
                         </div>
-                        
                     </div>
-
                     <div class="col-md-6 pl-5">
                         <div class="row justify-content-end">
                             <div class="col-md-7">
-                                <div class="row mb-2">
+                                <div class="row">
+                                    <div class="col-md-12 text-right border-bottom mb-5">
+                                        <h3 class="text-black h4 text-left text-uppercase">Cart Totals</h3>
+                                    </div>
+                                </div>
+                                <div class="row mb-5">
                                     <div class="col-md-6">
-                                        <span class="text-black">Total</span>
+                                        <span class="text-black h5">Total</span>
                                     </div>
                                     <div class="col-md-6 text-right">
-                                        <strong class="text-black">15.00 JOD</strong>
+                                        <strong class="text-black h5" id="cartTotal">0.00 JOD</strong>
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col-md-12">
-                                       <form asp-action="Checkout">
-                                            <button class="btn btn-primary btn-lg btn-block" type="submit">
-                                                Proceed To
-                                                Checkout
-                                            </button>
-                                        </form>
+                                        <button class="btn btn-primary btn-lg py-3 btn-block" onclick="proceedToCheckout()">Proceed To Checkout</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                  
                 </div>
-              
             </div>
         </div>
-
+                
+              
+    </div>
 
         <footer class="site-footer">
             <div class="container">
@@ -250,7 +213,7 @@
 
             </div>
         </footer>
-    </div>
+ 
 
     <script src="~/js/jquery-3.3.1.min.js"></script>
     <script src="~/js/jquery-ui.js"></script>
@@ -262,6 +225,131 @@
 
     <script src="~/js/main.js"></script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            loadCart();
+        });
+
+        function loadCart() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const tableBody = document.getElementById('cartTableBody');
+            tableBody.innerHTML = '';
+
+            if (cart.length === 0) {
+                tableBody.innerHTML = `
+                        <tr>
+                            <td colspan="6" class="text-center">Your cart is empty</td>
+                        </tr>
+                    `;
+                updateCartTotal();
+                return;
+            }
+
+            cart.forEach((item, index) => {
+                const row = `
+                        <tr data-id="${item.medicineId}">
+                            <td class="product-thumbnail">
+                                <img src="${item.imageUrl}" alt="${item.name}" class="img-fluid" style="max-width: 100px;">
+                            </td>
+                            <td class="product-name">
+                                <h2 class="h5 text-black">${item.name}</h2>
+                            </td>
+                            <td class="product-price">${item.price.toFixed(2)} JOD</td>
+                            <td>
+                                <div class="input-group mb-3" style="max-width: 120px;">
+                                    <div class="input-group-prepend">
+                                        <button class="btn btn-outline-primary js-btn-minus" type="button"
+                                                onclick="updateQuantity('${item.medicineId}', 'decrease')">&minus;</button>
+                                    </div>
+                                    <input type="text" class="form-control text-center"
+                                           value="${item.quantity}"
+                                           id="qty-${item.medicineId}"
+                                           onchange="updateQuantity('${item.medicineId}', 'input')">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-primary js-btn-plus" type="button"
+                                                onclick="updateQuantity('${item.medicineId}', 'increase')">&plus;</button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="product-total">${(item.price * item.quantity).toFixed(2)} JOD</td>
+                            <td>
+                                <button onclick="removeItem('${item.medicineId}')"
+                                        class="btn btn-primary height-auto btn-sm">X</button>
+                            </td>
+                        </tr>
+                    `;
+                tableBody.insertAdjacentHTML('beforeend', row);
+            });
+
+            updateCartTotal();
+        }
+
+        function updateQuantity(medicineId, action) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const itemIndex = cart.findIndex(item => item.medicineId === medicineId);
+            const quantityInput = document.getElementById(`qty-${medicineId}`);
+            let newQuantity;
+
+            switch (action) {
+                case 'decrease':
+                    newQuantity = Math.max(1, parseInt(quantityInput.value) - 1);
+                    break;
+                case 'increase':
+                    newQuantity = parseInt(quantityInput.value) + 1;
+                    break;
+                case 'input':
+                    newQuantity = parseInt(quantityInput.value);
+                    if (isNaN(newQuantity) || newQuantity < 1) newQuantity = 1;
+                    break;
+            }
+
+            cart[itemIndex].quantity = newQuantity;
+            localStorage.setItem('cart', JSON.stringify(cart));
+            loadCart(); // Reload the entire cart to update totals
+        }
+
+        function removeItem(medicineId) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart = cart.filter(item => item.medicineId !== medicineId);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            loadCart();
+        }
+
+        function clearCart() {
+            if (confirm('Are you sure you want to clear your cart?')) {
+                localStorage.removeItem('cart');
+                loadCart();
+            }
+        }
+
+        function updateCartTotal() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            document.getElementById('cartTotal').textContent = `${total.toFixed(2)} JOD`;
+        }
+
+         function proceedToCheckout() {
+            const cartItems = JSON.parse(localStorage.getItem('cart')); // Adjust key if necessary
+            if (cartItems) {
+                const response = await fetch('/Cart/Checkoutt', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(cartItems)
+                });
+
+                if (response.ok) {
+                    window.location.href = '/Cart/Checkoutt'; // Redirect to the checkout page
+                } else {
+                    console.error('Failed to proceed to checkout');
+                }
+            }
+        }
+
+    </script>
+
+    @Html.AntiForgeryToken()
 </body>
 
 </html>

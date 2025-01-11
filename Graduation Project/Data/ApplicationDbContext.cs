@@ -26,6 +26,8 @@ namespace Graduation_Project.Data
             public DbSet<PharmCart> PharmCarts { get; set; }
             public DbSet<PharmCartItem> PharmCartItems { get; set; }
             public DbSet<OrderNotifications> OrderNotifications { get; set; }
+            public DbSet<Cart> Carts { get; set; }
+            public DbSet<CartItem> CartItems { get; set; }
 
             protected override void OnModelCreating(ModelBuilder builder)
             {

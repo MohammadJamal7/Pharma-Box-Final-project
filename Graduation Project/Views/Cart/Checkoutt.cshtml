@@ -1,4 +1,5 @@
-﻿﻿@{
+﻿@model Graduation_Project.ViewModels.CheckoutViewModel
+@{
     Layout = null;
 }
 
@@ -102,53 +103,38 @@
                 <div class="row">
                     <div class="col-md-6 mb-5 mb-md-0">
                         <h2 class="h3 mb-3 text-black">Billing Details</h2>
+
                         <div class="py-lg-3 px-lg-5 border">
-                            <div class="">
-                                <!-- Name Input -->
-                                <div class="form-group row">
-                                    <div class="col-md-12">
-                                        <label for="c_diff_name" class="text-black">Name <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" id="c_diff_name" name="c_diff_name">
-                                    </div>
-                                </div>
-                                <!-- City Selection -->
-                                <div class="form-group">
-                                    <label for="c_diff_city" class="text-black">City <span class="text-danger">*</span></label>
-                                    <select id="c_diff_city" class="form-control">
-                                        <option value="1">Select a city</option>
-                                        <option value="2">Amman</option>
-                                        <option value="3">Irbid</option>
-                                        <option value="4">Zarqa</option>
-                                        <option value="5">Aqaba</option>
-                                        <option value="6">Jerash</option>
-                                        <option value="7">Salt</option>
-                                        <option value="8">Madaba</option>
-                                        <option value="9">Karak</option>
-                                    </select>
-                                </div>
-
-                                <!-- Address Input -->
-                                <div class="form-group row">
-                                    <div class="col-md-12">
-                                        <label for="c_diff_address" class="text-black">Address <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" id="c_diff_address" name="c_diff_address"
-                                               placeholder="Street address">
-                                    </div>
-                                </div>
-
-                                <!-- Contact Information -->
-                                <div class="form-group row mb-5">
-                                    <div class="col-md-6">
-                                        <label for="c_diff_email_address" class="text-black">Email Address <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" id="c_diff_email_address" name="c_diff_email_address">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="c_diff_phone" class="text-black">Phone <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" id="c_diff_phone" name="c_diff_phone" placeholder="Phone Number">
-                                    </div>
-                                </div>
-                            </div>
-
+                            <div class="form-group row">
+                        <div class="col-md-12">
+                            <label for="c_diff_name" class="text-black">Name <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="c_diff_name" name="c_diff_name" value="@Model.currentUser.FullName" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="c_diff_city" class="text-black">City <span class="text-danger">*</span></label>
+                        <select id="c_diff_city" class="form-control">
+                            <option value="1" >Amman</option>
+                            <option value="2" >Irbid</option>
+                            <!-- Add other cities similarly -->
+                        </select>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <label for="c_diff_address" class="text-black">Address <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="c_diff_address" name="c_diff_address" value="@Model.currentUser.Address" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-6">
+                            <label for="c_diff_email_address" class="text-black">Email Address <span class="text-danger">*</span></label>
+                            <input type="email" class="form-control" id="c_diff_email_address" name="c_diff_email_address" value="@Model.currentUser.Email" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="c_diff_phone" class="text-black">Phone <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="c_diff_phone" name="c_diff_phone" value="@Model.currentUser.PhoneNumber" required>
+                        </div>
+                    </div>
 
                         </div>
                     </div>
@@ -167,14 +153,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>Bioderma <strong class="mx-2">x</strong> 1</td>
-                                                <td>5.00 JOD</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Ibuprofeen <strong class="mx-2">x</strong> 2</td>
-                                                <td>10.00 JOD</td>
-                                            </tr>
+                                           
 
                                             <tr>
                                                 <td class="text-black font-weight-bold"><strong>Order Total</strong></td>
@@ -183,7 +162,7 @@
                                         </tbody>
                                     </table>
                                     <div class="form-group">
-                                        <button class="btn btn-primary btn-lg btn-block" onclick="window.location='thankyou.html'">
+                                        <button class="btn btn-primary btn-lg btn-block" onclick="proceedToCheckout()">
                                             Place
                                             Order
                                         </button>
@@ -251,7 +230,40 @@
     <script src="~/js/aos.js"></script>
 
     <script src="~/js/main.js"></script>
+    <script src="~/js/CartManager.js"> </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const orderTableBody = document.querySelector('.site-block-order-table tbody');
+            let total = 0;
 
+            // First, clear any existing non-total rows
+            while (orderTableBody.children.length > 1) {
+                orderTableBody.removeChild(orderTableBody.firstChild);
+            }
+
+            // Add cart items
+            cart.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${item.name} <strong class="mx-2">x</strong> ${item.quantity}</td>
+                    <td>${(item.price * item.quantity).toFixed(2)} JOD</td>
+                `;
+                // Insert before the last row (total row)
+                orderTableBody.insertBefore(row, orderTableBody.lastElementChild);
+                total += item.price * item.quantity;
+            });
+
+            // Update the total - more specific selector
+            const totalCell = orderTableBody.querySelector('tr:last-child td:last-child strong');
+            if (totalCell) {
+                totalCell.textContent = `${total.toFixed(2)}`;
+            }
+        });
+
+    </script>
+
+    @Html.AntiForgeryToken()
 </body>
 
 </html>

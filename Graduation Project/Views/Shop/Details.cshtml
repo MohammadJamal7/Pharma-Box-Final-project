@@ -24,7 +24,22 @@
     <link rel="stylesheet" href="~/css/aos.css">
 
     <link rel="stylesheet" href="~/css/style.css">
+    <style>
+        .quantity-input {
+            -moz-appearance: textfield;
+        }
 
+            .quantity-input::-webkit-outer-spin-button,
+            .quantity-input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+
+        .alert {
+            max-width: 300px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+    </style>
 
 </head>
 
@@ -97,6 +112,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-5 mr-auto">
+                        <input type="hidden" value="@Model.Inventory.BranchId" />
                         <div class="border text-center">
                             <img src="@Model.ImageUrl" alt="Image" class="img-fluid p-5">
                         </div>
@@ -115,19 +131,26 @@
                         <div class="mb-5">
                             <div class="input-group mb-3" style="max-width: 220px;">
                                 <div class="input-group-prepend">
-                                    <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
+                                    <button class="btn btn-outline-primary js-btn-minus" type="button" onclick="decreaseQuantity('@Model.MedicineId')">&minus;</button>
                                 </div>
-                                <input type="text" class="form-control text-center" value="1" placeholder=""
-                                       aria-label="Example text with button addon" aria-describedby="button-addon1">
+                                <input type="text"
+                                       id="quantity-@Model.MedicineId"
+                                       class="form-control text-center quantity-input"
+                                       value="1"
+                                       min="1"
+                                       onchange="validateQuantity('@Model.MedicineId')"
+                                       aria-label="Quantity">
                                 <div class="input-group-append">
-                                    <button class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
+                                    <button class="btn btn-outline-primary js-btn-plus" type="button" onclick="increaseQuantity('@Model.MedicineId')">&plus;</button>
                                 </div>
                             </div>
-
                         </div>
-                        <p><a href="cart.html" class="buy-now btn btn-sm height-auto px-4 py-3 btn-primary">Add To Cart</a></p>
-
-                       
+                        <p>
+                            <button onclick="addToCart('@Model.MedicineId', '@Model.Name', '@Model.ImageUrl','@Model.Inventory.BranchId')"
+                                    class="buy-now btn btn-sm height-auto px-4 py-3 btn-primary">
+                                Add To Cart
+                            </button>
+                        </p>
 
                     </div>
                 </div>
@@ -186,7 +209,85 @@
 
     <script src="~/js/main.js"></script>
 
+    <script>
+        function validateQuantity(medicineId) {
+            const input = document.getElementById(`quantity-${medicineId}`);
+            let value = parseInt(input.value);
 
+            // Ensure it's a number and at least 1
+            if (isNaN(value) || value < 1) {
+                value = 1;
+            }
+
+            input.value = value;
+        }
+
+        function decreaseQuantity(medicineId) {
+            const input = document.getElementById(`quantity-${medicineId}`);
+            let value = parseInt(input.value);
+            if (value > 1) {
+                input.value = value - 1;
+            }
+        }
+
+        function increaseQuantity(medicineId) {
+            const input = document.getElementById(`quantity-${medicineId}`);
+            let value = parseInt(input.value);
+            input.value = value + 1;
+        }
+
+        function addToCart(medicineId, medicineName, imageUrl,branchId) {
+            const quantity = parseInt(document.getElementById(`quantity-${medicineId}`).value);
+
+            // Get existing cart from localStorage or initialize empty array
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Check if item already exists in cart
+            const existingItemIndex = cart.findIndex(item => item.medicineId === medicineId);
+
+            if (existingItemIndex > -1) {
+                // Update quantity if item exists
+                cart[existingItemIndex].quantity += quantity;
+            } else {
+                // Add new item if it doesn't exist
+                cart.push({
+                    medicineId: medicineId,
+                    name: medicineName,
+                    imageUrl: imageUrl,
+                    quantity: quantity,
+                    price: 5.00, // Replace with actual price if dynamic
+                    branchId:branchId,
+                });
+            }
+
+            // Save updated cart
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Show success message
+            showNotification('Item added to cart successfully!');
+        }
+
+        function showNotification(message) {
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.className = 'alert alert-success alert-dismissible fade show position-fixed';
+            notification.style.top = '20px';
+            notification.style.right = '20px';
+            notification.style.zIndex = '1000000';
+            notification.innerHTML = `
+                    ${message}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                `;
+
+            // Add to document
+            document.body.appendChild(notification);
+
+            // Remove after 3 seconds
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+    </script>
 </body>
 
 </html>
