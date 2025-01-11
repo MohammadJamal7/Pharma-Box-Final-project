@@ -19,7 +19,7 @@ namespace Graduation_Project.Controllers
             _signInManager = signInManager;
         }
 
-        public async Task<IActionResult> Index(int id = 1)
+        public async Task<IActionResult> Index(int id = 1, int groupId = -1)
         {
             // Get the current branch (default to branch with ID 1 if none specified)
             var currentBranch = await _context.PharmacyBranch
@@ -33,21 +33,35 @@ namespace Graduation_Project.Controllers
                 return NotFound("Branch not found.");
             }
 
-            // Fetch medications for the current branch
-            var publishedMedications = await _context.Medicines
+            // Start with base query for medications
+            var query = _context.Medicines
                 .Where(g => g.InventoryId == currentBranch.Inventory.InventoryId
                             && g.GroupMedicine != null
-                            && g.ImageUrl != null
-                            )
-                .ToListAsync();
+                            && g.ImageUrl != null);
 
-            // Pass branch name for display in the view
+            // Apply group filter if a valid group was selected
+            if (groupId > 0)
+            {
+                query = query.Where(m => m.GroupMedicine.GroupMedicineId == groupId);
+            }
+
+            // Execute the query
+            var publishedMedications = await query.ToListAsync();
+
+            // Pass branch name and selected group ID for display in the view
             ViewBag.BranchName = currentBranch.Name;
+            ViewBag.userCurrentBranchId = id; 
+            ViewBag.SelectedGroupId = groupId;
+            if(groupId != -1)
+            {
+                var selectedGroup = await _context.GroupMedicines.FirstOrDefaultAsync(g => g.GroupMedicineId == groupId);
+                ViewBag.selectedGroup = selectedGroup.Name;
+            }
+           
 
-            // Return the view with the medications (can be empty)
+            // Return the view with the filtered medications
             return View(publishedMedications);
         }
-
         public async Task<IActionResult> Branches()
         {
             var branches = await _context.PharmacyBranch.ToListAsync();
@@ -55,14 +69,14 @@ namespace Graduation_Project.Controllers
         }
 
         // GET: Medicine/Details/5
-        public async Task<IActionResult> Details(int id)
+        public async Task<IActionResult> Details(int id, int branchId)
         {
             if (id == 0)
             {
                 return NotFound();
             }
 
-            var medication = await _context.Medicines
+            var medication = await _context.Medicines.Include(m=>m.Inventory)
                 .FirstOrDefaultAsync(m => m.MedicineId == id);
 
             if (medication == null)
@@ -70,8 +84,20 @@ namespace Graduation_Project.Controllers
                 return NotFound();
             }
 
+            var currentBranch = await _context.PharmacyBranch
+                .FirstOrDefaultAsync(b => b.BranchId == branchId);
+
+            if (currentBranch == null)
+            {
+                return NotFound("Branch not found.");
+            }
+
+            ViewBag.BranchName = currentBranch.Name;
+            ViewBag.userCurrentBranchId = branchId;
+
             return View(medication);
         }
+
 
     }
 }

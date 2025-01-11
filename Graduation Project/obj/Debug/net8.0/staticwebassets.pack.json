@@ -105,6 +105,10 @@
       "PackagePath": "staticwebassets\\images\\520241221143421.png"
     },
     {
+      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\Antibiotic20250108171755.png",
+      "PackagePath": "staticwebassets\\images\\Antibiotic20250108171755.png"
+    },
+    {
       "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\Baby  Child Care20250105094926.jpg",
       "PackagePath": "staticwebassets\\images\\Baby  Child Care20250105094926.jpg"
     },
@@ -141,6 +145,14 @@
       "PackagePath": "staticwebassets\\images\\Screenshot 2025-01-04 22221720250104225015.png"
     },
     {
+      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\Screenshot 2025-01-08 16192020250108170003.png",
+      "PackagePath": "staticwebassets\\images\\Screenshot 2025-01-08 16192020250108170003.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\Screenshot 2025-01-08 16192020250108170008.png",
+      "PackagePath": "staticwebassets\\images\\Screenshot 2025-01-08 16192020250108170008.png"
+    },
+    {
       "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\Vitamins Supplements20250105095042.jpg",
       "PackagePath": "staticwebassets\\images\\Vitamins Supplements20250105095042.jpg"
     },
@@ -171,6 +183,10 @@
     {
       "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\desktop.ini",
       "PackagePath": "staticwebassets\\images\\desktop.ini"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\first aid bandages20250108171807.jpeg",
+      "PackagePath": "staticwebassets\\images\\first aid bandages20250108171807.jpeg"
     },
     {
       "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\fruit-salad-7-735x98020241226223642.png",
@@ -209,6 +225,14 @@
       "PackagePath": "staticwebassets\\images\\medicines\\5124b040-1e49-4875-8d64-9e1df7bfebd6_Baby  Child Care.jpg"
     },
     {
+      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\medicines\\675a8eb9-60b6-493e-ba6d-7090b029b098_first aid bandages.jpeg",
+      "PackagePath": "staticwebassets\\images\\medicines\\675a8eb9-60b6-493e-ba6d-7090b029b098_first aid bandages.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\medicines\\88048a43-4ae3-4c31-a4a1-98b7eedb8af2_first aid bandages.jpeg",
+      "PackagePath": "staticwebassets\\images\\medicines\\88048a43-4ae3-4c31-a4a1-98b7eedb8af2_first aid bandages.jpeg"
+    },
+    {
       "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\medicines\\986f98a1-7fd0-4261-87b7-25cad72f0849_Prescription Medications.jpg",
       "PackagePath": "staticwebassets\\images\\medicines\\986f98a1-7fd0-4261-87b7-25cad72f0849_Prescription Medications.jpg"
     },
@@ -219,6 +243,10 @@
     {
       "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\medicines\\bdfe71a7-b19b-48ed-9c0f-cb48183a55d3_baby fever syrup.jpeg",
       "PackagePath": "staticwebassets\\images\\medicines\\bdfe71a7-b19b-48ed-9c0f-cb48183a55d3_baby fever syrup.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\medicines\\c4f87fcd-6ba4-408d-bfcc-9cd35ba505b6_Screenshot 2025-01-08 151423.png",
+      "PackagePath": "staticwebassets\\images\\medicines\\c4f87fcd-6ba4-408d-bfcc-9cd35ba505b6_Screenshot 2025-01-08 151423.png"
     },
     {
       "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\medicines\\c92e0cf6-d4f0-41cf-a403-79fc2a76afc1_ice-cream-sundae-fruit-sherbets-decorated-wafers-fresh-strawberries-37368479.png",
@@ -311,6 +339,10 @@
     {
       "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\women.jpg",
       "PackagePath": "staticwebassets\\images\\women.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\js\\CartManager.js",
+      "PackagePath": "staticwebassets\\js\\CartManager.js"
     },
     {
       "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\js\\aos.js",
