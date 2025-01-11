@@ -26,6 +26,24 @@
 
     <link rel="stylesheet" href="~/css/style.css">
 
+    <style>
+        .medicine-card {
+            transition: opacity 0.3s ease;
+        }
+
+        #searchInput {
+            padding: 10px 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            transition: all 0.3s ease;
+        }
+
+            #searchInput:focus {
+                outline: none;
+                border-color: #007bff;
+                box-shadow: 0 1px 3px rgba(0,123,255,0.3);
+            }
+    </style>
 </head>
 
 <body>
@@ -96,43 +114,70 @@
         <div class="site-section">
             <div class="container">
 
-                <div class="row">
-                    <input type="text" class="form-control" placeholder="Search keyword and hit enter...">
-
+            <div class="row mb-4">
+                <div class="col-12">
+                    <input type="text"
+                           id="searchInput"
+                           class="form-control"
+                           placeholder="Search medicines..."
+                           oninput="searchMedicines()">
                 </div>
+            </div>
 
                 <div class="container mt-5">
-    <h2 class="text-center mb-4">Shop - @ViewBag.BranchName</h2>
-
-    @if (!Model.Any())
-    {
-        <div class="text-center">
-            <p class="text-muted">No medicines available at this branch currently. Please check back later!</p>
-        </div>
-    }
-    else
-    {
-        <div class="row">
-            @foreach (var medication in Model)
-            {
-                                <div class="col-sm-6 col-lg-4 text-center item mb-4">
-                                    <a asp-action="Details" asp-controller="Shop" asp-route-id="@medication.MedicineId">
-                                        <img src="@medication.ImageUrl" alt="@medication.Name" class="img-fluid mb-3" style="width: 200px; height: 250px; object-fit: cover;">
+                <h2 class="text-center mb-4">Shop - @ViewBag.BranchName</h2>
+                <!-- Dynamic Message Based on GroupId -->
+                <div class="text-center mb-4">
+                    @if (ViewBag.SelectedGroupId != -1)
+                    {
+                        <p class="text-muted">Showing medicines available for your selected group - @ViewBag.selectedGroup </p>
+                    }
+                    else
+                    {
+                        <p class="text-muted">Showing all available medicines</p>
+                    }
+                </div>
+                    @if (!Model.Any())
+                    {
+                        <div class="text-center">
+                            <p class="text-muted">No medicines available at this branch currently. Please check back later!</p>
+                        </div>
+                    }
+                    else
+                    {
+                    <div class="row" id="medicineContainer">
+                        @foreach (var medication in Model)
+                        {
+                            <div class="col-sm-6 col-lg-4 text-center item mb-4 medicine-card"
+                                 data-name="@medication.Name.ToLower()"
+                                 data-price="5.00">
+                                <a asp-action="Details" asp-controller="Shop" asp-route-id="@medication.MedicineId" asp-route-branchId="@ViewBag.userCurrentBranchId">
+                                    <img src="@medication.ImageUrl"
+                                         alt="@medication.Name"
+                                         class="img-fluid mb-3"
+                                         style="width: 200px; height: 250px; object-fit: cover;">
+                                </a>
+                                <h3 class="text-dark">
+                                    <a asp-action="Details"
+                                       asp-controller="Shop"
+                                       asp-route-id="@medication.MedicineId"
+                                       class="text-decoration-none">
+                                        @medication.Name
                                     </a>
-                                    <h3 class="text-dark">
-                                        <a asp-action="Details" asp-controller="Shop" asp-route-id="@medication.MedicineId" class="text-decoration-none">
-                                            @medication.Name
-                                        </a>
-                                    </h3>
-                                    <p class="price text-primary fw-bold">
-                                        5.00 JOD
-                                    </p>
-                                </div>
+                                </h3>
+                                <p class="price text-primary fw-bold">
+                                    5.00 JOD
+                                </p>
+                            </div>
+                        }
 
+                        <!-- No results message placeholder -->
+                        <div id="noResultsMessage" class="col-12 text-center mt-4" style="display: none;">
+                            <p class="text-muted">No medicines found matching your search.</p>
+                        </div>
+                    </div>
             }
         </div>
-    }
-</div>
 
                 <div class="row mt-5">
                     <div class="col-md-12 text-center">
@@ -205,6 +250,37 @@
 
     <script src="~/js/main.js"></script>
 
+    <script>
+        function searchMedicines() {
+            const searchQuery = document.getElementById('searchInput').value.toLowerCase();
+            const medicineCards = document.querySelectorAll('.medicine-card');
+            let foundResults = false;
+
+            medicineCards.forEach(function (card) {
+                const medicineName = card.getAttribute('data-name');
+
+                if (medicineName.includes(searchQuery)) {
+                    card.style.display = '';
+                    foundResults = true;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Show/hide no results message
+            const noResultsMessage = document.getElementById('noResultsMessage');
+            noResultsMessage.style.display = (!foundResults && searchQuery !== '') ? 'block' : 'none';
+        }
+
+        // Add event listener to search input
+        document.getElementById('searchInput').addEventListener('input', searchMedicines);
+        document.getElementById('searchInput').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                searchMedicines();
+            }
+        });
+    </script>
 
 </body>
 

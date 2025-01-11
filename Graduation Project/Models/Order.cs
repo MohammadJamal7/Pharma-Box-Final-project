@@ -21,7 +21,7 @@ namespace Graduation_Project.Models
         [ForeignKey("BranchId")]
         public Branch Branch { get; set; }
 
-        public List<OrderItem> OrderItems { get; set; }
+        public List<OrderItem> OrderItems { get; set; } = [];
 
     }
     public class OrderItem

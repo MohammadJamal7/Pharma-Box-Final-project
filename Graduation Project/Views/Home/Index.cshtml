@@ -114,16 +114,19 @@
                 <div class="row">
                     <div class="col-md-12 block-3 products-wrap">
                         <div class="nonloop-block-3 owl-carousel">
-
                             @foreach (var group in Model.categories)
                             {
                                 <div class="col-sm-6 col-lg-4 item mb-4">
-                                    <a href="#branches"> <img src="/@group.ImageUrl" style="width:250px; height:200px" alt="Image"></a>
-                                    <h5 class="text-dark"  style="width:300%">@group.Name</h5>
+                                    <a href="#branches" onclick="selectGroup('@group.GroupMedicineId', '@group.Name')">
+                                        <img src="@group.ImageUrl" style="width:250px; height:200px" alt="Image">
+                                    </a>
+                                    <h5 class="text-dark" style="width:300%">@group.Name</h5>
                                 </div>
                             }
-
                         </div>
+                        <!-- Add this hidden input to store the selected group -->
+                        <input type="hidden" id="selectedGroupId" name="selectedGroupId" />
+
                     </div>
                 </div>
             </div>
@@ -142,7 +145,10 @@
                 <div class="row">
                     <div class="container mt-0">
 
-                        <div class="row mt-0">
+                        <div class="row mt-0" id="branches">
+                            <!-- Hidden input to store selected group -->
+                            <input type="hidden" id="selectedGroupId" name="selectedGroupId" />
+
                             @foreach (var branch in Model.branches)
                             {
                                 <div class="col-md-4 mb-4">
@@ -153,7 +159,12 @@
                                                 <strong>Location:</strong> @branch.Location <br />
                                                 <strong>Contact:</strong> @branch.ContactNumber
                                             </p>
-                                            <a asp-action="Index" asp-controller="Shop" asp-route-id="@branch.BranchId" class="btn btn-primary">
+                                            <a asp-action="Index"
+                                               asp-controller="Shop"
+                                               asp-route-id="@branch.BranchId"
+                                               asp-route-groupId="-1"
+                                               class="btn btn-primary branch-link"
+                                               data-branch-id="@branch.BranchId">
                                                 Explore
                                             </a>
                                         </div>
@@ -161,6 +172,7 @@
                                 </div>
                             }
                         </div>
+
                     </div>
 
                 </div>
@@ -224,6 +236,22 @@
     <script src="~/js/aos.js"></script>
 
     <script src="~/js/main.js"></script>
+    <script>
+        function selectGroup(groupId, groupName) {
+            // Store the selected group ID
+            document.getElementById('selectedGroupId').value = groupId;
+
+            // Update all branch links to include the selected group
+            document.querySelectorAll('.branch-link').forEach(link => {
+                let href = new URL(link.href);
+                href.searchParams.set('groupId', groupId);
+                link.href = href.toString();
+            });
+
+            // Smooth scroll to branches section
+            document.getElementById('branches').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 
 </body>
 
