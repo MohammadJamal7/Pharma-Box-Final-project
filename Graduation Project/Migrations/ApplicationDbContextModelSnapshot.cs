@@ -431,6 +431,9 @@ namespace Graduation_Project.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
+
                     b.Property<bool>("RequiresPrescription")
                         .HasColumnType("bit");
 

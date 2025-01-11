@@ -15,6 +15,7 @@ using Microsoft.EntityFrameworkCore.SqlServer.Query.Internal;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
+using System.Drawing;
 using System.Runtime.InteropServices;
 
 namespace Graduation_Project.Controllers
@@ -153,20 +154,21 @@ namespace Graduation_Project.Controllers
             return View(suppliers);
         }
 
-
+        [Authorize(Roles = "Pharmacist")]
         public async Task<IActionResult> SupplierMedications(string id)
         {
             var user = await _userManager.Users.Include(user => user.SupplierMedication).FirstOrDefaultAsync(user => user.Id == id);
 
             return View(user);
         }
-
+        [Authorize(Roles = "Pharmacist")]
         public async Task<IActionResult> Branches()
         {
             var branches = await _context.PharmacyBranch.Include(i => i.Inventory).ThenInclude(m => m.Medicines).ToListAsync();
             Console.Write(branches);
             return View(branches);
         }
+        [Authorize(Roles = "Pharmacist")]
         public async Task<IActionResult> BranchMedications(int id)
         {
 
@@ -179,11 +181,12 @@ namespace Graduation_Project.Controllers
             };
             return View(branchMedicinesViewModel);
         }
+        [Authorize(Roles = "Pharmacist")]
         public IActionResult Orders()
         {
             return View();
         }
-
+        [Authorize(Roles = "Pharmacist")]
         public async Task<IActionResult> PharmacistOrders()
         {
             var currentUser = await _userManager.GetUserAsync(User);
@@ -202,6 +205,8 @@ namespace Graduation_Project.Controllers
             var suppliers = await _context.Users
                 .Where(s => supplierIds.Contains(s.Id))
                 .ToDictionaryAsync(s => s.Id, s => s.FullName);
+
+          
 
             // Map to view model
             var orderViewModels = supplierOrders.Select(order => new SupplierOrderViewModel
@@ -225,20 +230,51 @@ namespace Graduation_Project.Controllers
         }
 
 
-        public IActionResult Overview()
+        [Authorize(Roles ="Pharmacist")]
+        public async Task<IActionResult> Overview()
         {
-            return View();
+            var user = await _userManager.GetUserAsync(User);
+            var suppliers = await _context.SupplierMedications.CountAsync();
+            var branches = await _context.PharmacyBranch.CountAsync();
+            var ordersFromUsers = await _context.Orders.Where(o => o.BranchId == user.BranchId).CountAsync();
+            var ordersToSuppleirs = await _context.SupplierOrders.Where(o=>o.BranchId==user.BranchId).CountAsync();
+            var categories = await _context.GroupMedicines.CountAsync();
+            var medications = await _context.Medicines.Where(m => m.Inventory.BranchId == user.BranchId).CountAsync();
+
+            var model = new PharmacistOverViewVM
+            {
+                Suppliers = suppliers,
+                Branches = branches,
+                OrdersFromUsers = ordersFromUsers,
+                GroupMedicatoins = categories,
+                OrdersToSuppliers = ordersToSuppleirs,
+                Medications = medications
+            };
+            //var model = new PharmacistOverViewVM
+            //{
+            //    Suppliers = 2,
+            //    Branches = 3,
+            //    OrdersFromUsers = 4,
+            //    GroupMedicatoins = 5,
+            //    OrdersToSuppliers = 6,
+            //    Medications = 7
+            //};
+            return View(model);
         }
 
+        [Authorize(Roles = "Pharmacist")]
         public async Task<IActionResult> Medications()
         {
+            var groups = await _context.GroupMedicines.ToListAsync();
+            ViewBag.groups = groups;
             var currentPharmacist = await _userManager.GetUserAsync(User);
-
+            
             var pharmacistMedications = await _context.Medicines.Include(g => g.GroupMedicine).Where(b => b.Inventory.BranchId == currentPharmacist.BranchId).ToListAsync();
             return View(pharmacistMedications);
         }
 
         [HttpGet]
+        [Authorize(Roles = "Pharmacist")]
         public IActionResult CreateMedicine()
         {
             // Assuming _context is your DbContext
@@ -251,10 +287,12 @@ namespace Graduation_Project.Controllers
                 .ToList();
 
             ViewBag.GroupMedicineList = groups;
+            
             return View();
         }
 
         [HttpPost]
+        [Authorize(Roles = "Pharmacist")]
         public async Task<IActionResult> AcceptOrder(int orderId)
         {
             // Get the order and its related items
@@ -311,6 +349,7 @@ namespace Graduation_Project.Controllers
                             SupplierMedicationId = supplierMedication.SupplierMedicationId,
                             GroupMedicineId = null, // Set group ID if applicable
                             Inventory = pharmacistInventory,
+                            Price = (double)supplierMedication.Price,
 
                         };
 
@@ -327,6 +366,7 @@ namespace Graduation_Project.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Pharmacist")]
         public async Task<IActionResult> RejectOrder(int orderId)
         {
             // Get the order and its related items
@@ -363,6 +403,7 @@ namespace Graduation_Project.Controllers
 
 
         [HttpPost]
+        [Authorize(Roles = "Pharmacist")]
         public async Task<IActionResult> CreateMedicine(MedicineViewModel model)
         {
             var currentUser = await _userManager.GetUserAsync(User);
@@ -407,7 +448,8 @@ namespace Graduation_Project.Controllers
                 GroupMedicineId = model.GroupMedicineId,
                 InventoryId = currentBranch.Inventory.InventoryId,
                 ImageUrl = uniqueFileName != null ? "/images/medicines/" + uniqueFileName : null,
-                RequiresPrescription = model.RequiresPrescription // Save checkbox value
+                RequiresPrescription = model.RequiresPrescription, // Save checkbox value
+                Price = model.Price
             };
 
             // Save to the database
@@ -418,6 +460,7 @@ namespace Graduation_Project.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Pharmacist")]
         public async Task<IActionResult> EditMedicine(int id)
         {
             var groups = _context.GroupMedicines
@@ -455,6 +498,7 @@ namespace Graduation_Project.Controllers
 
 
         [HttpPost]
+        [Authorize(Roles = "Pharmacist")]
         public async Task<IActionResult> EditMedicine(int id, MedicineViewModel model)
         {
             var medicine = await _context.Medicines.FirstOrDefaultAsync(m => m.MedicineId == id);
@@ -514,6 +558,7 @@ namespace Graduation_Project.Controllers
 
 
         [HttpPost]
+        [Authorize(Roles = "Pharmacist")]
         public IActionResult DeleteMedicine(int id)
         {
             // Your logic to delete the medicine entry
@@ -529,7 +574,7 @@ namespace Graduation_Project.Controllers
             return Json(new { success = true });
         }
 
-
+        [Authorize(Roles = "Pharmacist")]
         public async Task<IActionResult> GroupsOfMedicines()
         {
             var groups = await _context.GroupMedicines.Include(g => g.Medicines).ToListAsync();
@@ -537,11 +582,13 @@ namespace Graduation_Project.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Pharmacist")]
         public IActionResult AddGroupMed()
         {
             return View();
         }
 
+        [Authorize(Roles = "Pharmacist")]
         [HttpPost]
         public async Task<IActionResult> AddGroupMed(string Name, IFormFile Image)
         {
@@ -582,6 +629,7 @@ namespace Graduation_Project.Controllers
 
 
         [HttpGet]
+        [Authorize(Roles = "Pharmacist")]
         public async Task<IActionResult> EditGroup(int id)
         {
             var groupMedicine = await _context.GroupMedicines.FindAsync(id);
@@ -593,8 +641,9 @@ namespace Graduation_Project.Controllers
             return View(groupMedicine);
         }
 
-        // POST: Edit group method
+       
         [HttpPost]
+        [Authorize(Roles = "Pharmacist")]
         public async Task<IActionResult> EditGroup(int id, string Name, IFormFile Image)
         {
             if (!string.IsNullOrWhiteSpace(Name))
@@ -645,7 +694,7 @@ namespace Graduation_Project.Controllers
             ViewBag.ErrorMessage = "Please fill in all fields.";
             return View();
         }
-
+        [Authorize(Roles = "Pharmacist")]
         public async Task<IActionResult> DeleteGroup(int id)
         {
             var group = await _context.GroupMedicines.FindAsync(id);
@@ -656,26 +705,47 @@ namespace Graduation_Project.Controllers
 
 
 
-
+        [Authorize(Roles = "Pharmacist")]
         public IActionResult Inventory()
         {
             return View();
         }
 
-
+        [Authorize(Roles = "Pharmacist")]
         public async Task<IActionResult> Notifications()
         {
             var currentUser = await _userManager.GetUserAsync(User);
-            var notifications = _context.OrderNotifications
-         .Where(n => n.PharmacistId == currentUser.Id)
-         .OrderByDescending(n => n.NotificationDate) // Most recent notifications first
-         .ToList();
 
+            // Fetch notifications for the current pharmacist, including related SupplierOrder details
+            var notifications = await _context.OrderNotifications
+                .Include(n => n.SupplierOrder) // Include related SupplierOrder details
+                .Where(n => n.PharmacistId == currentUser.Id)
+                .OrderByDescending(n => n.NotificationDate) // Most recent notifications first
+                .ToListAsync(); // Asynchronously load data
 
-            return View(notifications);
+            var test=3;
+            return View(notifications); // Pass the notifications directly to the view
         }
 
+        [HttpPost]
+        public async Task<IActionResult> DeleteNotification(int id)
+        {
+            // Find the notification by ID
+            var notification = await _context.OrderNotifications
+                                              .FirstOrDefaultAsync(n => n.Id == id);
 
+            if (notification == null)
+            {
+                return Json(new { success = false, message = "Notification not found." });
+            }
+
+            // Remove the notification
+            _context.OrderNotifications.Remove(notification);
+            await _context.SaveChangesAsync();
+
+            // Return a success response
+            return Json(new { success = true });
+        }
         public async Task<IActionResult> LogOut()
         {
             await _signInManager.SignOutAsync();  // Signs out the user

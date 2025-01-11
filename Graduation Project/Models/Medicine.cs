@@ -13,6 +13,7 @@ using System.ComponentModel.DataAnnotations.Schema;
         public string? ImageUrl { get; set; }  
         public int StockQuantity { get; set; }  
         public DateTime ExpiryDate { get; set; }
+        public double Price { get; set; }
 
         // Add this property
         public bool RequiresPrescription { get; set; }

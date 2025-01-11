@@ -376,72 +376,116 @@
                 <a href="@Url.Action("Index", "PharmCart")" class="btn btn-success">Go to Cart</a>
             </div>
         </div>
-    </div>
+        <!-- Toast Container -->
+
+
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div id="liveToast" class="toast align-items-center text-bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body" id="toastMessage">
+                        <!-- Toast message will be dynamically inserted here -->
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        function addToCart(medicationId, supplierId, medicationName) {
-            let quantityInput = document.getElementById(`quantity-${medicationId}`);
-            let quantity = quantityInput ? parseInt(quantityInput.value) : 1;
+                        function showToast(message, type) {
+                const toastMessageElement = document.getElementById("toastMessage");
+                toastMessageElement.textContent = message;
 
-            // Validate quantity
-            if (quantity <= 0) {
-                alert("Quantity must be greater than 0.");
-                return;
+                const toastElement = new bootstrap.Toast(document.getElementById('liveToast'));
+
+                // Get the toast header (where we apply the color) and remove any previous color classes
+                const toastHeader = document.querySelector(".toast");
+
+                // Remove all previous color classes
+                toastHeader.classList.remove("text-bg-primary", "text-bg-success", "text-bg-danger", "text-bg-info", "text-bg-warning");
+
+                // Add the color class based on the type
+                if (type === "success") {
+                    toastHeader.classList.add("text-bg-success"); // Green background for success
+                } else if (type === "danger") {
+                    toastHeader.classList.add("text-bg-danger"); // Red background for errors
+                } else if (type === "info") {
+                    toastHeader.classList.add("text-bg-info"); // Blue background for informational messages
+                } else if (type === "warning") {
+                    toastHeader.classList.add("text-bg-warning"); // Yellow background for warnings
+                } else {
+                    toastHeader.classList.add("text-bg-primary"); // Default blue background
+                }
+
+                // Show the toast
+                toastElement.show(); 
             }
 
-            $.ajax({
-                url: '/PharmCart/AddToCart',
-                type: 'POST',
-                data: {
-                    medicationId: medicationId,
-                    quantity: quantity,
-                    supplierId: supplierId,
-                    __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val()
-                },
-                success: function (response) {
-                    if (response.success) {
-                        alert(`${quantity} of "${medicationName}" added to your cart.`);
-                        // Optional: Update cart display or trigger cart refresh
-                    } else if (response.needsConfirmation) {
-                        // Prompt user to clear existing cart
-                        if (confirm(response.message)) {
-                            // If user confirms, clear cart and add new item
-                            $.ajax({
-                                url: '/PharmCart/ClearCartAndChangeSupplier',
-                                type: 'POST',
-                                data: {
-                                    medicationId: medicationId,
-                                    quantity: quantity,
-                                    supplierId: supplierId,
-                                    __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val()
-                                },
-                                success: function (clearResponse) {
-                                    if (clearResponse.success) {
-                                        alert(`${quantity} of "${medicationName}" added to your cart after clearing previous items.`);
-                                        // Optional: Update cart display or trigger cart refresh
-                                    } else {
-                                        alert(clearResponse.message || "Failed to clear cart and add item.");
-                                    }
-                                },
-                                error: function (xhr, status, error) {
-                                    console.error('Error clearing cart:', error);
-                                    alert("An error occurred while clearing the cart.");
-                                }
-                            });
-                        }
-                    } else {
-                        alert(response.message || "Failed to add item to cart");
-                    }
-                },
-                error: function (xhr, status, error) {
-                    console.error('Error:', error);
-                    alert("An error occurred while adding the item to the cart.");
+            function addToCart(medicationId, supplierId, medicationName) {
+                let quantityInput = document.getElementById(`quantity-${medicationId}`);
+                let quantity = quantityInput ? parseInt(quantityInput.value) : 1;
+
+                // Validate quantity
+                if (quantity <= 0) {
+                    showToast("Quantity must be greater than 0.", "danger");
+                    return;
                 }
-            });
-        }
+
+                $.ajax({
+                    url: '/PharmCart/AddToCart',
+                    type: 'POST',
+                    data: {
+                        medicationId: medicationId,
+                        quantity: quantity,
+                        supplierId: supplierId,
+                        __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val()
+                    },
+                    success: function (response) {
+                        if (response.success) {
+                            showToast(`${quantity} of "${medicationName}" added to your cart.`, "success");
+                            // Optional: Update cart display or trigger cart refresh
+                        } else if (response.needsConfirmation) {
+                            // Prompt user to clear existing cart
+                            if (confirm(response.message)) {
+                                // If user confirms, clear cart and add new item
+                                $.ajax({
+                                    url: '/PharmCart/ClearCartAndChangeSupplier',
+                                    type: 'POST',
+                                    data: {
+                                        medicationId: medicationId,
+                                        quantity: quantity,
+                                        supplierId: supplierId,
+                                        __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val()
+                                    },
+                                    success: function (clearResponse) {
+                                        if (clearResponse.success) {
+                                            showToast(`${quantity} of "${medicationName}" added to your cart after clearing previous items.`, "success");
+                                            // Optional: Update cart display or trigger cart refresh
+                                        } else {
+                                            showToast(clearResponse.message || "Failed to clear cart and add item.", "danger");
+                                        }
+                                    },
+                                    error: function (xhr, status, error) {
+                                        console.error('Error clearing cart:', error);
+                                        showToast("An error occurred while clearing the cart.", "danger");
+                                    }
+                                });
+                            }
+                        } else {
+                            showToast(response.message || "Failed to add item to cart", "danger");
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Error:', error);
+                        showToast("An error occurred while adding the item to the cart.", "danger");
+                    }
+                });
+            }
+
+
    
         document.addEventListener("DOMContentLoaded", function (event) {
             const showNavbar = (toggleId, navId, bodyId, headerId) => {

@@ -23,31 +23,42 @@ wwwroot\fonts\icomoon\selection.json
 wwwroot\fonts\icomoon\style.css
 wwwroot\images\520241221142923.png
 wwwroot\images\520241221143421.png
+wwwroot\images\Baby  Child Care20250105094926.jpg
 wwwroot\images\batch-25---monogram-1-high-resolution-logo-transparent (2).png
 wwwroot\images\bg_1.jpg
 wwwroot\images\bg_2.jpg
 wwwroot\images\depositphotos_6341829-stock-photo-multi-flavor-ice-cream-glass20241226223620.jpg
 wwwroot\images\depositphotos_6341829-stock-photo-multi-flavor-ice-cream-glass20241226223805.jpg
 wwwroot\images\desktop.ini
+wwwroot\images\First Aid Medical Supplies20250105094957.jpg
 wwwroot\images\fruit-salad-7-735x98020241226223642.png
 wwwroot\images\hero_1.jpg
 wwwroot\images\IMG-20241101-WA003320241226223707.jpg
 wwwroot\images\logo.jpg
 wwwroot\images\medicines\063336fe-b657-497b-b1e7-db77bf82f32b_OIP.jpeg
-wwwroot\images\medicines\37d610fa-e69b-4992-9d69-d598d47735ba_night-mode-removebg-preview.webp
-wwwroot\images\medicines\94713c93-51ff-495e-baeb-313145349b90_IMG-20241101-WA0033.jpg
+wwwroot\images\medicines\0bd48efe-208f-480e-a55e-b6933ed6c03a_Antibiotic.png
+wwwroot\images\medicines\12709e86-f7b6-4248-8b76-38e99ca44c6d_vitamin c tablets.jpeg
+wwwroot\images\medicines\1275b429-feb9-4b29-8128-2eaa57f4b66b_first aid bandages.jpeg
+wwwroot\images\medicines\1e747de9-6139-4b7a-8813-70df46ed810d_first aid bandages.jpeg
+wwwroot\images\medicines\5124b040-1e49-4875-8d64-9e1df7bfebd6_Baby  Child Care.jpg
+wwwroot\images\medicines\986f98a1-7fd0-4261-87b7-25cad72f0849_Prescription Medications.jpg
 wwwroot\images\medicines\998434ae-4431-4bf0-a924-d1f8c5fe4604_ice-cream-sundae-fruit-sherbets-decorated-wafers-fresh-strawberries-37368479.png
-wwwroot\images\medicines\ba540b53-c6ba-404f-b739-9daf3f234547_night-mode-removebg-preview.webp
-wwwroot\images\medicines\c43a6ae5-96db-46a8-b9e9-0eb78fd657e4_R.jpeg
+wwwroot\images\medicines\bdfe71a7-b19b-48ed-9c0f-cb48183a55d3_baby fever syrup.jpeg
+wwwroot\images\medicines\c274ebd0-baa1-468f-89ee-5fc1cd499fea_Screenshot 2025-01-09 014153.png
 wwwroot\images\medicines\c92e0cf6-d4f0-41cf-a403-79fc2a76afc1_ice-cream-sundae-fruit-sherbets-decorated-wafers-fresh-strawberries-37368479.png
+wwwroot\images\medicines\d2683cb3-2548-4714-bcc5-e02c8734dfea_amoxicillin.jpg
+wwwroot\images\medicines\e9907462-d4e4-4d42-a429-599b1e1304a4_First Aid Medical Supplies.jpg
 wwwroot\images\medicines\fff489f7-d77b-4c0b-a382-1908c61432e9_fruit-salad-7-735x980.png
+wwwroot\images\Over the Counter Medications20250105095013.jpg
 wwwroot\images\person_1.jpg
 wwwroot\images\person_2.jpg
 wwwroot\images\person_3.jpg
 wwwroot\images\person_4.jpg
 wwwroot\images\person_5.jpg
+wwwroot\images\Personal Care20250105095025.jpg
 wwwroot\images\pharmacist.jpg
 wwwroot\images\pharmacist2.jpg
+wwwroot\images\Prescription Medications20250105095034.jpg
 wwwroot\images\product_01.png
 wwwroot\images\product_02.png
 wwwroot\images\product_04.png
@@ -55,12 +66,18 @@ wwwroot\images\product_05.png
 wwwroot\images\product_06.png
 wwwroot\images\product_07_large.png
 wwwroot\images\products_1.png
+wwwroot\images\prof.png
 wwwroot\images\Screenshot 2024-04-15 14483820241221142926.png
+wwwroot\images\Screenshot 2025-01-04 15424920250104225025.png
+wwwroot\images\Screenshot 2025-01-04 22221720250104225015.png
 wwwroot\images\shoe.png
 wwwroot\images\supplier.jpg
 wwwroot\images\user.jpg
+wwwroot\images\Vitamins Supplements20250105095042.jpg
+wwwroot\images\Vitamins Supplements20250105100347.jpg
 wwwroot\images\wave.svg
 wwwroot\images\women.jpg
+wwwroot\images\محمد جمال_page-000120250110115929.jpg
 wwwroot\js\aos.js
 wwwroot\js\bootstrap.bundle.min.js
 wwwroot\js\bootstrap.min.js

@@ -287,40 +287,41 @@
                         <span class="nav_name ">Dashboard</span>
 
                     </a>
-                    <a href="@Url.Action("Inventory")" class="nav_link ">
+                    <a href="@Url.Action("Inventory","Pharmacist")" class="nav_link ">
                         <i class="fa-solid fa-boxes-stacked"></i>
                         <span class="nav_name">Inventory</span>
                     </a>
 
-                    <a href="@Url.Action("Medications")" class="nav_link ">
+                    <a href="@Url.Action("Medications","Pharmacist")" class="nav_link ">
                         <i class="fa-solid fa-grip"></i>
                         <span class="nav_name">Medications</span>
                     </a>
-                    <a href="@Url.Action("GroupsOfMedicines")" class="nav_link">
+                    <a href="@Url.Action("GroupsOfMedicines","Pharmacist")" class="nav_link">
                         <i class="fa-solid fa-grip"></i>
                         <span class="nav_name">Medicine Groups</span>
                     </a>
 
-                    <a href="@Url.Action("SuppliersDetails")" class="nav_link active">
+                    <a href="@Url.Action("Suppliers","Pharmacist")" class="nav_link">
                         <i class="fa-solid fa-arrow-trend-up"></i>
                         <span class="nav_name">Suppliers</span>
                     </a>
-                    <a href="../Orders-sec/index.html" class="nav_link">
+                    <a href="@Url.Action("Orders","Pharmacist")" class="nav_link">
                         <i class="fa-solid fa-arrow-down-9-1"></i>
-                        <span class="nav_name">Orders</span>
+                        <span class="nav_name"> Orders</span>
                     </a>
 
-                    <a href="../Notification-sec/index.html" class="nav_link">
+                    <a href="@Url.Action("Notifications","Pharmacist")" class="nav_link">
                         <i class="fa-regular fa-bell"></i>
                         <span class="nav_name">Notifications</span>
                     </a>
-                    <a href="../chats-sec/index.html" class="nav_link">
-                        <i class='bx bx-message'></i>
-                        <span class="nav_name">Chats</span>
-                        <a href="../Branch-sec/index.html" class="nav_link">
-                            <i class="fa-solid fa-code-branch"></i>
-                            <span class="nav_name">Branchs</span>
-                        </a>
+                    <a href="@Url.Action("Branches","Pharmacist")" class="nav_link ">
+                        <i class="fa-solid fa-code-branch"></i>
+                        <span class="nav_name">Branchs</span>
+                    </a>
+
+                    <a href="@Url.Action("LogOut","Pharmacist")" class="nav_link">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span class="nav_name">Log Out</span>
                     </a>
 
                 </div>
@@ -392,6 +393,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Include SweetAlert2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.5.0/dist/sweetalert2.min.css" rel="stylesheet" />
+
+    <!-- Include SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.5.0/dist/sweetalert2.min.js"></script>
+
     <script>
 
 
@@ -434,39 +441,55 @@
             });
         });
 
-
-        function Back(){
+        function Back() {
             window.history.back();
         }
+
         function removeFromCart(medicationId) {
-            if (confirm("Are you sure you want to remove this item from your cart?")) {
-                $.ajax({
-                    url: '/PharmCart/RemoveFromCart',
-                    type: 'POST',
-                    data: {
-                        medicationId: medicationId,
-                        __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val()
-                    },
-                    success: function (response) {
-                        if (response.success) {
-                            location.reload(); // Reload the page to reflect changes
-                        } else {
-                            alert(response.message);
+            // SweetAlert2 confirmation dialog
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to undo this action!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Yes, remove it!',
+                cancelButtonText: 'Cancel',
+                reverseButtons: true
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Proceed with the AJAX request to remove the item
+                    $.ajax({
+                        url: '/PharmCart/RemoveFromCart',
+                        type: 'POST',
+                        data: {
+                            medicationId: medicationId,
+                            __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val()
+                        },
+                        success: function (response) {
+                            if (response.success) {
+                                location.reload(); // Reload the page to reflect changes
+                            } else {
+                                alert(response.message);
+                            }
+                        },
+                        error: function (xhr, status, error) {
+                            console.error('Error details:', xhr.responseText);
+                            alert("An error occurred while removing the item.");
                         }
-                    },
-                    error: function (xhr, status, error) {
-                        console.error('Error details:', xhr.responseText);
-                        alert("An error occurred while removing the item.");
-                    }
-                });
-            }
+                    });
+                }
+            });
         }
 
         function updateQuantity(cartItemId) {
             var quantity = document.getElementById('quantity-' + cartItemId).value;
 
             if (quantity <= 0) {
-                alert("Quantity must be greater than 0.");
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Quantity must be greater than 0.'
+                });
                 return;
             }
 
@@ -493,46 +516,82 @@
         }
 
         function clearCart() {
-            if (confirm("Are you sure you want to clear the entire cart?")) {
-                $.ajax({
-                    url: '/PharmCart/ClearCart',
-                    type: 'POST',
-                    data: {
-                        __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val()
-                    },
-                    success: function (response) {
-                        if (response.success) {
-                            location.reload(); // Reload the page to clear the cart
-                        } else {
-                            alert(response.message);
+            // SweetAlert2 confirmation dialog
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "This will clear your entire cart!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Yes, clear it!',
+                cancelButtonText: 'Cancel',
+                reverseButtons: true
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Proceed with the AJAX request to clear the cart
+                    $.ajax({
+                        url: '/PharmCart/ClearCart',
+                        type: 'POST',
+                        data: {
+                            __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val()
+                        },
+                        success: function (response) {
+                            if (response.success) {
+                                location.reload(); // Reload the page to clear the cart
+                            } else {
+                                alert(response.message);
+                            }
+                        },
+                        error: function (xhr, status, error) {
+                            console.error('Error details:', xhr.responseText);
+                            alert("An error occurred while clearing the cart.");
                         }
-                    },
-                    error: function (xhr, status, error) {
-                        console.error('Error details:', xhr.responseText);
-                        alert("An error occurred while clearing the cart.");
-                    }
-                });
-            }
+                    });
+                }
+            });
         }
 
         function checkout() {
-            $.ajax({
-                url: '/PharmCart/Checkout',
-                type: 'POST',
-                data: {
-                    __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val()
-                },
-                success: function (response) {
-                    if (response.success) {
-                        alert("Checkout successful!");
-                        location.reload();
-                    } else {
-                        alert(response.message);
-                    }
-                },
-                error: function (xhr, status, error) {
-                    console.error('Error details:', xhr.responseText);
-                    alert("An error occurred during checkout.");
+            // SweetAlert2 confirmation dialog before checkout
+            Swal.fire({
+                title: 'Proceed to Checkout?',
+                text: "Please review your cart before proceeding.",
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonText: 'Yes, checkout!',
+                cancelButtonText: 'Cancel',
+                reverseButtons: true
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Proceed with the AJAX request to checkout
+                    $.ajax({
+                        url: '/PharmCart/Checkout',
+                        type: 'POST',
+                        data: {
+                            __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val()
+                        },
+                              success: function (response) {
+            if (response.success) {
+                // Show the success Swal alert
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Checkout Successful',
+                    text: 'Your order has been placed successfully!'
+                }).then(function() {
+                    // Wait for 1 second (1000 milliseconds) after the alert closes, then reload the page
+                    setTimeout(function() {
+                        location.reload(); // Reload the page after the delay
+                    }, 500);
+                });
+            } else {
+                alert(response.message);
+            }
+        },
+
+                        error: function (xhr, status, error) {
+                            console.error('Error details:', xhr.responseText);
+                            alert("An error occurred during checkout.");
+                        }
+                    });
                 }
             });
         }

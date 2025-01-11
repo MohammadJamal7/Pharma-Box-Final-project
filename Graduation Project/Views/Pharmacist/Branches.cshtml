@@ -333,7 +333,8 @@
 
         <div class="search-bar d-flex justify-content-end">
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search for anything here..">
+                <input id="searchInput" type="text" class="form-control" placeholder="Search for anything here..">
+
                 <button class="btn btn-outline-secondary" type="button"><i class="fas fa-search"></i></button>
             </div>
         </div>
@@ -421,6 +422,26 @@
             });
         });
 
+
+        // Seardh function
+             document.addEventListener("DOMContentLoaded", function() {
+            const searchInput = document.getElementById('searchInput');
+            const tableRows = document.querySelectorAll('.table-container tbody tr');
+
+            searchInput.addEventListener('input', function() {
+                const searchQuery = searchInput.value.toLowerCase();
+
+                tableRows.forEach(row => {
+                    const branchName = row.querySelector('td:nth-child(1)').innerText.toLowerCase();
+
+                    if (branchName.includes(searchQuery)) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            });
+        });
     </script>
 </body>
 </html>

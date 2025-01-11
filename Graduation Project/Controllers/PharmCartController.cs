@@ -175,6 +175,29 @@ namespace Graduation_Project.Controllers
             return await AddToCart(medicationId, quantity, supplierId);
         }
 
+        // Clear cart manually
+        [HttpPost]
+        public async Task<IActionResult> ClearCart()
+        {
+            var userId = await GetCurrentUserIdAsync();
+            if (userId == null)
+            {
+                return Json(new { success = false, message = "User not authenticated." });
+            }
+
+            var cart = await _context.PharmCarts
+                .Include(c => c.CartItems)
+                .FirstOrDefaultAsync(c => c.UserId == userId);
+
+            if (cart != null)
+            {
+                cart.CartItems.Clear();
+                cart.SupplierId = null;
+                await _context.SaveChangesAsync();
+            }
+
+            return Json(new { success = true, message = "Cart cleared." });
+        }
 
         // Checkout and clear cart
         [HttpPost]

@@ -1,17 +1,22 @@
 ﻿using Graduation_Project.Models;
 using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 public class ApplicationUser : IdentityUser
 {
     // Full name of the user
+    [Required(ErrorMessage = "Full Name is required.")]
+    [StringLength(100, ErrorMessage = "Full Name cannot exceed 100 characters.")]
     public string FullName { get; set; }
 
     // Address is relevant for Patient and optionally Pharmacist
-    public string? Address { get; set; } // Nullable for users who do not need it (e.g., Pharmacists)
+    [StringLength(250, ErrorMessage = "Address cannot exceed 250 characters.")]
+    public string? Address { get; set; }
 
     // UserType is used to differentiate roles (consider using roles instead for access control)
-    public string UserType { get; set; } // Consider using Identity roles for role-based access
+    [Required(ErrorMessage = "User Type is required.")]
+    public string UserType { get; set; }
 
 
 

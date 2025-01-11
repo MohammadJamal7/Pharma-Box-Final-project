@@ -61,6 +61,7 @@ namespace Graduation_Project.Controllers
 
         }
         [HttpGet]
+        [Authorize(Roles = "Supplier")]
         public async Task <IActionResult> Edit(int id)
         {
             var currentUser = await _userManager.GetUserAsync(User);
@@ -242,7 +243,7 @@ namespace Graduation_Project.Controllers
         }
 
 
-        // GET: /Supplier/Orders
+        
         [Authorize(Roles = "Supplier")]
         public async Task<IActionResult> DisplayOrders()
         {
@@ -271,65 +272,7 @@ namespace Graduation_Project.Controllers
             return View(orderViewModels);
         }
 
-        //// GET: /Supplier/Orders
-        //[Authorize(Roles = "Supplier")]
-        //public IActionResult DisplayOrders()
-        //{
-        //    try
-        //    {
-        //        // Fake data for SupplierOrders
-        //        var supplierOrders = new List<SupplierOrderViewModel>
-        //{
-        //    new SupplierOrderViewModel
-        //    {
-        //        OrderId = 1,
-        //        OrderDate = DateTime.Now.AddDays(-2),
-        //        orderStatus = "Pending",
-        //        PharmacistName = "Dr. John Doe",
-        //        BranchName = "Main Branch",
-        //        OrderItems = new List<OrderItemViewModel>
-        //        {
-        //            new OrderItemViewModel
-        //            {
-        //                MedicationName = "Paracetamol",
-        //                Quantity = 10,
-        //                Price = 5.00m
-        //            },
-        //            new OrderItemViewModel
-        //            {
-        //                MedicationName = "Ibuprofen",
-        //                Quantity = 20,
-        //                Price = 3.50m
-        //            }
-        //        }
-        //    },
-        //    new SupplierOrderViewModel
-        //    {
-        //        OrderId = 2,
-        //        OrderDate = DateTime.Now.AddDays(-5),
-        //        orderStatus = "Preparing",
-        //        PharmacistName = "Pharmacist 1",
-        //        BranchName = "Default branch",
-        //        OrderItems = new List<OrderItemViewModel>
-        //        {
-        //            new OrderItemViewModel
-        //            {
-        //                MedicationName = "Amoxicillin",
-        //                Quantity = 15,
-        //                Price = 7.00m
-        //            }
-        //        }
-        //    }
-        //};
 
-        //        return View(supplierOrders); // Pass fake data to the view
-        //    }
-        //    catch (Exception ex)
-        //    {
-
-        //        return View("Error", new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        //    }
-        //}
         public async Task<IActionResult> AcceptOrder(int id)
         {
             var user = await _context.Users
@@ -345,11 +288,13 @@ namespace Graduation_Project.Controllers
                 return NotFound();
             }
 
-            order.orderStatus = "Preparing"; // Update order status to Preparing
+            // Update order status to 'Preparing'
+            order.orderStatus = "Preparing";
+
             var userMedications = user.SupplierMedication.ToList();
             var orderMedications = order.SupplierOrderItems.ToList();
 
-            // Update medications
+            // Update medications stock
             foreach (var orderItem in orderMedications)
             {
                 var userMedication = userMedications.FirstOrDefault(med => med.SupplierMedicationId == orderItem.SupplierMedicationId);
@@ -364,7 +309,7 @@ namespace Graduation_Project.Controllers
                         return Json(new { success = false, message = "Not enough stock." });
                     }
 
-                    _context.Update(userMedication); // Mark medication as updated
+                    _context.Update(userMedication); // Update medication
                 }
             }
 
@@ -373,22 +318,34 @@ namespace Graduation_Project.Controllers
 
             try
             {
-                await _context.SaveChangesAsync(); // Save all changes to database
+                await _context.SaveChangesAsync(); // Save changes to the database
             }
             catch (Exception ex)
             {
-                // Log the exception for better debugging
-               
+                // Log the exception for debugging
                 return Json(new { success = false, message = "An error occurred while saving changes." });
             }
 
-            // Schedule background job to update order status to "Delivered" after one day
+            // Create and save a notification
+            var notification = new OrderNotifications
+            {
+                OrderId = order.Id,
+                PharmacistId = order.PharmacistId,
+                Message = $"Supplier: {user.FullName} accepted Order #{order.Id}." +
+                $" Status: Preparing.",
+                NotificationDate = DateTime.Now,
+                NotificationType = "Order Accepted"
+            };
+
+            _context.OrderNotifications.Add(notification);
+            await _context.SaveChangesAsync();
+
+            // Schedule a background job to update the order status to "Delivered" after one day
             BackgroundJob.Schedule(() => UpdateOrderStatusToDelivered(order.Id), TimeSpan.FromDays(1));
 
-            // Return success JSON response with order details
+            // Return success JSON response
             return Json(new { success = true, orderId = order.Id, orderStatus = order.orderStatus });
         }
-
 
         public async Task<IActionResult> RejectOrder(int id)
         {
@@ -404,14 +361,30 @@ namespace Graduation_Project.Controllers
                 return NotFound();
             }
 
-            order.orderStatus = "Rejected"; // Update order status to Rejected
+            // Update the order status to 'Rejected'
+            order.orderStatus = "Rejected";
 
             _context.Update(order); // Mark order as updated
             await _context.SaveChangesAsync(); // Save changes
 
+            // Create a notification for the pharmacist
+            var notification = new OrderNotifications
+            {
+                OrderId = order.Id,
+                PharmacistId = order.PharmacistId,
+                Message = $"Supplier: {user.FullName} rejected Order #{order.Id}. Status: Rejected.",
+                NotificationDate = DateTime.Now,
+                NotificationType = "Order Rejected"
+            };
+
+            // Add the notification to the database
+            _context.OrderNotifications.Add(notification);
+            await _context.SaveChangesAsync();
+
             // Return JSON data with the updated order status
             return Json(new { success = true, orderId = order.Id, orderStatus = order.orderStatus });
         }
+
 
 
         public async Task UpdateOrderStatusToPreparing(int orderId)
@@ -477,11 +450,33 @@ namespace Graduation_Project.Controllers
                 return Json(new { success = false, message = "Order is already marked as delivered." });
             }
 
+            // Update the order status to "Delivered"
             order.orderStatus = "Delivered";
 
             try
             {
-                await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync(); // Save the updated order
+
+                // Create a notification for the pharmacist
+                var user = await _context.Users
+                                          .FirstOrDefaultAsync(u => u.Id == order.PharmacistId); // Get the pharmacist (who delivered the order)
+
+                if (user != null)
+                {
+                    var notification = new OrderNotifications
+                    {
+                        OrderId = order.Id,
+                        PharmacistId = user.Id,
+                        Message = $"Supplier: {user.FullName}: Order #{order.Id} has been marked as Delivered.",
+                        NotificationDate = DateTime.Now,
+                        NotificationType = "Order Delivered"
+                    };
+
+                    // Add the notification to the database
+                    _context.OrderNotifications.Add(notification);
+                    await _context.SaveChangesAsync();
+                }
+
                 return Json(new { success = true });
             }
             catch (Exception ex)
@@ -490,6 +485,47 @@ namespace Graduation_Project.Controllers
             }
         }
 
+
+
+        public async Task<IActionResult> OrderDetails(int id)
+        {
+            if (id <= 0) // Check for invalid ID
+            {
+                return NotFound();
+            }
+
+            var order = await _context.SupplierOrders
+                .Include(o => o.Pharmacist)
+                .Include(o => o.Branch)
+                .Include(o => o.SupplierOrderItems)
+                    .ThenInclude(oi => oi.SupplierMedication)
+                .Where(o => o.Id == id) // Use the correct property name (Id or OrderId)
+                .FirstOrDefaultAsync();
+
+            if (order == null)
+            {
+                return NotFound();
+            }
+
+            // Map to ViewModel
+            var orderViewModel = new SupplierOrderViewModel
+            {
+                OrderId = order.Id,
+                OrderDate = order.OrderDate,
+                orderStatus = order.orderStatus,
+                PharmacistName = order.Pharmacist?.FullName, // Null check
+                BranchName = order.Branch?.Name, // Null check
+                OrderItems = order.SupplierOrderItems.Select(item => new OrderItemViewModel
+                {
+                    MedicationName = item.SupplierMedication?.Name, // Null check
+                    Quantity = item.Quantity,
+                    Price = item.Price,
+                    
+                }).ToList()
+            };
+
+            return View(orderViewModel);
+        }
 
 
     }

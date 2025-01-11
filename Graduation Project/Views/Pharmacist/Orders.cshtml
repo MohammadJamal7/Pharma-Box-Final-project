@@ -363,76 +363,45 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <script>
-        
-
-                // Details Modal Handler
-                $('.details-order').on('click', function () {
-                    var orderId = $(this).data('order-id');
-                    var order = orderDetails.find(o => o.orderId === orderId);
-
-                    $('#modalOrderId').text(orderId);
-                    $('#modalBranchName').text(order.branchName);
-                    $('#modalOrderDate').text(order.orderDate);
-                    $('#modalTotalPrice').text(order.totalPrice.toFixed(2));
-
-                    var itemsHtml = '<table class="table table-bordered"><thead><tr><th>Medication</th><th>Quantity</th><th>Item Total</th></tr></thead><tbody>';
-                    order.items.forEach(function (item) {
-                        itemsHtml += '<tr>' +
-                            '<td>' + item.name + '</td>' +
-                            '<td>' + item.quantity + '</td>' +
-                            '<td>$' + item.total.toFixed(2) + '</td>' +
-                            '</tr>';
-                    });
-                    itemsHtml += '</tbody></table>';
-
-                    $('#orderItemsContainer').html(itemsHtml);
-                    new bootstrap.Modal(document.getElementById('orderDetailsModal')).show();
-                });
 
 
+        document.addEventListener("DOMContentLoaded", function(event) {
+                   const showNavbar = (toggleId, navId, bodyId, headerId) => {
+                       const toggle = document.getElementById(toggleId),
+                             nav = document.getElementById(navId),
+                             bodypd = document.getElementById(bodyId),
+                             headerpd = document.getElementById(headerId);
 
+                       if (toggle && nav && bodypd && headerpd) {
+                           toggle.addEventListener('click', () => {
+                               nav.classList.toggle('show');
+                               toggle.classList.toggle('bx-x');
+                               bodypd.classList.toggle('body-pd');
+                               headerpd.classList.toggle('body-pd');
+                           });    }
+                   };
 
-            });
+                   showNavbar('header-toggle', 'nav-bar', 'body-pd', 'header');
 
-            document.addEventListener("DOMContentLoaded", function (event) {
-                const showNavbar = (toggleId, navId, bodyId, headerId) => {
-                    const toggle = document.getElementById(toggleId),
-                        nav = document.getElementById(navId),
-                        bodypd = document.getElementById(bodyId),
-                        headerpd = document.getElementById(headerId);
+                   const linkColor = document.querySelectorAll('.nav_link');
 
-                    if (toggle && nav && bodypd && headerpd) {
-                        toggle.addEventListener('click', () => {
-                            nav.classList.toggle('show');
-                            toggle.classList.toggle('bx-x');
-                            bodypd.classList.toggle('body-pd');
-                            headerpd.classList.toggle('body-pd');
-                        });
-                    }
-                };
+                   function colorLink() {
+                       if (linkColor) {
+                           linkColor.forEach(l => l.classList.remove('active'));
+                           this.classList.add('active');
+                       }
+                   }
+                   linkColor.forEach(l => l.addEventListener('click', colorLink));
 
-                showNavbar('header-toggle', 'nav-bar', 'body-pd', 'header');
-
-                const linkColor = document.querySelectorAll('.nav_link');
-
-                function colorLink() {
-                    if (linkColor) {
-                        linkColor.forEach(l => l.classList.remove('active'));
-                        this.classList.add('active');
-                    }
-                }
-                linkColor.forEach(l => l.addEventListener('click', colorLink));
-
-                // Add click handling for user management navigation
-                const userNavLinks = document.querySelectorAll('.user-nav .nav-link');
-                userNavLinks.forEach(link => {
-                    link.addEventListener('click', function (e) {
-                        userNavLinks.forEach(l => l.classList.remove('active'));
-                        this.classList.add('active');
-                    });
-                });
-            });
-
+                   // Add click handling for user management navigation
+                   const userNavLinks = document.querySelectorAll('.user-nav .nav-link');
+                   userNavLinks.forEach(link => {
+                       link.addEventListener('click', function(e) {
+                           userNavLinks.forEach(l => l.classList.remove('active'));
+                           this.classList.add('active');
+                       });
+                   });
+               });
         </script>
 
         @Html.AntiForgeryToken()

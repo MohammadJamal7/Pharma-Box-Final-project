@@ -1,0 +1,129 @@
+﻿@model SupplierOrderViewModel
+
+@{
+    Layout = null; // Important: Set Layout to null
+}
+@{
+    ViewData["Title"] = $"Order #{Model.OrderId} Details";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6f42c1;
+            --light-primary-color: #e9d8fd;
+            --text-color: #333;
+            --border-color: #ddd;
+        }
+
+        body {
+            font-family: sans-serif; /* Add a default font */
+        }
+
+        .card {
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+        }
+
+        .table th,
+        .table td {
+            border-color: var(--border-color);
+            vertical-align: middle;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: darken(var(--primary-color), 10%);
+            border-color: darken(var(--primary-color), 10%);
+        }
+
+        .order-summary {
+            background-color: var(--light-primary-color);
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4" style="color: var(--primary-color);">@ViewData["Title"]</h2>
+
+        <div class="order-summary">
+            <div class="row">
+                <div class="col-md-4">
+                    <p><strong>Order ID:</strong> @Model.OrderId</p>
+                    <p><strong>Order Date:</strong> @Model.OrderDate.ToString("MM/dd/yyyy")</p>
+                </div>
+                <div class="col-md-4">
+                    <p><strong>Branch:</strong> @Model.BranchName</p>
+                    @if (!string.IsNullOrEmpty(Model.PharmacistName))
+                    {
+                        <p><strong>Pharmacist:</strong> @Model.PharmacistName</p>
+                    }
+                </div>
+                <div class="col-md-4 text-end">
+                    <p><strong>Total Items:</strong> @Model.OrderItems.Count</p>
+                    <p><strong>Total Price:</strong> <span class="fw-bold">@Model.OrderItems.Sum(item => item.Total) JOD</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                Order Items
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr style="background-color: var(--light-primary-color); color: var(--text-color);">
+                                <th>Medication</th>
+                                <th>Quantity</th>
+                                <th>Unit Price</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.OrderItems)
+                            {
+                                <tr>
+                                    <td>@item.MedicationName</td>
+                                    <td>@item.Quantity</td>
+                                    <td>@item.Price JOD</td>
+                                    <td>@item.Total JOD</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        @if(User.IsInRole("Supplier")){
+            <a asp-action="DisplayOrders" class="btn btn-secondary mt-3">Back to Orders</a>
+
+        }
+        else{
+            <a asp-action="PharmacistOrders" asp-controller="Pharmacist" class="btn btn-secondary mt-3">Back to Orders</a>
+        }
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

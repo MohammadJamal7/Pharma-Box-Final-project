@@ -179,26 +179,7 @@
             height: 100vh;
         }
 
-        /* .user-nav {
-                            display: flex;
-                            gap: 1rem;
-                        }
-
-                        .user-nav .nav-link {
-                            color: #6c757d;
-                            padding: 0.5rem 1rem;
-                            border-radius: 0.25rem;
-                            transition: all 0.2s;
-                        }
-
-                        .user-nav .nav-link:hover {
-                            background-color: #f8f9fa;
-                        }
-
-                        .user-nav .nav-link.active {
-                            color: var(--first-color) !important;
-                            font-weight: 500;
-                        } */
+     
 
         @@media screen and (min-width: 768px) {
             body {
@@ -232,6 +213,28 @@
             .body-pd {
                 padding-left: calc(var(--nav-width) + 188px);
             }
+        }
+
+        .notification-card {
+            transition: transform 0.2s ease;
+        }
+
+            .notification-card:hover {
+                transform: translateY(-5px);
+            }
+
+        .card-header {
+            border-bottom: none;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+        }
+
+        .notification-icon {
+            font-size: 1.5rem;
+            margin-right: 10px;
         }
     </style>
 </head>
@@ -279,7 +282,7 @@
                         <span class="nav_name"> Orders</span>
                     </a>
 
-                    <a href=#" class="nav_link active">
+                    <a href="#" class="nav_link active">
                         <i class="fa-regular fa-bell"></i>
                         <span class="nav_name">Notifications</span>
                     </a>
@@ -299,83 +302,50 @@
 
 
     <div class="container mt-5">
-
-
-
-
-      
-
+        @if (!Model.Any())
+        {
+            <!-- Display a message if there are no notifications -->
+            <div class="alert alert-info text-center" role="alert">
+                <strong>No Notifications Available</strong><br />
+                You have no new notifications at this time.
+            </div>
+        }
+        else {
         <div class="row">
-            <!-- Fake Data: Notification 1 -->
-            <div class="col-md-4 mb-4">
-                <div class="card shadow-sm">
-                    <div class="card-header bg-primary text-white">
-                        <strong>Order Accepted</strong>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Order ID: 101</h5>
-                        <p class="card-text">Your order has been accepted by the supplier. The items will be shipped soon.</p>
-                        <p class="text-muted">
-                            <i class="bi bi-calendar-event"></i> 2025-01-05 10:30 AM
-                        </p>
-                        <span class="badge bg-warning">Pending</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Fake Data: Notification 2 -->
-            <div class="col-md-4 mb-4">
-                <div class="card shadow-sm">
-                    <div class="card-header bg-primary text-white">
-                        <strong>Order Delivered</strong>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Order ID: 102</h5>
-                        <p class="card-text">Your order has been successfully delivered. You can now check your inventory.</p>
-                        <p class="text-muted">
-                            <i class="bi bi-calendar-event"></i> 2025-01-04 02:15 PM
-                        </p>
-                        <span class="badge bg-success">Delivered</span>
+            @foreach (var noti in Model)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card notification-card shadow-sm">
+                        <div class="card-header
+                        @(noti.NotificationType == "Order Accepted" ? "bg-success" :
+                           noti.NotificationType == "Order Rejected" ? "bg-danger" :
+                           noti.NotificationType == "Order Delivered" ? "bg-primary" : "bg-info")
+                        text-white d-flex align-items-center">
+                            <i class="bi
+                            @(noti.NotificationType == "Order Accepted" ? "check-circle" :
+                               noti.NotificationType == "Order Rejected" ? "x-circle" :
+                               noti.NotificationType == "Order Delivered" ? "truck" : "info-circle")
+                            notification-icon"></i>
+                            <strong>@noti.NotificationType</strong>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Order ID: @noti.OrderId</h5>
+                            <p class="card-text">@noti.Message</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">
+                                    <i class="bi bi-calendar-event"></i> @noti.NotificationDate
+                                </small>
+                                
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Fake Data: Notification 3 -->
-            <div class="col-md-4 mb-4">
-                <div class="card shadow-sm">
-                    <div class="card-header bg-primary text-white">
-                        <strong>Order Dispatched</strong>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Order ID: 103</h5>
-                        <p class="card-text">Your order has been dispatched from the supplier. It will arrive soon.</p>
-                        <p class="text-muted">
-                            <i class="bi bi-calendar-event"></i> 2025-01-03 09:00 AM
-                        </p>
-                        <span class="badge bg-warning">Pending</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Fake Data: Notification 4 -->
-            <div class="col-md-4 mb-4">
-                <div class="card shadow-sm">
-                    <div class="card-header bg-primary text-white">
-                        <strong>Order Cancelled</strong>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Order ID: 104</h5>
-                        <p class="card-text">Unfortunately, your order has been cancelled by the supplier. Please check your other orders.</p>
-                        <p class="text-muted">
-                            <i class="bi bi-calendar-event"></i> 2025-01-02 04:30 PM
-                        </p>
-                        <span class="badge bg-danger">Cancelled</span>
-                    </div>
-                </div>
-            </div>
-
-
+            }
+        </div>
+        }
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
     <input type="hidden" name="__RequestVerificationToken" value="Antiforgery.GetTokens(HttpContext).RequestToken" />
 
@@ -387,38 +357,7 @@
 
     <script>
 
-        function filterTable() {
-            var selectedGroupId = document.getElementById("groupFilter").value;
-            var rows = document.querySelectorAll("#medicineTable tr");
-
-            rows.forEach(function (row) {
-                var groupId = row.getAttribute("data-group-id");
-
-                if (selectedGroupId === "" || groupId === selectedGroupId) {
-                    row.style.display = ""; // Show row
-                } else {
-                    row.style.display = "none"; // Hide row
-                }
-            });
-
-
-        }
-
-        function searchMedicine() {
-            var searchQuery = document.getElementById("searchInput").value.toLowerCase();
-            var rows = document.querySelectorAll("#medicineTable tr");
-
-            rows.forEach(function (row) {
-                var name = row.getAttribute("data-name");
-                // Check if the search query matches the name (case insensitive)
-                if (name.includes(searchQuery)) {
-                    row.style.display = ""; // Show row
-                } else {
-                    row.style.display = "none"; // Hide row
-                }
-            });
-        }
-
+       
 
         document.addEventListener("DOMContentLoaded", function(event) {
             const showNavbar = (toggleId, navId, bodyId, headerId) => {
@@ -460,62 +399,7 @@
         });
 
 
-        function confirmDelete(medicineId) {
-            Swal.fire({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#d33',
-                cancelButtonColor: '#3085d6',
-                confirmButtonText: 'Yes, delete it!'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    // Ensure medicineId is being passed correctly
-                    console.log('Deleting medicine with ID:', medicineId);
-
-                    $.ajax({
-                        url: '/Pharmacist/DeleteMedicine',  // Make sure the URL is correct
-                        type: 'POST',
-
-                        data: { id: medicineId },  // Ensure the data is in the correct format
-                        headers: {
-                            'Accept': 'application/json'
-                        },
-                        success: function (data) {
-                            if (data.success) {
-                                // Remove the row with the corresponding medicineId
-                                $('#row-id-' + medicineId).remove();
-
-                                Swal.fire(
-                                    'Deleted!',
-                                    'The medicine has been deleted.',
-                                    'success'
-                                ).then(() => {
-                                    location.reload();  // Reload page to reflect the changes
-                                });
-                            } else {
-                                Swal.fire(
-                                    'Error!',
-                                    'Unable to delete the medicine.',
-                                    'error'
-                                );
-                            }
-                        },
-                        error: function (xhr, status, error) {
-                            Swal.fire(
-                                'Error!',
-                                'An unexpected error occurred.',
-                                'error'
-                            );
-                            console.error('Error:', error);
-                        }
-                    });
-                }
-            });
-        }
-
-
+       
 
     </script>
 </body>

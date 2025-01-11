@@ -1,7 +1,7 @@
 ﻿@{
     Layout = null;
 }
-
+@model Graduation_Project.ViewModels.PharmacistOverViewVM
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -296,41 +296,40 @@
         <div class="col-md-4 mb-3">
             <div class="card border-success">
                 <div class="card-body">
-                    <h5 class="card-title text-success">001</h5>
-                    <p class="card-text">Total Orders</p>
-                    <a href="#" class="btn btn-outline-success btn-sm">View Orders</a>
+                    <h5 class="card-title text-success">@Model.OrdersFromUsers</h5>
+                    <p class="card-text">Orders from Users</p>
+                    <a href="@Url.Action("Orders")" class="btn btn-outline-success btn-sm">View Orders</a>
                 </div>
             </div>
         </div>
         <div class="col-md-4 mb-3">
             <div class="card border-warning">
                 <div class="card-body">
-                    <h5 class="card-title text-warning">015</h5>
-                    <p class="card-text">Total Sales</p>
-                    <a href="#" class="btn btn-outline-warning btn-sm">View Completed Orders</a>
+                    <h5 class="card-title text-warning">@Model.OrdersToSuppliers</h5>
+                    <p class="card-text">Orders to Suppliers</p>
+                        <a href="@Url.Action("PharmacistOrders")" class="btn btn-outline-warning btn-sm">View Orders</a>
                 </div>
             </div>
         </div>
         <div class="col-md-4 mb-3">
             <div class="card border-primary">
                 <div class="card-body">
-                    <h5 class="card-title text-primary">005</h5>
+                    <h5 class="card-title text-primary">@Model.Medications</h5>
                     <p class="card-text">Medicines Available</p>
-                    <a href="#" class="btn btn-outline-primary btn-sm">Visit Inventory</a>
+                        <a href="@Url.Action("Inventory")" class="btn btn-outline-primary btn-sm">Visit Inventory</a>
                 </div>
             </div>
         </div>
       
     </div>
-
+    <hr />
     <div class="row mt-12">
         <div class="col-md-6 mb-3">
             <div class="card">
-                <div class="card-header bg-light">Inventory</div>
+                <div class="card-header bg-light">Categories</div>
                 <div class="card-body">
-                    <p>Total no of Medicines: <strong>05</strong></p>
-                    <p>Medicine Groups: <strong>06</strong></p>
-                    <a href="#" class="btn btn-outline-secondary btn-sm">Go to Configuration</a>
+                    <p>Total no of Medicines: <strong>@Model.GroupMedicatoins</strong></p>
+                        <a href="@Url.Action("GroupsOfMedicines")" class="btn btn-outline-secondary btn-sm">Go to Categories</a>
                 </div>
             </div>
         </div>
@@ -338,36 +337,13 @@
             <div class="card">
                 <div class="card-header bg-light">Branches</div>
                 <div class="card-body">
-                    <p>Branches: <strong>5</strong></p>
-                    <p>Total no of Medicines: <strong>007</strong></p>
+                    <p>Branches: <strong>@Model.Branches</strong></p>
                     <a href="#" class="btn btn-outline-secondary btn-sm">Go to all Branches</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="row mt-12">
-        <div class="col-md-6 mb-3">
-            <div class="card">
-                <div class="card-header bg-light">Orders</div>
-                <div class="card-body">
-                    <p>Total no of Suppliers: <strong>02</strong></p>
-                    <p>Total no of Orders: <strong>04</strong></p>
-                    <a href="#" class="btn btn-outline-secondary btn-sm">Go to Orders</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 mb-3">
-            <div class="card">
-                <div class="card-header bg-light">Suppliers</div>
-                <div class="card-body">
-                    <p>Total no of Suppliers: <strong>02</strong></p>
-                    <p>Total no of Medicines: <strong>02</strong></p>
-                    <a href="#" class="btn btn-outline-secondary btn-sm">Go to all Suppliers</a>
-                </div>
-            </div>
-        </div>
-    </div>
 
 </div>
 

@@ -138,6 +138,45 @@ namespace Graduation_Project.Controllers
                 user = user,
             };
             return View(model);
-        } 
+        }
+
+        public async Task<IActionResult> UpdateProfile(string name, string phone, string email, string address)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return NotFound("User not found.");
+            }
+
+            user.FullName = name;
+            user.PhoneNumber = phone;
+            user.Address = address;
+
+            // Update email using UserManager if it has to be confirmed or requires special handling
+            if (!string.Equals(user.Email, email, StringComparison.OrdinalIgnoreCase))
+            {
+                var setEmailResult = await _userManager.SetEmailAsync(user, email);
+                if (!setEmailResult.Succeeded)
+                {
+                    ModelState.AddModelError(string.Empty, "Failed to update email.");
+                    return View(); // Or handle error as needed
+                }
+            }
+
+            var result = await _userManager.UpdateAsync(user);
+            if (result.Succeeded)
+            {
+                return RedirectToAction("Profile"); // Redirect to a relevant page
+            }
+
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError(string.Empty, error.Description);
+            }
+
+            return View(user); // Return the updated model for review or error display
+        }
+
     }
+
 }

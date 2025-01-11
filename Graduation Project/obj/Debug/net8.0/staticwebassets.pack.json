@@ -1,588 +1,604 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Graduation Project.bundle.scp.css",
-      "PackagePath": "staticwebassets\\Graduation Project.bundle.scp.css"
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Graduation Project.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Graduation Project.hi2qgzlr1m.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\css\\aos.css",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\css\\aos.css",
       "PackagePath": "staticwebassets\\css\\aos.css"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\css\\bootstrap\\bootstrap-grid.css",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\css\\bootstrap\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\css\\bootstrap\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\css\\bootstrap\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\css\\bootstrap\\bootstrap.css",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\css\\bootstrap\\bootstrap.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\css\\jquery-ui.css",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\css\\jquery-ui.css",
       "PackagePath": "staticwebassets\\css\\jquery-ui.css"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\css\\magnific-popup.css",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\css\\magnific-popup.css",
       "PackagePath": "staticwebassets\\css\\magnific-popup.css"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\css\\owl.carousel.min.css",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\css\\owl.carousel.min.css",
       "PackagePath": "staticwebassets\\css\\owl.carousel.min.css"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\css\\owl.theme.default.min.css",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\css\\owl.theme.default.min.css",
       "PackagePath": "staticwebassets\\css\\owl.theme.default.min.css"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\css\\style.css",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\fonts\\icomoon\\Read Me.txt",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\Read Me.txt",
       "PackagePath": "staticwebassets\\fonts\\icomoon\\Read Me.txt"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\fonts\\icomoon\\demo-files\\demo.css",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\demo-files\\demo.css",
       "PackagePath": "staticwebassets\\fonts\\icomoon\\demo-files\\demo.css"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\fonts\\icomoon\\demo-files\\demo.js",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\demo-files\\demo.js",
       "PackagePath": "staticwebassets\\fonts\\icomoon\\demo-files\\demo.js"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\fonts\\icomoon\\demo.html",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\demo.html",
       "PackagePath": "staticwebassets\\fonts\\icomoon\\demo.html"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.eot",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.eot",
       "PackagePath": "staticwebassets\\fonts\\icomoon\\fonts\\icomoon.eot"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.svg",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.svg",
       "PackagePath": "staticwebassets\\fonts\\icomoon\\fonts\\icomoon.svg"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.ttf",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.ttf",
       "PackagePath": "staticwebassets\\fonts\\icomoon\\fonts\\icomoon.ttf"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.woff",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\fonts\\icomoon.woff",
       "PackagePath": "staticwebassets\\fonts\\icomoon\\fonts\\icomoon.woff"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\fonts\\icomoon\\selection.json",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\selection.json",
       "PackagePath": "staticwebassets\\fonts\\icomoon\\selection.json"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\fonts\\icomoon\\style.css",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\fonts\\icomoon\\style.css",
       "PackagePath": "staticwebassets\\fonts\\icomoon\\style.css"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\520241221142923.png",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\520241221142923.png",
       "PackagePath": "staticwebassets\\images\\520241221142923.png"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\520241221143421.png",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\520241221143421.png",
       "PackagePath": "staticwebassets\\images\\520241221143421.png"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\Baby  Child Care20250105094926.jpg",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\Baby  Child Care20250105094926.jpg",
       "PackagePath": "staticwebassets\\images\\Baby  Child Care20250105094926.jpg"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\First Aid Medical Supplies20250105094957.jpg",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\First Aid Medical Supplies20250105094957.jpg",
       "PackagePath": "staticwebassets\\images\\First Aid Medical Supplies20250105094957.jpg"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\IMG-20241101-WA003320241226223707.jpg",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\IMG-20241101-WA003320241226223707.jpg",
       "PackagePath": "staticwebassets\\images\\IMG-20241101-WA003320241226223707.jpg"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\Over the Counter Medications20250105095013.jpg",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\Over the Counter Medications20250105095013.jpg",
       "PackagePath": "staticwebassets\\images\\Over the Counter Medications20250105095013.jpg"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\Personal Care20250105095025.jpg",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\Personal Care20250105095025.jpg",
       "PackagePath": "staticwebassets\\images\\Personal Care20250105095025.jpg"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\Prescription Medications20250105095034.jpg",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\Prescription Medications20250105095034.jpg",
       "PackagePath": "staticwebassets\\images\\Prescription Medications20250105095034.jpg"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\Screenshot 2024-04-15 14483820241221142926.png",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\Screenshot 2024-04-15 14483820241221142926.png",
       "PackagePath": "staticwebassets\\images\\Screenshot 2024-04-15 14483820241221142926.png"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\Screenshot 2025-01-04 15424920250104225025.png",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\Screenshot 2025-01-04 15424920250104225025.png",
       "PackagePath": "staticwebassets\\images\\Screenshot 2025-01-04 15424920250104225025.png"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\Screenshot 2025-01-04 22221720250104225015.png",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\Screenshot 2025-01-04 22221720250104225015.png",
       "PackagePath": "staticwebassets\\images\\Screenshot 2025-01-04 22221720250104225015.png"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\Vitamins Supplements20250105095042.jpg",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\Vitamins Supplements20250105095042.jpg",
       "PackagePath": "staticwebassets\\images\\Vitamins Supplements20250105095042.jpg"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\Vitamins Supplements20250105100347.jpg",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\Vitamins Supplements20250105100347.jpg",
       "PackagePath": "staticwebassets\\images\\Vitamins Supplements20250105100347.jpg"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\batch-25---monogram-1-high-resolution-logo-transparent (2).png",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\batch-25---monogram-1-high-resolution-logo-transparent (2).png",
       "PackagePath": "staticwebassets\\images\\batch-25---monogram-1-high-resolution-logo-transparent (2).png"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\bg_1.jpg",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\bg_1.jpg",
       "PackagePath": "staticwebassets\\images\\bg_1.jpg"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\bg_2.jpg",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\bg_2.jpg",
       "PackagePath": "staticwebassets\\images\\bg_2.jpg"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\depositphotos_6341829-stock-photo-multi-flavor-ice-cream-glass20241226223620.jpg",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\depositphotos_6341829-stock-photo-multi-flavor-ice-cream-glass20241226223620.jpg",
       "PackagePath": "staticwebassets\\images\\depositphotos_6341829-stock-photo-multi-flavor-ice-cream-glass20241226223620.jpg"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\depositphotos_6341829-stock-photo-multi-flavor-ice-cream-glass20241226223805.jpg",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\depositphotos_6341829-stock-photo-multi-flavor-ice-cream-glass20241226223805.jpg",
       "PackagePath": "staticwebassets\\images\\depositphotos_6341829-stock-photo-multi-flavor-ice-cream-glass20241226223805.jpg"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\desktop.ini",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\desktop.ini",
       "PackagePath": "staticwebassets\\images\\desktop.ini"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\fruit-salad-7-735x98020241226223642.png",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\fruit-salad-7-735x98020241226223642.png",
       "PackagePath": "staticwebassets\\images\\fruit-salad-7-735x98020241226223642.png"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\hero_1.jpg",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\hero_1.jpg",
       "PackagePath": "staticwebassets\\images\\hero_1.jpg"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\logo.jpg",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\logo.jpg",
       "PackagePath": "staticwebassets\\images\\logo.jpg"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\medicines\\063336fe-b657-497b-b1e7-db77bf82f32b_OIP.jpeg",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\medicines\\063336fe-b657-497b-b1e7-db77bf82f32b_OIP.jpeg",
       "PackagePath": "staticwebassets\\images\\medicines\\063336fe-b657-497b-b1e7-db77bf82f32b_OIP.jpeg"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\medicines\\0bd48efe-208f-480e-a55e-b6933ed6c03a_Antibiotic.png",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\medicines\\0bd48efe-208f-480e-a55e-b6933ed6c03a_Antibiotic.png",
       "PackagePath": "staticwebassets\\images\\medicines\\0bd48efe-208f-480e-a55e-b6933ed6c03a_Antibiotic.png"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\medicines\\12709e86-f7b6-4248-8b76-38e99ca44c6d_vitamin c tablets.jpeg",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\medicines\\12709e86-f7b6-4248-8b76-38e99ca44c6d_vitamin c tablets.jpeg",
       "PackagePath": "staticwebassets\\images\\medicines\\12709e86-f7b6-4248-8b76-38e99ca44c6d_vitamin c tablets.jpeg"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\medicines\\1275b429-feb9-4b29-8128-2eaa57f4b66b_first aid bandages.jpeg",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\medicines\\1275b429-feb9-4b29-8128-2eaa57f4b66b_first aid bandages.jpeg",
       "PackagePath": "staticwebassets\\images\\medicines\\1275b429-feb9-4b29-8128-2eaa57f4b66b_first aid bandages.jpeg"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\medicines\\1e747de9-6139-4b7a-8813-70df46ed810d_first aid bandages.jpeg",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\medicines\\1e747de9-6139-4b7a-8813-70df46ed810d_first aid bandages.jpeg",
       "PackagePath": "staticwebassets\\images\\medicines\\1e747de9-6139-4b7a-8813-70df46ed810d_first aid bandages.jpeg"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\medicines\\5124b040-1e49-4875-8d64-9e1df7bfebd6_Baby  Child Care.jpg",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\medicines\\5124b040-1e49-4875-8d64-9e1df7bfebd6_Baby  Child Care.jpg",
       "PackagePath": "staticwebassets\\images\\medicines\\5124b040-1e49-4875-8d64-9e1df7bfebd6_Baby  Child Care.jpg"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\medicines\\986f98a1-7fd0-4261-87b7-25cad72f0849_Prescription Medications.jpg",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\medicines\\986f98a1-7fd0-4261-87b7-25cad72f0849_Prescription Medications.jpg",
       "PackagePath": "staticwebassets\\images\\medicines\\986f98a1-7fd0-4261-87b7-25cad72f0849_Prescription Medications.jpg"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\medicines\\998434ae-4431-4bf0-a924-d1f8c5fe4604_ice-cream-sundae-fruit-sherbets-decorated-wafers-fresh-strawberries-37368479.png",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\medicines\\998434ae-4431-4bf0-a924-d1f8c5fe4604_ice-cream-sundae-fruit-sherbets-decorated-wafers-fresh-strawberries-37368479.png",
       "PackagePath": "staticwebassets\\images\\medicines\\998434ae-4431-4bf0-a924-d1f8c5fe4604_ice-cream-sundae-fruit-sherbets-decorated-wafers-fresh-strawberries-37368479.png"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\medicines\\bdfe71a7-b19b-48ed-9c0f-cb48183a55d3_baby fever syrup.jpeg",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\medicines\\bdfe71a7-b19b-48ed-9c0f-cb48183a55d3_baby fever syrup.jpeg",
       "PackagePath": "staticwebassets\\images\\medicines\\bdfe71a7-b19b-48ed-9c0f-cb48183a55d3_baby fever syrup.jpeg"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\medicines\\c92e0cf6-d4f0-41cf-a403-79fc2a76afc1_ice-cream-sundae-fruit-sherbets-decorated-wafers-fresh-strawberries-37368479.png",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\medicines\\c274ebd0-baa1-468f-89ee-5fc1cd499fea_Screenshot 2025-01-09 014153.png",
+      "PackagePath": "staticwebassets\\images\\medicines\\c274ebd0-baa1-468f-89ee-5fc1cd499fea_Screenshot 2025-01-09 014153.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\medicines\\c92e0cf6-d4f0-41cf-a403-79fc2a76afc1_ice-cream-sundae-fruit-sherbets-decorated-wafers-fresh-strawberries-37368479.png",
       "PackagePath": "staticwebassets\\images\\medicines\\c92e0cf6-d4f0-41cf-a403-79fc2a76afc1_ice-cream-sundae-fruit-sherbets-decorated-wafers-fresh-strawberries-37368479.png"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\medicines\\d2683cb3-2548-4714-bcc5-e02c8734dfea_amoxicillin.jpg",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\medicines\\d2683cb3-2548-4714-bcc5-e02c8734dfea_amoxicillin.jpg",
       "PackagePath": "staticwebassets\\images\\medicines\\d2683cb3-2548-4714-bcc5-e02c8734dfea_amoxicillin.jpg"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\medicines\\e9907462-d4e4-4d42-a429-599b1e1304a4_First Aid Medical Supplies.jpg",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\medicines\\e9907462-d4e4-4d42-a429-599b1e1304a4_First Aid Medical Supplies.jpg",
       "PackagePath": "staticwebassets\\images\\medicines\\e9907462-d4e4-4d42-a429-599b1e1304a4_First Aid Medical Supplies.jpg"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\medicines\\fff489f7-d77b-4c0b-a382-1908c61432e9_fruit-salad-7-735x980.png",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\medicines\\fff489f7-d77b-4c0b-a382-1908c61432e9_fruit-salad-7-735x980.png",
       "PackagePath": "staticwebassets\\images\\medicines\\fff489f7-d77b-4c0b-a382-1908c61432e9_fruit-salad-7-735x980.png"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\person_1.jpg",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\person_1.jpg",
       "PackagePath": "staticwebassets\\images\\person_1.jpg"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\person_2.jpg",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\person_2.jpg",
       "PackagePath": "staticwebassets\\images\\person_2.jpg"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\person_3.jpg",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\person_3.jpg",
       "PackagePath": "staticwebassets\\images\\person_3.jpg"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\person_4.jpg",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\person_4.jpg",
       "PackagePath": "staticwebassets\\images\\person_4.jpg"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\person_5.jpg",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\person_5.jpg",
       "PackagePath": "staticwebassets\\images\\person_5.jpg"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\pharmacist.jpg",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\pharmacist.jpg",
       "PackagePath": "staticwebassets\\images\\pharmacist.jpg"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\pharmacist2.jpg",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\pharmacist2.jpg",
       "PackagePath": "staticwebassets\\images\\pharmacist2.jpg"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\product_01.png",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\product_01.png",
       "PackagePath": "staticwebassets\\images\\product_01.png"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\product_02.png",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\product_02.png",
       "PackagePath": "staticwebassets\\images\\product_02.png"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\product_04.png",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\product_04.png",
       "PackagePath": "staticwebassets\\images\\product_04.png"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\product_05.png",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\product_05.png",
       "PackagePath": "staticwebassets\\images\\product_05.png"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\product_06.png",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\product_06.png",
       "PackagePath": "staticwebassets\\images\\product_06.png"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\product_07_large.png",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\product_07_large.png",
       "PackagePath": "staticwebassets\\images\\product_07_large.png"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\products_1.png",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\products_1.png",
       "PackagePath": "staticwebassets\\images\\products_1.png"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\shoe.png",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\prof.png",
+      "PackagePath": "staticwebassets\\images\\prof.png"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\shoe.png",
       "PackagePath": "staticwebassets\\images\\shoe.png"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\supplier.jpg",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\supplier.jpg",
       "PackagePath": "staticwebassets\\images\\supplier.jpg"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\user.jpg",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\user.jpg",
       "PackagePath": "staticwebassets\\images\\user.jpg"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\wave.svg",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\wave.svg",
       "PackagePath": "staticwebassets\\images\\wave.svg"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\images\\women.jpg",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\women.jpg",
       "PackagePath": "staticwebassets\\images\\women.jpg"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\js\\aos.js",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\images\\محمد جمال_page-000120250110115929.jpg",
+      "PackagePath": "staticwebassets\\images\\محمد جمال_page-000120250110115929.jpg"
+    },
+    {
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\js\\aos.js",
       "PackagePath": "staticwebassets\\js\\aos.js"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\js\\jquery-3.3.1.min.js",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\js\\jquery-3.3.1.min.js",
       "PackagePath": "staticwebassets\\js\\jquery-3.3.1.min.js"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\js\\jquery-ui.js",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\js\\jquery-ui.js",
       "PackagePath": "staticwebassets\\js\\jquery-ui.js"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\js\\jquery.magnific-popup.min.js",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\js\\jquery.magnific-popup.min.js",
       "PackagePath": "staticwebassets\\js\\jquery.magnific-popup.min.js"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\js\\main.js",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\js\\main.js",
       "PackagePath": "staticwebassets\\js\\main.js"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\js\\owl.carousel.min.js",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\js\\owl.carousel.min.js",
       "PackagePath": "staticwebassets\\js\\owl.carousel.min.js"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\js\\popper.min.js",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\js\\popper.min.js",
       "PackagePath": "staticwebassets\\js\\popper.min.js"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\js\\site.js",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\js\\slick.min.js",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\js\\slick.min.js",
       "PackagePath": "staticwebassets\\js\\slick.min.js"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\Uni\\Graduation\\Graduation Project\\Graduation Project\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Graduation Project.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Graduation Project.Microsoft.AspNetCore.StaticWebAssets.props",

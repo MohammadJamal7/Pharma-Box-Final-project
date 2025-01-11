@@ -314,7 +314,7 @@
                 <div class="col-md-4">
                     <div class="stat-card rounded shadow-lg p-4 bg-white mt-3">
                         <h4 class="text-primary">Total Medications</h4>
-                        <p class="fs-3 text-dark"><strong>53</strong></p>
+                        <p class="fs-3 text-dark"><strong>@Model.TotalMedicines</strong></p>
                         <div class="stat-card-footer text-muted">
                             <i class="bi bi-building me-2"></i>Total Medications
                         </div>
@@ -322,8 +322,8 @@
                 </div>
                 <div class="col-md-4">
                     <div class="stat-card rounded shadow-lg p-4 bg-white mt-3">
-                        <h4 class="text-success">Number of Suppliers</h4>
-                        <p class="fs-3 text-dark"><strong>6</strong></p>
+                        <h4 class="text-success">Completed Orders</h4>
+                        <p class="fs-3 text-dark"><strong>@Model.CompletedOrders</strong></p>
                         <div class="stat-card-footer text-muted">
                             <i class="bi bi-person-bounding-box me-2"></i>Completed Orders
                         </div>
@@ -332,7 +332,7 @@
                 <div class="col-md-4">
                     <div class="stat-card rounded shadow-lg p-4 bg-white mt-3">
                         <h4 class="text-info">Pending Orders</h4>
-                        <p class="fs-3 text-dark"><strong>2</strong></p>
+                        <p class="fs-3 text-dark"><strong>@Model.PendingOrders</strong></p>
                         <div class="stat-card-footer text-muted">
                             <i class="bi bi-person-lines-fill me-2"></i>Pending Orders
                         </div>
@@ -341,7 +341,7 @@
                 <div class="col-md-4">
                     <div class="stat-card rounded shadow-lg p-4 bg-white mt-3">
                         <h4 class="text-info">Rejected Orders</h4>
-                        <p class="fs-3 text-dark"><strong>1</strong></p>
+                        <p class="fs-3 text-dark"><strong>@Model.RejectedOrders</strong></p>
                         <div class="stat-card-footer text-muted">
                             <i class="bi bi-person-lines-fill me-2"></i>Rejected Orders
                         </div>

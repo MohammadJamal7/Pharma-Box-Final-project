@@ -14,7 +14,7 @@ namespace Graduation_Project.ViewModels
 
         public string? ExistingImagePath { get; set; }
         public bool RequiresPrescription { get; set; }
-
+        public double Price { get; set; }
 
 
 

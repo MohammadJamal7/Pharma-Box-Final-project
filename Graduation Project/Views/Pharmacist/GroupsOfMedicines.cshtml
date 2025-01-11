@@ -280,12 +280,12 @@
         <p>List of medicines groups.</p>
 
         <div class="d-flex justify-content-between mb-3">
-            <input type="text" class="form-control w-25" placeholder="Search Medicine Groups...">
+            <input id="searchInput" type="text" class="form-control w-25" placeholder="Search Medicine Groups...">
             <a class="btn btn-primary" href="@Url.Action("AddGroupMed","Pharmacist")">
                 <i class="fa fa-plus"></i> Add New Group
             </a>
         </div>
-
+       
         <!-- Medicine Groups Table -->
         <table class="table table-striped table-hover">
             <thead class="table-light">
@@ -340,6 +340,27 @@
                 }
             }
             linkColor.forEach(l => l.addEventListener('click', colorLink));
+        });
+
+
+        // Seardh function
+               document.addEventListener("DOMContentLoaded", function() {
+            const searchInput = document.getElementById('searchInput');
+            const tableRows = document.querySelectorAll('table tbody tr'); // Target table rows directly
+
+            searchInput.addEventListener('input', function() {
+                const searchQuery = searchInput.value.toLowerCase();
+
+                tableRows.forEach(row => {
+                    const groupName = row.querySelector('td:nth-child(1)').innerText.toLowerCase(); // Search in the first column ("Group Name")
+
+                    if (groupName.includes(searchQuery)) {
+                        row.style.display = ''; // Show row if search query matches
+                    } else {
+                        row.style.display = 'none'; // Hide row if search query does not match
+                    }
+                });
+            });
         });
     </script>
 </body>

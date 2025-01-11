@@ -324,13 +324,14 @@
 
 
     <div class="container mt-5">
-        <h2 class="fw-bold">Suppliers &gt; <span class="text-primary">@Model.branch.Name</span></h2>
+        <h2 class="fw-bold"> <span class="text-primary">@Model.branch.Name</span></h2>
         <p>List of medicines groups.</p>
 
 
         <div class="search-bar d-flex justify-content-end">
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search for anything here..">
+                <input id="searchInput" type="text" class="form-control" placeholder="Search for anything here..">
+
                 <button class="btn btn-outline-secondary" type="button"><i class="fas fa-search"></i></button>
             </div>
         </div>
@@ -354,7 +355,7 @@
                                 <tr>
                                     <td>@medication.Name</td>
                                     <td>@medication.StockQuantity</td>
-                                    <td>@medication.ExpiryDate.ToString("dd/MM/yyyy")</td>
+                                    <td>@medication.ExpiryDate.ToString("MM/yyyy")</td>
                                    
                                 </tr>
                             }
@@ -363,7 +364,9 @@
                 </div>
             </div>
         </div>
-
+        <div class="d-flex justify-content-start mt-4">
+            <button class="btn btn-secondary" onclick="window.history.back()">Back to Previous Page</button>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -466,6 +469,26 @@
                 link.addEventListener('click', function (e) {
                     userNavLinks.forEach(l => l.classList.remove('active'));
                     this.classList.add('active');
+                });
+            });
+        });
+
+         // Seardh function
+             document.addEventListener("DOMContentLoaded", function() {
+            const searchInput = document.getElementById('searchInput');
+            const tableRows = document.querySelectorAll('.table-container tbody tr');
+
+            searchInput.addEventListener('input', function() {
+                const searchQuery = searchInput.value.toLowerCase();
+
+                tableRows.forEach(row => {
+                    const branchName = row.querySelector('td:nth-child(1)').innerText.toLowerCase();
+
+                    if (branchName.includes(searchQuery)) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
                 });
             });
         });

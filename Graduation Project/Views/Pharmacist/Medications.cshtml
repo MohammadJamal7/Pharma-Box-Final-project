@@ -316,8 +316,10 @@
         <div class="mb-3">
             <select id="groupFilter" class="form-select w-25" onchange="filterTable()">
                 <option value="" selected>- Select Group -</option>
-                <option value="1">Generic Medicine</option>
-                <option value="2">Diabetes</option>
+                @foreach (var group in ViewBag.Groups) 
+                {
+                    <option value="@group.GroupMedicineId">@group.Name</option>
+                }
             </select>
         </div>
 
@@ -330,7 +332,8 @@
                         <th>Medicine Name</th>
                         <th>Group Name</th>
                         <th>Expire Date</th>
-                        <th>Stock in Qty</th>
+                        <th>Qty in stock</th>
+                        <th>Price</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -342,6 +345,7 @@
                             <td>@(item.GroupMedicineId != null ? item.GroupMedicine.Name : "undefined")</td>
                             <td>@item.ExpiryDate.ToString("MM, yyyy")</td>
                             <td>@item.StockQuantity</td>
+                            <td>@item.Price</td>
                             <td class="d-flex flex-row  gap-2 align-items-center">
                                 <form asp-action="EditMedicine" asp-controller="Pharmacist" method="get" asp-route-id="@item.MedicineId">
                                     <button class="btn btn-success btn-sm"><i class="fas fa-edit"></i></button>

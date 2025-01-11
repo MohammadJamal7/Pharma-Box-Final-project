@@ -270,8 +270,7 @@
                         <i class="fa-solid fa-arrow-down-9-1"></i>
                         <span class="nav_name">My Orders</span>
                     </a>
-
-                    <a href="../Notification-sec/index.html" class="nav_link">
+                    <a href="@Url.Action("Notifications")" class="nav_link ">
                         <i class="fa-regular fa-bell"></i>
                         <span class="nav_name">Notifications</span>
                     </a>
@@ -323,9 +322,9 @@
                                         <td>$@order.OrderItems.Sum(item => item.Total).ToString("F2")</td>
                                         <td>
                                             <div class="d-flex">
-                                                <button class="btn btn-info btn-sm me-2 details-order" data-order-id="@order.OrderId">
+                                                <a asp-action="OrderDetails" asp-controller="Supplier" asp-route-id="@order.OrderId" class="btn btn-info btn-sm">
                                                     <i class="fas fa-info-circle"></i> Details
-                                                </button>
+                                                </a>
                                                 <form action="@Url.Action("AcceptOrder", "Pharmacist")" method="post">
                                                     <input type="hidden" name="orderId" value="@order.OrderId" />
                                                     <button type="submit" class="btn-sm me-2" style="background-color: #3B1E54; color: white;">
@@ -401,9 +400,9 @@
                                         </td>
 
                                         <td>
-                                            <button class="btn btn-info btn-sm me-2 details-order" data-order-id="@order.OrderId">
+                                            <a asp-action="OrderDetails" asp-controller="Supplier" asp-route-id="@order.OrderId" class="btn btn-info btn-sm">
                                                 <i class="fas fa-info-circle"></i> Details
-                                            </button>
+                                            </a>
                                         </td>
                                     </tr>
                                 }
