@@ -349,7 +349,7 @@
             <div class="row">
                 <div class="mb-3 col-7">
                     <label asp-for="ImageFile" class="form-label"></label>
-                    <input asp-for="ImageFile" type="file" class="form-control" id="medicinePic" placeholder="Upload medicine picture" />
+                    <input asp-for="ImageFile" name="img" type="file" class="form-control" id="medicinePic" placeholder="Upload medicine picture" />
                 </div>
                 <div class="form-check mb-4 col-5 d-flex align-content-center justify-content-center align-items-center">
                     <input asp-for="RequiresPrescription" type="checkbox" class="form-check-input me-2" id="requiresPrescription" />
@@ -376,7 +376,7 @@
                 </div>
                 <div class="col-md-4">
                     <label asp-for="ExpiryDate" class="form-label"></label>
-                    <input asp-for="ExpiryDate" type="year" class="form-control" id="expirydate" placeholder="Enter expiry date" required />
+                    <input asp-for="ExpiryDate" type="month" class="form-control" id="expirydate" placeholder="Enter expiry date" required />
                 </div>
             </div>
 

@@ -104,10 +104,10 @@
 <body>
     <div class="container-fluid registration-container">
         <div class="row w-100">
-           
+
             <!-- Image Section -->
             <div class="col-md-6 registration-image-container d-none d-md-flex justify-content-end">
-                <img src="@Url.Content("~/images/pharmacist2.jpg")" alt="Pharmacist Registration" class="registration-image  " />
+                <img src="@Url.Content("~/images/pharmacist2.jpg")" alt="Pharmacist Registration" class="registration-image" />
             </div>
 
             <!-- Form Section -->
@@ -116,6 +116,10 @@
                     <h2 class="text-center mb-4" style="color: #6a1b9a;">Pharmacist Registration</h2>
 
                     <form method="post" asp-action="Register" asp-controller="Pharmacist">
+
+                        <!-- General Error Message (if any) -->
+                        <span asp-validation-summary="ModelOnly" class="text-danger"></span>
+
                         <div class="mb-3">
                             <label for="FullName" class="form-label">Full Name</label>
                             <input type="text" class="form-control" id="FullName" name="FullName"
@@ -151,11 +155,19 @@
                         <div class="mb-3">
                             <label for="BranchId" class="form-label">Select Branch</label>
                             <select class="form-select" id="BranchId" name="BranchId" required>
-                                @foreach (var branch in Model.Branches)
+                                @if (Model.Branches != null && Model.Branches.Any())
                                 {
-                                    <option value="@branch.BranchId">@branch.Name - @branch.Location</option>
+                                    foreach (var branch in Model.Branches)
+                                    {
+                                        <option value="@branch.BranchId">@branch.Name - @branch.Location</option>
+                                    }
+                                }
+                                else
+                                {
+                                    <option disabled>No branches available</option>
                                 }
                             </select>
+                            <span asp-validation-for="BranchId" class="text-danger"></span>
                         </div>
 
                         <div class="d-grid mt-4">
@@ -171,10 +183,9 @@
                     </form>
                 </div>
             </div>
-            
+
         </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

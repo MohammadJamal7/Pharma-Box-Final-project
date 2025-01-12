@@ -5,7 +5,7 @@ namespace Graduation_Project.Models
     public class Order
     {
         public int Id { get; set; }
-        public OrderStatus Status { get; set; }
+        public string Status { get; set; }
         public DateTime OrderDate { get; set; }
         public decimal TotalAmount { get; set; }
         public DateTime? DeliveredDate { get; set; }  // When the order is delivered
@@ -42,12 +42,5 @@ namespace Graduation_Project.Models
     }
 
 
-    public enum OrderStatus
-    {
-        Pending,
-        Processed,
-        Shipped,
-        Delivered,
-        Cancelled
-    }
+    
 }

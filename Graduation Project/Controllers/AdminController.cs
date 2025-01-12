@@ -155,7 +155,7 @@ namespace Graduation_Project.Controllers
         {
             var user = await _userManager.Users.FirstOrDefaultAsync(u => u.Id == id);
             _context.Users.Remove(user);
-            _context.SaveChangesAsync();
+           await _context.SaveChangesAsync();
             return RedirectToAction("Suppliers");
         }
 

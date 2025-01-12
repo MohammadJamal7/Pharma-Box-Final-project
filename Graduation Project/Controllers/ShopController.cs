@@ -1,4 +1,5 @@
 ﻿using Graduation_Project.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -6,6 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Graduation_Project.Controllers
 {
+    
     public class ShopController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;

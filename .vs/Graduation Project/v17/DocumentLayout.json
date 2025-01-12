@@ -3,32 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\graduationproject\\graduation project\\views\\user\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\user\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\graduationproject\\graduation project\\views\\pharmacist\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\pharmacist\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\graduationproject\\graduation project\\views\\supplier\\displayorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\supplier\\displayorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\graduationproject\\graduation project\\controllers\\pharmacistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\controllers\\pharmacistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\graduationproject\\graduation project\\views\\supplier\\overview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\supplier\\overview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\graduationproject\\graduation project\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\graduationproject\\graduation project\\viewmodels\\userprofileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\viewmodels\\userprofileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\graduationproject\\graduation project\\views\\pharmacist\\orders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\pharmacist\\orders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\graduationproject\\graduation project\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\graduationproject\\graduation project\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\graduationproject\\graduation project\\controllers\\suppliercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\controllers\\suppliercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\graduationproject\\graduation project\\views\\supplier\\medicines.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\supplier\\medicines.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|c:\\users\\pc\\desktop\\.net projs\\graduationproject\\graduation project\\views\\shop\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{049D8887-58DE-4638-B2B6-30A3F33B4E6E}|Graduation Project\\Graduation Project.csproj|solutionrelative:graduation project\\views\\shop\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 294,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,88 +42,81 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "OverView.cshtml",
-              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\Views\\Supplier\\OverView.cshtml",
-              "RelativeDocumentMoniker": "Graduation Project\\Views\\Supplier\\OverView.cshtml",
-              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\Views\\Supplier\\OverView.cshtml",
-              "RelativeToolTip": "Graduation Project\\Views\\Supplier\\OverView.cshtml",
-              "ViewState": "AgIAAE4BAAAAAAAAAAAAAEQBAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-10T22:07:57.31Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "userProfileViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\ViewModels\\userProfileViewModel.cs",
-              "RelativeDocumentMoniker": "Graduation Project\\ViewModels\\userProfileViewModel.cs",
-              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\ViewModels\\userProfileViewModel.cs",
-              "RelativeToolTip": "Graduation Project\\ViewModels\\userProfileViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T22:01:48.447Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Graduation Project\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Graduation Project\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAAAI4AAABvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T21:19:48.301Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "profile.cshtml",
-              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\Views\\User\\profile.cshtml",
-              "RelativeDocumentMoniker": "Graduation Project\\Views\\User\\profile.cshtml",
-              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\Views\\User\\profile.cshtml",
-              "RelativeToolTip": "Graduation Project\\Views\\User\\profile.cshtml",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAUwGwAAAAAAAAAAAAAAA==",
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\Views\\Pharmacist\\Login.cshtml",
+              "RelativeDocumentMoniker": "Graduation Project\\Views\\Pharmacist\\Login.cshtml",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\Views\\Pharmacist\\Login.cshtml",
+              "RelativeToolTip": "Graduation Project\\Views\\Pharmacist\\Login.cshtml",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAAAI8AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-10T20:30:52.736Z",
+              "WhenOpened": "2025-01-12T06:55:59.262Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Medicines.cshtml",
-              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\Views\\Supplier\\Medicines.cshtml",
-              "RelativeDocumentMoniker": "Graduation Project\\Views\\Supplier\\Medicines.cshtml",
-              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\Views\\Supplier\\Medicines.cshtml",
-              "RelativeToolTip": "Graduation Project\\Views\\Supplier\\Medicines.cshtml",
-              "ViewState": "AgIAAGQBAAAAAAAAAAAYwI0BAAAqAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Orders.cshtml",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\Views\\Pharmacist\\Orders.cshtml",
+              "RelativeDocumentMoniker": "Graduation Project\\Views\\Pharmacist\\Orders.cshtml",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\Views\\Pharmacist\\Orders.cshtml",
+              "RelativeToolTip": "Graduation Project\\Views\\Pharmacist\\Orders.cshtml",
+              "ViewState": "AgIAAEkBAAAAAAAAAADwv1kBAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-08T14:56:29.383Z"
+              "WhenOpened": "2025-01-12T06:41:08.043Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SupplierController.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\Controllers\\SupplierController.cs",
-              "RelativeDocumentMoniker": "Graduation Project\\Controllers\\SupplierController.cs",
-              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\Controllers\\SupplierController.cs",
-              "RelativeToolTip": "Graduation Project\\Controllers\\SupplierController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAHgAAAAnAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "Graduation Project\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\Models\\Order.cs",
+              "RelativeToolTip": "Graduation Project\\Models\\Order.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAADwvy4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-08T14:32:15.675Z"
+              "WhenOpened": "2025-01-12T06:43:27.386Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DisplayOrders.cshtml",
-              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\Views\\Supplier\\DisplayOrders.cshtml",
-              "RelativeDocumentMoniker": "Graduation Project\\Views\\Supplier\\DisplayOrders.cshtml",
-              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\Views\\Supplier\\DisplayOrders.cshtml",
-              "RelativeToolTip": "Graduation Project\\Views\\Supplier\\DisplayOrders.cshtml",
-              "ViewState": "AgIAAHEBAAAAAAAAAAAAAHwBAAA7AAAAAAAAAA==",
+              "Title": "PharmacistController.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\Controllers\\PharmacistController.cs",
+              "RelativeDocumentMoniker": "Graduation Project\\Controllers\\PharmacistController.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\Controllers\\PharmacistController.cs",
+              "RelativeToolTip": "Graduation Project\\Controllers\\PharmacistController.cs",
+              "ViewState": "AgIAAL8AAAAAAAAAAAAAANAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T05:52:13.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "Graduation Project\\Controllers\\CartController.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\Controllers\\CartController.cs",
+              "RelativeToolTip": "Graduation Project\\Controllers\\CartController.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAiwGIAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T05:52:13.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\Views\\Shop\\Details.cshtml",
+              "RelativeDocumentMoniker": "Graduation Project\\Views\\Shop\\Details.cshtml",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\.Net projs\\GraduationProject\\Graduation Project\\Views\\Shop\\Details.cshtml",
+              "RelativeToolTip": "Graduation Project\\Views\\Shop\\Details.cshtml",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAAAIUAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-08T13:50:39.859Z"
+              "WhenOpened": "2025-01-12T05:54:25.54Z",
+              "EditorCaption": ""
             }
           ]
         },

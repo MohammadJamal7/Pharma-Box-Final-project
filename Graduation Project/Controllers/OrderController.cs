@@ -40,7 +40,7 @@ public class OrderController : Controller
                 UserId = user.Id,
                 OrderDate = DateTime.UtcNow,
                 TotalAmount = orderData.TotalAmount,
-                Status = OrderStatus.Pending ,// Assuming you have an enum for OrderStatus
+                Status = "Preparing" ,
                 OrderItems = new List<OrderItem>() 
             };
 

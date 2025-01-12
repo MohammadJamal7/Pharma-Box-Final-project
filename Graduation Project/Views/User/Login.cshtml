@@ -115,6 +115,15 @@
                     <h2 class="text-center mb-4" style="color: #6a1b9a;">User Login</h2>
 
                     <form method="post" asp-action="Login" asp-controller="User">
+
+                        <!-- General Error Message (if any) -->
+                        @if (ViewData.ModelState.ErrorCount > 0)
+                        {
+                            <div class="alert alert-danger">
+                                <strong>Error!</strong> @ViewData["LoginError"]
+                            </div>
+                        }
+
                         <div class="mb-3">
                             <label for="Email" class="form-label">Email Address</label>
                             <input type="email" asp-for="Email" class="form-control" id="Email" required />

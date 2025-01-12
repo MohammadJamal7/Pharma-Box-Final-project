@@ -72,7 +72,7 @@ namespace Graduation_Project.Controllers
                     // Optionally, sign the user in after registration
                     await _signInManager.SignInAsync(user, isPersistent: false);
 
-                    // Redirect to the homepage or a desired page after successful registration
+                    // Redirect to the login page after successful registration
                     return RedirectToAction("Login", "User");
                 }
                 else
@@ -88,7 +88,6 @@ namespace Graduation_Project.Controllers
             // If validation failed, return the same view with validation errors
             return View(model);
         }
-
         // Display the login form
         [HttpGet]
         public IActionResult Login()
@@ -96,7 +95,6 @@ namespace Graduation_Project.Controllers
             return View();
         }
 
-        // Process login submission
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(UserLogin model)
@@ -112,11 +110,11 @@ namespace Graduation_Project.Controllers
                 else
                 {
                     ModelState.AddModelError(string.Empty, "Invalid login attempt.");
-                    return View(model);
+                    return View(model);  // Return the view with the error message
                 }
             }
 
-            // If validation fails, redisplay the login form
+            // If validation fails, redisplay the login form with validation errors
             return View(model);
         }
 

@@ -102,7 +102,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 mb-0">
-                        <a href="index.html">Home</a> <span class="mx-2 mb-0">/</span> <a href="shop.html">Store</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">@Model.Name</strong>
+                        <a href="@Url.Action("Index","Home")">Home</a> <span class="mx-2 mb-0">/</span> <a href="@Url.Action("Index","Shop")">Store</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">@Model.Name</strong>
                     </div>
                 </div>
             </div>
@@ -120,37 +120,49 @@
                     <div class="col-md-6">
                         <h2 class="text-black">@Model.Name</h2>
                         <p>
-                           @Model.Description
+                            @Model.Description
                         </p>
 
+                        <!-- Display "How to Use" section -->
+                        <div class="mb-4">
+                            <h5>How to Use</h5>
+                            <p>@Model.HowToUse</p> <!-- This will show the usage instructions -->
+                        </div>
 
-                        <p><strong class="text-primary h4"> 55.00 JOD </strong></p>
+                        <p><strong class="text-primary h4"> @Model.Price JOD </strong></p>
 
-
-
-                        <div class="mb-5">
-                            <div class="input-group mb-3" style="max-width: 220px;">
-                                <div class="input-group-prepend">
-                                    <button class="btn btn-outline-primary js-btn-minus" type="button" onclick="decreaseQuantity('@Model.MedicineId')">&minus;</button>
-                                </div>
-                                <input type="text"
-                                       id="quantity-@Model.MedicineId"
-                                       class="form-control text-center quantity-input"
-                                       value="1"
-                                       min="1"
-                                       onchange="validateQuantity('@Model.MedicineId')"
-                                       aria-label="Quantity">
-                                <div class="input-group-append">
-                                    <button class="btn btn-outline-primary js-btn-plus" type="button" onclick="increaseQuantity('@Model.MedicineId')">&plus;</button>
+                        @if (Model.RequiresPrescription)
+                        {
+                            <div class="alert alert-warning" role="alert">
+                                This medicine requires a prescription. You can only buy it from our local branch.
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="mb-5">
+                                <div class="input-group mb-3" style="max-width: 220px;">
+                                    <div class="input-group-prepend">
+                                        <button class="btn btn-outline-primary js-btn-minus" type="button" onclick="decreaseQuantity('@Model.MedicineId')">&minus;</button>
+                                    </div>
+                                    <input type="text"
+                                           id="quantity-@Model.MedicineId"
+                                           class="form-control text-center quantity-input"
+                                           value="1"
+                                           min="1"
+                                           onchange="validateQuantity('@Model.MedicineId')"
+                                           aria-label="Quantity">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-primary js-btn-plus" type="button" onclick="increaseQuantity('@Model.MedicineId')">&plus;</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <p>
-                            <button onclick="addToCart('@Model.MedicineId', '@Model.Name', '@Model.ImageUrl','@Model.Inventory.BranchId')"
-                                    class="buy-now btn btn-sm height-auto px-4 py-3 btn-primary">
-                                Add To Cart
-                            </button>
-                        </p>
+                            <p>
+                                <button onclick="addToCart('@Model.MedicineId', '@Model.Name', '@Model.ImageUrl', '@Model.Inventory.BranchId')"
+                                        class="buy-now btn btn-sm height-auto px-4 py-3 btn-primary">
+                                    Add To Cart
+                                </button>
+                            </p>
+                        }
 
                     </div>
                 </div>
@@ -267,7 +279,7 @@
             showNotification('Item added to cart successfully!');
         }
 
-        function showNotification(message) {
+              function showNotification(message) {
             // Create notification element
             const notification = document.createElement('div');
             notification.className = 'alert alert-success alert-dismissible fade show position-fixed';
@@ -275,18 +287,34 @@
             notification.style.right = '20px';
             notification.style.zIndex = '1000000';
             notification.innerHTML = `
-                    ${message}
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                `;
+                ${message}
+                <button type="button" class="btn-close" aria-label="Close"></button>
+            `;
 
             // Add to document
             document.body.appendChild(notification);
 
-            // Remove after 3 seconds
+            // Find the close button
+            const closeButton = notification.querySelector('.btn-close');
+
+            // Add click event to close the notification
+            closeButton.addEventListener('click', () => {
+                notification.classList.remove('show'); // Fade out the notification
+                setTimeout(() => {
+                    notification.remove(); // Remove it from the DOM after fade out
+                }, 150); // Delay for fade-out effect
+            });
+
+            // Automatically remove notification after 3 seconds if not closed manually
             setTimeout(() => {
-                notification.remove();
+                notification.classList.remove('show'); // Fade-out effect
+                setTimeout(() => {
+                    notification.remove(); // Remove it after fade-out
+                }, 150); // Wait for fade-out animation to complete
             }, 3000);
         }
+
+
     </script>
 </body>
 

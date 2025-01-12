@@ -1,5 +1,5 @@
 using Graduation_Project.Data;
-using Graduation_Project.Hubs; // Add your ChatHub namespace
+using Graduation_Project.Hubs;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,12 +14,24 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
+// Add Identity services
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 {
     options.SignIn.RequireConfirmedAccount = false;
 })
-    .AddRoles<IdentityRole>()
-    .AddEntityFrameworkStores<ApplicationDbContext>();
+.AddEntityFrameworkStores<ApplicationDbContext>()
+.AddDefaultTokenProviders();
+
+// Configure the Application Cookie (move this here)
+builder.Services.ConfigureApplicationCookie(options =>
+{
+   
+    options.AccessDeniedPath = "/Home/AccessDenied";  // Specify access denied path
+});
+
+// Add MVC services
+builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages();
 
 // Add SignalR services
 builder.Services.AddSignalR();
@@ -27,7 +39,7 @@ builder.Services.AddSignalR();
 // Build the app
 var app = builder.Build();
 
-// Seed roles, admin user, and default data if needed
+// Seed roles, admin user, and default data
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
@@ -37,7 +49,7 @@ using (var scope = app.Services.CreateScope())
     await DbInitializer.SeedRolesAndAdminAsync(userManager, roleManager, context);
 }
 
-// Configure the HTTP request pipeline.
+// Configure the HTTP request pipeline
 if (app.Environment.IsDevelopment())
 {
     app.UseMigrationsEndPoint();
@@ -55,12 +67,11 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
-
-
 // Map default routes
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
 app.MapRazorPages();
 
 app.Run();

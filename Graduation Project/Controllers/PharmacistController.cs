@@ -1,5 +1,4 @@
-﻿using Graduation_Project.Areas.Identity.Pages.Account;
-using Graduation_Project.Data;
+﻿using Graduation_Project.Data;
 using Graduation_Project.Models;
 using Graduation_Project.ViewModels;
 using Microsoft.AspNetCore.Authorization;
@@ -57,13 +56,12 @@ namespace Graduation_Project.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(PharmacistRegister model)
         {
-            if (true)
+             if (true)
             {
                 // Check if the email already exists in the system
                 var existingUser = await _userManager.FindByEmailAsync(model.Email);
                 if (existingUser != null)
                 {
-                    // If the email already exists, add a model error
                     ModelState.AddModelError("", "This email is already in use. Please choose another one.");
                     return View(model);
                 }
@@ -74,7 +72,15 @@ namespace Graduation_Project.Controllers
                     ModelState.AddModelError("", "Passwords do not match.");
                     return View(model);
                 }
+
                 var currentBranch = _context.PharmacyBranch.FirstOrDefault(b => b.BranchId == model.BranchId);
+                // Ensure that the branch exists
+                if (currentBranch == null)
+                {
+                    ModelState.AddModelError("", "Selected branch is invalid.");
+                    return View(model);
+                }
+
                 // Create a new user
                 var user = new ApplicationUser
                 {
@@ -109,10 +115,12 @@ namespace Graduation_Project.Controllers
                     }
                 }
             }
-
+            var branches = await _context.PharmacyBranch.ToListAsync();
+            model.Branches = branches;
             // If validation failed, return the same view with validation errors
             return View(model);
         }
+
 
         [HttpGet]
         public IActionResult Login()
@@ -135,11 +143,11 @@ namespace Graduation_Project.Controllers
                 else
                 {
                     ModelState.AddModelError(string.Empty, "Invalid login attempt.");
-                    return View(model);
+                    return View(model);  // This passes the errors back to the view
                 }
             }
 
-            // If we got this far, something failed, redisplay form
+            // If ModelState is invalid, re-render the form with validation errors
             return View(model);
         }
 
@@ -182,10 +190,26 @@ namespace Graduation_Project.Controllers
             return View(branchMedicinesViewModel);
         }
         [Authorize(Roles = "Pharmacist")]
-        public IActionResult Orders()
+
+        [Authorize]  // Make sure only logged-in users can access
+        public async Task<IActionResult> Orders()
         {
-            return View();
+            // Get the current user
+            var currentUser = await _userManager.GetUserAsync(User);
+
+            // Get the branch ID of the current user
+            var branchId = currentUser.BranchId;
+
+            // Fetch orders associated with the current user's branch
+            var orders = await _context.Orders
+                                       .Where(o => o.BranchId == branchId)
+                                       .OrderByDescending(o => o.OrderDate)  // Order by date or any other logic
+                                       .ToListAsync();
+            
+
+            return View(orders);
         }
+
         [Authorize(Roles = "Pharmacist")]
         public async Task<IActionResult> PharmacistOrders()
         {
@@ -404,39 +428,62 @@ namespace Graduation_Project.Controllers
 
         [HttpPost]
         [Authorize(Roles = "Pharmacist")]
-        public async Task<IActionResult> CreateMedicine(MedicineViewModel model)
+        public async Task<IActionResult> CreateMedicine(MedicineViewModel model, IFormFile img)
         {
+            // Check if GroupMedicineId is provided
+            if (model.GroupMedicineId == null)
+            {
+                return View(model);
+            }
+
+            // Get current user and branch data
             var currentUser = await _userManager.GetUserAsync(User);
             var currentBranch = await _context.PharmacyBranch
                 .Include(i => i.Inventory)
                 .FirstOrDefaultAsync(b => b.BranchId == currentUser.BranchId);
+
+            // Get selected medicine group
             var selectedMedicineGroup = await _context.GroupMedicines
                 .FirstOrDefaultAsync(g => g.GroupMedicineId == model.GroupMedicineId);
+
             string uniqueFileName = null;
 
-            // Save the uploaded image to wwwroot/images/medicines
+            // Handle image file upload
             if (model.ImageFile != null)
             {
-                string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "images/medicines");
-
-                // Ensure the directory exists
-                if (!Directory.Exists(uploadsFolder))
+                try
                 {
-                    Directory.CreateDirectory(uploadsFolder);
+                    string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "images/medicines");
+
+                    // Ensure the directory exists
+                    if (!Directory.Exists(uploadsFolder))
+                    {
+                        Directory.CreateDirectory(uploadsFolder);
+                    }
+
+                    // Generate a unique file name
+                    uniqueFileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(model.ImageFile.FileName);
+                    string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+                    // Save the file
+                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await model.ImageFile.CopyToAsync(fileStream);
+                    }
                 }
-
-                // Generate a unique file name
-                uniqueFileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(model.ImageFile.FileName);
-                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
-
-                // Save the file
-                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                catch (Exception ex)
                 {
-                    await model.ImageFile.CopyToAsync(fileStream);
+                    // Log the error if the file upload fails
+                    Console.WriteLine($"Error uploading image: {ex.Message}");
                 }
             }
+            else
+            {
+                // Log or debug to ensure it's not entering this branch when no image is uploaded
+                Console.WriteLine("No image uploaded.");
+            }
 
-            // Create a new Medicine and save the file path to ImageUrl
+            // Create a new Medicine entity and set its properties
             Medicine medicine = new Medicine
             {
                 Name = model.Name,
@@ -447,12 +494,12 @@ namespace Graduation_Project.Controllers
                 GroupMedicine = selectedMedicineGroup,
                 GroupMedicineId = model.GroupMedicineId,
                 InventoryId = currentBranch.Inventory.InventoryId,
-                ImageUrl = uniqueFileName != null ? "/images/medicines/" + uniqueFileName : null,
-                RequiresPrescription = model.RequiresPrescription, // Save checkbox value
+                ImageUrl = uniqueFileName != null ? "/images/medicines/" + uniqueFileName : "/images/medicines/default-image.jpg", // Default image if none uploaded
+                RequiresPrescription = model.RequiresPrescription,
                 Price = model.Price
             };
 
-            // Save to the database
+            // Save the new Medicine record to the database
             _context.Medicines.Add(medicine);
             await _context.SaveChangesAsync();
 
